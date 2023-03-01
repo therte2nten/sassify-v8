@@ -1,7 +1,22 @@
 {
-	"files.exclude": {
-		"node_modules/": true,
-		"package-lock.json": true
-	},
-	"npm-scripts.showStartNotification": false
+  "files.exclude": {
+    "node_modules/": false,
+    "package-lock.json": false,
+    ".github": false,
+    ".vscode": false,
+    ".gitignore": false,
+    ".npmrc": false,
+    "CHANGELOG.md": false,
+    "CODE_OF_CONDUCT.md": false,
+    "CODEOWNERS": false,
+    "CONTRIBUTING.md": false,
+    "LICENSE": false,
+    "README.md": false
+  },
+  "npm-scripts.showStartNotification": false,
+  "workspace.isHidden": false,
+  "workspace.disableCounter": true,
+  "workspace.disableColoring": false,
+  "workspace.alwaysShowToggle": true,
+  "workspace.statusbarPriority": 0
 }
