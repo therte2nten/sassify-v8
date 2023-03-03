@@ -1,0 +1,20 @@
+/// Функция `last-in-list` выдает последний элемент в списке.
+/// ---
+/// @name last-in-list
+/// @since 7.0.0
+/// @access public
+/// @author Sindre Sorhus
+/// @link https://github.com/sindresorhus GitHub
+/// @example scss Пример использования в Sass (SCSS)
+///   @debug last-in-list((1, 2, 3));
+///   @debug last-in-list((3, 2, 1));
+///   @debug last-in-list((red, blue, green));
+/// @example Результат в консоли
+///   Debug: 3
+///   Debug: 1
+///   Debug: green
+/// @return {*} элемент, который находится в конце списка
+/// @param {List} $list - список, из которого необходимо получить последний элемент
+@function last-in-list($list) {
+	@return nth($list, -1);
+}
