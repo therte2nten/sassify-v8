@@ -9,61 +9,80 @@
 /// @author Kitty Giraudel
 /// @link https://github.com/KittyGiraudel GitHub
 /// @example scss Пример использования в Sass (SCSS)
-/// 	@debug
+/// 	$grid-default-config: (
+/// 		columns: 12,
+/// 		gutter: 10px,
+/// 		min-width: 240px,
+/// 		max-width: 1330px,
+/// 		layouts: (
+/// 			S:  370px,  // ≥20px columns
+/// 			M:  610px,  // ≥40px columns
+/// 			L:  850px,  // ≥60px columns
+/// 			XL: 1090px  // ≥80px columns
+/// 		),
+/// 		fluid: true,
+/// 		debug: false,
+/// 		fixed-layout: M,
+/// 		enhanced-experience: true
+/// 	);
+///
+/// 	@debug map-deep-set($grid-default-config, "layouts" "M", 650px);
+/// 	@debug map-deep-set($grid-default-config, "mobile-first", true);
 /// @example Результат в консоли
-/// 	Debug:
+/// 	Debug: (columns: 12, gutter: 10px, min-width: 240px, max-width: 1330px, layouts: (S: 370px, M: 650px, L: 850px, XL: 1090px), fluid: true, debug: false, fixed-layout: M, enhanced-experience: true)
+/// 	Debug: (columns: 12, gutter: 10px, min-width: 240px, max-width: 1330px, layouts: (S: 370px, M: 610px, L: 850px, XL: 1090px), fluid: true, debug: false, fixed-layout: M, enhanced-experience: true, "mobile-first": true)
 /// @return {Map} карта с установленными значениями
 /// @param {Map} $map - карта (`Map`), в которую нужно добавить значения
 /// @param {String} $keys - ключ значения
 /// @param {*} $value - значение
 @function map-deep-set($map, $keys, $value) {
 
-  $_maps: ($map,);
-  $_result: null;
+	$_maps: ($map,);
+	$_result: null;
 
-  // Если введёный ключ уже является картой,
-  // то оповещаю разработчика о том, что она будет
-  // переопределена:
-  @if type-of(nth($keys, -1)) == "map" {
+	// Если введёный ключ уже является картой,
+	// то оповещаю разработчика о том, что она будет
+	// переопределена:
+	@if type-of(nth($keys, -1)) == "map" {
 		@warn "🟨 Последний указанный вами ключ — это карта. Он будет переопределен с помощью `#{$value}`.";
 	}
 
-  // Если `$keys` - это один ключ, то
-  // просто объединяю и возвращаю его:
-  @if length($keys) == 1 {
-    @return map-merge($map, ($keys: $value));
-  }
+	// Если `$keys` - это один ключ, то
+	// просто объединяю и возвращаю его:
+	@if length($keys) == 1 {
+		@return map-merge($map, ($keys: $value));
+	}
 
-  // Прохожу циклом `@for` от первого до предпоследнего ключа
-  // из `$keys`.
-  // Сохраните связанную карту с этим ключом в списке `$_maps`
-  @for $i from 1 through length($keys) - 1 {
+	// Прохожу циклом `@for` от первого до предпоследнего ключа
+	// из `$keys`.
+	// Сохраните связанную карту с этим ключом в списке `$_maps`
+	@for $i from 1 through length($keys) - 1 {
 
-    $_current-key: nth($keys, $i);
-    $_current-map: nth($_maps, -1);
-    $_current-get: map-get($_current-map, $_current-key);
+		$_current-key: nth($keys, $i);
+		$_current-map: nth($_maps, -1);
+		$_current-get: map-get($_current-map, $_current-key);
 
-    // Если ключ не существует, выдаю сообщение об ошибке:
-    @if $_current-get == null {
-      @error "🟥 Ключ `#{$keys}` не существует на текущем уровне карты!";
-    }
+		// Если ключ не существует, выдаю сообщение об ошибке:
+		@if $_current-get == null {
+			@error "🟥 Ключ `#{$keys}` не существует на текущем уровне карты!";
+		}
 
-    $_maps: append($_maps, $_current-get);
-  }
+		$_maps: append($_maps, $_current-get);
+	}
 
-  // Цикл от последней карты к первой.
-  // Объединяем его с предыдущим:
-  @for $i from length($_maps) through 1 {
+	// Цикл от последней карты к первой.
+	// Объединяем его с предыдущим:
+	@for $i from length($_maps) through 1 {
 
-    $_current-map: nth($_maps, $i);
-    $_current-key: nth($keys, $i);
-    $_current-val: if($i == length($_maps), $value, $_result);
+		$_current-map: nth($_maps, $i);
+		$_current-key: nth($keys, $i);
+		$_current-val: if($i == length($_maps), $value, $_result);
 
-    $_result: map-merge($_current-map, ($_current-key: $_current-val));
+		$_result: map-merge($_current-map, ($_current-key: $_current-val));
 
-  }
+	}
 
-  // Возвращаю результат:
-  @return $_result;
+	// Возвращаю результат:
+	@return $_result;
 
 }
