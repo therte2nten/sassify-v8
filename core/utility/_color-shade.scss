@@ -1,0 +1,22 @@
+/// Функция `color-shade` миксует необходимый цвет с черным
+/// и выдаёт "затемненный" цвет.
+/// ---
+/// @name color-shade
+/// @since 7.0.0
+/// @access public
+/// @author Kitty Giraudel
+/// @link https://github.com/KittyGiraudel GitHub
+/// @example scss Пример использования в Sass (SCSS)
+///   @debug color-shade(#fff, 10);
+/// @example Результат в консоли
+///   Debug: #e6e6e6
+/// @return {Color} цвет, который получился после микса
+/// @param {Color} $color - цвет, который необходимо замиксовать
+/// @param {Number} $percentage - процент микса цвета `$color` (т.е. как много чёрного добавить в исходный цвет)
+@function color-shade($color, $percentage) {
+	@return mix(
+		black,
+		$color,
+		$percentage
+	);
+}

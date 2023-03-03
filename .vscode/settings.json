@@ -11,7 +11,8 @@
     "CODEOWNERS": true,
     "CONTRIBUTING.md": true,
     "LICENSE": true,
-    "README.md": true
+    "README.md": true,
+    "*.map": true
   },
   "npm-scripts.showStartNotification": false,
   "workspace.isHidden": true,
