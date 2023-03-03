@@ -7,9 +7,9 @@
 /// @author Kitty Giraudel
 /// @link https://github.com/KittyGiraudel GitHub
 /// @example scss Пример использования в Sass (SCSS)
-///   @debug color-shade(#fff, 10);
+/// 	@debug color-shade(#fff, 10);
 /// @example Результат в консоли
-///   Debug: #e6e6e6
+/// 	Debug: #e6e6e6
 /// @return {Color} цвет, который получился после микса
 /// @param {Color} $color - цвет, который необходимо замиксовать
 /// @param {Number} $percentage - процент микса цвета `$color` (т.е. как много чёрного добавить в исходный цвет)

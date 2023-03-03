@@ -7,9 +7,9 @@
 /// @author Kitty Giraudel
 /// @link https://github.com/KittyGiraudel GitHub
 /// @example scss Пример использования в Sass (SCSS)
-///   @debug color-tint(#000, 15);
+/// 	@debug color-tint(#000, 15);
 /// @example Результат в консоли
-///   Debug: #262626
+/// 	Debug: #262626
 /// @return {Color} цвет, который получился после микса
 /// @param {Color} $color - цвет, который необходимо замиксовать
 /// @param {Number} $percentage - процент микса цвета `$color` (т.е. как много белого добавить в исходный цвет)
