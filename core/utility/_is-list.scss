@@ -1,0 +1,36 @@
+/// Функция `is-list` проверяет соответствие значения
+/// типу `List` и возвращает `true` или `false`.
+///
+/// Функция является по сути обёрткой над `type-of`.
+/// ---
+/// @name is-list
+/// @since 7.0.0
+/// @access public
+/// @author takamoso
+/// @link https://github.com/takamoso GitHub
+/// @example scss Пример использования в Sass (SCSS)
+///   $boolean: true;
+///   $number: 1310;
+///   $string: "Sassify";
+///   $list: 1 2 3 4 5;
+///   $map: (
+///     one: 1,
+///     two: 2,
+///     three: 3
+///   );
+///   $null: null;
+///   $color: #fff;
+///
+///   @debug is-list($boolean); //=> false
+///   @debug is-list($number); //=> false
+///   @debug is-list($string); //=> false
+///   @debug is-list($list); //=> true
+///   @debug is-list($map); //=> false
+///   @debug is-list($null); //=> false
+///   @debug is-boolean($color); //=> false
+/// @return {Boolean} является ли переданное значение списком?
+/// @param {*} $value - значение, которое необходимо проверить на соответствие типу `List`
+@function is-list($value) {
+  @return type-of($value) == list or
+          type-of($value) == arglist;
+}
