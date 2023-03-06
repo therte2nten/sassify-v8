@@ -27,7 +27,7 @@
 ///   @debug is-list($list); //=> true
 ///   @debug is-list($map); //=> false
 ///   @debug is-list($null); //=> false
-///   @debug is-boolean($color); //=> false
+///   @debug is-list($color); //=> false
 /// @return {Boolean} является ли переданное значение списком?
 /// @param {*} $value - значение, которое необходимо проверить на соответствие типу `List`
 @function is-list($value) {
