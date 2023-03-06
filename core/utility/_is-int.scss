@@ -27,7 +27,7 @@
 ///   @debug is-int($null); //=> false
 ///   @debug is-int($color); //=> false
 /// @return {Boolean} является ли переданное значение числом?
-/// @param {String} $value - значение, которое необходимо проверить на соответствие типу `Integer`
+/// @param {*} $value - значение, которое необходимо проверить на соответствие типу `Integer`
 @function is-int($value) {
   @return type-of($value) == number;
 }

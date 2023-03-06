@@ -29,7 +29,7 @@
 ///   @debug is-boolean($null); //=> false
 ///   @debug is-boolean($color); //=> false
 /// @return {Boolean} является ли переданное значение булевым?
-/// @param {String | Boolean} $value - значение, которое необходимо проверить на соответствие типу `Boolean`
+/// @param {*} $value - значение, которое необходимо проверить на соответствие типу `Boolean`
 @function is-boolean($value) {
   @return type-of($value) == bool;
 }
