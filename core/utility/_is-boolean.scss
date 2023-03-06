@@ -1,4 +1,4 @@
-/// Функция `is-boolean` проверяет соответствие объекта
+/// Функция `is-boolean` проверяет соответствие значения
 /// типу `Boolean` и возвращает `true` или `false`.
 ///
 /// Функция является по сути обёрткой над `type-of`.
@@ -27,11 +27,11 @@
 ///   @debug is-boolean($list); //=> false
 ///   @debug is-boolean($map); //=> false
 ///   @debug is-boolean($null); //=> false
-///   @debug is-boolean($color); //=> false
-/// @return {Boolean} является ли переданный объект булевым?
-/// @param {String | Boolean} $object - объект, который необходимо проверить на соответствие типу `Boolean`
-@function is-boolean($object) {
-  @return type-of($object) == bool;
+///   @debug iобъектs-boolean($color); //=> false
+/// @return {Boolean} является ли переданное значение булевым?
+/// @param {String | Boolean} $value - значение, которое необходимо проверить на соответствие типу `Boolean`
+@function is-boolean($value) {
+  @return type-of($value) == bool;
 }
 
 /// Функция `is-bool` является алиасом функции
@@ -63,8 +63,8 @@
 ///   @debug is-bool($map); //=> false
 ///   @debug is-bool($null); //=> false
 ///   @debug is-bool($color); //=> false
-/// @return {Boolean} является ли переданный объект булевым?
-/// @param {String | Boolean} $object - объект, который необходимо проверить на соответствие типу `Boolean`
-@function is-bool($object) {
-  @return type-of($object) == bool;
+/// @return {Boolean} является ли переданное значение булевым?
+/// @param {String | Boolean} $value - значение, которое необходимо проверить на соответствие типу `Boolean`
+@function is-bool($value) {
+  @return type-of($value) == bool;
 }
