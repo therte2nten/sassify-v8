@@ -1,0 +1,33 @@
+@use 'sass:math';
+@use '../../config' as config;
+
+/// Функция `strip-unit` отсекает меры исчисления
+/// от числа.
+/// ---
+/// @name strip-unit
+/// @since 7.0.0
+/// @access public
+/// @author Sindre Sorhus
+/// @link https://github.com/sindresorhus GitHub
+/// @example scss Пример использования в Sass (SCSS)
+/// 	@debug strip-unit(16px); //=> 16
+/// 	@debug strip-unit(1440px); //=> 1440
+/// 	@debug strip-unit(2.3rem); //=> 2.3
+/// 	@debug strip-unit(.3em); //=> 0.3
+/// @return {Number} число, которое было отделено от остального
+/// @see {Variable} $setting--strip-unit-use-sassmath
+/// @require {Variable} $setting--strip-unit-use-sassmath
+/// @param {*} $value - число или строка, которую необходимо оставить без меры исчисления
+@function strip-unit($value) {
+
+	$_value: null;
+
+	@if config.$setting--strip-unit-use-sassmath {
+		$_value: math.div($value, $value * 0 + 1);
+	} @else {
+		$_value: $value / ($value * 0 + 1);
+	}
+
+	@return $_value;
+
+}
