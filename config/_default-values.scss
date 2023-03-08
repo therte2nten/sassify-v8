@@ -1,9 +1,9 @@
-/// @name $dvalues_url-encode-characters
+/// @name $dvalues--url-encode-characters
 /// @since 7.0.0
 /// @access public
 /// @see {Function} url-encode
 /// @type Map
-$dvalues_url-encode-characters: (
+$dvalues--url-encode-characters: (
 	'!': '%21',
 	'#': '%23',
 	'$': '%24',
