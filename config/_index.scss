@@ -7,6 +7,6 @@
 /// @access public
 /// @deprecated Использование `/` для деления вне `calc()` устарело и будет удалено в DartS ass 2.0.0.
 /// @link https://sass-lang.com/d/slash-div Breaking Change: Slash as Division
-/// @see {Function} url-encode
+/// @see {Function} strip-unit
 /// @type Boolean
 $setting--strip-unit-use-sassmath: true !default;
