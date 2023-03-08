@@ -7,27 +7,27 @@
 /// @author Zsolt Pentz
 /// @link https://github.com/pentzzsolt GitHub
 /// @example scss Пример использования в Sass (SCSS)
-///   $boolean: true;
-///   $number: 1310;
-///   $string: "Sassify";
-///   $list: 1 2 3 4 5;
-///   $map: (
-///     one: 1,
-///     two: 2,
-///     three: 3
-///   );
-///   $null: null;
-///   $color: #fff;
+/// 	$boolean: true;
+/// 	$number: 1310;
+/// 	$string: "Sassify";
+/// 	$list: 1 2 3 4 5;
+/// 	$map: (
+/// 		one: 1,
+/// 		two: 2,
+/// 		three: 3
+/// 	);
+/// 	$null: null;
+/// 	$color: #fff;
 ///
-///   @debug is-int($boolean); //=> false
-///   @debug is-int($number); //=> true
-///   @debug is-int($string); //=> false
-///   @debug is-int($list); //=> false
-///   @debug is-int($map); //=> false
-///   @debug is-int($null); //=> false
-///   @debug is-int($color); //=> false
+/// 	@debug is-int($boolean); //=> false
+/// 	@debug is-int($number); //=> true
+/// 	@debug is-int($string); //=> false
+/// 	@debug is-int($list); //=> false
+/// 	@debug is-int($map); //=> false
+/// 	@debug is-int($null); //=> false
+/// 	@debug is-int($color); //=> false
 /// @return {Boolean} является ли переданное значение числом?
 /// @param {*} $value - значение, которое необходимо проверить на соответствие типу `Integer`
 @function is-int($value) {
-  @return type-of($value) == number;
+	@return type-of($value) == number;
 }

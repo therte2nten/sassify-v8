@@ -1,27 +1,27 @@
 {
-  "name": "@therteenten/sassify",
-  "version": "7.0.0",
-  "description": "Большой набор миксинов и функций на языке CSS-препроцессора Sass",
-  "main": "index.scss",
-  "scripts": {
-    "test": "sass --watch test.scss:test.css"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/therteenten/sassify.git"
-  },
-  "keywords": [
-    "sass",
-    "scss",
-    "sassify"
-  ],
-  "author": "Haba Kudzaev <therteenten@inbox.ru>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/therteenten/sassify/issues"
-  },
-  "homepage": "https://github.com/therteenten/sassify#readme",
-  "devDependencies": {
-    "sass": "^1.58.3"
-  }
+	"name": "@therteenten/sassify",
+	"version": "7.0.0",
+	"description": "Большой набор миксинов и функций на языке CSS-препроцессора Sass",
+	"main": "index.scss",
+	"scripts": {
+		"test": "sass --watch test.scss:test.css"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/therteenten/sassify.git"
+	},
+	"keywords": [
+		"sass",
+		"scss",
+		"sassify"
+	],
+	"author": "Haba Kudzaev <therteenten@inbox.ru>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/therteenten/sassify/issues"
+	},
+	"homepage": "https://github.com/therteenten/sassify#readme",
+	"devDependencies": {
+		"sass": "^1.58.3"
+	}
 }

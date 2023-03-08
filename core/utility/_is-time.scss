@@ -8,34 +8,34 @@
 /// @link https://github.com/selfishprimate GitHub
 /// @link https://github.com/selfishprimate/gerillass/blob/master/scss/utilities/_is-time.scss Исходный код
 /// @example scss Пример использования в Sass (SCSS)
-///   $time-1h: 1h;
-///   $time-1ms: 1ms;
-///   $time-1s: 1s;
-///   $time-string: "1s";
-///   $time-list: 1s 1h 1ms;
-///   $time-number: 1310;
-///   $time-boolean: false;
-///   $time-map: (
-///     1s: "1s",
-///     1ms: "1ms"
-///   );
+/// 	$time-1h: 1h;
+/// 	$time-1ms: 1ms;
+/// 	$time-1s: 1s;
+/// 	$time-string: "1s";
+/// 	$time-list: 1s 1h 1ms;
+/// 	$time-number: 1310;
+/// 	$time-boolean: false;
+/// 	$time-map: (
+/// 		1s: "1s",
+/// 		1ms: "1ms"
+/// 	);
 ///
-///   @debug is-time($time-1h); //=> true
-///   @debug is-time($time-1ms); //=> true
-///   @debug is-time($time-1s); //=> true
-///   @debug is-time($time-number); //=> true
-///   @debug is-time($time-boolean); //=> Error: $number: false is not a number.
-///   @debug is-time($time-string); //=> Error: $number: "1s" is not a number.
-///   @debug is-time($time-list); //=> Error: $number: 1s 1h 1ms is not a number.
-///   @debug is-time($time-map); //=> Error: $number: (1s: "1s", 1ms: "1ms") is not a number.
+/// 	@debug is-time($time-1h); //=> true
+/// 	@debug is-time($time-1ms); //=> true
+/// 	@debug is-time($time-1s); //=> true
+/// 	@debug is-time($time-number); //=> true
+/// 	@debug is-time($time-boolean); //=> Error: $number: false is not a number.
+/// 	@debug is-time($time-string); //=> Error: $number: "1s" is not a number.
+/// 	@debug is-time($time-list); //=> Error: $number: 1s 1h 1ms is not a number.
+/// 	@debug is-time($time-map); //=> Error: $number: (1s: "1s", 1ms: "1ms") is not a number.
 /// @return {Boolean} является ли переданное значение временем?
 /// @param {*} $value - значение, которое необходимо проверить
 @function is-time($value) {
-  @for $i from 1 through length($value) {
-    @if (type-of($value) == "number" and index ("ms", "s", "h", unit($value)) != null or $value == 0) {
-      @return true;
-    } @else {
-      @return false;
-    }
-  }
+	@for $i from 1 through length($value) {
+		@if (type-of($value) == "number" and index ("ms", "s", "h", unit($value)) != null or $value == 0) {
+			@return true;
+		} @else {
+			@return false;
+		}
+	}
 }

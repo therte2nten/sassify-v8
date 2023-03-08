@@ -7,11 +7,11 @@
 /// @author Sindre Sorhus
 /// @link https://github.com/sindresorhus GitHub
 /// @example scss Пример использования в Sass (SCSS)
-///   $number: 1;
+/// 	$number: 1;
 ///
-///   @debug number-invert($number); //=> -1
-///   @debug number-invert(365); //=> -365
-///   @debug number-invert(-1310); //=> 1310
+/// 	@debug number-invert($number); //=> -1
+/// 	@debug number-invert(365); //=> -365
+/// 	@debug number-invert(-1310); //=> 1310
 /// @return {Number} отрицательное или положительное число
 /// @param {Number} $number - число, которое необходимо инвертировать
 @function number-invert($number) {

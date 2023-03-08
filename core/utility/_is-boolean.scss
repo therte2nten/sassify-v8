@@ -31,7 +31,7 @@
 /// @return {Boolean} является ли переданное значение булевым?
 /// @param {*} $value - значение, которое необходимо проверить на соответствие типу `Boolean`
 @function is-boolean($value) {
-  @return type-of($value) == bool;
+	@return type-of($value) == bool;
 }
 
 /// Функция `is-bool` является алиасом функции
@@ -44,27 +44,27 @@
 /// @author takamoso
 /// @link https://github.com/takamoso GitHub
 /// @example scss Пример использования в Sass (SCSS)
-///   $boolean: true;
-///   $number: 1310;
-///   $string: "Sassify";
-///   $list: 1 2 3 4 5;
-///   $map: (
-///     one: 1,
-///     two: 2,
-///     three: 3
-///   );
-///   $null: null;
-///   $color: #fff;
+/// 	$boolean: true;
+/// 	$number: 1310;
+/// 	$string: "Sassify";
+/// 	$list: 1 2 3 4 5;
+/// 	$map: (
+/// 		one: 1,
+/// 		two: 2,
+/// 		three: 3
+/// 	);
+/// 	$null: null;
+/// 	$color: #fff;
 ///
-///   @debug is-bool($boolean); //=> true
-///   @debug is-bool($number); //=> false
-///   @debug is-bool($string); //=> false
-///   @debug is-bool($list); //=> false
-///   @debug is-bool($map); //=> false
-///   @debug is-bool($null); //=> false
-///   @debug is-bool($color); //=> false
+/// 	@debug is-bool($boolean); //=> true
+/// 	@debug is-bool($number); //=> false
+/// 	@debug is-bool($string); //=> false
+/// 	@debug is-bool($list); //=> false
+/// 	@debug is-bool($map); //=> false
+/// 	@debug is-bool($null); //=> false
+/// 	@debug is-bool($color); //=> false
 /// @return {Boolean} является ли переданное значение булевым?
 /// @param {String | Boolean} $value - значение, которое необходимо проверить на соответствие типу `Boolean`
 @function is-bool($value) {
-  @return type-of($value) == bool;
+	@return type-of($value) == bool;
 }

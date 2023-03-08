@@ -9,27 +9,27 @@
 /// @author takamoso
 /// @link https://github.com/takamoso GitHub
 /// @example scss Пример использования в Sass (SCSS)
-///   $boolean: true;
-///   $number: 1310;
-///   $string: "Sassify";
-///   $list: 1 2 3 4 5;
-///   $map: (
-///     one: 1,
-///     two: 2,
-///     three: 3
-///   );
-///   $null: null;
-///   $color: #fff;
+/// 	$boolean: true;
+/// 	$number: 1310;
+/// 	$string: "Sassify";
+/// 	$list: 1 2 3 4 5;
+/// 	$map: (
+/// 		one: 1,
+/// 		two: 2,
+/// 		three: 3
+/// 	);
+/// 	$null: null;
+/// 	$color: #fff;
 ///
-///   @debug is-map($boolean); //=> false
-///   @debug is-map($number); //=> false
-///   @debug is-map($string); //=> false
-///   @debug is-map($list); //=> false
-///   @debug is-map($map); //=> true
-///   @debug is-map($null); //=> false
-///   @debug is-map($color); //=> false
+/// 	@debug is-map($boolean); //=> false
+/// 	@debug is-map($number); //=> false
+/// 	@debug is-map($string); //=> false
+/// 	@debug is-map($list); //=> false
+/// 	@debug is-map($map); //=> true
+/// 	@debug is-map($null); //=> false
+/// 	@debug is-map($color); //=> false
 /// @return {Boolean} является ли переданное значение картой?
 /// @param {*} $value - значение, которое необходимо проверить на соответствие типу `Map`
 @function is-map($value) {
-  @return type-of($value) == map;
+	@return type-of($value) == map;
 }
