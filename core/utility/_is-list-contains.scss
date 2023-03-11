@@ -10,10 +10,14 @@
 /// @author Haba Kudzaev (therteenten)
 /// @link https://github.com/therteenten/sassify GitHub
 /// @example scss Пример использования в Sass (SCSS)
-/// 	$boolean: true;
-/// 	$number: 1310;
-/// 	@debug is-list-contains($boolean); //=> false
-/// 	@debug is-list-contains($number); //=> false
+/// 	$list: color, opacity, border-radius;
+/// 	$map: (
+/// 		color: red,
+/// 		border-radius: 8px
+/// 	);
+///
+/// 	@debug is-list-contains(color, $list); //=> true
+/// 	@debug is-list-contains(border-radius, $map); //=> Error: "🟥 Выбранная переменная не является списком (List)!"
 /// @return {Boolean} содержит ли список нужный пункт?
 /// @param {*} $value - значение, которое необходимо проверить на соответствие типу `Map`
 /// @param {List} $list - значение, которое необходимо проверить на соответствие типу `Map`
