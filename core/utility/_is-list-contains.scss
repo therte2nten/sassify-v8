@@ -1,0 +1,37 @@
+@use '../../config' as config;
+@use './is-list' as *;
+
+/// Функция `is-list-contains` проверяет наличие
+/// нужного элемента в списке.
+/// ---
+/// @name is-list-contains
+/// @since 7.0.0
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @link https://github.com/therteenten/sassify GitHub
+/// @example scss Пример использования в Sass (SCSS)
+/// 	$boolean: true;
+/// 	$number: 1310;
+/// 	@debug is-list-contains($boolean); //=> false
+/// 	@debug is-list-contains($number); //=> false
+/// @return {Boolean} содержит ли список нужный пункт?
+/// @param {*} $value - значение, которое необходимо проверить на соответствие типу `Map`
+/// @param {List} $list - значение, которое необходимо проверить на соответствие типу `Map`
+@function is-list-contains($value, $list) {
+
+	// (1) Функцией `is-list()` проверяем соответствие
+	// переменной `$list` типу `List`:
+	@if is-list($list) == true {
+
+		// (1.1) Если переменная `$list` соответствует
+		// типу `List`, то ищем в ней совпадения с `$value`:
+		@return not not index($list, $value);
+
+	} @else {
+
+		// (1.2) Если нет соответствий, то отображаем ошибку:
+		@error "#{config.$emoji-error} Выбранная переменная не является списком (List)!"
+
+	}
+
+}
