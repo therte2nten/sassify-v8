@@ -16,14 +16,14 @@
 /// 	@debug url-encode('https://github.com/therteenten/sassify'); //=> https%3A%2F%2Fgithub.com%2Ftherteenten%2Fsassify
 /// 	@debug url-encode('https://github.com/sindresorhus'); //=> https%3A%2F%2Fgithub.com%2Fsindresorhus
 /// @return {String} строка, в которой все символы заменены
-/// @see {Variable} $dvalues--url-encode-characters
-/// @require {Variable} $dvalues--url-encode-characters - карта со всеми заменяемыми символами
+/// @see {Variable} $dv--url-encode_characters
+/// @require {Variable} $dv--url-encode_characters - карта со всеми заменяемыми символами
 /// @param {String} $url - ссылка, символы в которой надо заменить
 @function url-encode($url) {
 
 	$_string: $url;
 
-	@each $_replaceable, $_replacement in config.$dvalues--url-encode-characters {
+	@each $_replaceable, $_replacement in config.$dv--url-encode_characters {
 		$_string: string-replace(
 			$_string,
 			$_replaceable,
