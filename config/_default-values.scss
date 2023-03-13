@@ -1,9 +1,9 @@
-/// @name $dv--url-encode_characters
+/// @name $default-values--url-encode_characters
 /// @since 7.0.0
 /// @access public
 /// @see {Function} url-encode
 /// @type Map
-$dv--url-encode_characters: (
+$default-values--url-encode_characters: (
 	'!': '%21',
 	'#': '%23',
 	'$': '%24',
@@ -25,12 +25,12 @@ $dv--url-encode_characters: (
 	'"': '%22' // В случае, если результат заключен в двойные кавычки
 ) !default;
 
-/// @name $dv--set-initial_initials
+/// @name $default-values--set-initial_initials
 /// @since 7.0.0
 /// @access public
-/// @see {Function} url-encode
+/// @see {Function} set-initial
 /// @type Map
-$dv--set-initial_initials: (
+$default-values--set-initial_initials: (
 	'align-content': normal,
 	'align-items': normal,
 	'align-self': auto,
