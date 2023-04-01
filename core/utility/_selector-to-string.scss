@@ -1,0 +1,25 @@
+/// Функция `selector-to-string` приводит к строке имя селектора.
+///
+/// > Функция необходима для миксинов `b`, `e` и `m`.
+/// ---
+/// @name selector-to-string
+/// @since 7.0.0
+/// @access public
+/// @author Marcmintel
+/// @link https://medium.com/@marcmintel Medium
+/// @example scss Пример использования в Sass (SCSS)
+/// 	@debug selector-to-string(".selector"); //=> Debug .selector
+/// 	@debug selector-to-string("#selector"); //=> Debug #selector
+/// @return {String} строка с селектором
+/// @param {*} $selector - селектор, с которым необходимо проводить операцию
+@function selector-to-string($selector) {
+
+	// Приводим к строке:
+	$selector: inspect($selector);
+
+	// Убираем кавычки:
+	$selector: str-slice($selector, 2, -2); // снимите скобки
+
+	@return $selector;
+
+}
