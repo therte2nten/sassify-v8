@@ -1,3 +1,10 @@
+/// @name $default-values--amcss-prefix
+/// @since 7.0.0
+/// @access public
+/// @see {Mixin} amcss
+/// @type String
+$default-values--amcss-prefix: 'am-' !default;
+
 /// @name $default-values--bem
 /// @since 7.0.0
 /// @access public
