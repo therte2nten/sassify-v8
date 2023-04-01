@@ -2,6 +2,8 @@
 
 @forward 'config';
 
+@forward 'core/mixin/bem';
+
 @forward 'core/utility/color-shade';
 @forward 'core/utility/color-tint';
 @forward 'core/utility/first-in-list';
@@ -19,8 +21,9 @@
 @forward 'core/utility/map-deep-get';
 @forward 'core/utility/map-deep-set';
 @forward 'core/utility/number-invert';
+@forward 'core/utility/selector-to-string';
 @forward 'core/utility/set-initial';
 @forward 'core/utility/string-replace';
 @forward 'core/utility/strip-unit';
 @forward 'core/utility/url-encode';
-@forward 'core/utility/selector-to-string';
+@forward 'core/utility/get-block';

@@ -1,3 +1,15 @@
+/// @name $default-values--bem
+/// @since 7.0.0
+/// @access public
+/// @see {Mixin} bem-block
+/// @see {Mixin} bem-element
+/// @see {Mixin} bem-modifier
+/// @type Map
+$default-values--bem: (
+	element: '__',
+	modifier: '--'
+) !default;
+
 /// @name $default-values--url-encode_characters
 /// @since 7.0.0
 /// @access public
