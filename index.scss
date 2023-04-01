@@ -10,13 +10,14 @@
 @forward 'core/utility/is-list';
 @forward 'core/utility/is-list-contains';
 @forward 'core/utility/is-map';
+@forward 'core/utility/is-start-with';
 @forward 'core/utility/is-string';
 @forward 'core/utility/is-time';
 @forward 'core/utility/last-in-list';
 @forward 'core/utility/map-deep-get';
 @forward 'core/utility/map-deep-set';
 @forward 'core/utility/number-invert';
+@forward 'core/utility/set-initial';
 @forward 'core/utility/string-replace';
 @forward 'core/utility/strip-unit';
 @forward 'core/utility/url-encode';
-@forward 'core/utility/set-initial';
