@@ -18,9 +18,7 @@
 /// 		xxl: (min-width: 1400px)
 /// 	) !default;
 ///
-/// 	@debug map-deep-get($breakpoints, xxl);
-/// @example Результат в консоли
-/// 	Debug: (min-width: 1400px)
+/// 	@debug map-deep-get($breakpoints, xxl); //=> (min-width: 1400px)
 /// @return {Map} карта со значениями
 /// @param {Map} $map - карта (`Map`), значения которой нужно получить
 /// @param {String} $keys... - ключи, которые надо получить
