@@ -1,3 +1,6 @@
+@use '../../common/invalid-value-message' as *;
+@use 'is-int' as *;
+
 /// Функция `number-invert` превращает отрицательные
 /// числа в положительные и наоборот.
 /// ---
@@ -15,5 +18,15 @@
 /// @return {Number} отрицательное или положительное число
 /// @param {Number} $number - число, которое необходимо инвертировать
 @function number-invert($number) {
-	@return $number * -1;
+
+	$-result: '';
+
+	@if is-int($number) == true {
+		$-result: $number * -1;
+	} @else {
+		@return invalid-value-message('number-invert', $number, 'Number');
+	}
+
+	@return $-result;
+
 }
