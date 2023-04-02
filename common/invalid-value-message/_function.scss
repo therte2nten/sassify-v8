@@ -40,9 +40,9 @@
 		// сообщение об ошибке через директиву `@warn`:
 		@warn '#{config.$string--emoji_warning} #{$-message}';
 
-	}
+		// Возвращаем пустую строку:
+		@return null;
 
-	// Возращаем результат:
-	@return $-message;
+	}
 
 }
