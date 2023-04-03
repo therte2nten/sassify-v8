@@ -11,17 +11,18 @@
 /// - `$setting--strict-mode: false`: отключает жесткий режим, а
 /// ошибки будут выводиться в консоль с помощью директивы `@warn`.
 /// ---
-/// @name $setting--strict-mode [true]
+/// @name setting--strict-mode
+/// @group config/
 /// @since 7.0.0
 /// @access public
 /// @type Boolean
 $setting--strict-mode: true !default;
 
-/// @name $setting--strip-unit-use-sassmath [true]
+/// @name setting--strip-unit-use-sassmath
+/// @group config/
 /// @since 7.0.0
 /// @access public
 /// @deprecated Использование `/` для деления вне `calc()` устарело и будет удалено в DartSass 2.0.0.
 /// @link https://sass-lang.com/d/slash-div Breaking Change: Slash as Division
-/// @see {Function} strip-unit
 /// @type Boolean
 $setting--strip-unit-use-sassmath: true !default;

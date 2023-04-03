@@ -6,13 +6,14 @@
 /// > Предназначена для `@function`!
 /// ---
 /// @name invalid-value-message
+/// @group common/
 /// @since 7.0.0
 /// @access public
 /// @author Haba Kudzaev (therteenten)
 /// @link https://github.com/therteenten GitHub
-/// @return {String} сообщение об ошибке
-/// @param {String} $function-name - функция, от имени которой консоль "говорит"
-/// @param {String} $invalid-param - неверный параметр
+/// @return {string} сообщение об ошибке
+/// @param {string} $function-name - функция, от имени которой консоль "говорит"
+/// @param {string} $invalid-param - неверный параметр
 @function invalid-value-message($function-name, $invalid-param, $error-explanation: false) {
 
 	$-message: '';

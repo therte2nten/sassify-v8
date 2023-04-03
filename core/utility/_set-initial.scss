@@ -4,6 +4,7 @@
 /// значение CSS-свойства.
 /// ---
 /// @name set-initial
+/// @group core/
 /// @since 7.0.0
 /// @access public
 /// @author takamoso
@@ -14,7 +15,7 @@
 /// 	@debug set-initial(animation); //=> none 0s ease 0s 1 normal none running
 /// 	@debug set-initial(unknown); //=> Error: 🟥 Свойство «unknown» отсутствует в карте `$default-values--set-initial_initials`!
 /// @return {*} дефолтное значение того или иного CSS-свойства
-/// @param {String} $property - CSS-свойство, дефолтное значение которого нужно получить
+/// @param {string} $property - CSS-свойство, дефолтное значение которого нужно получить
 @function set-initial($property) {
 	@if map-has-key(config.$default-values--set-initial_initials, $property) {
 		@return map-get(

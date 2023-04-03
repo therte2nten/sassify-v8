@@ -5,6 +5,7 @@
 /// от числа.
 /// ---
 /// @name strip-unit
+/// @group core/
 /// @since 7.0.0
 /// @access public
 /// @author Sindre Sorhus
@@ -14,9 +15,7 @@
 /// 	@debug strip-unit(1440px); //=> 1440
 /// 	@debug strip-unit(2.3rem); //=> 2.3
 /// 	@debug strip-unit(.3em); //=> 0.3
-/// @return {Number} число, которое было отделено от остального
-/// @see {Variable} $setting--strip-unit-use-sassmath
-/// @require {Variable} $setting--strip-unit-use-sassmath
+/// @return {number} число, которое было отделено от остального
 /// @param {*} $value - число или строка, которую необходимо оставить без меры исчисления
 @function strip-unit($value) {
 

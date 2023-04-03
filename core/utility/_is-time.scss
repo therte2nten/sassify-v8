@@ -2,6 +2,7 @@
 /// функции значение временем.
 /// ---
 /// @name is-time
+/// @group core/
 /// @since 7.0.0
 /// @access public
 /// @author Halil İbrahim Çakıroğlu
@@ -28,7 +29,7 @@
 /// 	@debug is-time($time-string); //=> Error: $number: "1s" is not a number.
 /// 	@debug is-time($time-list); //=> Error: $number: 1s 1h 1ms is not a number.
 /// 	@debug is-time($time-map); //=> Error: $number: (1s: "1s", 1ms: "1ms") is not a number.
-/// @return {Boolean} является ли переданное значение временем?
+/// @return {boolean} является ли переданное значение временем?
 /// @param {*} $value - значение, которое необходимо проверить
 @function is-time($value) {
 	@for $i from 1 through length($value) {

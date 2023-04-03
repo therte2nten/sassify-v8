@@ -4,6 +4,7 @@
 /// Миксин `bem-modifier` создает модификатор по "БЭМу".
 /// ---
 /// @name bem-modifier
+/// @group core/
 /// @since 7.0.0
 /// @access public
 /// @author Marcmintel
@@ -36,7 +37,7 @@
 /// 		color: #fafafa;
 /// 		/* ... */
 /// 	}
-/// @param {String} $modifier - название селектора модификатора
+/// @param {string} $modifier - название селектора модификатора
 @mixin bem-modifier($modifier) {
 	@at-root {
 		#{&}#{ map-deep-get(config.$default-values--bem, modifier) + $modifier } {

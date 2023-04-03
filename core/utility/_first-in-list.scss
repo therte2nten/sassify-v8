@@ -4,6 +4,7 @@
 /// Функция `first-in-list` выдает первый элемент в списке.
 /// ---
 /// @name first-in-list
+/// @group core/
 /// @since 7.0.0
 /// @access public
 /// @author Sindre Sorhus
@@ -13,7 +14,7 @@
 /// 	@debug first-in-list((3, 2, 1)); //=> 2
 /// 	@debug first-in-list((red, blue, green)); //=> red
 /// @return {*} элемент, который находится в начале списка
-/// @param {List} $list - список, из которого необходимо получить первый элемент
+/// @param {list} $list - список, из которого необходимо получить первый элемент
 @function first-in-list($list) {
 
 	// Проверка на соответствие типу `List`:

@@ -7,6 +7,7 @@
 /// Этот миксин позволяет писать стили с учетом методологии намного проще.
 /// ---
 /// @name amcss
+/// @group core/
 /// @since 7.0.0
 /// @access public
 /// @author W3cplus
@@ -37,9 +38,9 @@
 /// 	[am-module~="large"] {
 /// 		font-size: 2em;
 /// 	}
-/// @param {String} $module - название модуля
-/// @param {String | Number} $trait [null] - значение модуля
-/// @param {String} prefix [config.$default-values--amcss-prefix] - префикс для атрибута
+/// @param {string} $module - название модуля
+/// @param {string | number} $trait [null] - значение модуля
+/// @param {string} prefix [config.$default-values--amcss-prefix] - префикс для атрибута
 @mixin amcss(
 	$module,
 	$trait: null,

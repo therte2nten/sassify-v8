@@ -4,6 +4,7 @@
 /// Функция является по сути обёрткой над `type-of`.
 /// ---
 /// @name is-map
+/// @group core/
 /// @since 7.0.0
 /// @access public
 /// @author takamoso
@@ -28,7 +29,7 @@
 /// 	@debug is-map($map); //=> true
 /// 	@debug is-map($null); //=> false
 /// 	@debug is-map($color); //=> false
-/// @return {Boolean} является ли переданное значение картой?
+/// @return {boolean} является ли переданное значение картой?
 /// @param {*} $value - значение, которое необходимо проверить на соответствие типу `Map`
 @function is-map($value) {
 	@return type-of($value) == map;

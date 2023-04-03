@@ -6,13 +6,14 @@
 /// > Предназначена для `@mixin`!
 /// ---
 /// @name invalid-value-message
+/// @group common/
 /// @since 7.0.0
 /// @access public
 /// @author Haba Kudzaev (therteenten)
 /// @link https://github.com/therteenten GitHub
-/// @param {String} $mixin-name - миксин, от имени которого консоль "говорит"
-/// @param {String} $invalid-param - неверный параметр
-/// @param {List} $valid-params - список допустимых параметров
+/// @param {string} $mixin-name - миксин, от имени которого консоль "говорит"
+/// @param {string} $invalid-param - неверный параметр
+/// @param {list} $valid-params - список допустимых параметров
 @mixin invalid-value-message($mixin-name, $invalid-param, $valid-params) {
 
 	$-message: '';

@@ -4,6 +4,7 @@
 /// Функция является по сути обёрткой над `type-of`.
 /// ---
 /// @name is-boolean
+/// @group core/
 /// @since 7.0.0
 /// @access public
 /// @author takamoso
@@ -28,7 +29,7 @@
 ///   @debug is-boolean($map); //=> false
 ///   @debug is-boolean($null); //=> false
 ///   @debug is-boolean($color); //=> false
-/// @return {Boolean} является ли переданное значение булевым?
+/// @return {boolean} является ли переданное значение булевым?
 /// @param {*} $value - значение, которое необходимо проверить на соответствие типу `Boolean`
 @function is-boolean($value) {
 	@return type-of($value) == bool;
@@ -39,6 +40,7 @@
 /// ---
 /// @name is-bool
 /// @alias is-boolean
+/// @group core/
 /// @since 7.0.0
 /// @access public
 /// @author takamoso
@@ -63,7 +65,7 @@
 /// 	@debug is-bool($map); //=> false
 /// 	@debug is-bool($null); //=> false
 /// 	@debug is-bool($color); //=> false
-/// @return {Boolean} является ли переданное значение булевым?
+/// @return {boolean} является ли переданное значение булевым?
 /// @param {String | Boolean} $value - значение, которое необходимо проверить на соответствие типу `Boolean`
 @function is-bool($value) {
 	@return type-of($value) == bool;

@@ -4,6 +4,7 @@
 /// Функция является по сути обёрткой над `type-of`.
 /// ---
 /// @name is-string
+/// @group core/
 /// @since 7.0.0
 /// @access public
 /// @author takamoso
@@ -28,7 +29,7 @@
 /// 	@debug is-string($map); //=> false
 /// 	@debug is-string($null); //=> false
 /// 	@debug is-string($color); //=> false
-/// @return {Boolean} является ли переданное значение строкой?
+/// @return {boolean} является ли переданное значение строкой?
 /// @param {*} $value - значение, которое необходимо проверить на соответствие типу `String`
 @function is-string($value) {
 	@return type-of($value) == string;

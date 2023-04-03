@@ -5,6 +5,7 @@
 /// числа в положительные и наоборот.
 /// ---
 /// @name number-invert
+/// @group core/
 /// @since 7.0.0
 /// @access public
 /// @author Sindre Sorhus
@@ -15,8 +16,8 @@
 /// 	@debug number-invert($number); //=> -1
 /// 	@debug number-invert(365); //=> -365
 /// 	@debug number-invert(-1310); //=> 1310
-/// @return {Number} отрицательное или положительное число
-/// @param {Number} $number - число, которое необходимо инвертировать
+/// @return {number} отрицательное или положительное число
+/// @param {number} $number - число, которое необходимо инвертировать
 @function number-invert($number) {
 
 	$-result: '';

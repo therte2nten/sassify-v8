@@ -1,28 +1,33 @@
-/// @name $string--emoji_error [🟥]
+/// @name string--emoji_error
+/// @group config/
 /// @since 7.0.0
 /// @access public
 /// @type String
 $string--emoji_error: '🟥' !default;
 
-/// @name $string--emoji_warning [🟧]
+/// @name string--emoji_warning
+/// @group config/
 /// @since 7.0.0
 /// @access public
 /// @type String
 $string--emoji_warning: '🟧' !default;
 
-/// @name $string--emoji_info [🟦]
+/// @name string--emoji_info
+/// @group config/
 /// @since 7.0.0
 /// @access public
 /// @type String
 $string--emoji_info: '🟦' !default;
 
-/// @name $string--emoji_success [🟩]
+/// @name string--emoji_success
+/// @group config/
 /// @since 7.0.0
 /// @access public
 /// @type String
 $string--emoji_success: '🟩' !default;
 
-/// @name $string--emoji_debug [⬜]
+/// @name string--emoji_debug
+/// @group config/
 /// @since 7.0.0
 /// @access public
 /// @type String

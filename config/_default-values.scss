@@ -1,11 +1,13 @@
-/// @name $default-values--amcss-prefix
+/// @name default-values--amcss-prefix
+/// @group config/
 /// @since 7.0.0
 /// @access public
 /// @see {Mixin} amcss
 /// @type String
 $default-values--amcss-prefix: 'am-' !default;
 
-/// @name $default-values--bem
+/// @name default-values--bem
+/// @group config/
 /// @since 7.0.0
 /// @access public
 /// @see {Mixin} bem-block
@@ -17,7 +19,8 @@ $default-values--bem: (
 	modifier: '--'
 ) !default;
 
-/// @name $default-values--url-encode_characters
+/// @name default-values--url-encode_characters
+/// @group config/
 /// @since 7.0.0
 /// @access public
 /// @see {Function} url-encode
@@ -44,7 +47,8 @@ $default-values--url-encode_characters: (
 	'"': '%22' // В случае, если результат заключен в двойные кавычки
 ) !default;
 
-/// @name $default-values--set-initial_initials
+/// @name default-values--set-initial_initials
+/// @group config/
 /// @since 7.0.0
 /// @access public
 /// @see {Function} set-initial

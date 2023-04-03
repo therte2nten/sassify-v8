@@ -6,6 +6,7 @@
 /// Миксин `bem-block` создает элемент блока по "БЭМу".
 /// ---
 /// @name bem-element
+/// @group core/
 /// @since 7.0.0
 /// @access public
 /// @author Marcmintel
@@ -30,7 +31,7 @@
 /// 		color: #29ff50;
 /// 		/* ... */
 /// 	}
-/// @param {String} $element - название селектора элемента
+/// @param {string} $element - название селектора элемента
 @mixin bem-element($element) {
 
 	$-selector: &;

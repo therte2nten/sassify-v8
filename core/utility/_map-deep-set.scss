@@ -5,6 +5,7 @@
 /// в указанную карту (`Map`).
 /// ---
 /// @name map-deep-set
+/// @group core/
 /// @since 7.0.0
 /// @access public
 /// @author Kitty Giraudel
@@ -29,9 +30,9 @@
 ///
 /// 	@debug map-deep-set($grid-default-config, "layouts" "M", 650px); //=> Debug: (columns: 12, gutter: 10px, min-width: 240px, max-width: 1330px, layouts: (S: 370px, M: 650px, L: 850px, XL: 1090px), fluid: true, debug: false, fixed-layout: M, enhanced-experience: true)
 /// 	@debug map-deep-set($grid-default-config, "mobile-first", true); //=> Debug: (columns: 12, gutter: 10px, min-width: 240px, max-width: 1330px, layouts: (S: 370px, M: 610px, L: 850px, XL: 1090px), fluid: true, debug: false, fixed-layout: M, enhanced-experience: true, "mobile-first": true)
-/// @return {Map} карта с установленными значениями
-/// @param {Map} $map - карта (`Map`), в которую нужно добавить значения
-/// @param {String} $keys - ключ значения
+/// @return {map} карта с установленными значениями
+/// @param {map} $map - карта (`Map`), в которую нужно добавить значения
+/// @param {string} $keys - ключ значения
 /// @param {*} $value - значение
 @function map-deep-set($map, $keys, $value) {
 

@@ -4,6 +4,7 @@
 /// из указанной карты (`Map`).
 /// ---
 /// @name map-deep-get
+/// @group core/
 /// @since 7.0.0
 /// @access public
 /// @author Kitty Giraudel
@@ -19,9 +20,9 @@
 /// 	) !default;
 ///
 /// 	@debug map-deep-get($breakpoints, xxl); //=> (min-width: 1400px)
-/// @return {Map} карта со значениями
-/// @param {Map} $map - карта (`Map`), значения которой нужно получить
-/// @param {String} $keys... - ключи, которые надо получить
+/// @return {map} карта со значениями
+/// @param {map} $map - карта (`Map`), значения которой нужно получить
+/// @param {string} $keys... - ключи, которые надо получить
 @function map-deep-get($map, $keys...) {
 
 	$_key: null;

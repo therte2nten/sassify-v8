@@ -6,16 +6,17 @@
 /// или части слова на что-то иное.
 /// ---
 /// @name string-replace
+/// @group core/
 /// @since 7.0.0
 /// @access public
 /// @author Sindre Sorhus
 /// @link https://github.com/sindresorhus GitHub
 /// @example scss Пример использования в Sass (SCSS)
 /// 	@debug string-replace('foo bar baz', 'bar', 'unicorn'); //=> foo unicorn baz
-/// @return {String} строка, которая получилась в итоге
-/// @param {String} $string - строка, в которой необходимо провести операцию замены
-/// @param {String} $replaceable - слово или часть слова в строке `$string`, которую необходимо заменить
-/// @param {String} $replacement [''] - слово, которое заменит значение из `$replaceable`
+/// @return {string} строка, которая получилась в итоге
+/// @param {string} $string - строка, в которой необходимо провести операцию замены
+/// @param {string} $replaceable - слово или часть слова в строке `$string`, которую необходимо заменить
+/// @param {string} $replacement [''] - слово, которое заменит значение из `$replaceable`
 @function string-replace($string, $replaceable, $replacement: '') {
 
 	@if is-string($string) {

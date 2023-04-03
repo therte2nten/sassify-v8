@@ -6,6 +6,7 @@
 /// ссылки, например, в `content`).
 /// ---
 /// @name url-encode
+/// @group core/
 /// @since 7.0.0
 /// @access public
 /// @author Sindre Sorhus
@@ -15,10 +16,8 @@
 /// 	@debug url-encode('mailto:therteenten@inbox.ru'); //=> mailto%3Atherteenten%40inbox.ru
 /// 	@debug url-encode('https://github.com/therteenten/sassify'); //=> https%3A%2F%2Fgithub.com%2Ftherteenten%2Fsassify
 /// 	@debug url-encode('https://github.com/sindresorhus'); //=> https%3A%2F%2Fgithub.com%2Fsindresorhus
-/// @return {String} строка, в которой все символы заменены
-/// @see {Variable} $default-values--url-encode_characters
-/// @require {Variable} $default-values--url-encode_characters - карта со всеми заменяемыми символами
-/// @param {String} $url - ссылка, символы в которой надо заменить
+/// @return {string} строка, в которой все символы заменены
+/// @param {string} $url - ссылка, символы в которой надо заменить
 @function url-encode($url) {
 
 	$_string: $url;

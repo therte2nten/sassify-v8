@@ -1,6 +1,7 @@
 /// Миксин `bem-block` создает блок по "БЭМу".
 /// ---
 /// @name bem-block
+/// @group core/
 /// @since 7.0.0
 /// @access public
 /// @author Marcmintel
@@ -17,7 +18,7 @@
 /// 		border: none;
 /// 		/* ... */
 /// 	}
-/// @param {String} $block - название селектора блока
+/// @param {string} $block - название селектора блока
 @mixin bem-block($block) {
 	.#{$block} {
 		@content;

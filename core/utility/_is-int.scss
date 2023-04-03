@@ -2,6 +2,7 @@
 /// типу `Integer` и возращает `true` или `false`.
 /// ---
 /// @name is-int
+/// @group core/
 /// @since 7.0.0
 /// @access public
 /// @author Zsolt Pentz
@@ -26,7 +27,7 @@
 /// 	@debug is-int($map); //=> false
 /// 	@debug is-int($null); //=> false
 /// 	@debug is-int($color); //=> false
-/// @return {Boolean} является ли переданное значение числом?
+/// @return {boolean} является ли переданное значение числом?
 /// @param {*} $value - значение, которое необходимо проверить на соответствие типу `Integer`
 @function is-int($value) {
 	@return type-of($value) == number;
