@@ -20,7 +20,7 @@ $setting--strict-mode: true !default;
 /// @name $setting--strip-unit-use-sassmath [true]
 /// @since 7.0.0
 /// @access public
-/// @deprecated Использование `/` для деления вне `calc()` устарело и будет удалено в DartS ass 2.0.0.
+/// @deprecated Использование `/` для деления вне `calc()` устарело и будет удалено в DartSass 2.0.0.
 /// @link https://sass-lang.com/d/slash-div Breaking Change: Slash as Division
 /// @see {Function} strip-unit
 /// @type Boolean
