@@ -4,7 +4,8 @@
 	"description": "Большой набор миксинов и функций на языке CSS-препроцессора Sass",
 	"main": "index.scss",
 	"scripts": {
-		"test": "sass --watch test.scss:test.css"
+		"test": "sass --watch test.scss:test.css",
+		"sassdoc": "npx sassdoc . -d docs/"
 	},
 	"repository": {
 		"type": "git",
