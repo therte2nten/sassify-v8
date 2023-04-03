@@ -3,10 +3,24 @@
 @forward 'prefixes';
 @forward 'strings';
 
+/// Переменная `$setting--strict-mode` регулирует поведение
+/// вывода ошибок миксинов и функций в консоль.
+///
+/// - `$setting--strict-mode: true`: включает жесткий режим, при
+/// котором ошибки будут выводиться с помощью директивы `@error`.
+/// - `$setting--strict-mode: false`: отключает жесткий режим, а
+/// ошибки будут выводиться в консоль с помощью директивы `@warn`.
+/// ---
+/// @name $setting--strict-mode [true]
+/// @since 7.0.0
+/// @access public
+/// @type Boolean
+$setting--strict-mode: true !default;
+
 /// @name $setting--strip-unit-use-sassmath [true]
 /// @since 7.0.0
 /// @access public
-/// @deprecated Использование `/` для деления вне `calc()` устарело и будет удалено в DartS ass 2.0.0.
+/// @deprecated Использование `/` для деления вне `calc()` устарело и будет удалено в DartSass 2.0.0.
 /// @link https://sass-lang.com/d/slash-div Breaking Change: Slash as Division
 /// @see {Function} strip-unit
 /// @type Boolean

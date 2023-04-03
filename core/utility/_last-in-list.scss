@@ -1,3 +1,6 @@
+@use '../../common/invalid-value-message' as *;
+@use 'is-list' as *;
+
 /// Функция `last-in-list` выдает последний элемент в списке.
 /// ---
 /// @name last-in-list
@@ -12,5 +15,21 @@
 /// @return {*} элемент, который находится в конце списка
 /// @param {List} $list - список, из которого необходимо получить последний элемент
 @function last-in-list($list) {
-	@return nth($list, -1);
+
+	// Проверка на соответствие типу `List`:
+	@if is-list($list) == true {
+
+		// Возращаем результативное значение:
+		@return nth($list, -1);
+
+	}
+
+	// Если значение `$list` не соответствует типу `List`:
+	@else {
+
+		// Выводим сообщение о несоответствии типа:
+		@return invalid-value-message('last-in-list', $list, 'List');
+
+	}
+
 }

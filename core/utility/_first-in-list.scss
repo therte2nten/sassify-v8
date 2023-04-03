@@ -1,3 +1,6 @@
+@use '../../common/invalid-value-message' as *;
+@use 'is-list' as *;
+
 /// Функция `first-in-list` выдает первый элемент в списке.
 /// ---
 /// @name first-in-list
@@ -12,5 +15,21 @@
 /// @return {*} элемент, который находится в начале списка
 /// @param {List} $list - список, из которого необходимо получить первый элемент
 @function first-in-list($list) {
-	@return nth($list, 1);
+
+	// Проверка на соответствие типу `List`:
+	@if is-list($list) == true {
+
+		// Возращаем результативное значение:
+		@return nth($list, 1);
+
+	}
+
+	// Если значение `$list` не соответствует типу `List`:
+	@else {
+
+		// Выводим сообщение о несоответствии типа:
+		@return invalid-value-message('first-in-list', $list, 'List');
+
+	}
+
 }

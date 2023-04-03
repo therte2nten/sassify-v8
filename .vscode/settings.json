@@ -12,7 +12,8 @@
     "CONTRIBUTING.md": true,
     "LICENSE": true,
     "README.md": true,
-    "*.map": true
+    "*.map": true,
+    ".editorconfig": true
   },
   "npm-scripts.showStartNotification": false,
   "workspace.isHidden": true,

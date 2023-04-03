@@ -1,3 +1,7 @@
+@use '../../common/invalid-value-message' as *;
+@use '../../config' as config;
+@use 'is-string' as *;
+
 /// Функция `string-replace` позволяет заменить слово
 /// или части слова на что-то иное.
 /// ---
@@ -14,20 +18,28 @@
 /// @param {String} $replacement [''] - слово, которое заменит значение из `$replaceable`
 @function string-replace($string, $replaceable, $replacement: '') {
 
-	$_index: str-index($string, $replaceable);
+	@if is-string($string) {
+		$_index: str-index($string, $replaceable);
 
-	@if $_index {
-		@return str-slice($string, 1, $_index - 1)
-			+ $replacement
-			+ string-replace(
-					str-slice(
-						$string,
-						$_index + str-length($replaceable)
-					),
-					$replaceable,
-					$replacement
-				);
+		@if $_index {
+
+			@return str-slice($string, 1, $_index - 1)
+				+ $replacement
+				+ string-replace(
+						str-slice(
+							$string,
+							$_index + str-length($replaceable)
+						),
+						$replaceable,
+						$replacement
+					);
+
+		}
+
+		@return $string;
+
+	} @else {
+		@return invalid-value-message('string-replace', $string, 'String');
 	}
 
-	@return $string;
 }
