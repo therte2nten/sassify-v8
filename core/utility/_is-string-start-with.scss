@@ -1,5 +1,6 @@
 @use '../../config' as config;
 @use './is-string' as *;
+@use '../../common/invalid-value-message' as *;
 
 /// Функция `is-string-start-with` позволяет проверить, начинается
 /// ли строка с определенного фрагмента.
@@ -34,7 +35,7 @@
 
 		// Если `$string` не соответствует типу `String`,
 		// то выводим сообщение с ошибкой:
-		@error config.$string--emoji_error + ' Значение `$string: #{$string}` не соответствует типу `String`!';
+		@return invalid-value-message('is-string-start-with', $string, 'String');
 
 	}
 
