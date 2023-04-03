@@ -1,6 +1,8 @@
 *.css
 test.*
 
+sassdoc/
+
 *~
 .fuse_hidden*
 .directory
