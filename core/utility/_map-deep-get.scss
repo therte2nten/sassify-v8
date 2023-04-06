@@ -25,18 +25,18 @@
 /// @param {string} $keys... - ключи, которые надо получить
 @function map-deep-get($map, $keys...) {
 
-	$_key: null;
+	$-key: null;
 
 	// Прохожу циклом по карте и забираю значение:
 	@each $key in $keys {
 		$map: map-get($map, $key);
-		$_key: $key;
+		$-key: $key;
 	}
 
 	// Показываю предепреждение в консоль, если
-	// ключ `$_key` равен `null`:
+	// ключ `$-key` равен `null`:
 	@if type-of($map) == "null" {
-		@warn "#{config.$string--emoji_warning} Не удалось найти ключ «#{$_key}». Будет возвращено значение «null»!";
+		@warn "#{config.$string--emoji_warning} Не удалось найти ключ «#{$-key}». Будет возвращено значение «null»!";
 	}
 
 	// Возвращаю значение из карты:

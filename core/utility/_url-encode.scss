@@ -20,16 +20,16 @@
 /// @param {string} $url - ссылка, символы в которой надо заменить
 @function url-encode($url) {
 
-	$_string: $url;
+	$-string: $url;
 
-	@each $_replaceable, $_replacement in config.$default-values--url-encode_characters {
-		$_string: string-replace(
-			$_string,
-			$_replaceable,
-			$_replacement
+	@each $-replaceable, $-replacement in config.$default-values--url-encode_characters {
+		$-string: string-replace(
+			$-string,
+			$-replaceable,
+			$-replacement
 		);
 	}
 
-	@return $_string;
+	@return $-string;
 
 }

@@ -19,14 +19,14 @@
 /// @param {*} $value - число или строка, которую необходимо оставить без меры исчисления
 @function strip-unit($value) {
 
-	$_value: null;
+	$-value: null;
 
 	@if config.$setting--strip-unit-use-sassmath {
-		$_value: math.div($value, $value * 0 + 1);
+		$-value: math.div($value, $value * 0 + 1);
 	} @else {
-		$_value: $value / ($value * 0 + 1);
+		$-value: $value / ($value * 0 + 1);
 	}
 
-	@return $_value;
+	@return $-value;
 
 }
