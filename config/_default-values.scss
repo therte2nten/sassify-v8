@@ -2,7 +2,6 @@
 /// @group config/
 /// @since 7.0.0
 /// @access public
-/// @see {Mixin} amcss
 /// @type String
 $default-values--amcss-prefix: 'am-' !default;
 
@@ -10,9 +9,6 @@ $default-values--amcss-prefix: 'am-' !default;
 /// @group config/
 /// @since 7.0.0
 /// @access public
-/// @see {Mixin} bem-block
-/// @see {Mixin} bem-element
-/// @see {Mixin} bem-modifier
 /// @type Map
 $default-values--bem: (
 	element: '__',
@@ -23,7 +19,6 @@ $default-values--bem: (
 /// @group config/
 /// @since 7.0.0
 /// @access public
-/// @see {Function} url-encode
 /// @type Map
 $default-values--url-encode_characters: (
 	'!': '%21',
@@ -51,7 +46,6 @@ $default-values--url-encode_characters: (
 /// @group config/
 /// @since 7.0.0
 /// @access public
-/// @see {Function} set-initial
 /// @type Map
 $default-values--set-initial_initials: (
 	'align-content': normal,
