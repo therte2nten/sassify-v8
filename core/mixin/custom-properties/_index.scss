@@ -1,0 +1,107 @@
+/// Миксин `custom-properties` позволяет генерировать список
+/// кастомных свойств CSS из карты (`Map`).
+/// ---
+/// @name custom-properties
+/// @group core/
+/// @since 7.0.0
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @link https://github.com/therteenten/sassify/blob/develop/core/mixin/size/_index.scss Исходный код миксина
+/// @example scss Пример использования в Sass (SCSS)
+/// 	$theme: (
+/// 		color-background: #e1e1e1,
+/// 		text-color: #212121,
+/// 		text-color-h2: #454545,
+/// 		color-accent: #ff3d3d
+/// 	);
+///
+/// 	$card-variables: (
+/// 		width: 200px,
+/// 		height: 600px,
+/// 		border-radius: 8px,
+/// 		background-color: #fff,
+/// 		text-color: #000
+/// 	);
+///
+/// 	@include custom-properties($theme);
+///
+/// 	.card {
+///
+/// 		@include custom-properties($card-variables, false);
+///
+/// 		@include size(var(--width), var(--height));
+///
+/// 		border-radius: var(--border-radius);
+/// 		background-color: var(--background-color);
+/// 		color: var(--text-color);
+///
+/// 	}
+///
+/// 	.button {
+///
+/// 		@include custom-properties((
+/// 			background-color: #266bff,
+/// 			text-color: #fff,
+/// 			border-radius: 8px
+/// 		), false);
+///
+/// 		border-radius: var(--border-radius);
+/// 		background-color: var(--background-color);
+/// 		color: var(--text-color);
+///
+/// 	}
+/// @example css Результат работы миксина в CSS
+/// 	:root {
+/// 		--color-background: #e1e1e1;
+/// 		--text-color: #212121;
+/// 		--text-color-h2: #454545;
+/// 		--color-accent: #ff3d3d;
+/// 	}
+///
+/// 	.card {
+/// 		--width: 200px;
+/// 		--height: 600px;
+/// 		--border-radius: 8px;
+/// 		--background-color: #fff;
+/// 		--text-color: #000;
+/// 		width: var(--width);
+/// 		height: var(--height);
+/// 		border-radius: var(--border-radius);
+/// 		background-color: var(--background-color);
+/// 		color: var(--text-color);
+/// 	}
+///
+/// 	.button {
+/// 		--background-color: #266bff;
+/// 		--text-color: #fff;
+/// 		--border-radius: 8px;
+/// 		border-radius: var(--border-radius);
+/// 		background-color: var(--background-color);
+/// 		color: var(--text-color);
+/// 	}
+/// @param {map} $map [()] - карта, чьи пары "ключ: значение" необходимо перевести в кастомные свойства CSS
+/// @param {boolean} $create-in-root [true] - нужно ли создавать блок с кастомными свойствами в `:root`?
+@mixin custom-properties($map: (), $create-in-root: true) {
+
+	// Если значение параметра `$create-in-root` равняется
+	// значению `true`, то генерируем блок кастомных свойств
+	// CSS в `:root`:
+	@if $create-in-root == true {
+		:root {
+			@each $-key, $-value in $map {
+				--#{$-key}: #{$-value};
+			}
+		}
+	}
+
+	// Если значение параметра `$create-in-root` равняется
+	// значению `false`, то генерируем блок кастомных свойств
+	// CSS в родительском селекторе:
+	@else {
+		@each $-key, $-value in $map {
+			--#{$-key}: #{$-value};
+		}
+	}
+
+}
+
