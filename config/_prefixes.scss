@@ -4,3 +4,10 @@
 /// @access public
 /// @type List
 $prefixes--all: webkit khtml moz ms o !default;
+
+/// @name prefixes--user-select
+/// @group config/
+/// @since 7.0.0
+/// @access public
+/// @type List
+$prefixes--user-select: webkit moz ms !default;
