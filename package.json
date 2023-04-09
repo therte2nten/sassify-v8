@@ -1,6 +1,6 @@
 {
 	"name": "@therteenten/sassify",
-	"version": "7.0.0",
+	"version": "7.0.1",
 	"description": "Большой набор миксинов и функций на языке CSS-препроцессора Sass",
 	"main": "index.scss",
 	"scripts": {
@@ -8,7 +8,7 @@
 		"sassdoc": "npx sassdoc . -d docs/"
 	},
 	"publishConfig": {
-    "ignore": [
+		"ignore": [
 			".github/",
 			".vscode/",
 			"docs/",
@@ -19,7 +19,7 @@
 			"CODE_OF_CONDUCT.md",
 			"CODEOWNERS",
 			"CONTRIBUTING.md"
-    ]
+		]
 	},
 	"repository": {
 		"type": "git",
