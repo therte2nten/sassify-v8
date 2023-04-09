@@ -1,11 +1,15 @@
 {
 	"name": "@therteenten/sassify",
-	"version": "7.0.1",
+	"version": "7.0.0",
 	"description": "Большой набор миксинов и функций на языке CSS-препроцессора Sass",
 	"main": "index.scss",
 	"scripts": {
 		"test": "sass --watch test.scss:test.css",
-		"sassdoc": "npx sassdoc . -d docs/"
+		"sassdoc": "npx sassdoc . -d docs/",
+		"npm:publish": "npm publish",
+		"npm:version-major": "npm version major",
+		"npm:version-minor": "npm version minor",
+		"npm:version-patch": "npm version patch"
 	},
 	"publishConfig": {
 		"ignore": [
