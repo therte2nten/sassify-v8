@@ -119,6 +119,6 @@ Sassify написан на Sass, а значит и подключать наб
 ### Демонстрационное видео
 Я также выложил [демонстрационное видео](https://youtu.be/DkYvbaIM_mA) на YouTube, в котором показал весь процесс подключения пакета Sassify:
 
-[![Демонстрационное видео](https://github.com/therteenten/sassify/blob/main/.github/images/sassify_banner_demo_youtube.png?raw=true)](https://youtu.be/DkYvbaIM_mA)
+[![Демонстрационное видео](https://github.com/therteenten/sassify/blob/develop/.github/images/sassify_banner_demo_youtube.png?raw=true)](https://youtu.be/DkYvbaIM_mA)
 
 ...
