@@ -1,9 +1,9 @@
-/// @name valid-values--size-mode
+/// @name vvalues--size
 /// @group config/
 /// @since 7.0.0
 /// @access public
 /// @type List
-$valid-values--size-mode: normal max min !default;
+$vvalues--size: normal max min !default;
 
 /// #### `none`
 /// Текст элемента и вложенных в него элементов не
@@ -32,10 +32,10 @@ $valid-values--size-mode: normal max min !default;
 /// Позволяет начать выбор внутри элемента; однако, выбор
 /// будет содержаться внутри границ данного элемента.
 /// ---
-/// @name valid-values--user-select
+/// @name vvalues--user-select
 /// @group config/
 /// @since 7.0.0
 /// @access public
 /// @link https://developer.mozilla.org/ru/docs/Web/CSS/user-select user-select - CSS | MDN
 /// @type List
-$valid-values--user-select: auto none text all contain inherit initial revert revert-layer unset !default;
+$vvalues--user-select: auto none text all contain inherit initial revert revert-layer unset !default;

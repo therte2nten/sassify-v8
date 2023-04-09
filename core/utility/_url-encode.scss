@@ -22,7 +22,7 @@
 
 	$-string: $url;
 
-	@each $-replaceable, $-replacement in config.$default-values--url-encode_characters {
+	@each $-replaceable, $-replacement in config.$dvalues--url-encode__characters {
 		$-string: string-replace(
 			$-string,
 			$-replaceable,

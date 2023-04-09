@@ -56,12 +56,15 @@
 /// 	}
 /// @param {number | string} $width - ширина
 /// @param {number | string} $height [$width] - высота (по умолчанию наследуется значение из `$width`)
-/// @param {string} $mode [normal] - режим работы миксина
-@mixin size($width, $height: $width, $mode: normal) {
+/// @param {string} $mode [config.$dvalues--size__mode] - режим работы миксина
+@mixin size(
+	$width,
+	$height: $width,
+	$mode: config.$dvalues--size__mode) {
 
 	// Для начала проверяем есть ли значение из `$mode` в списке
-	// `config.$valid-values--size-mode`:
-	@if is-list-contains($mode, config.$valid-values--size-mode) {
+	// `config.$vvalues--size`:
+	@if is-list-contains($mode, config.$vvalues--size) {
 
 		// Если есть, то проверяем след.:
 		// 	1. Если `$mode` содержит значение `normal`,
@@ -80,14 +83,14 @@
 
 	}
 
-	// Если в списке `config.$valid-values--size-mode` нет
+	// Если в списке `config.$vvalues--size` нет
 	// значения из параметра `$mode`, то отображаем сообщение
 	// в консоль:
 	@else {
 		@include invalid-value-message(
 			'size',
 			$mode,
-			config.$valid-values--size-mode
+			config.$vvalues--size
 		);
 	}
 

@@ -33,13 +33,13 @@
 
 		// Если включен "жесткий режим", то выводим сообщение
 		// в консоль с помощью директивы `@error`:
-		@error '#{config.$string--emoji_error} #{$-message}';
+		@error '#{config.$string--emoji__error} #{$-message}';
 
 	} @else {
 
 		// Если "жесткий режим" выключен, то отображаем
 		// сообщение об ошибке через директиву `@warn`:
-		@warn '#{config.$string--emoji_warning} #{$-message}';
+		@warn '#{config.$string--emoji__warning} #{$-message}';
 
 		// Возвращаем пустую строку:
 		@return null;

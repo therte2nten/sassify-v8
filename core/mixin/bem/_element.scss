@@ -36,13 +36,13 @@
 
 	$-selector: &;
 
-	@if contains-modifier($-selector, map-deep-get(config.$default-values--bem, modifier)) {
+	@if contains-modifier($-selector, map-deep-get(config.$dvalues--bem, modifier)) {
 
-		$block: get-block($-selector, map-deep-get(config.$default-values--bem, modifier));
+		$block: get-block($-selector, map-deep-get(config.$dvalues--bem, modifier));
 
 		@at-root {
 			#{$-selector} {
-				#{$block + map-deep-get(config.$default-values--bem, element) + $element} {
+				#{$block + map-deep-get(config.$dvalues--bem, element) + $element} {
 					@content;
 				}
 			}
@@ -51,7 +51,7 @@
 	} @else {
 
 		@at-root {
-			#{$-selector + map-deep-get(config.$default-values--bem, element) + $element } {
+			#{$-selector + map-deep-get(config.$dvalues--bem, element) + $element } {
 				@content;
 			}
 		}

@@ -21,7 +21,7 @@
 
 	$-value: null;
 
-	@if config.$setting--strip-unit-use-sassmath {
+	@if config.$setting--strip-unit__use-sassmath {
 		$-value: math.div($value, $value * 0 + 1);
 	} @else {
 		$-value: $value / ($value * 0 + 1);

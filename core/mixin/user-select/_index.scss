@@ -31,8 +31,8 @@
 /// 		-ms-user-select: all;
 /// 		user-select: all;
 /// 	}
-/// @param {string} $value [auto] - значение CSS-свойства `user-selet`
-@mixin user-select($value: auto) {
+/// @param {string} $value [config.$dvalues--user-select] - значение CSS-свойства `user-select`
+@mixin user-select($value: config.$dvalues--user-select) {
 
 	// С помощью функции `is-string` проверяем
 	// соответствие значения параметра `$value`
@@ -41,11 +41,11 @@
 
 		// Если значение параметра `$value` соответствует
 		// Sass-типу `String`, то проверяем наличие значения
-		// параметра `$value` в списке `config.$valid-values--user-select`:
-		@if is-list-contains($value, config.$valid-values--user-select) {
+		// параметра `$value` в списке `config.$vvalues--user-select`:
+		@if is-list-contains($value, config.$vvalues--user-select) {
 
 			// Если значение параметра `$value` содержится в
-			// списке `config.$valid-values--user-select`, то с помощью
+			// списке `config.$vvalues--user-select`, то с помощью
 			// миксина `prefixer` генерируем CSS-свойство со всеми нужными
 			// браузерными префиксами:
 			@include prefixer(
@@ -57,10 +57,10 @@
 		}
 
 		// Если значение параметра `$value` не содержится в
-		// списке `config.$valid-values--user-select`, то
+		// списке `config.$vvalues--user-select`, то
 		// выводим сообщение об ошибке:
 		@else {
-			@include invalid-value-message('user-select', $value, config.$valid-values--user-select);
+			@include invalid-value-message('user-select', $value, config.$vvalues--user-select);
 		}
 
 	}

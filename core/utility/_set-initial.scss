@@ -13,16 +13,16 @@
 /// 	@debug set-initial(clip); //=> auto
 /// 	@debug set-initial(border-radius); //=> 0
 /// 	@debug set-initial(animation); //=> none 0s ease 0s 1 normal none running
-/// 	@debug set-initial(unknown); //=> Error: 🟥 Свойство «unknown» отсутствует в карте `$default-values--set-initial_initials`!
+/// 	@debug set-initial(unknown); //=> Error: 🟥 Свойство «unknown» отсутствует в карте `$dvalues--set-initial`!
 /// @return {*} дефолтное значение того или иного CSS-свойства
 /// @param {string} $property - CSS-свойство, дефолтное значение которого нужно получить
 @function set-initial($property) {
-	@if map-has-key(config.$default-values--set-initial_initials, $property) {
+	@if map-has-key(config.$dvalues--set-initial, $property) {
 		@return map-get(
-			config.$default-values--set-initial_initials,
+			config.$dvalues--set-initial,
 			$property
 		);
 	} @else {
-		@error #{config.$string--emoji_error}  + ' Свойство «#{$property}» отсутствует в карте `$default-values--set-initial_initials`!';
+		@error #{config.$string--emoji__error}  + ' Свойство «#{$property}» отсутствует в карте `$dvalues--set-initial`!';
 	}
 }

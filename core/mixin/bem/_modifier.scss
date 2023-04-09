@@ -40,7 +40,7 @@
 /// @param {string} $modifier - название селектора модификатора
 @mixin bem-modifier($modifier) {
 	@at-root {
-		#{&}#{ map-deep-get(config.$default-values--bem, modifier) + $modifier } {
+		#{&}#{ map-deep-get(config.$dvalues--bem, modifier) + $modifier } {
 			@content;
 		}
 	}

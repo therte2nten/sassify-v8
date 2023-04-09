@@ -40,11 +40,11 @@
 /// 	}
 /// @param {string} $module - название модуля
 /// @param {string | number} $trait [null] - значение модуля
-/// @param {string} prefix [config.$default-values--amcss-prefix] - префикс для атрибута
+/// @param {string} prefix [config.$dvalues--amcss__prefix] - префикс для атрибута
 @mixin amcss(
 	$module,
 	$trait: null,
-	$prefix: config.$default-values--amcss-prefix) {
+	$prefix: config.$dvalues--amcss__prefix) {
 
 	@if $trait != null {
 		[#{$prefix}#{$module}~="#{$trait}"]{
