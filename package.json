@@ -7,6 +7,20 @@
 		"test": "sass --watch test.scss:test.css",
 		"sassdoc": "npx sassdoc . -d docs/"
 	},
+	"publishConfig": {
+    "ignore": [
+			".github/",
+			".vscode/",
+			"docs/",
+			"node_modules/",
+			".editorconfig",
+			".gitignore",
+			".npmrc",
+			"CODE_OF_CONDUCT.md",
+			"CODEOWNERS",
+			"CONTRIBUTING.md"
+    ]
+	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/therteenten/sassify.git"
