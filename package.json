@@ -11,20 +11,6 @@
 		"npm:version-minor": "npm version minor",
 		"npm:version-patch": "npm version patch"
 	},
-	"publishConfig": {
-		"ignore": [
-			".github/",
-			".vscode/",
-			"docs/",
-			"node_modules/",
-			".editorconfig",
-			".gitignore",
-			".npmrc",
-			"CODE_OF_CONDUCT.md",
-			"CODEOWNERS",
-			"CONTRIBUTING.md"
-		]
-	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/therteenten/sassify.git"

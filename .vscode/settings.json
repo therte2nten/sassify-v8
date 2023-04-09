@@ -13,7 +13,8 @@
     "LICENSE": true,
     "README.md": true,
     "*.map": true,
-    ".editorconfig": true
+    ".editorconfig": true,
+    ".npmignore": true
   },
   "npm-scripts.showStartNotification": false,
   "workspace.isHidden": true,

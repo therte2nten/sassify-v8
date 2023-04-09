@@ -1,0 +1,10 @@
+.github/
+.vscode/
+docs/
+node_modules/
+.editorconfig
+.gitignore
+.npmrc
+CODE_OF_CONDUCT.md
+CODEOWNERS
+CONTRIBUTING.md
