@@ -11,3 +11,10 @@ $prefixes--all: webkit khtml moz ms o !default;
 /// @access public
 /// @type List
 $prefixes--user-select: webkit moz ms !default;
+
+/// @name prefixes--tab-size
+/// @group config/
+/// @since 7.0.0
+/// @access public
+/// @type List
+$prefixes--tab-size: moz o !default;
