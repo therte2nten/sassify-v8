@@ -12,7 +12,7 @@
 
 @forward 'core/utility/color-shade';
 @forward 'core/utility/color-tint';
-@forward 'core/utility/first-in-list';
+@forward 'core/utility/list-first-item';
 @forward 'core/utility/is-boolean';
 @forward 'core/utility/is-int';
 @forward 'core/utility/is-list';
@@ -23,7 +23,7 @@
 @forward 'core/utility/is-string-end-with';
 @forward 'core/utility/is-string-start-with';
 @forward 'core/utility/is-time';
-@forward 'core/utility/last-in-list';
+@forward 'core/utility/list-last-item';
 @forward 'core/utility/map-deep-get';
 @forward 'core/utility/map-deep-set';
 @forward 'core/utility/number-invert';
