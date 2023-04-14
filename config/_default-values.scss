@@ -1,3 +1,12 @@
+/// Размер блока для миксина `visually-hidden`
+/// ---
+/// @name dvalues--visually-hidden__size
+/// @group config/
+/// @since 7.0.0
+/// @access public
+/// @type String
+$dvalues--visually-hidden__size: 1px !default;
+
 /// Режим работы миксина `size`
 /// ---
 /// @name dvalues--size__mode
