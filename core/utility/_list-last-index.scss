@@ -1,0 +1,40 @@
+@use '../../common/invalid-value-message' as *;
+@use 'is-list' as *;
+
+/// Функция `list-last-index` выдает индекс последнего
+/// элемента в списке.
+/// ---
+/// @name list-last-index
+/// @group core/
+/// @since 7.0.0
+/// @access public
+/// @author Kitty Giraudel
+/// @link https://github.com/KittyGiraudel GitHub
+/// @link https://kittygiraudel.com/2013/08/08/advanced-sass-list-functions/ Исходник функции
+/// @example scss Пример использования в Sass (SCSS)
+/// 	$list: firefox safari edge chrome ie;
+///
+/// 	@debug list-last-index($list, chrome); //=> Debug: 4
+/// 	@debug list-last-index($list, ie); //=> Debug: 5
+/// 	@debug list-last-index($list, safari); //=> Debug: 2
+///
+/// 	$list2: apple google microsoft google samsung microsoft;
+///
+/// 	@debug list-last-index($list2, google); //=> Debug: 4
+/// 	@debug list-last-index($list2, microsoft); //=> Debug: 6
+/// @return {number} индекс элемента в списке
+/// @param {list} $list - список, в котором будет происходить индексация
+/// @param {string | number} $value - значение, которое нужно индексировать
+@function list-last-index($list, $value) {
+
+  $-index: null;
+
+  @for $-i from 1 through length($list) {
+    @if nth($list, $-i) == $value {
+      $-index: $-i;
+    }
+  }
+
+  @return $-index;
+
+}
