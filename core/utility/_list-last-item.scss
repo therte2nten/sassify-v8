@@ -1,21 +1,21 @@
 @use '../../common/invalid-value-message' as *;
 @use 'is-list' as *;
 
-/// Функция `last-in-list` выдает последний элемент в списке.
+/// Функция `list-last-item` выдает последний элемент в списке.
 /// ---
-/// @name last-in-list
+/// @name list-last-item
 /// @group core/
 /// @since 7.0.0
 /// @access public
 /// @author Sindre Sorhus
 /// @link https://github.com/sindresorhus GitHub
 /// @example scss Пример использования в Sass (SCSS)
-/// 	@debug last-in-list((1, 2, 3)); //=> 3
-/// 	@debug last-in-list((3, 2, 1)); //=> 1
-/// 	@debug last-in-list((red, blue, green)); //=> green
+/// 	@debug list-last-item((1, 2, 3)); //=> 3
+/// 	@debug list-last-item((3, 2, 1)); //=> 1
+/// 	@debug list-last-item((red, blue, green)); //=> green
 /// @return {*} элемент, который находится в конце списка
 /// @param {list} $list - список, из которого необходимо получить последний элемент
-@function last-in-list($list) {
+@function list-last-item($list) {
 
 	// Проверка на соответствие типу `List`:
 	@if is-list($list) == true {
@@ -29,7 +29,7 @@
 	@else {
 
 		// Выводим сообщение о несоответствии типа:
-		@return invalid-value-message('last-in-list', $list, 'List');
+		@return invalid-value-message('list-last-item', $list, 'List');
 
 	}
 
