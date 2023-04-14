@@ -1,7 +1,7 @@
-/// Функция `is-int` проверяет значение на соответствие
+/// Функция `is-number` проверяет значение на соответствие
 /// типу `Integer` и возращает `true` или `false`.
 /// ---
-/// @name is-int
+/// @name is-number
 /// @group core/
 /// @since 7.0.0
 /// @access public
@@ -20,15 +20,15 @@
 /// 	$null: null;
 /// 	$color: #fff;
 ///
-/// 	@debug is-int($boolean); //=> false
-/// 	@debug is-int($number); //=> true
-/// 	@debug is-int($string); //=> false
-/// 	@debug is-int($list); //=> false
-/// 	@debug is-int($map); //=> false
-/// 	@debug is-int($null); //=> false
-/// 	@debug is-int($color); //=> false
+/// 	@debug is-number($boolean); //=> false
+/// 	@debug is-number($number); //=> true
+/// 	@debug is-number($string); //=> false
+/// 	@debug is-number($list); //=> false
+/// 	@debug is-number($map); //=> false
+/// 	@debug is-number($null); //=> false
+/// 	@debug is-number($color); //=> false
 /// @return {boolean} является ли переданное значение числом?
 /// @param {*} $value - значение, которое необходимо проверить на соответствие типу `Integer`
-@function is-int($value) {
+@function is-number($value) {
 	@return type-of($value) == number;
 }
