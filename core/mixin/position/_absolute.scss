@@ -63,10 +63,10 @@
 /// 	.block-position-absolute {
 /// 		position: absolute;
 /// 	}
-/// @param {number} $side-top [null]
-/// @param {number} $side-right [null]
-/// @param {number} $side-bottom [null]
-/// @param {number} $side-left [null]
+/// @param {string | number} $side-top [null]
+/// @param {string | number} $side-right [null]
+/// @param {string | number} $side-bottom [null]
+/// @param {string | number} $side-left [null]
 @mixin position-absolute(
 	$side-top: null,
 	$side-right: null,

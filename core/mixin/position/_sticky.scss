@@ -54,7 +54,7 @@
 /// 		left: 5px;
 /// 	}
 /// @param {string} $side [config.$dvalues--position-sticky__side] - сторона "прилипания"
-/// @param {number} $side-offset [config.$dvalues--position-sticky__side-offset] - отступ от стороны "прилипания"
+/// @param {string | number} $side-offset [config.$dvalues--position-sticky__side-offset] - отступ от стороны "прилипания"
 @mixin position-sticky(
 	$side: config.$dvalues--position-sticky__side,
 	$side-offset: config.$dvalues--position-sticky__side-offset) {
