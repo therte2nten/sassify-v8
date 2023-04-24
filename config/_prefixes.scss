@@ -5,6 +5,13 @@
 /// @type List
 $prefixes--all: webkit khtml moz ms o !default;
 
+/// @name prefixes--position-sticky
+/// @group config/
+/// @since 7.0.0
+/// @access public
+/// @type List
+$prefixes--position-sticky: webkit !default;
+
 /// @name prefixes--user-select
 /// @group config/
 /// @since 7.0.0

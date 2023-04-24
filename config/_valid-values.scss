@@ -1,3 +1,59 @@
+/// #### `static`
+/// Это значение позволяет элементу находиться в обычном его
+/// состоянии, расположенном на своём месте в документе. Свойства
+/// `top`, `right`, `bottom`, `left` и `z-index` не применяются к данному
+/// элементу. Это значение по умолчанию.
+///
+/// #### `relative`
+/// Элемент позиционируется в соответствии с нормальным потоком
+/// документа, а затем смещается относительно себя на основе
+/// значений `top`, `right`, `bottom` и `left`. Смещение не влияет на положение
+/// любых других элементов; таким образом, пространство, заданное для
+/// элемента в макете страницы, такое же, как если бы позиция была `static`.
+/// Это значение создаёт новый [контекст наложения](https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context),
+/// когда значение `z-index` не `auto`. Его влияние на элементы `table-*-group`,
+/// `table-row`, `table-column`, `table-cell` и `table-caption` не определено.
+///
+/// #### `absolute`
+/// Элемент удаляется из обычного потока документов, и для элемента в макете страницы
+/// не создаётся пробела. Он расположен относительно его ближайшего относительно
+/// позиционированного предка, если таковой имеется; в противном случае он
+/// помещается относительно исходного [содержащего блока](https://developer.mozilla.org/ru/docs/Web/CSS/Containing_block).
+/// Его конечная позиция определяется значениями `top`, `right`, `bottom`, и `left`.
+/// Это значение создаёт новый [контекст наложения](https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context),
+/// когда значение `z-index` не `auto`. Поля абсолютно позиционированных коробок не
+/// [сворачиваются](https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing) с другими полями.
+///
+/// #### `fixed`
+/// Элемент выбивается из обычного потока документа, и для элемента в макете страницы
+/// не создаётся пространство. Он позиционируется относительно исходного [содержащего блока](https://developer.mozilla.org/ru/docs/Web/CSS/Containing_block),
+/// установленного [`viewport`](https://developer.mozilla.org/ru/docs/Glossary/Viewport), за
+/// исключением случаев, когда один из его предков имеет свойство `transform`, `perspective`,
+/// или `filter`, установленное на что-то иное, кроме none (см. [CSS Transforms Spec](https://www.w3.org/TR/css-transforms-1/#propdef-transform)), и
+/// в этом случае этот предок ведёт себя как содержащий блок. (Обратите внимание,
+/// что существуют несогласованности браузера с `perspective` и `filter`, способствующими
+/// содержанию формирования блоков.) Его конечная позиция определяется значениями `top`,
+/// `right`, `bottom` и `left`. Это значение всегда создаёт новый [контекст наложения](https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context).
+/// В печатных документах элемент помещается в одно и то же положение на каждой странице.
+///
+/// #### `sticky`
+/// Элемент позиционируется в соответствии с нормальным потоком документа, а затем
+/// смещается относительно его ближайшего прокручивающего предка и [содержащего блока](https://developer.mozilla.org/ru/docs/Web/CSS/Containing_block)
+/// (ближайший родительский уровень блока), включая элементы, связанные с таблицей,
+/// на основе значений `top`, `right`, `bottom`, и `left`. Смещение не влияет на положение любых других
+/// элементов.Это значение всегда создаёт новый [контекст наложения](https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context).
+/// Обратите внимание, что липкий элемент «прилипает» к его ближайшему предшественнику, имеющему
+/// «механизм прокрутки» (созданный при `overflow` равном `hidden`, `scroll`, `auto` или `overlay`), даже
+/// если тот не является ближайшим фактически прокручивающим предком. Это эффективно препятствует
+/// любому «липкому» поведению (см. [Github issue on W3C CSSWG](https://github.com/w3c/csswg-drafts/issues/865)).
+/// ---
+/// @name vvalues--position
+/// @group config/
+/// @since 7.0.0
+/// @access public
+/// @type List
+$vvalues--position: static relative absolute fixed sticky inherit initial revert revert-layer unset !default;
+
 /// @name vvalues--tab-size
 /// @group config/
 /// @since 7.0.0
