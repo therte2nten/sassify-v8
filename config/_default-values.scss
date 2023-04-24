@@ -7,13 +7,31 @@
 /// @type String
 $dvalues--position: static !default;
 
+/// Значение `$side` для миксина `position-sticky`
+/// ---
+/// @name dvalues--position-sticky__side
+/// @group config/
+/// @since 7.0.0
+/// @access public
+/// @type String
+$dvalues--position-sticky__side: top !default;
+
+/// Значение `$side-offset` для миксина `position-sticky`
+/// ---
+/// @name dvalues--position-sticky__side-offset
+/// @group config/
+/// @since 7.0.0
+/// @access public
+/// @type Number
+$dvalues--position-sticky__side-offset: 0 !default;
+
 /// Значение по умолчанию для CSS-свойства `tab-size`
 /// ---
 /// @name dvalues--tab-size
 /// @group config/
 /// @since 7.0.0
 /// @access public
-/// @type String
+/// @type Number
 $dvalues--tab-size: 8 !default;
 
 /// Размер блока для миксина `visually-hidden`
@@ -22,7 +40,7 @@ $dvalues--tab-size: 8 !default;
 /// @group config/
 /// @since 7.0.0
 /// @access public
-/// @type String
+/// @type Number
 $dvalues--visually-hidden__size: 1px !default;
 
 /// Режим работы миксина `size`
@@ -40,7 +58,7 @@ $dvalues--size__mode: normal !default;
 /// @group config/
 /// @since 7.0.0
 /// @access public
-/// @type String
+/// @type Boolean
 $dvalues--prefixer__prefix-value: false !default;
 
 /// Сохранять исходный вариант CSS-свойтсва без браузерного префикса?
@@ -49,7 +67,7 @@ $dvalues--prefixer__prefix-value: false !default;
 /// @group config/
 /// @since 7.0.0
 /// @access public
-/// @type String
+/// @type Boolean
 $dvalues--prefixer__save-unprefixed-property: true !default;
 
 /// Значение CSS-свойства `user-select` по умолчанию

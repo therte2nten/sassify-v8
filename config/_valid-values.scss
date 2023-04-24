@@ -1,3 +1,10 @@
+/// @name vvalues--position-sticky__sides
+/// @group config/
+/// @since 7.0.0
+/// @access public
+/// @type List
+$vvalues--position-sticky__sides: top right bottom left !default;
+
 /// #### `static`
 /// Это значение позволяет элементу находиться в обычном его
 /// состоянии, расположенном на своём месте в документе. Свойства
