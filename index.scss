@@ -7,15 +7,15 @@
 @forward 'core/mixin/custom-properties';
 @forward 'core/mixin/custom-properties/use';
 @forward 'core/mixin/position';
-@forward 'core/mixin/position/sticky';
 @forward 'core/mixin/position/absolute';
-@forward 'core/mixin/position/relative';
 @forward 'core/mixin/position/fixed';
+@forward 'core/mixin/position/relative';
+@forward 'core/mixin/position/sticky';
 @forward 'core/mixin/prefixer';
 @forward 'core/mixin/size';
+@forward 'core/mixin/tab-size';
 @forward 'core/mixin/user-select';
 @forward 'core/mixin/visually-hidden';
-@forward 'core/mixin/tab-size';
 
 @forward 'core/utility/color-shade';
 @forward 'core/utility/color-tint';
