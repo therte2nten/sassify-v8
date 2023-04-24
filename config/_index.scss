@@ -15,7 +15,7 @@
 /// @group config/
 /// @since 7.0.0
 /// @access public
-/// @type Boolean
+/// @type boolean
 $setting--strict-mode: true !default;
 
 /// @name setting--strip-unit__use-sassmath
@@ -24,5 +24,5 @@ $setting--strict-mode: true !default;
 /// @access public
 /// @deprecated Использование `/` для деления вне `calc()` устарело и будет удалено в DartSass 2.0.0.
 /// @link https://sass-lang.com/d/slash-div Breaking Change: Slash as Division
-/// @type Boolean
+/// @type boolean
 $setting--strip-unit__use-sassmath: true !default;

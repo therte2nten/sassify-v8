@@ -50,11 +50,11 @@
 /// 		position: sticky;
 /// 		top: 20px;
 /// 	}
-/// @param {String} $position [config.$dvalues--position] - тип позиционирования
-/// @param {String} $top [null] - конечное местоположение элемента относительно верхней стенки
-/// @param {String} $right [null] - конечное местоположение элемента относительно правой стенки
-/// @param {String} $bottom [null] - конечное местоположение элемента относительно низа
-/// @param {String} $left [null] - конечное местоположение элемента относительно левой стенки
+/// @param {string} $position [config.$dvalues--position] - тип позиционирования
+/// @param {string} $top [null] - конечное местоположение элемента относительно верхней стенки
+/// @param {string} $right [null] - конечное местоположение элемента относительно правой стенки
+/// @param {string} $bottom [null] - конечное местоположение элемента относительно низа
+/// @param {string} $left [null] - конечное местоположение элемента относительно левой стенки
 @mixin position($position: config.$dvalues--position, $top: null, $right: null, $bottom: null, $left: null) {
 
 	// С помощью функции `is-list-contains` проверяем

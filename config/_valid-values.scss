@@ -2,7 +2,7 @@
 /// @group config/
 /// @since 7.0.0
 /// @access public
-/// @type List
+/// @type list
 $vvalues--position-sticky__sides: top right bottom left !default;
 
 /// #### `static`
@@ -58,21 +58,21 @@ $vvalues--position-sticky__sides: top right bottom left !default;
 /// @group config/
 /// @since 7.0.0
 /// @access public
-/// @type List
+/// @type list
 $vvalues--position: static relative absolute fixed sticky inherit initial revert revert-layer unset !default;
 
 /// @name vvalues--tab-size
 /// @group config/
 /// @since 7.0.0
 /// @access public
-/// @type List
+/// @type list
 $vvalues--tab-size: '<Number>' inherit initial revert revert-layer unset !default;
 
 /// @name vvalues--size
 /// @group config/
 /// @since 7.0.0
 /// @access public
-/// @type List
+/// @type list
 $vvalues--size: normal max min !default;
 
 /// #### `none`
@@ -107,5 +107,5 @@ $vvalues--size: normal max min !default;
 /// @since 7.0.0
 /// @access public
 /// @link https://developer.mozilla.org/ru/docs/Web/CSS/user-select user-select - CSS | MDN
-/// @type List
+/// @type list
 $vvalues--user-select: auto none text all contain inherit initial revert revert-layer unset !default;

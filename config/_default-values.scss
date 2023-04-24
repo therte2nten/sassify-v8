@@ -4,7 +4,7 @@
 /// @group config/
 /// @since 7.0.0
 /// @access public
-/// @type String
+/// @type string
 $dvalues--position: static !default;
 
 /// Значение `$side` для миксина `position-sticky`
@@ -13,7 +13,7 @@ $dvalues--position: static !default;
 /// @group config/
 /// @since 7.0.0
 /// @access public
-/// @type String
+/// @type string
 $dvalues--position-sticky__side: top !default;
 
 /// Значение `$side-offset` для миксина `position-sticky`
@@ -22,7 +22,7 @@ $dvalues--position-sticky__side: top !default;
 /// @group config/
 /// @since 7.0.0
 /// @access public
-/// @type Number
+/// @type number
 $dvalues--position-sticky__side-offset: 0 !default;
 
 /// Значение по умолчанию для CSS-свойства `tab-size`
@@ -31,7 +31,7 @@ $dvalues--position-sticky__side-offset: 0 !default;
 /// @group config/
 /// @since 7.0.0
 /// @access public
-/// @type Number
+/// @type number
 $dvalues--tab-size: 8 !default;
 
 /// Размер блока для миксина `visually-hidden`
@@ -40,7 +40,7 @@ $dvalues--tab-size: 8 !default;
 /// @group config/
 /// @since 7.0.0
 /// @access public
-/// @type Number
+/// @type number
 $dvalues--visually-hidden__size: 1px !default;
 
 /// Режим работы миксина `size`
@@ -49,7 +49,7 @@ $dvalues--visually-hidden__size: 1px !default;
 /// @group config/
 /// @since 7.0.0
 /// @access public
-/// @type String
+/// @type string
 $dvalues--size__mode: normal !default;
 
 /// Добавлять префиксы не к CSS-свойству, а к его значению?
@@ -58,7 +58,7 @@ $dvalues--size__mode: normal !default;
 /// @group config/
 /// @since 7.0.0
 /// @access public
-/// @type Boolean
+/// @type boolean
 $dvalues--prefixer__prefix-value: false !default;
 
 /// Сохранять исходный вариант CSS-свойтсва без браузерного префикса?
@@ -67,7 +67,7 @@ $dvalues--prefixer__prefix-value: false !default;
 /// @group config/
 /// @since 7.0.0
 /// @access public
-/// @type Boolean
+/// @type boolean
 $dvalues--prefixer__save-unprefixed-property: true !default;
 
 /// Значение CSS-свойства `user-select` по умолчанию
@@ -76,7 +76,7 @@ $dvalues--prefixer__save-unprefixed-property: true !default;
 /// @group config/
 /// @since 7.0.0
 /// @access public
-/// @type String
+/// @type string
 $dvalues--user-select: auto !default;
 
 /// Префикс для атрибута
@@ -85,7 +85,7 @@ $dvalues--user-select: auto !default;
 /// @group config/
 /// @since 7.0.0
 /// @access public
-/// @type String
+/// @type string
 $dvalues--amcss__prefix: 'am-' !default;
 
 /// Настройка миксинов `bem-block`, `bem-element` и
@@ -95,7 +95,7 @@ $dvalues--amcss__prefix: 'am-' !default;
 /// @group config/
 /// @since 7.0.0
 /// @access public
-/// @type Map
+/// @type map
 /// @prop {string} $dvalues--bem.element  ['__'] - разделитель для элемента
 /// @prop {string} $dvalues--bem.modifier  ['--'] - разделитель для модификатора
 $dvalues--bem: (
@@ -107,7 +107,7 @@ $dvalues--bem: (
 /// @group config/
 /// @since 7.0.0
 /// @access public
-/// @type Map
+/// @type map
 $dvalues--url-encode__characters: (
 	'!': '%21',
 	'#': '%23',
@@ -134,7 +134,7 @@ $dvalues--url-encode__characters: (
 /// @group config/
 /// @since 7.0.0
 /// @access public
-/// @type Map
+/// @type map
 /// @prop {string} $dvalues--set-initial.align-content ['normal']
 /// @prop {string} $dvalues--set-initial.align-items ['normal']
 /// @prop {string} $dvalues--set-initial.align-self ['auto']

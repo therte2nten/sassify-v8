@@ -2,26 +2,26 @@
 /// @group config/
 /// @since 7.0.0
 /// @access public
-/// @type List
+/// @type list
 $prefixes--all: webkit khtml moz ms o !default;
 
 /// @name prefixes--position-sticky
 /// @group config/
 /// @since 7.0.0
 /// @access public
-/// @type List
+/// @type list
 $prefixes--position-sticky: webkit !default;
 
 /// @name prefixes--user-select
 /// @group config/
 /// @since 7.0.0
 /// @access public
-/// @type List
+/// @type list
 $prefixes--user-select: webkit moz ms !default;
 
 /// @name prefixes--tab-size
 /// @group config/
 /// @since 7.0.0
 /// @access public
-/// @type List
+/// @type list
 $prefixes--tab-size: moz o !default;
