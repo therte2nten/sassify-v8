@@ -1,0 +1,87 @@
+@use '../../../config' as config;
+
+/// Миксин `keyframes` позволяет генерировать CSS-правило
+/// `@keyframes` со всеми нужными браузерными префиксами.
+/// ---
+/// @name keyframes
+/// @group core/
+/// @since 7.0.0
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @link https://github.com/therteenten/sassify/blob/develop/core/mixin/keyframes/_index.scss Исходный код миксина
+/// @example scss Пример использования в Sass (SCSS)
+/// 	@include keyframes(slideIn) {
+/// 		from {
+/// 			transform: translateX(0%);
+/// 		}
+///
+/// 		to {
+/// 			transform: translateX(100%);
+/// 		}
+/// 	}
+/// @example css Результат работы миксина в CSS
+/// 	@-webkit-keyframes slideIn {
+/// 		from {
+/// 			transform: translateX(0%);
+/// 		}
+/// 		to {
+/// 			transform: translateX(100%);
+/// 		}
+/// 	}
+/// 	@-moz-keyframes slideIn {
+/// 		from {
+/// 			transform: translateX(0%);
+/// 		}
+/// 		to {
+/// 			transform: translateX(100%);
+/// 		}
+/// 	}
+/// 	@-ms-keyframes slideIn {
+/// 		from {
+/// 			transform: translateX(0%);
+/// 		}
+/// 		to {
+/// 			transform: translateX(100%);
+/// 		}
+/// 	}
+/// 	@-o-keyframes slideIn {
+/// 		from {
+/// 			transform: translateX(0%);
+/// 		}
+/// 		to {
+/// 			transform: translateX(100%);
+/// 		}
+/// 	}
+/// 	@keyframes slideIn {
+/// 		from {
+/// 			transform: translateX(0%);
+/// 		}
+/// 		to {
+/// 			transform: translateX(100%);
+/// 		}
+/// 	}
+/// @param {string} $keyframes-name - имя правила
+/// @param {boolean} $save-unprefixed-rule [true] - генерировать правило `@keyframes` без браузерного префикса?
+@mixin keyframes(
+	$keyframes-name,
+	$save-unprefixed-rule: true) {
+
+	// С помощью директивы `@each` проходимся по всему
+	// списку `config.$prefixes--keyframes` и добавляем
+	// браузерный префикс на каждой итерации:
+	@each $-rule-prefix in config.$prefixes--keyframes {
+		@-#{$-rule-prefix}-keyframes #{$keyframes-name} {
+			@content;
+		}
+	}
+
+	// Если параметр `$save-unprefixed-rule` равен `false`,
+	// то правило `@keyframes` без браузерного префикса не
+	// будет сгенерировано:
+	@if $save-unprefixed-rule == true {
+		@keyframes #{$keyframes-name} {
+			@content;
+		}
+	}
+
+}
