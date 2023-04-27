@@ -15,6 +15,9 @@ $prefixes--all: webkit khtml moz ms o !default;
 /// @type list
 $prefixes--border-radius: webkit moz !default;
 
+/// - Firefox до версии 3.5 поддерживает свойство `-moz-opacity`.
+/// - Internet Explorer до версии 9.0 для изменения прозрачности использует фильтры, для этого браузера следует записать `filter: alpha(opacity=50)`, где параметр `opacity` может принимать значение от 0 до 100.
+/// ---
 /// @name prefixes--opacity
 /// @group config/
 /// @since 7.0.0
@@ -22,6 +25,9 @@ $prefixes--border-radius: webkit moz !default;
 /// @type list
 $prefixes--opacity: moz !default;
 
+/// - Chrome до версии 43, Opera до версии 30, Safari до версии 9 и Android поддерживают `@-webkit-keyframes`.
+/// - Firefox до версии 16 поддерживает `@-moz-keyframes`.
+/// ---
 /// @name prefixes--keyframes
 /// @group config/
 /// @since 7.0.0
@@ -29,6 +35,8 @@ $prefixes--opacity: moz !default;
 /// @type list
 $prefixes--keyframes: webkit moz ms o !default;
 
+/// - Браузер Safari поддерживает значение `-webkit-sticky`.
+/// ---
 /// @name prefixes--position-sticky
 /// @group config/
 /// @since 7.0.0
@@ -36,6 +44,10 @@ $prefixes--keyframes: webkit moz ms o !default;
 /// @type list
 $prefixes--position-sticky: webkit !default;
 
+/// - Internet Explorer и Edge поддерживают свойство `-ms-user-select`.
+/// - Chrome до версии 54, Opera до версии 41, Safari и Android поддерживают свойство `-webkit-user-select`.
+/// - Firefox поддерживает свойство `-moz-user-select`.
+/// ---
 /// @name prefixes--user-select
 /// @group config/
 /// @since 7.0.0
@@ -43,6 +55,9 @@ $prefixes--position-sticky: webkit !default;
 /// @type list
 $prefixes--user-select: webkit moz ms !default;
 
+/// - Opera до версии 15 поддерживает свойство `-o-tab-size`.
+/// - Firefox до версии 53 поддерживает свойство `-moz-tab-size`.
+/// ---
 /// @name prefixes--tab-size
 /// @group config/
 /// @since 7.0.0
