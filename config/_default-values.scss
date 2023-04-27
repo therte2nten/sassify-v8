@@ -1,6 +1,16 @@
 /// Значение по умолчанию для миксина `opacity`. Значение регулирует
 /// поддержку CSS-свойства `opacity` для браузера Internet Explorer.
 /// ---
+/// @name dvalues--border-radius
+/// @group config/
+/// @since 7.0.0
+/// @access public
+/// @type number
+$dvalues--border-radius: 0 !default;
+
+/// Значение по умолчанию для миксина `opacity`. Значение регулирует
+/// поддержку CSS-свойства `opacity` для браузера Internet Explorer.
+/// ---
 /// @name dvalues--opacity__support-ie
 /// @group config/
 /// @since 7.0.0

@@ -5,6 +5,16 @@
 /// @type list
 $prefixes--all: webkit khtml moz ms o !default;
 
+/// - Chrome до версии 4.0, Safari до версии 5.0 и Android до версии 2.1 используют свойство `-webkit-border-radius`.
+/// - Firefox до версии 4.0 использует свойство `-moz-border-radius`.
+/// ---
+/// @name prefixes--border-radius
+/// @group config/
+/// @since 7.0.0
+/// @access public
+/// @type list
+$prefixes--border-radius: webkit moz !default;
+
 /// @name prefixes--opacity
 /// @group config/
 /// @since 7.0.0
