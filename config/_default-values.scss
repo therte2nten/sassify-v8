@@ -1,3 +1,13 @@
+/// Значение по умолчанию для миксина `opacity`. Значение регулирует
+/// поддержку CSS-свойства `opacity` для браузера Internet Explorer.
+/// ---
+/// @name dvalues--opacity__support-ie
+/// @group config/
+/// @since 7.0.0
+/// @access public
+/// @type boolean
+$dvalues--opacity__support-ie: false !default;
+
 /// Значение по умолчанию для CSS-свойства `position`
 /// ---
 /// @name dvalues--position
