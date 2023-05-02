@@ -1,0 +1,49 @@
+/// @name color--microsoft-windows-phone8
+/// @group color/
+/// @since 7.0.0
+/// @access public
+/// @author Microsoft Corporation
+/// @link http://www.creepyed.com/2012/11/03/windows-phone-8-theme-colors-hex-rgb/ Windows Phone 8 Theme Colors
+/// @type map
+/// @prop {color} $color--microsoft-windows-phone8.Lime [#A4C400]
+/// @prop {color} $color--microsoft-windows-phone8.Green [#60A917]
+/// @prop {color} $color--microsoft-windows-phone8.Emerald [#008A00]
+/// @prop {color} $color--microsoft-windows-phone8.Teal [#00ABA9]
+/// @prop {color} $color--microsoft-windows-phone8.Cyan [#1BA1E2]
+/// @prop {color} $color--microsoft-windows-phone8.Cobalt [#0050EF]
+/// @prop {color} $color--microsoft-windows-phone8.Indigo [#6A00FF]
+/// @prop {color} $color--microsoft-windows-phone8.Violet [#AA00FF]
+/// @prop {color} $color--microsoft-windows-phone8.Pink [#F472D0]
+/// @prop {color} $color--microsoft-windows-phone8.Magenta [#D80073]
+/// @prop {color} $color--microsoft-windows-phone8.Crimson [#A20025]
+/// @prop {color} $color--microsoft-windows-phone8.Red [#E51400]
+/// @prop {color} $color--microsoft-windows-phone8.Orange [#FA6800]
+/// @prop {color} $color--microsoft-windows-phone8.Amber [#F0A30A]
+/// @prop {color} $color--microsoft-windows-phone8.Yellow [#E3C800]
+/// @prop {color} $color--microsoft-windows-phone8.Brown [#825A2C]
+/// @prop {color} $color--microsoft-windows-phone8.Olive [#6D8764]
+/// @prop {color} $color--microsoft-windows-phone8.Steel [#647687]
+/// @prop {color} $color--microsoft-windows-phone8.Mauve [#76608A]
+/// @prop {color} $color--microsoft-windows-phone8.Taupe [#87794E]
+$color--microsoft-windows-phone8: (
+	Lime: #A4C400,
+	Green: #60A917,
+	Emerald: #008A00,
+	Teal: #00ABA9,
+	Cyan: #1BA1E2,
+	Cobalt: #0050EF,
+	Indigo: #6A00FF,
+	Violet: #AA00FF,
+	Pink: #F472D0,
+	Magenta: #D80073,
+	Crimson: #A20025,
+	Red: #E51400,
+	Orange: #FA6800,
+	Amber: #F0A30A,
+	Yellow: #E3C800,
+	Brown: #825A2C,
+	Olive: #6D8764,
+	Steel: #647687,
+	Mauve: #76608A,
+	Taupe: #87794E
+)
