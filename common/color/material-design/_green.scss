@@ -1,0 +1,37 @@
+/// @name color--md-green
+/// @group color/
+/// @since 7.0.0
+/// @access public
+/// @author Google
+/// @link https://material.io/design/color/the-color-system.html Material Design
+/// @type map
+/// @prop {color} $color--md-green.50 [#e8f5e9]
+/// @prop {color} $color--md-green.100 [#c8e6c9]
+/// @prop {color} $color--md-green.200 [#a5d6a7]
+/// @prop {color} $color--md-green.300 [#81c784]
+/// @prop {color} $color--md-green.400 [#66bb6a]
+/// @prop {color} $color--md-green.500 [#4caf50]
+/// @prop {color} $color--md-green.600 [#43a047]
+/// @prop {color} $color--md-green.700 [#388e3c]
+/// @prop {color} $color--md-green.800 [#2e7d32]
+/// @prop {color} $color--md-green.900 [#1b5e20]
+/// @prop {color} $color--md-green.A100 [#b9f6ca]
+/// @prop {color} $color--md-green.A200 [#69f0ae]
+/// @prop {color} $color--md-green.A400 [#00e676]
+/// @prop {color} $color--md-green.A700 [#00c853]
+$color--md-green: (
+	50: #e8f5e9,
+	100: #c8e6c9,
+	200: #a5d6a7,
+	300: #81c784,
+	400: #66bb6a,
+	500: #4caf50,
+	600: #43a047,
+	700: #388e3c,
+	800: #2e7d32,
+	900: #1b5e20,
+	A100: #b9f6ca,
+	A200: #69f0ae,
+	A400: #00e676,
+	A700: #00c853
+);

@@ -1,4 +1,4 @@
-@use '../../../common/invalid-value-message' as *;
+@use '../../../devpack/invalid-value-message' as *;
 @use '../validator/is-list' as *;
 
 /// Вы уже знаете, что в Sass есть встроенная функция

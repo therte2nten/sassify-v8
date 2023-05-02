@@ -1,0 +1,37 @@
+/// @name color--md-blue-grey
+/// @group color/
+/// @since 7.0.0
+/// @access public
+/// @author Google
+/// @link https://material.io/design/color/the-color-system.html Material Design
+/// @type map
+/// @prop {color} $color--md-blue-grey.50 [#eceff1]
+/// @prop {color} $color--md-blue-grey.100 [#cfd8dc]
+/// @prop {color} $color--md-blue-grey.200 [#b0bec5]
+/// @prop {color} $color--md-blue-grey.300 [#90a4ae]
+/// @prop {color} $color--md-blue-grey.400 [#78909c]
+/// @prop {color} $color--md-blue-grey.500 [#607d8b]
+/// @prop {color} $color--md-blue-grey.600 [#546e7a]
+/// @prop {color} $color--md-blue-grey.700 [#455a64]
+/// @prop {color} $color--md-blue-grey.800 [#37474f]
+/// @prop {color} $color--md-blue-grey.900 [#263238]
+/// @prop {color} $color--md-blue-grey.A10 [#cfd8dc]
+/// @prop {color} $color--md-blue-grey.A20 [#b0bec5]
+/// @prop {color} $color--md-blue-grey.A40 [#78909c]
+/// @prop {color} $color--md-blue-grey.A70 [#455a64]
+$color--md-blue-grey: (
+	50: #eceff1,
+	100: #cfd8dc,
+	200: #b0bec5,
+	300: #90a4ae,
+	400: #78909c,
+	500: #607d8b,
+	600: #546e7a,
+	700: #455a64,
+	800: #37474f,
+	900: #263238,
+	A100: #cfd8dc,
+	A200: #b0bec5,
+	A400: #78909c,
+	A700: #455a64
+);

@@ -1,0 +1,37 @@
+/// @name color--md-pink
+/// @group color/
+/// @since 7.0.0
+/// @access public
+/// @author Google
+/// @link https://material.io/design/color/the-color-system.html Material Design
+/// @type map
+/// @prop {color} $color--md-pink.50 [#fce4ec]
+/// @prop {color} $color--md-pink.100 [#f8bbd0]
+/// @prop {color} $color--md-pink.200 [#f48fb1]
+/// @prop {color} $color--md-pink.300 [#f06292]
+/// @prop {color} $color--md-pink.400 [#ec407a]
+/// @prop {color} $color--md-pink.500 [#e91e63]
+/// @prop {color} $color--md-pink.600 [#d81b60]
+/// @prop {color} $color--md-pink.700 [#c2185b]
+/// @prop {color} $color--md-pink.800 [#ad1457]
+/// @prop {color} $color--md-pink.900 [#880e4f]
+/// @prop {color} $color--md-pink.A100 [#ff80ab]
+/// @prop {color} $color--md-pink.A200 [#ff4081]
+/// @prop {color} $color--md-pink.A400 [#f50057]
+/// @prop {color} $color--md-pink.A700 [#c51162]
+$color--md-pink: (
+	50: #fce4ec,
+	100: #f8bbd0,
+	200: #f48fb1,
+	300: #f06292,
+	400: #ec407a,
+	500: #e91e63,
+	600: #d81b60,
+	700: #c2185b,
+	800: #ad1457,
+	900: #880e4f,
+	A100: #ff80ab,
+	A200: #ff4081,
+	A400: #f50057,
+	A700: #c51162
+);

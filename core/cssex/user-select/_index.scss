@@ -1,5 +1,5 @@
 @use '../../../config' as config;
-@use '../../../common/invalid-value-message' as *;
+@use '../../../devpack/invalid-value-message' as *;
 @use '../../prefixer' as *;
 @use '../../utility/validator/is-list-contains' as *;
 @use '../../utility/validator/is-string' as *;

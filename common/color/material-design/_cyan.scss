@@ -1,0 +1,37 @@
+/// @name color--md-cyan
+/// @group color/
+/// @since 7.0.0
+/// @access public
+/// @author Google
+/// @link https://material.io/design/color/the-color-system.html Material Design
+/// @type map
+/// @prop {color} $color--md-cyan.50 [#e0f7fa]
+/// @prop {color} $color--md-cyan.100 [#b2ebf2]
+/// @prop {color} $color--md-cyan.200 [#80deea]
+/// @prop {color} $color--md-cyan.300 [#4dd0e1]
+/// @prop {color} $color--md-cyan.400 [#26c6da]
+/// @prop {color} $color--md-cyan.500 [#00bcd4]
+/// @prop {color} $color--md-cyan.600 [#00acc1]
+/// @prop {color} $color--md-cyan.700 [#0097a7]
+/// @prop {color} $color--md-cyan.800 [#00838f]
+/// @prop {color} $color--md-cyan.900 [#006064]
+/// @prop {color} $color--md-cyan.A100 [#84ffff]
+/// @prop {color} $color--md-cyan.A200 [#18ffff]
+/// @prop {color} $color--md-cyan.A400 [#00e5ff]
+/// @prop {color} $color--md-cyan.A700 [#00b8d4]
+$color--md-cyan: (
+	50: #e0f7fa,
+	100: #b2ebf2,
+	200: #80deea,
+	300: #4dd0e1,
+	400: #26c6da,
+	500: #00bcd4,
+	600: #00acc1,
+	700: #0097a7,
+	800: #00838f,
+	900: #006064,
+	A100: #84ffff,
+	A200: #18ffff,
+	A400: #00e5ff,
+	A700: #00b8d4
+);

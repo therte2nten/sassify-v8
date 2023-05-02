@@ -1,0 +1,37 @@
+/// @name color--md-amber
+/// @group color/
+/// @since 7.0.0
+/// @access public
+/// @author Google
+/// @link https://material.io/design/color/the-color-system.html Material Design
+/// @type map
+/// @prop {color} $color--md-amber.50 [#fff8e1]
+/// @prop {color} $color--md-amber.100 [#ffecb3]
+/// @prop {color} $color--md-amber.200 [#ffe082]
+/// @prop {color} $color--md-amber.300 [#ffd54f]
+/// @prop {color} $color--md-amber.400 [#ffca28]
+/// @prop {color} $color--md-amber.500 [#ffc107]
+/// @prop {color} $color--md-amber.600 [#ffb300]
+/// @prop {color} $color--md-amber.700 [#ffa000]
+/// @prop {color} $color--md-amber.800 [#ff8f00]
+/// @prop {color} $color--md-amber.900 [#ff6f00]
+/// @prop {color} $color--md-amber.A100 [#ffe57f]
+/// @prop {color} $color--md-amber.A200 [#ffd740]
+/// @prop {color} $color--md-amber.A400 [#ffc400]
+/// @prop {color} $color--md-amber.A700 [#ffab00]
+$color--md-amber: (
+	50: #fff8e1,
+	100: #ffecb3,
+	200: #ffe082,
+	300: #ffd54f,
+	400: #ffca28,
+	500: #ffc107,
+	600: #ffb300,
+	700: #ffa000,
+	800: #ff8f00,
+	900: #ff6f00,
+	A100: #ffe57f,
+	A200: #ffd740,
+	A400: #ffc400,
+	A700: #ffab00
+);

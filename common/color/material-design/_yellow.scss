@@ -1,0 +1,37 @@
+/// @name color--md-yellow
+/// @group color/
+/// @since 7.0.0
+/// @access public
+/// @author Google
+/// @link https://material.io/design/color/the-color-system.html Material Design
+/// @type map
+/// @prop {color} $color--md-yellow.50 [#fffde7]
+/// @prop {color} $color--md-yellow.100 [#fff9c4]
+/// @prop {color} $color--md-yellow.200 [#fff59d]
+/// @prop {color} $color--md-yellow.300 [#fff176]
+/// @prop {color} $color--md-yellow.400 [#ffee58]
+/// @prop {color} $color--md-yellow.500 [#ffeb3b]
+/// @prop {color} $color--md-yellow.600 [#fdd835]
+/// @prop {color} $color--md-yellow.700 [#fbc02d]
+/// @prop {color} $color--md-yellow.800 [#f9a825]
+/// @prop {color} $color--md-yellow.900 [#f57f17]
+/// @prop {color} $color--md-yellow.A100 [#ffff8d]
+/// @prop {color} $color--md-yellow.A200 [#ffff00]
+/// @prop {color} $color--md-yellow.A400 [#ffea00]
+/// @prop {color} $color--md-yellow.A700 [#ffd600]
+$color--md-yellow: (
+	50: #fffde7,
+	100: #fff9c4,
+	200: #fff59d,
+	300: #fff176,
+	400: #ffee58,
+	500: #ffeb3b,
+	600: #fdd835,
+	700: #fbc02d,
+	800: #f9a825,
+	900: #f57f17,
+	A100: #ffff8d,
+	A200: #ffff00,
+	A400: #ffea00,
+	A700: #ffd600
+);

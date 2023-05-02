@@ -1,4 +1,4 @@
-@use '../../../common/invalid-value-message' as *;
+@use '../../../devpack/invalid-value-message' as *;
 @use '../validator/is-list' as *;
 
 /// Функция `list-last-item` выдает последний элемент в списке.

@@ -1,0 +1,37 @@
+/// @name color--md-purple
+/// @group color/
+/// @since 7.0.0
+/// @access public
+/// @author Google
+/// @link https://material.io/design/color/the-color-system.html Material Design
+/// @type map
+/// @prop {color} $color--md-purple.50 [#f3e5f5]
+/// @prop {color} $color--md-purple.100 [#e1bee7]
+/// @prop {color} $color--md-purple.200 [#ce93d8]
+/// @prop {color} $color--md-purple.300 [#ba68c8]
+/// @prop {color} $color--md-purple.400 [#ab47bc]
+/// @prop {color} $color--md-purple.500 [#9c27b0]
+/// @prop {color} $color--md-purple.600 [#8e24aa]
+/// @prop {color} $color--md-purple.700 [#7b1fa2]
+/// @prop {color} $color--md-purple.800 [#6a1b9a]
+/// @prop {color} $color--md-purple.900 [#4a148c]
+/// @prop {color} $color--md-purple.A100 [#ea80fc]
+/// @prop {color} $color--md-purple.A200 [#e040fb]
+/// @prop {color} $color--md-purple.A400 [#d500f9]
+/// @prop {color} $color--md-purple.A700 [#aa00ff]
+$color--md-purple: (
+	50: #f3e5f5,
+	100: #e1bee7,
+	200: #ce93d8,
+	300: #ba68c8,
+	400: #ab47bc,
+	500: #9c27b0,
+	600: #8e24aa,
+	700: #7b1fa2,
+	800: #6a1b9a,
+	900: #4a148c,
+	A100: #ea80fc,
+	A200: #e040fb,
+	A400: #d500f9,
+	A700: #aa00ff
+);
