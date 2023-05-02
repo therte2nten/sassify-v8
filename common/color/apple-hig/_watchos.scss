@@ -1,0 +1,35 @@
+/// @name color--apple-watchos
+/// @group color/
+/// @since 7.0.0
+/// @access public
+/// @author Apple Inc.
+/// @link https://developer.apple.com/design/human-interface-guidelines/foundations/color/ Human Interface Guidelines
+/// @type map
+/// @prop {color} $color--apple-watchos.red [#ff0000]
+/// @prop {color} $color--apple-watchos.orange [#ff9500]
+/// @prop {color} $color--apple-watchos.yellow [#fcf717]
+/// @prop {color} $color--apple-watchos.green [#00f47a]
+/// @prop {color} $color--apple-watchos.mint [#04dbd2]
+/// @prop {color} $color--apple-watchos.teal [#46c4de]
+/// @prop {color} $color--apple-watchos.cyan [#2cc2fc]
+/// @prop {color} $color--apple-watchos.blue [#2078fb]
+/// @prop {color} $color--apple-watchos.indigo [#8e33ff]
+/// @prop {color} $color--apple-watchos.purple [#da00f0]
+/// @prop {color} $color--apple-watchos.pink [#ff0038]
+/// @prop {color} $color--apple-watchos.brown [#b09166]
+/// @prop {color} $color--apple-watchos.gray [#9b9eaa]
+$color--apple-watchos: (
+	red: #ff0000,
+	orange: #ff9500,
+	yellow: #fcf717,
+	green: #00f47a,
+	mint: #04dbd2,
+	teal: #46c4de,
+	cyan: #2cc2fc,
+	blue: #2078fb,
+	indigo: #8e33ff,
+	purple: #da00f0,
+	pink: #ff0038,
+	brown: #b09166,
+	gray: #9b9eaa
+);
