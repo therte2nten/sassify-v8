@@ -1,7 +1,7 @@
-@use '../../../config' as config;
-@use '../../utility/contains-modifier' as *;
-@use '../../utility/get-block' as *;
-@use '../../utility//map/map-deep-get' as *;
+@use '../../config' as config;
+@use '../utility/contains-modifier' as *;
+@use '../utility/get-block' as *;
+@use '../utility/map/map-deep-get' as *;
 
 /// Миксин `bem-block` создает элемент блока по "БЭМу".
 /// ---

@@ -1,7 +1,7 @@
 @use '../../../config' as config;
 @use '../../../common/invalid-value-message' as *;
 @use '../../utility/validator/is-list-contains' as *;
-@use '../../mixin/prefixer' as *;
+@use '../../prefixer' as *;
 
 /// Миксин `position` позволяет указать тип позиционирования
 /// одной строкой.

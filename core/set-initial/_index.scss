@@ -1,5 +1,5 @@
-@use '../../../config' as config;
-@use '../../utility/set-initial' as *;
+@use '../../config' as config;
+@use '../utility/set-initial' as *;
 
 /// Миксин `set-initial` позволяет устанавливать CSS-свойствам
 /// значения по умолчанию.

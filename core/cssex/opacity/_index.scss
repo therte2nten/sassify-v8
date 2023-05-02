@@ -1,7 +1,7 @@
 @use '../../../common/invalid-value-message' as *;
 @use '../../../config' as config;
 @use '../../utility/validator/is-number' as *;
-@use '../../mixin/prefixer' as *;
+@use '../../prefixer' as *;
 
 /// > CSS-свойство `opacity` устанавливает непрозрачность элемента.
 /// > Непрозрачность - это степень, в которой содержимое скрывается

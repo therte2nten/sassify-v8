@@ -1,7 +1,7 @@
 @use '../../../common/invalid-value-message' as *;
 @use '../../../config' as config;
 @use '../../utility/validator/is-number' as *;
-@use '../../mixin/prefixer' as *;
+@use '../../prefixer' as *;
 
 /// > `border-radius` — это CSS-свойство, позволяющее разработчикам
 /// > определять, как скругляются границы блока. Закруглённость

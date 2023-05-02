@@ -2,25 +2,25 @@
 
 @forward 'config';
 
-@forward 'core/cssex/border-radius';
-@forward 'core/cssex/keyframes';
-@forward 'core/cssex/opacity';
-@forward 'core/cssex/position';
+@forward 'core/amcss/';
+@forward 'core/bem/';
+@forward 'core/custom-properties/';
+@forward 'core/custom-properties/use';
+@forward 'core/prefixer/';
+@forward 'core/set-initial/';
+
+@forward 'core/cssex/border-radius/';
+@forward 'core/cssex/keyframes/';
+@forward 'core/cssex/opacity/';
+@forward 'core/cssex/position/';
 @forward 'core/cssex/position/absolute';
 @forward 'core/cssex/position/fixed';
 @forward 'core/cssex/position/relative';
 @forward 'core/cssex/position/sticky';
-@forward 'core/cssex/size';
-@forward 'core/cssex/tab-size';
-@forward 'core/cssex/user-select';
-@forward 'core/cssex/visually-hidden';
-
-@forward 'core/mixin/amcss';
-@forward 'core/mixin/bem';
-@forward 'core/mixin/custom-properties';
-@forward 'core/mixin/custom-properties/use';
-@forward 'core/mixin/prefixer';
-@forward 'core/mixin/set-initial';
+@forward 'core/cssex/size/';
+@forward 'core/cssex/tab-size/';
+@forward 'core/cssex/user-select/';
+@forward 'core/cssex/visually-hidden/';
 
 @forward 'core/utility/color/color-shade';
 @forward 'core/utility/color/color-tint';
