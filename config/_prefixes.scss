@@ -5,9 +5,20 @@
 /// @type list
 $prefixes--all: webkit khtml moz ms o !default;
 
-/// - Браузеры Edge и Safari поддерживают свойство `-webkit-backdrop-filter`.
+/// - Chrome до версии 26, Safari до версии 6.1 и Android до версии 4.4 поддерживают свойство `-webkit-transition`
+/// - Opera до версии 12.10 поддерживает свойство `-o-transition`
+/// - Firefox до версии 16 поддерживает свойство `-moz-transition`
+/// ---
+/// @name prefixes--transition
+/// @group config/
+/// @since 7.0.0
+/// @access public
+/// @type list
+$prefixes--transition: webkit moz o !default;
+
+/// - Браузеры Edge и Safari поддерживают свойство `-webkit-backdrop-filter`
 /// - Чтобы свойство работало в браузере Opera, на странице [`opera:flags`](opera:flags) раздел **Experimental Web Platform features** следует установить в **Enabled**.
-/// - Чтобы свойство работало в браузере Firefox, на странице [`about:config`](about:config) параметр `layout.css.backdrop-filter.enabled` следует установить как `true`.
+/// - Чтобы свойство работало в браузере Firefox, на странице [`about:config`](about:config) параметр `layout.css.backdrop-filter.enabled` следует установить как `true`
 /// ---
 /// @name prefixes--backdrop-filter
 /// @group config/
@@ -16,8 +27,8 @@ $prefixes--all: webkit khtml moz ms o !default;
 /// @type list
 $prefixes--backdrop-filter: webkit !default;
 
-/// - Chrome до версии 4.0, Safari до версии 5.0 и Android до версии 2.1 используют свойство `-webkit-border-radius`.
-/// - Firefox до версии 4.0 использует свойство `-moz-border-radius`.
+/// - Chrome до версии 4.0, Safari до версии 5.0 и Android до версии 2.1 используют свойство `-webkit-border-radius`
+/// - Firefox до версии 4.0 использует свойство `-moz-border-radius`
 /// ---
 /// @name prefixes--border-radius
 /// @group config/
@@ -26,7 +37,7 @@ $prefixes--backdrop-filter: webkit !default;
 /// @type list
 $prefixes--border-radius: webkit moz !default;
 
-/// - Firefox до версии 3.5 поддерживает свойство `-moz-opacity`.
+/// - Firefox до версии 3.5 поддерживает свойство `-moz-opacity`
 /// - Internet Explorer до версии 9.0 для изменения прозрачности использует фильтры, для этого браузера следует записать `filter: alpha(opacity=50)`, где параметр `opacity` может принимать значение от 0 до 100.
 /// ---
 /// @name prefixes--opacity
@@ -36,8 +47,8 @@ $prefixes--border-radius: webkit moz !default;
 /// @type list
 $prefixes--opacity: moz !default;
 
-/// - Chrome до версии 43, Opera до версии 30, Safari до версии 9 и Android поддерживают `@-webkit-keyframes`.
-/// - Firefox до версии 16 поддерживает `@-moz-keyframes`.
+/// - Chrome до версии 43, Opera до версии 30, Safari до версии 9 и Android поддерживают `@-webkit-keyframes`
+/// - Firefox до версии 16 поддерживает `@-moz-keyframes`
 /// ---
 /// @name prefixes--keyframes
 /// @group config/
@@ -46,7 +57,7 @@ $prefixes--opacity: moz !default;
 /// @type list
 $prefixes--keyframes: webkit moz ms o !default;
 
-/// - Браузер Safari поддерживает значение `-webkit-sticky`.
+/// - Браузер Safari поддерживает значение `-webkit-sticky`
 /// ---
 /// @name prefixes--position-sticky
 /// @group config/
@@ -55,9 +66,9 @@ $prefixes--keyframes: webkit moz ms o !default;
 /// @type list
 $prefixes--position-sticky: webkit !default;
 
-/// - Internet Explorer и Edge поддерживают свойство `-ms-user-select`.
-/// - Chrome до версии 54, Opera до версии 41, Safari и Android поддерживают свойство `-webkit-user-select`.
-/// - Firefox поддерживает свойство `-moz-user-select`.
+/// - Internet Explorer и Edge поддерживают свойство `-ms-user-select`
+/// - Chrome до версии 54, Opera до версии 41, Safari и Android поддерживают свойство `-webkit-user-select`
+/// - Firefox поддерживает свойство `-moz-user-select`
 /// ---
 /// @name prefixes--user-select
 /// @group config/
@@ -66,8 +77,8 @@ $prefixes--position-sticky: webkit !default;
 /// @type list
 $prefixes--user-select: webkit moz ms !default;
 
-/// - Opera до версии 15 поддерживает свойство `-o-tab-size`.
-/// - Firefox до версии 53 поддерживает свойство `-moz-tab-size`.
+/// - Opera до версии 15 поддерживает свойство `-o-tab-size`
+/// - Firefox до версии 53 поддерживает свойство `-moz-tab-size`
 /// ---
 /// @name prefixes--tab-size
 /// @group config/

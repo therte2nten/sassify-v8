@@ -26,3 +26,16 @@ $setting--strict-mode: true !default;
 /// @link https://sass-lang.com/d/slash-div Breaking Change: Slash as Division
 /// @type boolean
 $setting--strip-unit__use-sassmath: true !default;
+
+/// Данный параметр сообщает всем остальным миксинам
+/// и функциям в Sassify, которые как-то связаны с
+/// анимацией и переходами о том, что нужно следовать
+/// предпочтениям пользователя или нет.
+/// ---
+/// @name $setting--follow-prefers-reduced-motion
+/// @group config/
+/// @since 7.0.0
+/// @access public
+/// @link https://doka.guide/a11y/prefers-reduced-motion/ Как сделать анимацию на сайте доступной.
+/// @type boolean
+$setting--follow-prefers-reduced-motion: true !default;

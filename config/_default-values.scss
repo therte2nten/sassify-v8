@@ -1,3 +1,10 @@
+/// @name dvalues--transition
+/// @group config/
+/// @since 7.0.0
+/// @access public
+/// @type list
+$dvalues--transition: all 0s ease 0s !default;
+
 /// Значение по умолчанию для миксина `opacity`. Значение регулирует
 /// поддержку CSS-свойства `opacity` для браузера Internet Explorer.
 /// ---
