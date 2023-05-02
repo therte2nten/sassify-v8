@@ -32,9 +32,19 @@
 /// 	}
 /// @param {list} $filter-function-list - список фильтров
 @mixin backdrop-filter($filter-function-list...) {
-	@include prefixer(
-		backdrop-filter,
-		$filter-function-list,
-		config.$prefixes--backdrop-filter
-	);
+
+	// Проверяем поддержку CSS-свойства `backdrop-filter`
+	// браузером:
+	@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+
+		// С помощью миксина `prefixer` генерируем
+		// браузерные префиксы:
+		@include prefixer(
+			backdrop-filter,
+			$filter-function-list,
+			config.$prefixes--backdrop-filter
+		);
+
+	}
+
 }
