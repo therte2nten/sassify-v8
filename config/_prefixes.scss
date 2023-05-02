@@ -5,6 +5,17 @@
 /// @type list
 $prefixes--all: webkit khtml moz ms o !default;
 
+/// - Браузеры Edge и Safari поддерживают свойство `-webkit-backdrop-filter`.
+/// - Чтобы свойство работало в браузере Opera, на странице [`opera:flags`](opera:flags) раздел **Experimental Web Platform features** следует установить в **Enabled**.
+/// - Чтобы свойство работало в браузере Firefox, на странице [`about:config`](about:config) параметр `layout.css.backdrop-filter.enabled` следует установить как `true`.
+/// ---
+/// @name prefixes--backdrop-filter
+/// @group config/
+/// @since 7.0.0
+/// @access public
+/// @type list
+$prefixes--backdrop-filter: webkit !default;
+
 /// - Chrome до версии 4.0, Safari до версии 5.0 и Android до версии 2.1 используют свойство `-webkit-border-radius`.
 /// - Firefox до версии 4.0 использует свойство `-moz-border-radius`.
 /// ---
