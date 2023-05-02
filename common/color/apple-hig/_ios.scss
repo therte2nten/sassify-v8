@@ -1,29 +1,29 @@
-/// @name color--apple-ios
+/// @name color--ios
 /// @group color/
 /// @since 7.0.0
 /// @access public
 /// @author Apple Inc.
 /// @link https://developer.apple.com/design/human-interface-guidelines/foundations/color/ Human Interface Guidelines
 /// @type map
-/// @prop {color} $color--apple-ios.red [#ff0000]
-/// @prop {color} $color--apple-ios.orange [#ff9500]
-/// @prop {color} $color--apple-ios.yellow [#ffd900]
-/// @prop {color} $color--apple-ios.green [#00db62]
-/// @prop {color} $color--apple-ios.mint [#00d0c2]
-/// @prop {color} $color--apple-ios.teal [#00b1c9]
-/// @prop {color} $color--apple-ios.cyan [#00a5e8]
-/// @prop {color} $color--apple-ios.blue [#353eff]
-/// @prop {color} $color--apple-ios.indigo [#6f00d6]
-/// @prop {color} $color--apple-ios.purple [#c800dc]
-/// @prop {color} $color--apple-ios.pink [#e9cbd2]
-/// @prop {color} $color--apple-ios.brown [#a6875c]
-/// @prop {color} $color--apple-ios.gray [#8f8d93]
-/// @prop {color} $color--apple-ios.gray-2 [#aeadb2]
-/// @prop {color} $color--apple-ios.gray-3 [#c8c6cc]
-/// @prop {color} $color--apple-ios.gray-4 [#d2d0d6]
-/// @prop {color} $color--apple-ios.gray-5 [#e6e4ea]
-/// @prop {color} $color--apple-ios.gray-6 [#f3f1f7]
-$color--apple-ios: (
+/// @prop {color} $color--ios.red [#ff0000]
+/// @prop {color} $color--ios.orange [#ff9500]
+/// @prop {color} $color--ios.yellow [#ffd900]
+/// @prop {color} $color--ios.green [#00db62]
+/// @prop {color} $color--ios.mint [#00d0c2]
+/// @prop {color} $color--ios.teal [#00b1c9]
+/// @prop {color} $color--ios.cyan [#00a5e8]
+/// @prop {color} $color--ios.blue [#353eff]
+/// @prop {color} $color--ios.indigo [#6f00d6]
+/// @prop {color} $color--ios.purple [#c800dc]
+/// @prop {color} $color--ios.pink [#e9cbd2]
+/// @prop {color} $color--ios.brown [#a6875c]
+/// @prop {color} $color--ios.gray [#8f8d93]
+/// @prop {color} $color--ios.gray-2 [#aeadb2]
+/// @prop {color} $color--ios.gray-3 [#c8c6cc]
+/// @prop {color} $color--ios.gray-4 [#d2d0d6]
+/// @prop {color} $color--ios.gray-5 [#e6e4ea]
+/// @prop {color} $color--ios.gray-6 [#f3f1f7]
+$color--ios: (
 	red: #ff0000,
 	orange: #ff9500,
 	yellow: #ffd900,
@@ -44,32 +44,32 @@ $color--apple-ios: (
 	gray-6: #f3f1f7
 );
 
-/// @name color--apple-ios-dark
+/// @name color--ios-dark
 /// @group color/
 /// @since 7.0.0
 /// @access public
 /// @author Apple Inc.
 /// @link https://developer.apple.com/design/human-interface-guidelines/foundations/color/ Human Interface Guidelines
 /// @type map
-/// @prop {color} $color--apple-ios-dark.red [#ff000f]
-/// @prop {color} $color--apple-ios-dark.orange [#ffa200]
-/// @prop {color} $color--apple-ios-dark.yellow [#ffe400]
-/// @prop {color} $color--apple-ios-dark.green [#00e763]
-/// @prop {color} $color--apple-ios-dark.mint [#00eee5]
-/// @prop {color} $color--apple-ios-dark.teal [#00cae3]
-/// @prop {color} $color--apple-ios-dark.cyan [#37ceff]
-/// @prop {color} $color--apple-ios-dark.blue [#2e57ff]
-/// @prop {color} $color--apple-ios-dark.indigo [#7700e6]
-/// @prop {color} $color--apple-ios-dark.purple [#ebebeb]
-/// @prop {color} $color--apple-ios-dark.pink [#ff004e]
-/// @prop {color} $color--apple-ios-dark.brown [#b09166]
-/// @prop {color} $color--apple-ios-dark.gray [#8f8d93]
-/// @prop {color} $color--apple-ios-dark.gray-2 [#636266]
-/// @prop {color} $color--apple-ios-dark.gray-3 [#48484a]
-/// @prop {color} $color--apple-ios-dark.gray-4 [#3a3a3c]
-/// @prop {color} $color--apple-ios-dark.gray-5 [#2c2c2e]
-/// @prop {color} $color--apple-ios-dark.gray-6 [#1c1c1e]
-$color--apple-ios-dark: (
+/// @prop {color} $color--ios-dark.red [#ff000f]
+/// @prop {color} $color--ios-dark.orange [#ffa200]
+/// @prop {color} $color--ios-dark.yellow [#ffe400]
+/// @prop {color} $color--ios-dark.green [#00e763]
+/// @prop {color} $color--ios-dark.mint [#00eee5]
+/// @prop {color} $color--ios-dark.teal [#00cae3]
+/// @prop {color} $color--ios-dark.cyan [#37ceff]
+/// @prop {color} $color--ios-dark.blue [#2e57ff]
+/// @prop {color} $color--ios-dark.indigo [#7700e6]
+/// @prop {color} $color--ios-dark.purple [#ebebeb]
+/// @prop {color} $color--ios-dark.pink [#ff004e]
+/// @prop {color} $color--ios-dark.brown [#b09166]
+/// @prop {color} $color--ios-dark.gray [#8f8d93]
+/// @prop {color} $color--ios-dark.gray-2 [#636266]
+/// @prop {color} $color--ios-dark.gray-3 [#48484a]
+/// @prop {color} $color--ios-dark.gray-4 [#3a3a3c]
+/// @prop {color} $color--ios-dark.gray-5 [#2c2c2e]
+/// @prop {color} $color--ios-dark.gray-6 [#1c1c1e]
+$color--ios-dark: (
 	red: #ff000f,
 	orange: #ffa200,
 	yellow: #ffe400,

@@ -1,8 +1,11 @@
 @forward 'helper/css-types';
 
+@forward 'color/apple-hig/ios';
+@forward 'color/apple-hig/macos';
+@forward 'color/apple-hig/watchos';
 @forward 'color/material-design/amber';
-@forward 'color/material-design/blue-grey';
 @forward 'color/material-design/blue';
+@forward 'color/material-design/blue-grey';
 @forward 'color/material-design/brown';
 @forward 'color/material-design/cyan';
 @forward 'color/material-design/deep-orange';
@@ -19,9 +22,4 @@
 @forward 'color/material-design/red';
 @forward 'color/material-design/teal';
 @forward 'color/material-design/yellow';
-
-@forward 'color/apple-hig/ios';
-@forward 'color/apple-hig/macos';
-@forward 'color/apple-hig/watchos';
-
 @forward 'color/microsoft-windows';
