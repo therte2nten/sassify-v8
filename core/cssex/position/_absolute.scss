@@ -1,0 +1,84 @@
+@use './index' as *;
+
+/// Миксин `position-absolute` позволяет указать тип позиционирования `absolute`
+/// одной строкой.
+///
+/// Элемент удаляется из обычного потока документов, и для элемента в макете страницы
+/// не создаётся пробела. Он расположен относительно его ближайшего относительно
+/// позиционированного предка, если таковой имеется; в противном случае он
+/// помещается относительно исходного [содержащего блока](https://developer.mozilla.org/ru/docs/Web/CSS/Containing_block).
+/// Его конечная позиция определяется значениями `top`, `right`, `bottom`, и `left`.
+/// Это значение создаёт новый [контекст наложения](https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context),
+/// когда значение `z-index` не `auto`. Поля абсолютно позиционированных коробок не
+/// [сворачиваются](https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing) с другими полями.
+/// ---
+/// @name position-absolute
+/// @group CSSex
+/// @since 7.0.0
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @link https://github.com/therteenten/sassify/blob/develop/core/cssex/position/_absolute.scss Исходный код миксина
+/// @example scss Пример использования в Sass (SCSS)
+/// 	.block-position-absolute-top {
+/// 		@include position-absolute(15px);
+/// 	}
+///
+/// 	.block-position-absolute-topLeft {
+/// 		@include position-absolute(15px, null, null, 15px);
+/// 	}
+///
+/// 	.block-position-absolute-bottom {
+/// 		@include position-absolute(null, null, 15px);
+/// 	}
+///
+/// 	.block-position-absolute-right {
+/// 		@include position-absolute(null, 15px);
+/// 	}
+///
+/// 	.block-position-absolute {
+/// 		@include position-absolute();
+/// 	}
+/// @example css Результат работы миксина в CSS
+/// 	.block-position-absolute-top {
+/// 		position: absolute;
+/// 		top: 15px;
+/// 	}
+///
+/// 	.block-position-absolute-topLeft {
+/// 		position: absolute;
+/// 		top: 15px;
+/// 		left: 15px;
+/// 	}
+///
+/// 	.block-position-absolute-bottom {
+/// 		position: absolute;
+/// 		bottom: 15px;
+/// 	}
+///
+/// 	.block-position-absolute-right {
+/// 		position: absolute;
+/// 		right: 15px;
+/// 	}
+///
+/// 	.block-position-absolute {
+/// 		position: absolute;
+/// 	}
+/// @param {string | number} $side-top [null]
+/// @param {string | number} $side-right [null]
+/// @param {string | number} $side-bottom [null]
+/// @param {string | number} $side-left [null]
+@mixin position-absolute(
+	$side-top: null,
+	$side-right: null,
+	$side-bottom: null,
+	$side-left: null) {
+
+	@include position(
+		absolute,
+		$side-top,
+		$side-right,
+		$side-bottom,
+		$side-left
+	);
+
+}

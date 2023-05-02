@@ -1,0 +1,97 @@
+@use '../../../config' as config;
+@use '../../../common/invalid-value-message' as *;
+@use '../../utility/validator/is-list-contains' as *;
+
+/// Миксин `size` позволяет указать CSS-свойства `width`, `min-width`,
+/// `max-width`, `height`, `mix-height` и `max-height` одной строкой.
+/// ---
+/// @name size
+/// @group CSSex
+/// @since 7.0.0
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @link https://github.com/therteenten/sassify/blob/develop/core/cssex/size/_index.scss Исходный код миксина
+/// @example scss Пример использования в Sass (SCSS)
+/// 	.block-1 {
+/// 		@include size(250px);
+/// 	}
+///
+/// 	.block-2 {
+/// 		@include size(250px, 100px);
+/// 	}
+///
+/// 	.block-3 {
+/// 		@include size(250px, null, max);
+/// 	}
+///
+/// 	.block-4 {
+/// 		@include size(250px, 500px, min);
+/// 	}
+///
+/// 	.block-5 {
+/// 		@include size(null, 250px);
+/// 	}
+/// @example css Результат работы миксина в CSS
+/// 	.block-1 {
+/// 		width: 250px;
+/// 		height: 250px;
+/// 	}
+///
+/// 	.block-2 {
+/// 		width: 250px;
+/// 		height: 100px;
+/// 	}
+///
+/// 	.block-3 {
+/// 		max-width: 250px;
+/// 	}
+///
+/// 	.block-4 {
+/// 		min-width: 250px;
+/// 		min-height: 500px;
+/// 	}
+///
+/// 	.block-5 {
+/// 		height: 250px;
+/// 	}
+/// @param {number | string} $width - ширина
+/// @param {number | string} $height [$width] - высота (по умолчанию наследуется значение из `$width`)
+/// @param {string} $mode [config.$dvalues--size__mode] - режим работы миксина
+@mixin size(
+	$width,
+	$height: $width,
+	$mode: config.$dvalues--size__mode) {
+
+	// Для начала проверяем есть ли значение из `$mode` в списке
+	// `config.$vvalues--size`:
+	@if is-list-contains($mode, config.$vvalues--size) {
+
+		// Если есть, то проверяем след.:
+		// 	1. Если `$mode` содержит значение `normal`,
+		// 	то не используем приставки `max` или `min`:
+		@if $mode == normal {
+			width: $width;
+			height: $height;
+		}
+
+		//	2. Если значение `$mode` отличается от `normal`,
+		// 	то подставляем значение `$mode` как приставку:
+		@else {
+			#{$mode}-width: $width;
+			#{$mode}-height: $height;
+		}
+
+	}
+
+	// Если в списке `config.$vvalues--size` нет
+	// значения из параметра `$mode`, то отображаем сообщение
+	// в консоль:
+	@else {
+		@include invalid-value-message(
+			'size',
+			$mode,
+			config.$vvalues--size
+		);
+	}
+
+}

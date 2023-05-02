@@ -1,0 +1,36 @@
+@use '../../../common/invalid-value-message' as *;
+@use '../validator/is-list' as *;
+
+/// Функция `list-first-item` выдает первый элемент в списке.
+/// ---
+/// @name list-first-item
+/// @group core/
+/// @since 7.0.0
+/// @access public
+/// @author Sindre Sorhus
+/// @link https://github.com/sindresorhus GitHub
+/// @example scss Пример использования в Sass (SCSS)
+/// 	@debug list-first-item((1, 2, 3)); //=> 1
+/// 	@debug list-first-item((3, 2, 1)); //=> 2
+/// 	@debug list-first-item((red, blue, green)); //=> red
+/// @return {*} элемент, который находится в начале списка
+/// @param {list} $list - список, из которого необходимо получить первый элемент
+@function list-first-item($list) {
+
+	// Проверка на соответствие типу `List`:
+	@if is-list($list) == true {
+
+		// Возращаем результативное значение:
+		@return nth($list, 1);
+
+	}
+
+	// Если значение `$list` не соответствует типу `List`:
+	@else {
+
+		// Выводим сообщение о несоответствии типа:
+		@return invalid-value-message('list-first-item', $list, 'List');
+
+	}
+
+}

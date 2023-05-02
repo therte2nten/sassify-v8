@@ -1,0 +1,47 @@
+@use '../../config' as config;
+@use '../utility/map/map-deep-get' as *;
+
+/// Миксин `bem-modifier` создает модификатор по "БЭМу".
+/// ---
+/// @name bem-modifier
+/// @group core/
+/// @since 7.0.0
+/// @access public
+/// @author Marcmintel
+/// @link https://medium.com/@marcmintel Medium
+/// @example scss Пример использования в Sass (SCSS)
+/// 	@include bem-block(card) {
+/// 		background-color: #fff;
+/// 		box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+/// 		/* ... */
+/// 		@include bem-element(title) {
+/// 			color: #29ff50;
+/// 			/* ... */
+/// 			@include bem-modifier(disabled) {
+/// 				color: #fafafa;
+/// 				/* ... */
+/// 			}
+/// 		}
+/// 	}
+/// @example css Результат в CSS
+/// 	.card {
+/// 		background-color: #fff;
+/// 		box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+/// 		/* ... */
+/// 	}
+/// 	.card__title {
+/// 		color: #29ff50;
+/// 		/* ... */
+/// 	}
+/// 	.card__title--disabled {
+/// 		color: #fafafa;
+/// 		/* ... */
+/// 	}
+/// @param {string} $modifier - название селектора модификатора
+@mixin bem-modifier($modifier) {
+	@at-root {
+		#{&}#{ map-deep-get(config.$dvalues--bem, modifier) + $modifier } {
+			@content;
+		}
+	}
+}

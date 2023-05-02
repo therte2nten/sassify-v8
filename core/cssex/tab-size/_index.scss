@@ -1,0 +1,52 @@
+@use '../../../config' as config;
+@use '../../../common/invalid-value-message' as *;
+@use '../../prefixer/' as *;
+@use '../../utility/validator/is-number' as *;
+@use '../../utility/validator/is-list-contains' as *;
+
+/// Миксин `tab-size` устанавливает значение для CSS-свойства
+/// `tab-size` со всеми необходимыми браузерными префиксами.
+///
+/// `tab-size` используется для изменения ширины отступа,
+/// заданного с помощью символа табуляции (клавиша <kbd>Tab</kbd>).
+/// ---
+/// @name tab-size
+/// @group CSSex
+/// @since 7.0.0
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @link https://github.com/therteenten/sassify/blob/develop/core/cssex/tab-size/_index.scss Исходный код миксина
+/// @example scss Пример использования в Sass (SCSS)
+/// 	.code-block { @include tab-size(4); }
+/// @example css Результат в CSS
+/// 	.code-block {
+/// 	  -moz-tab-size: 4;
+/// 	  -o-tab-size: 4;
+/// 	  tab-size: 4;
+/// 	}
+/// @param {number} $size [config.$dvalues--tab-size] - размер отступа
+@mixin tab-size($size: config.$dvalues--tab-size) {
+
+	// С помощью функции `is-number` проверяем соответствие
+	// значения параметра `$size` типу `Number` и также проверяем
+	// наличие значения `$size` в списке `config.$vvalues--tab-size` с
+	// помощью функции `is-list-contains`:
+	@if is-number($size) == true or is-list-contains($size, config.$vvalues--tab-size) {
+
+		// Если `$size` == 'Number', то с помощью миксина `prefixer`
+		// добавляем CSS-свойству `tab-size` нужные браузерные префиксы:
+		@include prefixer(
+			tab-size,
+			$size,
+			config.$prefixes--tab-size
+		);
+
+	}
+
+	// Если `$size` не соответствует типу `Number`, то отображаем
+	// сообщение об этом:
+	@else {
+		@include invalid-value-message('tab-size', $size, config.$vvalues--tab-size);
+	}
+
+}

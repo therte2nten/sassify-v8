@@ -1,0 +1,75 @@
+@use '../../../common/invalid-value-message' as *;
+@use '../../../config' as config;
+@use '../../utility/validator/is-number' as *;
+@use '../../prefixer' as *;
+
+/// > `border-radius` — это CSS-свойство, позволяющее разработчикам
+/// > определять, как скругляются границы блока. Закруглённость
+/// > каждого угла определяется с помощью одного или двух радиусов,
+/// > определяя его форму: круг или эллипс.
+/// >
+/// > &mdash; [mdn web docs](https://developer.mozilla.org/ru/docs/Web/CSS/border-radius)
+///
+/// Миксин `border-radius` позволяет сгенерировать CSS-свойство
+/// `border-radius` со всеми необходимыми юраузерными префиксами.
+/// ---
+/// @name border-radius
+/// @group CSSex
+/// @since 7.0.0
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @link https://github.com/therteenten/sassify/blob/develop/core/cssex/border-radius/_index.scss Исходный код миксина
+/// @example scss Пример использования в Sass (SCSS)
+/// 	.class-1 {
+/// 		@include border-radius(6px);
+/// 	}
+///
+/// 	.class-2 {
+/// 		@include border-radius(20%);
+/// 	}
+///
+/// 	.class-3 {
+/// 		@include border-radius(.8em);
+/// 	}
+/// @example css Результат работы миксина в CSS
+/// 	.class-1 {
+/// 		-webkit-border-radius: 6px;
+/// 		-moz-border-radius: 6px;
+/// 		border-radius: 6px;
+/// 	}
+///
+/// 	.class-2 {
+/// 		-webkit-border-radius: 20%;
+/// 		-moz-border-radius: 20%;
+/// 		border-radius: 20%;
+/// 	}
+///
+/// 	.class-3 {
+/// 		-webkit-border-radius: 0.8em;
+/// 		-moz-border-radius: 0.8em;
+/// 		border-radius: 0.8em;
+/// 	}
+/// @param {number} $radius [config.$dvalues--border-radius] - [`<length>`](https://developer.mozilla.org/ru/docs/Web/CSS/length) или [`<percentage>`](https://developer.mozilla.org/ru/docs/Web/CSS/percentage) устанавливает радиус скругления для всех углов элемента. Может быть указано только одно значение (или одна пара).
+@mixin border-radius($radius: config.$dvalues--border-radius) {
+
+	// С помощью функции `is-number` проверяем значение параметра
+	// `$radius` на соответствие Sass-типу `Number`:
+	@if is-number($radius) {
+
+		// С помощью миксина `prefixer` добавляем все
+		// необходимые браузерные префиксы:
+		@include prefixer(
+			border-radius,
+			$radius,
+			config.$prefixes--border-radius
+		);
+
+	}
+
+	// Если значение параметра `$radius` на соответствует
+	// Sass-типу `Number`, то отображаем сообщение об этом:
+	@else {
+		@include invalid-value-message('border-radius', $radius, config.$vvalues--border-radius)
+	}
+
+}
