@@ -1,3 +1,10 @@
+/// @name vvalues--transition-delay
+/// @group config/
+/// @since 7.0.0
+/// @access public
+/// @type list
+$vvalues--transition-delay: "Time (1s, 5ms, .2ms)" inherit initial unset !default;
+
 /// @name vvalues--border-radius
 /// @group config/
 /// @since 7.0.0
