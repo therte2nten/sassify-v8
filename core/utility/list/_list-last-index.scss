@@ -1,5 +1,5 @@
-@use '../../common/invalid-value-message' as *;
-@use 'is-list' as *;
+@use '../../../common/invalid-value-message' as *;
+@use '../validator/is-list' as *;
 
 /// Функция `list-last-index` выдает индекс последнего
 /// элемента в списке.

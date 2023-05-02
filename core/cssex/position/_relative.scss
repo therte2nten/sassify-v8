@@ -13,11 +13,11 @@
 /// `table-row`, `table-column`, `table-cell` и `table-caption` не определено.
 /// ---
 /// @name position-relative
-/// @group core/
+/// @group CSSex
 /// @since 7.0.0
 /// @access public
 /// @author Haba Kudzaev (therteenten)
-/// @link https://github.com/therteenten/sassify/blob/develop/core/mixin/position/_relative.scss Исходный код миксина
+/// @link https://github.com/therteenten/sassify/blob/develop/core/cssex/position/_relative.scss Исходный код миксина
 /// @example scss Пример использования в Sass (SCSS)
 /// 	.block-position-relative {
 /// 		@include position-relative(15px, null, null, 15px);

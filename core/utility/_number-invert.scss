@@ -1,5 +1,5 @@
 @use '../../common/invalid-value-message' as *;
-@use 'is-number' as *;
+@use './validator/is-number' as *;
 
 /// Функция `number-invert` превращает отрицательные
 /// числа в положительные и наоборот.

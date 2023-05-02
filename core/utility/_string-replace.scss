@@ -1,6 +1,6 @@
 @use '../../common/invalid-value-message' as *;
 @use '../../config' as config;
-@use 'is-string' as *;
+@use './validator/is-string' as *;
 
 /// Функция `string-replace` позволяет заменить слово
 /// или части слова на что-то иное.

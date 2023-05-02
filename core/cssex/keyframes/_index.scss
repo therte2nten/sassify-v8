@@ -4,11 +4,11 @@
 /// `@keyframes` со всеми нужными браузерными префиксами.
 /// ---
 /// @name keyframes
-/// @group core/
+/// @group CSSex
 /// @since 7.0.0
 /// @access public
 /// @author Haba Kudzaev (therteenten)
-/// @link https://github.com/therteenten/sassify/blob/develop/core/mixin/keyframes/_index.scss Исходный код миксина
+/// @link https://github.com/therteenten/sassify/blob/develop/core/cssex/keyframes/_index.scss Исходный код миксина
 /// @example scss Пример использования в Sass (SCSS)
 /// 	@include keyframes(slideIn) {
 /// 		from {

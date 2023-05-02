@@ -1,6 +1,6 @@
-@use '../../config' as config;
+@use '../../../config' as config;
 @use './is-string' as *;
-@use '../../common/invalid-value-message' as *;
+@use '../../../common/invalid-value-message' as *;
 
 /// Функция `is-string-contains` позволяет проверить, содержит ли
 /// строка определённую часть.

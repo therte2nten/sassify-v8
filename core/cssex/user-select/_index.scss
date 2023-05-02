@@ -1,19 +1,19 @@
 @use '../../../config' as config;
 @use '../../../common/invalid-value-message' as *;
-@use '../prefixer' as *;
-@use '../../utility/is-list-contains' as *;
-@use '../../utility/is-string' as *;
+@use '../../mixin/prefixer' as *;
+@use '../../utility/validator/is-list-contains' as *;
+@use '../../utility/validator/is-string' as *;
 
 /// Миксин `user-select` позволяет генерировать CSS-свойство
 /// [`user-select`](https://developer.mozilla.org/ru/docs/Web/CSS/user-select) со
 /// всеми необходимыми браузерными префиксами для максимальной совместимости.
 /// ---
 /// @name user-select
-/// @group core/
+/// @group CSSex
 /// @since 7.0.0
 /// @access public
 /// @author Haba Kudzaev (therteenten)
-/// @link https://github.com/therteenten/sassify/blob/develop/core/mixin/user-select/_index.scss Исходный код миксина
+/// @link https://github.com/therteenten/sassify/blob/develop/core/cssex/user-select/_index.scss Исходный код миксина
 /// @example scss Пример использования в Sass (SCSS)
 /// 	.unselect   { @include user-select(none); }
 /// 	.select-all { @include user-select(all);  }

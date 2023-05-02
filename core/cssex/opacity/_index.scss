@@ -1,7 +1,7 @@
 @use '../../../common/invalid-value-message' as *;
 @use '../../../config' as config;
-@use '../../utility/is-number' as *;
-@use '../prefixer' as *;
+@use '../../utility/validator/is-number' as *;
+@use '../../mixin/prefixer' as *;
 
 /// > CSS-свойство `opacity` устанавливает непрозрачность элемента.
 /// > Непрозрачность - это степень, в которой содержимое скрывается
@@ -13,11 +13,11 @@
 /// всеми необходимыми браузерными префиксами.
 /// ---
 /// @name opacity
-/// @group core/
+/// @group CSSex
 /// @since 7.0.0
 /// @access public
 /// @author Haba Kudzaev (therteenten)
-/// @link https://github.com/therteenten/sassify/blob/develop/core/mixin/opacity/_index.scss Исходный код миксина
+/// @link https://github.com/therteenten/sassify/blob/develop/core/cssex/opacity/_index.scss Исходный код миксина
 /// @example scss Пример использования в Sass (SCSS)
 /// 	.class-1 {
 /// 		@include opacity(); // default value (1)

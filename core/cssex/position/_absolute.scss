@@ -13,11 +13,11 @@
 /// [сворачиваются](https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing) с другими полями.
 /// ---
 /// @name position-absolute
-/// @group core/
+/// @group CSSex
 /// @since 7.0.0
 /// @access public
 /// @author Haba Kudzaev (therteenten)
-/// @link https://github.com/therteenten/sassify/blob/develop/core/mixin/position/_absolute.scss Исходный код миксина
+/// @link https://github.com/therteenten/sassify/blob/develop/core/cssex/position/_absolute.scss Исходный код миксина
 /// @example scss Пример использования в Sass (SCSS)
 /// 	.block-position-absolute-top {
 /// 		@include position-absolute(15px);

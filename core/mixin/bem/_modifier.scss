@@ -1,5 +1,5 @@
 @use '../../../config' as config;
-@use '../../utility/map-deep-get' as *;
+@use '../../utility/map/map-deep-get' as *;
 
 /// Миксин `bem-modifier` создает модификатор по "БЭМу".
 /// ---

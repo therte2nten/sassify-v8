@@ -1,8 +1,8 @@
 @use '../../../config' as config;
 @use '../../../common/invalid-value-message' as *;
-@use '../prefixer' as *;
-@use '../../utility/is-number' as *;
-@use '../../utility/is-list-contains' as *;
+@use '../../mixin/prefixer/' as *;
+@use '../../utility/validator/is-number' as *;
+@use '../../utility/validator/is-list-contains' as *;
 
 /// Миксин `tab-size` устанавливает значение для CSS-свойства
 /// `tab-size` со всеми необходимыми браузерными префиксами.
@@ -11,11 +11,11 @@
 /// заданного с помощью символа табуляции (клавиша <kbd>Tab</kbd>).
 /// ---
 /// @name tab-size
-/// @group core/
+/// @group CSSex
 /// @since 7.0.0
 /// @access public
 /// @author Haba Kudzaev (therteenten)
-/// @link https://github.com/therteenten/sassify/blob/develop/core/mixin/tab-size/_index.scss Исходный код миксина
+/// @link https://github.com/therteenten/sassify/blob/develop/core/cssex/tab-size/_index.scss Исходный код миксина
 /// @example scss Пример использования в Sass (SCSS)
 /// 	.code-block { @include tab-size(4); }
 /// @example css Результат в CSS
