@@ -48,3 +48,30 @@
 @forward 'core/utility/validator/is-string-end-with';
 @forward 'core/utility/validator/is-string-start-with';
 @forward 'core/utility/validator/is-time';
+
+@forward 'common/helper/css-types';
+@forward 'common/check';
+
+@forward 'common/color/apple-hig/ios';
+@forward 'common/color/apple-hig/macos';
+@forward 'common/color/apple-hig/watchos';
+@forward 'common/color/material-design/amber';
+@forward 'common/color/material-design/blue';
+@forward 'common/color/material-design/blue-grey';
+@forward 'common/color/material-design/brown';
+@forward 'common/color/material-design/cyan';
+@forward 'common/color/material-design/deep-orange';
+@forward 'common/color/material-design/deep-purple';
+@forward 'common/color/material-design/green';
+@forward 'common/color/material-design/grey';
+@forward 'common/color/material-design/indigo';
+@forward 'common/color/material-design/light-blue';
+@forward 'common/color/material-design/light-green';
+@forward 'common/color/material-design/lime';
+@forward 'common/color/material-design/orange';
+@forward 'common/color/material-design/pink';
+@forward 'common/color/material-design/purple';
+@forward 'common/color/material-design/red';
+@forward 'common/color/material-design/teal';
+@forward 'common/color/material-design/yellow';
+@forward 'common/color/microsoft-windows';

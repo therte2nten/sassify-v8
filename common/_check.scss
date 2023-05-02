@@ -1,0 +1,38 @@
+@use '../config' as config;
+
+/// Миксин `check` выводит некоторую информацию о Sassify.
+/// Полезно для проверки установки пакета Sassify в проект.
+/// ---
+/// @name check
+/// @group common/
+/// @since 7.0.0
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @link https://github.com/therteenten/sassify GitHub
+/// @param {string} $
+@mixin check() {
+
+	$-package: (
+		"Имя пакета": '@therteenten/sassify',
+		"Описание": 'Большой набор миксинов и функций на языке CSS-препроцессора Sass',
+		"Разработчик": 'Haba Kudzaev <therteenten@inbox.ru>',
+		"Лицензия": 'MIT',
+		"Ссылка на npm": 'https://www.npmjs.com/package/@therteenten/sassify',
+		"Исходный код проекта": 'https://github.com/therteenten/sassify'
+	);
+
+	$-message-check-success: '(sassify) #{config.$string--emoji__success} The check was successful!';
+
+	@debug $-message-check-success;
+	/* #{$-message-check-success} */
+
+	@each $-title, $-description in $-package {
+
+		$-message: '(sassify) #{config.$string--emoji__debug} #{$-title}: #{$-description}';
+
+		@debug $-message;
+		/* #{$-message} */
+
+	}
+
+}

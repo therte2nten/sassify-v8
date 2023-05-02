@@ -27,7 +27,7 @@
 
 	// Шаблон части сообщения с допустимыми
 	// значениями:
-	$-message-valid-params--list: '#{config.$string--emoji__info} ┌ Допустимые значения для «#{$mixin-name}»:';
+	$-message-valid-params--list: '(sassify) #{config.$string--emoji__info} ┌ Допустимые значения для «#{$mixin-name}»:';
 
 	// Если "жесткий режим" включен, то...
 	@if config.$setting--strict-mode == true {
@@ -46,7 +46,7 @@
 	@else {
 
 		// ... конфигурируем текст сообщения об ошибке:
-		$-message: '#{config.$string--emoji__warning} #{$-message-template}';
+		$-message: '(sassify) #{config.$string--emoji__warning} #{$-message-template}';
 
 		// С помощью директивы `@warn` выводим сообщение
 		// об ошибке:
@@ -71,20 +71,20 @@
 
 			// С помощью директивы `@debug` выводим в консоль
 			// список допустимых параметров для миксина:
-			@debug '#{config.$string--emoji__success} └─ #{$i}';
+			@debug '(sassify) #{config.$string--emoji__success} └─ #{$i}';
 
 			// Дублируем этот список в CSS-файл с помощью комментариев:
-			/* #{config.$string--emoji__success} └─ #{$i} */
+			/* (sassify) #{config.$string--emoji__success} └─ #{$i} */
 
 		}
 
 		// В конце выводим для примера неверный параметр,
 		// который был передан миксину:
-		@debug '#{config.$string--emoji__error} └⤬ #{$invalid-param}';
+		@debug '(sassify) #{config.$string--emoji__error} └⤬ #{$invalid-param}';
 
 		// Дублируем вывод неверного параметра прямо в CSS-файл
 		// с помощью комментария:
-		/* #{config.$string--emoji__error} └⤬ #{$invalid-param} */
+		/* (sassify) #{config.$string--emoji__error} └⤬ #{$invalid-param} */
 
 	}
 
