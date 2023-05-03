@@ -21,3 +21,44 @@
 - [Участие в разработке Sassify](./CONTRIBUTING.md)
 - [Кодекс Поведения участника](./CODE_OF_CONDUCT.md)
 - [Техническое задание проекта](.docs/technical-specification.md)
+
+## Оглавление
+...
+
+## Быстрый старт
+...
+
+## Нашли проблему? Есть предложение?
+...
+
+## Документация
+...
+
+### Локальная документация
+...
+
+## Сообщество
+...
+
+## Версии
+...
+
+## Благодарности
+...
+
+## Лицензия
+Проект распространяется по свободной лицензии MIT, однако в проекте используются труды иных людей, чьё авторство я также обозначил в местах, где используется их код.
+
+```
+MIT License
+
+Copyright (c) 2023 Haba Kudzaev <therteenten@inbox.ru>
+```
+
+> Если Вы нашли нарушение чьей-либо лицензии в моем проекте, то просьба написать мне → [Telegram][therteenten-telegram], [эл. почта][therteenten-email] или [VK][therteenten-vk].
+
+<!-- ! -->
+[therteenten-vk]: https://vk.com/therteenten
+[therteenten-telegram]: https://t.me/therteenten
+[therteenten-email]: mailto:therteenten@inbox.ru
+<!-- ! -->
