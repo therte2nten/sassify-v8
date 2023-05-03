@@ -22,11 +22,64 @@
 - [Кодекс Поведения участника](./CODE_OF_CONDUCT.md)
 - [Техническое задание проекта](.docs/technical-specification.md)
 
-## Оглавление
-...
-
 ## Быстрый старт
-...
+1. Перед тем как начать нужно удостовериться в том, что у Вас установлен Node.js:
+
+	```sh
+	node -v
+	# или
+	npm -v
+	```
+	```sh
+	v16.18.1
+	# или
+	9.6.4
+	```
+
+	> Если у Вас какая-то другая версия - всё нормально. Значит Node.js у Вас установлен.
+
+2. Далее с помощью пакетного менеджера для Node.js устанавливаем пакет в ваш проект:
+
+	```sh
+	# npm
+	npm install @therteenten/sassify --save-dev
+	```
+	```sh
+	# Yarn
+	yarn add @therteenten/sassify --dev
+	```
+	```sh
+	# pnpm
+	pnpm install @therteenten/sassify -D
+	```
+
+3. Далее в нужный Sass/SCSS-файл импортируем модуль Sassify:
+
+	```scss
+	@use 'node_modules/@therteenten/sassify' as sassify;
+	```
+
+	> Если Вы до сих пор используете директиву `@import` в Sass, то вот что говорят разработчики Sass в своем блоге:
+	>
+	> > The Sass team wants to allow for a large amount of time when `@use` and `@import` can coexist, to help the ecosystem smoothly migrate to the new system. However, doing away with `@import` entirely is the ultimate goal for simplicity, performance, and CSS compatibility.
+	> > <details><summary>Перевод (машинный)</summary><br><p>Команда Sass хочет предусмотреть большое количество времени, когда <code>@use</code>  и <code>@import</code> могут сосуществовать, чтобы помочь экосистеме плавно перейти на новую систему. Однако полный отказ от <code>@import</code> является конечной целью для простоты, производительности и совместимости с CSS.</p></details>
+
+4. Проверяем подключение Sassify:
+
+	```scss
+	@include sassify.check();
+	```
+	```css
+	/* (sassify) 🟩 The check was successful! */
+	/* (sassify) ⬜ Package Name: @therteenten/sassify */
+	/* (sassify) ⬜ Description:  Большой набор миксинов и функций на языке CSS-препроцессора Sass */
+	/* (sassify) ⬜ Author:       Haba Kudzaev <therteenten@inbox.ru> */
+	/* (sassify) ⬜ License:      MIT */
+	/* (sassify) ⬜ npm:          https://www.npmjs.com/package/@therteenten/sassify */
+	/* (sassify) ⬜ Source Code:  https://github.com/therteenten/sassify */
+	```
+
+5. **Готово!**
 
 ## Нашли проблему? Есть предложение?
 ...
