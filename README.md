@@ -16,3 +16,8 @@
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/therteenten/sassify)
 ![GitHub contributors](https://img.shields.io/github/contributors/therteenten/sassify)
 ![GitHub last commit](https://img.shields.io/github/last-commit/therteenten/sassify)
+
+- [Список изменений](./CHANGELOG.md)
+- [Участие в разработке Sassify](./CONTRIBUTING.md)
+- [Кодекс Поведения участника](./CODE_OF_CONDUCT.md)
+- [Техническое задание проекта](.docs/technical-specification.md)
