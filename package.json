@@ -5,7 +5,9 @@
 	"main": "index.scss",
 	"scripts": {
 		"test": "sass --watch test.scss:test.css",
-		"sassdoc": "npx sassdoc . -d docs/",
+		"sassdoc": "npm-run-all --continue-on-error sassdoc:sass sassdoc:docs",
+		"sassdoc:docs": "npx sassdoc . -d docs/ -c sassdoc.json",
+		"sassdoc:sass": "sass .sassdoc-theme/styles:.sassdoc-theme/assets/css",
 		"npm:publish": "npm publish --access public",
 		"npm:version-major": "npm version major -m \"Обновил версию пакета до %s\"",
 		"npm:version-minor": "npm version minor -m \"Обновил версию пакета до %s\"",
@@ -27,6 +29,7 @@
 	},
 	"homepage": "https://github.com/therteenten/sassify#readme",
 	"devDependencies": {
+		"npm-run-all": "^4.1.5",
 		"sass": "^1.62.1",
 		"sassdoc": "^2.7.4"
 	}

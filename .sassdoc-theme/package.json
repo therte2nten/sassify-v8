@@ -1,0 +1,17 @@
+{
+  "name": "sassdoc-theme",
+  "description": "A fancy new SassDoc theme.",
+  "version": "0.1.0",
+  "keywords": [
+    "sassdoc-theme"
+  ],
+  "dependencies": {
+    "extend": "^3.0.2",
+    "nunjucks": "^3.2.4",
+    "sassdoc-extras": "^3.0.0",
+    "themeleon": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  }
+}

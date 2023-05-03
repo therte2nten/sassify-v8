@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="assets/css/grid.css">
+		<link rel="stylesheet" href="assets/css/main.css">
+		<title>Document</title>
+	</head>
+	<body>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					{##
+					# To display our items, we need to:
+					# 1. Loop over `data.byGroupAndType` groups
+					# 2. Loop over types mapped to each group
+					# 3. Loop over items mapped to each type
+					#}
+
+					{# 1. Loop over the groups in `data.byGroupAndType` #}
+					{% for group_name, group in data.byGroupAndType %}
+						<section class="group-section">
+							{# Retrieve group alias if any (else group name) #}
+							<h1 class="group-name">{{ groups[group_name] }}</h1>
+
+							{# 2. Loop over the types in the current group #}
+							{% for type, items in group %}
+
+								{# If items to be displayed in type #}
+								{% if items.length > 0 %}
+									<section>
+
+										<h2>{{ type }}</h2>
+
+										{# 3. Loop over the items in the current type #}
+										{% for item in items %}
+
+											{# At this point it is up to you to display whatever you want from your items. #}
+											<h3>{{ item.context.name }}</h3>
+											{% if item.author.length > 0 %}
+												<h3 class="item__sub-heading">Автор{% if item.author.length > 1 %}ы{% endif %}</h3>
+
+												<ul class="list-unstyled">
+													{% for author in item.author %}
+														<li>{{ author | safe }}</li>
+													{% endfor %}
+												</ul>
+											{% endif %}
+
+
+
+										{% endfor %}
+									</section>
+								{% endif %}
+
+							{% endfor %}
+
+						</section>
+
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
