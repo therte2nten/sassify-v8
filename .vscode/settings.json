@@ -14,7 +14,8 @@
     "README.md": false,
     "*.map": false,
     ".editorconfig": false,
-    ".npmignore": false
+    ".npmignore": false,
+    ".docs": false
   },
   "npm-scripts.showStartNotification": false,
   "workspace.isHidden": false,
