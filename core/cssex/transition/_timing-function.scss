@@ -78,103 +78,103 @@
 /// 		@include transition-timing-function($timing-function, true);
 /// 	}
 /// @example css Результат работы миксина в CSS
-///		.ease {
-///			-webkit-transition-timing-function: ease;
-///			-moz-transition-timing-function: ease;
-///			-o-transition-timing-function: ease;
-///			transition-timing-function: ease;
-///		}
+/// 	.ease {
+/// 		-webkit-transition-timing-function: ease;
+/// 		-moz-transition-timing-function: ease;
+/// 		-o-transition-timing-function: ease;
+/// 		transition-timing-function: ease;
+/// 	}
 ///
-///		.easein {
-///			-webkit-transition-timing-function: ease-in;
-///			-moz-transition-timing-function: ease-in;
-///			-o-transition-timing-function: ease-in;
-///			transition-timing-function: ease-in;
-///		}
+/// 	.easein {
+/// 		-webkit-transition-timing-function: ease-in;
+/// 		-moz-transition-timing-function: ease-in;
+/// 		-o-transition-timing-function: ease-in;
+/// 		transition-timing-function: ease-in;
+/// 	}
 ///
-///		.easeout {
-///			-webkit-transition-timing-function: ease-out;
-///			-moz-transition-timing-function: ease-out;
-///			-o-transition-timing-function: ease-out;
-///			transition-timing-function: ease-out;
-///		}
+/// 	.easeout {
+/// 		-webkit-transition-timing-function: ease-out;
+/// 		-moz-transition-timing-function: ease-out;
+/// 		-o-transition-timing-function: ease-out;
+/// 		transition-timing-function: ease-out;
+/// 	}
 ///
-///		.easeinout {
-///			-webkit-transition-timing-function: ease-in-out;
-///			-moz-transition-timing-function: ease-in-out;
-///			-o-transition-timing-function: ease-in-out;
-///			transition-timing-function: ease-in-out;
-///		}
+/// 	.easeinout {
+/// 		-webkit-transition-timing-function: ease-in-out;
+/// 		-moz-transition-timing-function: ease-in-out;
+/// 		-o-transition-timing-function: ease-in-out;
+/// 		transition-timing-function: ease-in-out;
+/// 	}
 ///
-///		.linear {
-///			-webkit-transition-timing-function: linear;
-///			-moz-transition-timing-function: linear;
-///			-o-transition-timing-function: linear;
-///			transition-timing-function: linear;
-///		}
+/// 	.linear {
+/// 		-webkit-transition-timing-function: linear;
+/// 		-moz-transition-timing-function: linear;
+/// 		-o-transition-timing-function: linear;
+/// 		transition-timing-function: linear;
+/// 	}
 ///
-///		.cb {
-///			-webkit-transition-timing-function: cubic-bezier(0.2, -2, 0.8, 2);
-///			-moz-transition-timing-function: cubic-bezier(0.2, -2, 0.8, 2);
-///			-o-transition-timing-function: cubic-bezier(0.2, -2, 0.8, 2);
-///			transition-timing-function: cubic-bezier(0.2, -2, 0.8, 2);
-///		}
+/// 	.cb {
+/// 		-webkit-transition-timing-function: cubic-bezier(0.2, -2, 0.8, 2);
+/// 		-moz-transition-timing-function: cubic-bezier(0.2, -2, 0.8, 2);
+/// 		-o-transition-timing-function: cubic-bezier(0.2, -2, 0.8, 2);
+/// 		transition-timing-function: cubic-bezier(0.2, -2, 0.8, 2);
+/// 	}
 ///
-///		.jump-start {
-///			-webkit-transition-timing-function: steps(5, jump-start);
-///			-moz-transition-timing-function: steps(5, jump-start);
-///			-o-transition-timing-function: steps(5, jump-start);
-///			transition-timing-function: steps(5, jump-start);
-///		}
+/// 	.jump-start {
+/// 		-webkit-transition-timing-function: steps(5, jump-start);
+/// 		-moz-transition-timing-function: steps(5, jump-start);
+/// 		-o-transition-timing-function: steps(5, jump-start);
+/// 		transition-timing-function: steps(5, jump-start);
+/// 	}
 ///
-///		.jump-end {
-///			-webkit-transition-timing-function: steps(5, jump-end);
-///			-moz-transition-timing-function: steps(5, jump-end);
-///			-o-transition-timing-function: steps(5, jump-end);
-///			transition-timing-function: steps(5, jump-end);
-///		}
+/// 	.jump-end {
+/// 		-webkit-transition-timing-function: steps(5, jump-end);
+/// 		-moz-transition-timing-function: steps(5, jump-end);
+/// 		-o-transition-timing-function: steps(5, jump-end);
+/// 		transition-timing-function: steps(5, jump-end);
+/// 	}
 ///
-///		.jump-none {
-///			-webkit-transition-timing-function: steps(5, jump-none);
-///			-moz-transition-timing-function: steps(5, jump-none);
-///			-o-transition-timing-function: steps(5, jump-none);
-///			transition-timing-function: steps(5, jump-none);
-///		}
+/// 	.jump-none {
+/// 		-webkit-transition-timing-function: steps(5, jump-none);
+/// 		-moz-transition-timing-function: steps(5, jump-none);
+/// 		-o-transition-timing-function: steps(5, jump-none);
+/// 		transition-timing-function: steps(5, jump-none);
+/// 	}
 ///
-///		.jump-both {
-///			-webkit-transition-timing-function: steps(5, jump-both);
-///			-moz-transition-timing-function: steps(5, jump-both);
-///			-o-transition-timing-function: steps(5, jump-both);
-///			transition-timing-function: steps(5, jump-both);
-///		}
+/// 	.jump-both {
+/// 		-webkit-transition-timing-function: steps(5, jump-both);
+/// 		-moz-transition-timing-function: steps(5, jump-both);
+/// 		-o-transition-timing-function: steps(5, jump-both);
+/// 		transition-timing-function: steps(5, jump-both);
+/// 	}
 ///
-///		.step-start {
-///			-webkit-transition-timing-function: step-start;
-///			-moz-transition-timing-function: step-start;
-///			-o-transition-timing-function: step-start;
-///			transition-timing-function: step-start;
-///		}
+/// 	.step-start {
+/// 		-webkit-transition-timing-function: step-start;
+/// 		-moz-transition-timing-function: step-start;
+/// 		-o-transition-timing-function: step-start;
+/// 		transition-timing-function: step-start;
+/// 	}
 ///
-///		.step-end {
-///			-webkit-transition-timing-function: step-end;
-///			-moz-transition-timing-function: step-end;
-///			-o-transition-timing-function: step-end;
-///			transition-timing-function: step-end;
-///		}
+/// 	.step-end {
+/// 		-webkit-transition-timing-function: step-end;
+/// 		-moz-transition-timing-function: step-end;
+/// 		-o-transition-timing-function: step-end;
+/// 		transition-timing-function: step-end;
+/// 	}
 ///
-///		.multiply {
-///			-webkit-transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1);
-///			-moz-transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1);
-///			-o-transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1);
-///			transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1);
-///		}
+/// 	.multiply {
+/// 		-webkit-transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1);
+/// 		-moz-transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1);
+/// 		-o-transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1);
+/// 		transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1);
+/// 	}
 ///
-///		.multiply-2 {
-///			-webkit-transition-timing-function: ease-in, cubic-bezier(0.1, 0.7, 1, 0.1);
-///			-moz-transition-timing-function: ease-in, cubic-bezier(0.1, 0.7, 1, 0.1);
-///			-o-transition-timing-function: ease-in, cubic-bezier(0.1, 0.7, 1, 0.1);
-///			transition-timing-function: ease-in, cubic-bezier(0.1, 0.7, 1, 0.1);
-///		}
+/// 	.multiply-2 {
+/// 		-webkit-transition-timing-function: ease-in, cubic-bezier(0.1, 0.7, 1, 0.1);
+/// 		-moz-transition-timing-function: ease-in, cubic-bezier(0.1, 0.7, 1, 0.1);
+/// 		-o-transition-timing-function: ease-in, cubic-bezier(0.1, 0.7, 1, 0.1);
+/// 		transition-timing-function: ease-in, cubic-bezier(0.1, 0.7, 1, 0.1);
+/// 	}
 /// @param {string} $function [config.$dvalues--transition-timing-function] - математическая функция, показывающая, как быстро по времени меняется указанное через `transition-property` значение свойства
 /// @param {boolean} $is-multiple-timing-functions [false] - используется ли "пакет" значений (напр.: `(ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1)`)?
 @mixin transition-timing-function($function: config.$dvalues--transition-timing-function, $is-multiple-timing-functions: false) {
