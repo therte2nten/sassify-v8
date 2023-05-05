@@ -42,8 +42,8 @@
 /// 	.target:hover {
 /// 		font-size: 36px;
 /// 	}
-/// @param {string} $property - название стилевого свойства, регистр при его написании не учитывается.
-@mixin transition-property($property) {
+/// @param {string} $property [config.$dvalues--transition-property] - название стилевого свойства, регистр при его написании не учитывается.
+@mixin transition-property($property: config.$dvalues--transition-property) {
 
 	// Если проверки прошли успешно, то с помощью
 	// миксина `prefixer` добавляем необходимые браузерные

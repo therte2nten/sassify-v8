@@ -175,9 +175,9 @@
 ///			-o-transition-timing-function: ease-in, cubic-bezier(0.1, 0.7, 1, 0.1);
 ///			transition-timing-function: ease-in, cubic-bezier(0.1, 0.7, 1, 0.1);
 ///		}
-/// @param {string} $function - математическая функция, показывающая, как быстро по времени меняется указанное через `transition-property` значение свойства
+/// @param {string} $function [config.$dvalues--transition-timing-function] - математическая функция, показывающая, как быстро по времени меняется указанное через `transition-property` значение свойства
 /// @param {boolean} $is-multiple-timing-functions [false] - используется ли "пакет" значений (напр.: `(ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1)`)?
-@mixin transition-timing-function($function, $is-multiple-timing-functions: false) {
+@mixin transition-timing-function($function: config.$dvalues--transition-timing-function, $is-multiple-timing-functions: false) {
 
 	// Для начала проведем проверку значения параметра
 	// `$function`:
