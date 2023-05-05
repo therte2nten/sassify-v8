@@ -1,3 +1,10 @@
+/// @name vvalues--transition-duration
+/// @group config/
+/// @since 7.0.0
+/// @access public
+/// @type list
+$vvalues--transition-duration: "Time (1s, 5ms, .2ms)" inherit initial revert revert-layer unset !default;
+
 /// @name vvalues--transition-delay
 /// @group config/
 /// @since 7.0.0

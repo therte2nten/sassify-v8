@@ -5,6 +5,17 @@
 /// @type list
 $prefixes--all: webkit khtml moz ms o !default;
 
+/// - Chrome до версии 26.0, Safari до версии 6.1 и Android до версии 4.4 поддерживают свойство `-webkit-transition-duration`
+/// - Opera до версии 12.10 поддерживает свойство `-o-transition-duration`
+/// - Firefox до версии 16 поддерживает свойство `-moz-transition-duration`
+/// ---
+/// @name prefixes--transition-duration
+/// @group config/
+/// @since 7.0.0
+/// @access public
+/// @type list
+$prefixes--transition-duration: webkit moz o !default;
+
 /// - Chrome до версии 26.0, Safari до версии 6.1 и Android до версии 4.4 поддерживают свойство `-webkit-transition-delay`
 /// - Opera до версии 12.10 поддерживает свойство `-o-transition-delay`
 /// - Firefox до версии 16 поддерживает свойство `-moz-transition-delay`
