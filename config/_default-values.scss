@@ -26,12 +26,21 @@ $dvalues--transition-duration: 0s !default;
 /// @type number
 $dvalues--transition-delay: 0s !default;
 
+/// С этой переменной сложились проблемы, т.к. непонятно
+/// как быть с тем, что миксин принимает в качестве функции
+/// множественный аргумент (или как он там называется) и написать
+/// что-то типа `$params...: $dvalues--transition` не получится.
+///
+/// Я попробую в будущем это как-то решить, но пока эта
+/// переменная не работает.
+/// ---
+/// @ignore
 /// @name dvalues--transition
 /// @group config/
 /// @since 7.0.0
-/// @access public
+/// @access private
 /// @type list
-$dvalues--transition: all 0s ease 0s !default;
+$-dvalues--transition: all 0s ease 0s !default;
 
 /// Значение по умолчанию для миксина `opacity`. Значение регулирует
 /// поддержку CSS-свойства `opacity` для браузера Internet Explorer.
