@@ -5,6 +5,18 @@
 /// @type list
 $prefixes--all: webkit khtml moz ms o !default;
 
+/// - Chrome до версии 26, Safari до версии 6.1 и Android до версии 4.4 поддерживают свойство `-webkit-transition-timing-function`
+/// - Opera до версии 12.10 поддерживает свойство `-o-transition-timing-function`
+/// - Firefox до версии 16 поддерживает свойство` -moz-transition-timing-function`
+/// - Safari поддерживает значение `steps` только с версии 5.1
+/// ---
+/// @name prefixes--transition-timing-function
+/// @group config/
+/// @since 7.0.0
+/// @access public
+/// @type list
+$prefixes--transition-timing-function: webkit moz o !default;
+
 /// - Chrome до версии 26.0, Safari до версии 6.1 и Android до версии 4.4 поддерживают свойство `-webkit-transition-property`
 /// - Opera до версии 12.10 поддерживает свойство `-o-transition-property`
 /// - Firefox до версии 16 поддерживает свойство `-moz-transition-property`

@@ -1,3 +1,10 @@
+/// @name vvalues--transition-timing-function
+/// @group config/
+/// @since 7.0.0
+/// @access public
+/// @type list
+$vvalues--transition-timing-function: ease ease-in ease-out ease-in-out linear step-start step-end "steps()" "cubic-bezier()" "Multiple timing functions (~ ease, cubic-bezier(0.1, 0.7, 1, 0.1))" inherit initial revert revert-layer unset !default;
+
 /// @name vvalues--transition-duration
 /// @group config/
 /// @since 7.0.0
