@@ -1,26 +1,26 @@
 /// @name dvalues--transition-timing-function
-/// @group config/
+/// @group Configs
 /// @since 7.0.0
 /// @access public
 /// @type number
 $dvalues--transition-timing-function: ease !default;
 
 /// @name dvalues--transition-property
-/// @group config/
+/// @group Configs
 /// @since 7.0.0
 /// @access public
 /// @type number
 $dvalues--transition-property: all !default;
 
 /// @name dvalues--transition-duration
-/// @group config/
+/// @group Configs
 /// @since 7.0.0
 /// @access public
 /// @type number
 $dvalues--transition-duration: 0s !default;
 
 /// @name dvalues--transition-delay
-/// @group config/
+/// @group Configs
 /// @since 7.0.0
 /// @access public
 /// @type number
@@ -36,7 +36,7 @@ $dvalues--transition-delay: 0s !default;
 /// ---
 /// @ignore
 /// @name dvalues--transition
-/// @group config/
+/// @group Configs
 /// @since 7.0.0
 /// @access private
 /// @type list
@@ -46,7 +46,7 @@ $-dvalues--transition: all 0s ease 0s !default;
 /// поддержку CSS-свойства `opacity` для браузера Internet Explorer.
 /// ---
 /// @name dvalues--border-radius
-/// @group config/
+/// @group Configs
 /// @since 7.0.0
 /// @access public
 /// @type number
@@ -56,7 +56,7 @@ $dvalues--border-radius: 0 !default;
 /// поддержку CSS-свойства `opacity` для браузера Internet Explorer.
 /// ---
 /// @name dvalues--opacity__support-ie
-/// @group config/
+/// @group Configs
 /// @since 7.0.0
 /// @access public
 /// @type boolean
@@ -65,7 +65,7 @@ $dvalues--opacity__support-ie: false !default;
 /// Значение по умолчанию для CSS-свойства `position`
 /// ---
 /// @name dvalues--position
-/// @group config/
+/// @group Configs
 /// @since 7.0.0
 /// @access public
 /// @type string
@@ -74,7 +74,7 @@ $dvalues--position: static !default;
 /// Значение `$side` для миксина `position-sticky`
 /// ---
 /// @name dvalues--position-sticky__side
-/// @group config/
+/// @group Configs
 /// @since 7.0.0
 /// @access public
 /// @type string
@@ -83,7 +83,7 @@ $dvalues--position-sticky__side: top !default;
 /// Значение `$side-offset` для миксина `position-sticky`
 /// ---
 /// @name dvalues--position-sticky__side-offset
-/// @group config/
+/// @group Configs
 /// @since 7.0.0
 /// @access public
 /// @type number
@@ -92,7 +92,7 @@ $dvalues--position-sticky__side-offset: 0 !default;
 /// Значение по умолчанию для CSS-свойства `tab-size`
 /// ---
 /// @name dvalues--tab-size
-/// @group config/
+/// @group Configs
 /// @since 7.0.0
 /// @access public
 /// @type number
@@ -101,7 +101,7 @@ $dvalues--tab-size: 8 !default;
 /// Размер блока для миксина `visually-hidden`
 /// ---
 /// @name dvalues--visually-hidden__size
-/// @group config/
+/// @group Configs
 /// @since 7.0.0
 /// @access public
 /// @type number
@@ -110,7 +110,7 @@ $dvalues--visually-hidden__size: 1px !default;
 /// Режим работы миксина `size`
 /// ---
 /// @name dvalues--size__mode
-/// @group config/
+/// @group Configs
 /// @since 7.0.0
 /// @access public
 /// @type string
@@ -119,7 +119,7 @@ $dvalues--size__mode: normal !default;
 /// Добавлять префиксы не к CSS-свойству, а к его значению?
 /// ---
 /// @name dvalues--prefixer__prefix-value
-/// @group config/
+/// @group Configs
 /// @since 7.0.0
 /// @access public
 /// @type boolean
@@ -128,7 +128,7 @@ $dvalues--prefixer__prefix-value: false !default;
 /// Сохранять исходный вариант CSS-свойтсва без браузерного префикса?
 /// ---
 /// @name dvalues--prefixer__save-unprefixed-property
-/// @group config/
+/// @group Configs
 /// @since 7.0.0
 /// @access public
 /// @type boolean
@@ -137,7 +137,7 @@ $dvalues--prefixer__save-unprefixed-property: true !default;
 /// Значение CSS-свойства `user-select` по умолчанию
 /// ---
 /// @name dvalues--user-select
-/// @group config/
+/// @group Configs
 /// @since 7.0.0
 /// @access public
 /// @type string
@@ -146,7 +146,7 @@ $dvalues--user-select: auto !default;
 /// Префикс для атрибута
 /// ---
 /// @name dvalues--amcss__prefix
-/// @group config/
+/// @group Configs
 /// @since 7.0.0
 /// @access public
 /// @type string
@@ -156,7 +156,7 @@ $dvalues--amcss__prefix: 'am-' !default;
 /// `bem-modifier`.
 /// ---
 /// @name dvalues--bem
-/// @group config/
+/// @group Configs
 /// @since 7.0.0
 /// @access public
 /// @type map
@@ -168,7 +168,7 @@ $dvalues--bem: (
 ) !default;
 
 /// @name dvalues--url-encode__characters
-/// @group config/
+/// @group Configs
 /// @since 7.0.0
 /// @access public
 /// @type map
@@ -195,7 +195,7 @@ $dvalues--url-encode__characters: (
 ) !default;
 
 /// @name dvalues--set-initial
-/// @group config/
+/// @group Configs
 /// @since 7.0.0
 /// @access public
 /// @type map
