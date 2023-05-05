@@ -1,0 +1,57 @@
+@use '../../../config' as config;
+@use '../../prefixer' as *;
+
+/// > Устанавливает имя стилевого свойства, значение
+/// > которого будет отслеживаться для создания эффекта перехода.
+/// >
+/// > &mdash; [WebReference](https://webref.ru/css/transition-property)
+///
+/// Миксин `transition-property` позволяет сгенерировать CSS-свойство
+/// `transition-property` со всеми необходимыми браузерными префиксами.
+/// ---
+/// @name transition-property
+/// @group CSSex
+/// @since 7.0.0
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @link https://github.com/therteenten/sassify/blob/develop/core/cssex/transition-property/_index.scss Исходный код миксина
+/// @example scss Пример использования в Sass (SCSS)
+/// 	// https://developer.mozilla.org/en-US/docs/Web/CSS/transition-property#simple_example
+/// 	.target {
+/// 	  font-size: 14px;
+/// 	  @include transition-property(font-size);
+/// 	  @include transition-duration(4s);
+/// 	}
+///
+/// 	.target:hover {
+/// 	  font-size: 36px;
+/// 	}
+/// @example css Результат работы миксина в CSS
+/// 	.target {
+/// 		font-size: 14px;
+/// 		-webkit-transition-property: font-size;
+/// 		-moz-transition-property: font-size;
+/// 		-o-transition-property: font-size;
+/// 		transition-property: font-size;
+/// 		-webkit-transition-duration: 4s;
+/// 		-moz-transition-duration: 4s;
+/// 		-o-transition-duration: 4s;
+/// 		transition-duration: 4s;
+/// 	}
+///
+/// 	.target:hover {
+/// 		font-size: 36px;
+/// 	}
+/// @param {string} $property - время в секундах или миллисекундах, сколько должна длиться анимация перехода до её завершения
+@mixin transition-property($property) {
+
+	// Если проверки прошли успешно, то с помощью
+	// миксина `prefixer` добавляем необходимые браузерные
+	// префиксы CSS-свойству `transition-property`:
+	@include prefixer(
+		transition-property,
+		$property,
+		config.$prefixes--transition-property
+	);
+
+}
