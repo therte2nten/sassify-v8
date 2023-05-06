@@ -5,6 +5,18 @@
 /// @type list
 $prefixes--all: webkit khtml moz ms o !default;
 
+/// - Internet Explorer 9 поддерживает свойство `-ms-transform`
+/// - Chrome до версии 36, Safari до версии 9, Opera до версии 23 и Android поддерживают свойство `-webkit-transform`
+/// - Opera до версии 12.1 и с версии 15 до 23 поддерживает свойство `-o-transform`
+/// - Firefox до версии 16 поддерживает свойство `-moz-transform`
+/// ---
+/// @name prefixes--transform
+/// @group Configs
+/// @since 7.0.0
+/// @access public
+/// @type list
+$prefixes--transform: webkit moz ms o !default;
+
 /// - Chrome до версии 26, Safari до версии 6.1 и Android до версии 4.4 поддерживают свойство `-webkit-transition-timing-function`
 /// - Opera до версии 12.10 поддерживает свойство `-o-transition-timing-function`
 /// - Firefox до версии 16 поддерживает свойство` -moz-transition-timing-function`

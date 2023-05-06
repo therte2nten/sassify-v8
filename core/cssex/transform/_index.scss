@@ -1,0 +1,53 @@
+@use '../../../config' as config;
+@use '../../prefixer' as *;
+
+/// > CSS-свойство `transform` позволяет вам
+/// > поворачивать, масштабировать, наклонять
+/// > или сдвигать элемент. Оно модифицирует
+/// > координатное пространство для CSS [визуальной
+/// > форматируемой модели](https://developer.mozilla.org/ru/docs/Web/CSS/Visual_formatting_model).
+/// >
+/// > &mdash; [mdn web docs](https://developer.mozilla.org/ru/docs/Web/CSS/transform)
+///
+/// > Трансформирует элемент, в частности,
+/// > позволяет его масштабировать, вращать,
+/// > сдвигать, наклонять, а также комбинировать
+/// > виды трансформаций, перечисляя функции
+/// > трансформации через пробел.
+/// >
+/// > &mdash; [WebReference](https://webref.ru/css/transform)
+///
+/// Миксин `transform` позволяет сгенерировать CSS-свойство
+/// `transform` со всеми необходимыми браузерными префиксами.
+/// ---
+/// @name transform
+/// @group CSSex
+/// @since 7.0.0
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @link https://github.com/therteenten/sassify/blob/develop/core/cssex/transform/_index.scss Исходный код миксина
+/// @example scss Пример использования в Sass (SCSS)
+/// 	.selector {
+/// 		@include transform(translate(120px, 50%))
+/// 	}
+/// @example css Результат работы миксина в CSS
+/// 	.selector {
+/// 		-webkit-transform: translate(120px, 50%);
+/// 		-moz-transform: translate(120px, 50%);
+/// 		-ms-transform: translate(120px, 50%);
+/// 		-o-transform: translate(120px, 50%);
+/// 		transform: translate(120px, 50%);
+/// 	}
+/// @param {list} $params - список параметров для CSS-свойства `transform`
+@mixin transform($params...) {
+
+	// С помощью миксина `prefixer` добавляем все
+	// необходимые браузерные префиксы к CSS-свойству
+	// `transform`:
+	@include prefixer(
+		transform,
+		$params,
+		config.$prefixes--transform
+	);
+
+}
