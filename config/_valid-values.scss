@@ -1,3 +1,15 @@
+/// - `no-preference` — настройки контрастности по умолчанию
+/// - `more` — контрастность увеличена
+/// - `less` — контрастность понижена
+/// - `custom` — выбран режим принудительных цветов. Например, режим высокой контрастности Windows
+/// ---
+/// @name vvalues--media-prefers-contrast
+/// @group Configs
+/// @since 7.0.0
+/// @access public
+/// @type list
+$vvalues--media-prefers-contrast: no-preference more less custom !default;
+
 /// #### `flat`
 /// Дочерние элементы лежат в плоскости экрана.
 ///
