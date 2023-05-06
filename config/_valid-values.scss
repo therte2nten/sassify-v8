@@ -1,3 +1,9 @@
+/// #### `flat`
+/// Дочерние элементы лежат в плоскости экрана.
+///
+/// #### `preserve-3d`
+/// Дочерние элементы будут отображаться в 3D-пространстве.
+/// ---
 /// @name vvalues--transform-style
 /// @group Configs
 /// @since 7.0.0
@@ -5,10 +11,49 @@
 /// @type list
 $vvalues--transform-style: preserve-3d flat inherit initial unset !default;
 
+/// #### `ease`
+/// Анимация начинается медленно, затем ускоряется и к концу
+/// движения опять замедляется. Аналогично `cubic-bezier(0.25,0.1,0.25,1)`.
+///
+/// #### `ease-in`
+/// Анимация медленно начинается, к концу ускоряется.
+/// Аналогично `cubic-bezier(0.42,0,1,1)`.
+///
+/// #### `ease-out`
+/// Анимация начинается быстро, к концу замедляется.
+/// Аналогично `cubic-bezier(0,0,0.58,1)`.
+///
+/// #### `ease-in-out`
+/// Анимация начинается и заканчивается медленно.
+/// Аналогично `cubic-bezier(0.42,0,0.58,1)`.
+///
+/// #### `linear`
+/// Одинаковая скорость от начала и до конца.
+///
+/// #### `step-start`
+/// Как таковой анимации нет. Стилевые свойства сразу же
+/// принимают конечное значение.
+///
+/// #### `step-end`
+/// Как таковой анимации нет. Стилевые свойства находятся в
+/// начальном значении заданное время, затем сразу же принимают
+/// конечное значение.
+///
+/// #### `steps`
+/// Ступенчатая функция, имеющая заданное число шагов.
+/// `transition-timing-function: steps(<число>, start | end)`
+/// Здесь: `<число>` — целое число больше нуля; `start` — задаёт
+/// полунепрерывную снизу функцию; `end` — задаёт полунепрерывную
+/// сверху функцию.
+///
+/// #### `cubic-bezier`
+/// Задаёт функцию движения в виде [кривой Безье](http://ru.wikipedia.org/wiki/%D0%9A%D1%80%D0%B8%D0%B2%D0%B0%D1%8F_%D0%91%D0%B5%D0%B7%D1%8C%D0%B5).
+/// ---
 /// @name vvalues--transition-timing-function
 /// @group Configs
 /// @since 7.0.0
 /// @access public
+/// @link https://webref.ru/css/transition-timing-function WebReference
 /// @type list
 $vvalues--transition-timing-function: ease ease-in ease-out ease-in-out linear step-start step-end "steps()" "cubic-bezier()" "Multiple timing functions (~ ease, cubic-bezier(0.1, 0.7, 1, 0.1))" inherit initial revert revert-layer unset !default;
 
