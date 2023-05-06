@@ -1,0 +1,61 @@
+@use '../../../config' as config;
+@use '../../utility/validator/is-list-contains' as *;
+@use '../../utility/validator/is-number' as *;
+@use '../../prefixer' as *;
+
+/// > Устанавливает координаты точки, относительно
+/// > которой будет происходить трансформация элемента.
+/// >
+/// > &mdash; [WebReference](https://webref.ru/css/transform-origin)
+///
+/// Миксин `transform-origin` позволяет сгенерировать CSS-свойство
+/// `transform-origin` со всеми необходимыми браузерными префиксами.
+/// ---
+/// @name transform-origin
+/// @group CSSex
+/// @since 7.0.0
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @link https://github.com/therteenten/sassify/blob/develop/core/cssex/transform-origin/_index.scss Исходный код миксина
+/// @example scss Пример использования в Sass (SCSS)
+/// 	.selector {
+/// 		@include transform-origin(top, left)
+/// 	}
+///
+/// 	.selector-not-z {
+/// 		@include transform-origin(top, left, null)
+/// 	}
+/// @example css Результат работы миксина в CSS
+/// 	.selector {
+/// 		-webkit-transform-origin: top left 0;
+/// 		-moz-transform-origin: top left 0;
+/// 		-ms-transform-origin: top left 0;
+/// 		-o-transform-origin: top left 0;
+/// 		transform-origin: top left 0;
+/// 	}
+///
+/// 	.selector-not-z {
+/// 		-webkit-transform-origin: top left;
+/// 		-moz-transform-origin: top left;
+/// 		-ms-transform-origin: top left;
+/// 		-o-transform-origin: top left;
+/// 		transform-origin: top left;
+/// 	}
+/// @param {number | string} $x [config.$dvalues--transform-origin_x] - координата по оси X
+/// @param {number | string} $y [config.$dvalues--transform-origin_y] - координата по оси Y
+/// @param {number | string} $z [config.$dvalues--transform-origin_z] - координата по оси Z
+@mixin transform-origin(
+	$x: config.$dvalues--transform-origin_x,
+	$y: config.$dvalues--transform-origin_y,
+	$z: config.$dvalues--transform-origin_z) {
+
+	// С помощью миксина `prefixer` добавляем все
+	// необходимые браузерные префиксы к CSS-свойству
+	// `transform-origin`:
+	@include prefixer(
+		transform-origin,
+		$x $y $z,
+		config.$prefixes--transform-origin
+	);
+
+}

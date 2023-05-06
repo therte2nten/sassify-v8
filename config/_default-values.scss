@@ -1,3 +1,24 @@
+/// @name dvalues--transform-origin_x
+/// @group Configs
+/// @since 7.0.0
+/// @access public
+/// @type number
+$dvalues--transform-origin_x: 50% !default;
+
+/// @name dvalues--transform-origin_y
+/// @group Configs
+/// @since 7.0.0
+/// @access public
+/// @type number
+$dvalues--transform-origin_y: 50% !default;
+
+/// @name dvalues--transform-origin_z
+/// @group Configs
+/// @since 7.0.0
+/// @access public
+/// @type number
+$dvalues--transform-origin_z: 0 !default;
+
 /// @name dvalues--transition-timing-function
 /// @group Configs
 /// @since 7.0.0
