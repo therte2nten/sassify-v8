@@ -1,3 +1,10 @@
+/// @name dvalues--transform-style
+/// @group Configs
+/// @since 7.0.0
+/// @access public
+/// @type string
+$dvalues--transform-style: flat !default;
+
 /// @name dvalues--transform-origin_x
 /// @group Configs
 /// @since 7.0.0
@@ -23,14 +30,14 @@ $dvalues--transform-origin_z: 0 !default;
 /// @group Configs
 /// @since 7.0.0
 /// @access public
-/// @type number
+/// @type string
 $dvalues--transition-timing-function: ease !default;
 
 /// @name dvalues--transition-property
 /// @group Configs
 /// @since 7.0.0
 /// @access public
-/// @type number
+/// @type string
 $dvalues--transition-property: all !default;
 
 /// @name dvalues--transition-duration

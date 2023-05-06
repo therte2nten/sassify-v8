@@ -1,3 +1,10 @@
+/// @name vvalues--transform-style
+/// @group Configs
+/// @since 7.0.0
+/// @access public
+/// @type list
+$vvalues--transform-style: preserve-3d flat inherit initial unset !default;
+
 /// @name vvalues--transition-timing-function
 /// @group Configs
 /// @since 7.0.0
