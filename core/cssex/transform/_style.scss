@@ -51,7 +51,7 @@
 	// 1) на соответствие типу `String`
 	// 2) на наличие параметра в списке допустимых
 	@if is-string($style) and
-			is-list-contains($style, config.$vvalues--transform-style) {
+			is-list-contains(config.$vvalues--transform-style, $style) {
 
 		// С помощью миксина `prefixer` добавляем все
 		// необходимые браузерные префиксы к CSS-свойству

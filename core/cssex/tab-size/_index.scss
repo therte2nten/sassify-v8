@@ -31,7 +31,7 @@
 	// значения параметра `$size` типу `Number` и также проверяем
 	// наличие значения `$size` в списке `config.$vvalues--tab-size` с
 	// помощью функции `is-list-contains`:
-	@if is-number($size) == true or is-list-contains($size, config.$vvalues--tab-size) {
+	@if is-number($size) == true or is-list-contains(config.$vvalues--tab-size, $size) {
 
 		// Если `$size` == 'Number', то с помощью миксина `prefixer`
 		// добавляем CSS-свойству `tab-size` нужные браузерные префиксы:

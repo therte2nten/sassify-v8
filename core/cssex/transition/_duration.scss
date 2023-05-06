@@ -43,7 +43,7 @@
 	// проводим проверку:
 	// 1) является ли `$duration` числом?
 	// 2) если не числом, то хоть допустимым вариантом из списка?
-	@if is-number($duration) == true or is-list-contains($duration, config.$vvalues--transition-duration) == true {
+	@if is-number($duration) == true or is-list-contains(config.$vvalues--transition-duration, $duration) == true {
 
 		// Если проверки прошли успешно, то с помощью
 		// миксина `prefixer` добавляем необходимые браузерные

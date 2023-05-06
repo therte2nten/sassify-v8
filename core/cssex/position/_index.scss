@@ -64,7 +64,7 @@
 
 	// С помощью функции `is-list-contains` проверяем
 	// наличие значения `$position` в списке `config.$vvalues--position`:
-	@if is-list-contains($position, config.$vvalues--position) {
+	@if is-list-contains(config.$vvalues--position, $position) {
 
 		// Если значение из `$position` есть в
 		// списке `config.$vvalues--position`,

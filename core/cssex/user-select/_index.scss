@@ -42,7 +42,7 @@
 		// Если значение параметра `$value` соответствует
 		// Sass-типу `String`, то проверяем наличие значения
 		// параметра `$value` в списке `config.$vvalues--user-select`:
-		@if is-list-contains($value, config.$vvalues--user-select) {
+		@if is-list-contains(config.$vvalues--user-select, $value) {
 
 			// Если значение параметра `$value` содержится в
 			// списке `config.$vvalues--user-select`, то с помощью

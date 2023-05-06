@@ -64,7 +64,7 @@
 
 	// Для начала проверяем есть ли значение из `$mode` в списке
 	// `config.$vvalues--size`:
-	@if is-list-contains($mode, config.$vvalues--size) {
+	@if is-list-contains(config.$vvalues--size, $mode) {
 
 		// Если есть, то проверяем след.:
 		// 	1. Если `$mode` содержит значение `normal`,

@@ -71,7 +71,7 @@
 
 	// С помощью функции `is-list-contains` проверяем наличие
 	// значения параметра `$side` в списке `config.$vvalues--position-sticky__sides`:
-	@if is-list-contains($side, config.$vvalues--position-sticky__sides) {
+	@if is-list-contains(config.$vvalues--position-sticky__sides, $side) {
 
 		// Если в `$side` есть значение из `config.$vvalues--position-sticky__sides`,
 		// то генерируем стили:

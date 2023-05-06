@@ -205,8 +205,8 @@
 	// из списка `config.$vvalues--transition-timing-function`,
 	// то...
 	@else if is-list-contains(
-		$function,
-		config.$vvalues--transition-timing-function) {
+		config.$vvalues--transition-timing-function,
+		$function) {
 
 		// ... с помощью миксина `prefixer` добавляем
 		// все необходимые браузерные префиксы:

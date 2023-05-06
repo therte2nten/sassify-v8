@@ -1,6 +1,5 @@
 @use '../../../config' as config;
 @use '../../../devpack/invalid-value-message' as *;
-@use '../../utility/validator/is-list-contains' as *;
 @use '../../prefixer' as *;
 
 /// > [CSS](https://developer.mozilla.org/ru/docs/Web/CSS) свойство `backdrop-filter`

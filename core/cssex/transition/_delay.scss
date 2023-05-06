@@ -43,7 +43,7 @@
 	// проводим проверку:
 	// 1) является ли `$delay` числом?
 	// 2) если не числом, то хоть допустимым вариантом из списка?
-	@if is-number($delay) == true or is-list-contains($delay, config.$vvalues--transition-delay) == true {
+	@if is-number($delay) == true or is-list-contains(config.$vvalues--transition-delay, $delay) == true {
 
 		// Если проверки прошли успешно, то с помощью
 		// миксина `prefixer` добавляем необходимые браузерные
