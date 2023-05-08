@@ -1,0 +1,18 @@
+/// @name helper--css-media-queries
+/// @group Helpers
+/// @since 7.0.0
+/// @access public
+/// @type map
+/// @prop {string} $store--css-media-queries.pointer-coarse [(pointer:coarse)]
+/// @prop {string} $store--css-media-queries.pointer-fine [(pointer:fine)]
+/// @prop {string} $store--css-media-queries.hover [(hover)]
+/// @prop {string} $store--css-media-queries.hover-none [(hover:none)]
+/// @prop {string} $store--css-media-queries.overflow-block-paged [(overflow-block: paged)]
+$store--css-media-queries: (
+	pointer-coarse: '(pointer:coarse)',
+	pointer-fine: '(pointer:fine)',
+	hover: '(hover)',
+	hover-none: '(hover:none)',
+	overflow-block-paged: '(overflow-block: paged)'
+);
+
