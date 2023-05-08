@@ -1,0 +1,70 @@
+@use '../../../config' as config;
+@use '../../prefixer' as *;
+
+/// > CSS-свойство `box-shadow` добавляет тень к элементу.
+/// > Через запятую можно задать несколько теней. Тень
+/// > описывается смещениями по оси X и Y относительно
+/// > элемента, радиусом размытия и распространения, а
+/// > также цветом.
+/// >
+/// > &mdash; [mdn web docs](https://developer.mozilla.org/ru/docs/Web/CSS/box-shadow)
+///
+/// Миксин `box-shadow-v2` позволяет сгенерировать CSS-свойство
+/// `box-shadow` со всеми необходимыми юраузерными префиксами,
+/// а также устанавливает жесткие правила ввода параметров.
+/// ---
+/// @name box-shadow-v2
+/// @group CSSex
+/// @since 7.0.0
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @link https://github.com/therteenten/sassify/blob/develop/core/cssex/box-shadow/_index.scss Исходный код миксина
+/// @example scss Пример использования в Sass (SCSS)
+/// 	.selector {
+/// 		@include box-shadow-v2(false, 2px, 2px, 2px, 1px, rgba(0, 0, 0, 0.2))
+/// 	}
+/// @example css Результат работы миксина в CSS
+/// 	.selector {
+/// 		-webkit-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+/// 		-moz-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+/// 		box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+/// 	}
+/// @param {boolean} $is-inset [false] - если не указано (по умолчанию), то тень будет отбрасываться от элемента (придавая эффект выпуклости блоку)
+/// @param {number} $offset-x - задаёт положение тени по горизонтали (отрицательные значения размещают тень слева от элемента)
+/// @param {number} $offset-y - определяет положение тени по вертикали (отрицательные значения располагают тень выше элемента)
+/// @param {number} $blur-radius - чем больше это значение, тем шире и светлее будет тень (отрицательные значения не допускаются)
+/// @param {number} $spread-radius [0] - положительные значения расширяют тень, отрицательные — сжимают её
+/// @param {color} $color - цвет тени (если не указано (по умолчанию), используется [`currentColor`](https://developer.mozilla.org/ru/docs/Web/CSS/color_value#currentcolor_keyword))
+@mixin box-shadow-v2(
+	$is-inset: false,
+	$offset-x,
+	$offset-y,
+	$blur-radius,
+	$spread-radius: 0,
+	$color) {
+
+	// Объявляем переменную для параметра `$is-inset`:
+	$-inset: '';
+
+	// Если значение параметра `$is-inset` равно
+	// `true`, то присваиваем переменной `$-inset`
+	// значение `inset`:
+	@if $is-inset == true {
+		$-inset: inset;
+	}
+
+	// ... А если нет, то значение `null`, чтобы
+	// в CSS этого параметра не было:
+	@else {
+		$-inset: null;
+	}
+
+	// С помощью миксина `prefixer` добавляем CSS-свойству
+	// браузерные префиксы:
+	@include prefixer(
+		box-shadow,
+		$-inset $offset-x $offset-y $blur-radius $spread-radius $color,
+		config.$prefixes--box-shadow
+	);
+
+}
