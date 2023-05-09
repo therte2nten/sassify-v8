@@ -12,8 +12,9 @@
 @forward 'core/cssex/backdrop-filter';
 @forward 'core/cssex/border-radius';
 @forward 'core/cssex/box-shadow';
-@forward 'core/cssex/box-shadow/v2';
 @forward 'core/cssex/box-shadow/store';
+@forward 'core/cssex/box-shadow/v2';
+@forward 'core/cssex/calc';
 @forward 'core/cssex/keyframes';
 @forward 'core/cssex/media/prefers-contrast';
 @forward 'core/cssex/opacity';
@@ -62,10 +63,10 @@
 @forward 'core/utility/validator/is-string-start-with';
 @forward 'core/utility/validator/is-time';
 
-@forward 'common/store/css-types';
+@forward 'common/check';
 @forward 'common/store/css-media_queries';
 @forward 'common/store/css-shadows';
-@forward 'common/check';
+@forward 'common/store/css-types';
 
 @forward 'common/color/apple-hig/ios';
 @forward 'common/color/apple-hig/macos';

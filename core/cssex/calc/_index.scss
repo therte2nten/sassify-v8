@@ -1,0 +1,53 @@
+@use '../../../config' as config;
+@use '../../prefixer' as *;
+
+/// > Используется для указания вычисляемого
+/// > значения свойств, которые в качестве значений
+/// > используют размер, угол, время, число. Это
+/// > позволяет задавать значения, основанные на
+/// > сложении или вычитании разных единиц
+/// > измерений, например можно задать 100% - 20px.
+/// > Если значение не может быть вычислено,
+/// > оно игнорируется.
+/// >
+/// > [WebReference](https://webref.ru/css/value/calc)
+///
+/// Миксин `calc` позволяет позволяет генерировать
+/// CSS-функцию `calc` со всеми нужными браузерными
+/// префиксами.
+/// ---
+/// @name calc
+/// @group CSSex
+/// @since 7.0.0
+/// @access public
+/// @author Roman Matusevich
+/// @link https://github.com/romamatusevich Автор миксина
+/// @link https://github.com/drublic/Sass-Mixins/blob/master/mixins.scss Исходный код
+/// @link http://caniuse.com/calc Can i use
+/// @link http://www.w3.org/TR/css3-values/#calc Спецификация `calc()` W3
+/// @link https://github.com/therteenten/sassify/blob/develop/core/cssex/calc/_index.scss Исходный код миксина
+/// @example scss Пример использования в Sass (SCSS)
+/// 	.selector {
+/// 		@include calc(width, '600px - 2em');
+/// 	}
+/// @example css Результат работы миксина в CSS
+/// 	.selector {
+/// 	  width: -webkit-calc(600px - 2em);
+/// 	  width: -moz-calc(600px - 2em);
+/// 	  width: calc(600px - 2em);
+/// 	}
+/// @param {string} $property - CSS-свойство
+/// @param {string} $expression - выражение для CSS-функции `calc()`
+@mixin calc($property, $expression) {
+
+	// С помощью миксина `prefixer` добавляем
+	// браузерные префиксы значению CSS-свойства:
+	@include prefixer(
+		$property,
+		calc(#{$expression}),
+		config.$prefixes--calc,
+		true,
+		true
+	);
+
+}

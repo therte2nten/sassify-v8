@@ -5,6 +5,17 @@
 /// @type list
 $prefixes--all: webkit khtml moz ms o !default;
 
+/// - Firefox до версии 16 поддерживает `-moz-calc`
+/// - Chrome до версии 26 поддерживает `-webkit-calc`
+/// - Safari 6 поддерживает `-webkit-calc`
+/// ---
+/// @name prefixes--calc
+/// @group Configs
+/// @since 7.0.0
+/// @access public
+/// @type list
+$prefixes--calc: webkit moz !default;
+
 /// - Safari до версии 5.1, Chrome до версии 10.0, Android до версии 4.0 поддерживают свойство `-webkit-box-shadow`
 /// - Firefox до версии 4.0 поддерживает свойство `-moz-box-shadow`
 /// ---
