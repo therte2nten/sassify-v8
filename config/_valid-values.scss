@@ -1,3 +1,18 @@
+/// - `content-box` — основывается на стандартах CSS,
+/// при этом свойства `width` и `height` задают ширину и
+/// высоту содержимого и не включают в себя значения
+/// `margin`, `padding` и `border`.
+///
+/// - `border-box` — свойства `width` и `height` включают
+/// в себя значения `padding` и `border`, но не `margin`.
+/// ---
+/// @name vvalues--box-sizing
+/// @group Configs
+/// @since 7.0.0
+/// @access public
+/// @type list
+$vvalues--box-sizing: border-box content-box inherit initial revert revert-layer unset !default;
+
 /// - `no-preference` — настройки контрастности по умолчанию
 /// - `more` — контрастность увеличена
 /// - `less` — контрастность понижена
