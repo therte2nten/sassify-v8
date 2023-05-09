@@ -18,13 +18,13 @@
 /// @example scss Пример использования в Sass (SCSS)
 /// 	// https://developer.mozilla.org/en-US/docs/Web/CSS/transition-property#simple_example
 /// 	.target {
-/// 	  font-size: 14px;
-/// 	  @include transition-property(font-size);
-/// 	  @include transition-duration(4s);
+/// 		font-size: 14px;
+/// 		@include transition-property(font-size);
+/// 		@include transition-duration(4s);
 /// 	}
 ///
 /// 	.target:hover {
-/// 	  font-size: 36px;
+/// 		font-size: 36px;
 /// 	}
 /// @example css Результат работы миксина в CSS
 /// 	.target {

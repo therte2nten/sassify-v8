@@ -31,41 +31,41 @@
 /// @link https://github.com/therteenten/sassify/blob/develop/core/cssex/transition-timing-function/_index.scss Исходный код миксина
 /// @example scss Пример использования в Sass (SCSS)
 /// 	.ease {
-/// 	  @include transition-timing-function(ease);
+/// 		@include transition-timing-function(ease);
 /// 	}
 /// 	.easein {
-/// 	  @include transition-timing-function(ease-in);
+/// 		@include transition-timing-function(ease-in);
 /// 	}
 /// 	.easeout {
-/// 	  @include transition-timing-function(ease-out);
+/// 		@include transition-timing-function(ease-out);
 /// 	}
 /// 	.easeinout {
-/// 	  @include transition-timing-function(ease-in-out);
+/// 		@include transition-timing-function(ease-in-out);
 /// 	}
 /// 	.linear {
-/// 	  @include transition-timing-function(linear);
+/// 		@include transition-timing-function(linear);
 /// 	}
 /// 	.cb {
-/// 	  @include transition-timing-function(cubic-bezier(0.2, -2, 0.8, 2));
+/// 		@include transition-timing-function(cubic-bezier(0.2, -2, 0.8, 2));
 /// 	}
 ///
 /// 	.jump-start {
-/// 	  @include transition-timing-function(steps(5, jump-start));
+/// 		@include transition-timing-function(steps(5, jump-start));
 /// 	}
 /// 	.jump-end {
-/// 	  @include transition-timing-function(steps(5, jump-end));
+/// 		@include transition-timing-function(steps(5, jump-end));
 /// 	}
 /// 	.jump-none {
-/// 	  @include transition-timing-function(steps(5, jump-none));
+/// 		@include transition-timing-function(steps(5, jump-none));
 /// 	}
 /// 	.jump-both {
-/// 	  @include transition-timing-function(steps(5, jump-both));
+/// 		@include transition-timing-function(steps(5, jump-both));
 /// 	}
 /// 	.step-start {
-/// 	  @include transition-timing-function(step-start);
+/// 		@include transition-timing-function(step-start);
 /// 	}
 /// 	.step-end {
-/// 	  @include transition-timing-function(step-end);
+/// 		@include transition-timing-function(step-end);
 /// 	}
 ///
 /// 	.multiply {

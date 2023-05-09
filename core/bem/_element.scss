@@ -14,8 +14,8 @@
 /// @example scss Пример использования в Sass (SCSS)
 /// 	@include bem-block(card) {
 /// 		background-color: #fff;
-/// 	  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-/// 	  /* ... */
+/// 		box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+/// 		/* ... */
 /// 		@include bem-element(title) {
 /// 			color: #29ff50;
 /// 			/* ... */

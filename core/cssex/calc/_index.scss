@@ -32,9 +32,9 @@
 /// 	}
 /// @example css Результат работы миксина в CSS
 /// 	.selector {
-/// 	  width: -webkit-calc(600px - 2em);
-/// 	  width: -moz-calc(600px - 2em);
-/// 	  width: calc(600px - 2em);
+/// 		width: -webkit-calc(600px - 2em);
+/// 		width: -moz-calc(600px - 2em);
+/// 		width: calc(600px - 2em);
 /// 	}
 /// @param {string} $property - CSS-свойство
 /// @param {string} $expression - выражение для CSS-функции `calc()`

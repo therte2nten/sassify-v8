@@ -17,8 +17,8 @@
 /// @example scss Пример использования в Sass (SCSS)
 /// 	@include media-prefers-contrast(more) {
 /// 		.image {
-/// 	    border: 3px solid black;
-/// 	  }
+/// 			border: 3px solid black;
+/// 		}
 /// 	}
 /// @example css Результат работы миксина в CSS
 /// 	@media (prefers-contrast: more) {
