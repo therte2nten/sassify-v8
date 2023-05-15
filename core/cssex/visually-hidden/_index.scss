@@ -1,5 +1,5 @@
 @use '../../../config' as config;
-@use '../../cssex/size' as *;
+@use '../../csset/size' as *;
 
 /// Миксин `visually-hidden` скрывает HTML-элемент со
 /// страницы.

@@ -24,7 +24,6 @@
 @forward 'core/cssex/position/fixed';
 @forward 'core/cssex/position/relative';
 @forward 'core/cssex/position/sticky';
-@forward 'core/cssex/size';
 @forward 'core/cssex/tab-size';
 @forward 'core/cssex/transform';
 @forward 'core/cssex/transform/origin';
@@ -36,7 +35,9 @@
 @forward 'core/cssex/transition/timing-function';
 @forward 'core/cssex/user-select';
 @forward 'core/cssex/visually-hidden';
+@forward 'core/cssex/selection';
 
+@forward 'core/csset/size';
 @forward 'core/csset/text-shorten';
 
 @forward 'core/utility/color/color-shade';
