@@ -1,3 +1,24 @@
+/// @name dvalues--text-shorten
+/// @group Configs
+/// @since 7.0.0
+/// @access public
+/// @type list
+$dvalues--text-shorten: none !default;
+
+/// @name dvalues--illogical-usage-message_mode
+/// @group Configs
+/// @since 7.0.0
+/// @access public
+/// @type list
+$dvalues--illogical-usage-message_mode: 'console', 'comment' !default;
+
+/// @name dvalues--line-clamp
+/// @group Configs
+/// @since 7.0.0
+/// @access public
+/// @type string
+$dvalues--line-clamp: none !default;
+
 /// @name dvalues--box-sizing
 /// @group Configs
 /// @since 7.0.0

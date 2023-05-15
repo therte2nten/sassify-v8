@@ -1,0 +1,102 @@
+@use '../../../config' as config;
+@use '../../../devpack/invalid-value-message' as *;
+@use '../../../devpack/illogical-usage-message' as *;
+@use '../../utility/validator/is-number' as *;
+@use '../../utility/validator/is-list-contains' as *;
+@use '../../prefixer' as *;
+
+/// > Ограничивает текст заданным числом строк. Если
+/// > текст превышает указанное число строк, то текст
+/// > обрезается и в конце добавляется многоточие.
+/// >
+/// > [WebReference](https://webref.ru/css/line-clamp)
+///
+/// Миксин `text-shorten` позволяет сгенерировать стили
+/// для ограничения блока текста заданным количеством строк.
+/// ---
+/// @name text-shorten
+/// @group CSSet
+/// @since 7.0.0
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @link https://github.com/therteenten/sassify/blob/develop/core/csset/text-shorten/_index.scss Исходный код миксина
+/// @example scss Пример использования в Sass (SCSS)
+/// 	.text-shorten {
+/// 		@include text-shorten(4);
+/// 	}
+///
+/// 	.text-shorten-illogical {
+/// 		@include text-shorten();
+/// 	}
+/// @example css Результат работы миксина в CSS
+/// 	.text-shorten {
+/// 		white-space: nowrap;
+/// 		text-overflow: ellipsis;
+/// 		overflow: hidden;
+/// 	}
+/// 	@supports (-webkit-line-clamp: 4) {
+/// 		.text-shorten {
+/// 			overflow: hidden;
+/// 			text-overflow: ellipsis;
+/// 			white-space: initial;
+/// 			-webkit-line-clamp: 4;
+/// 			-webkit-box-orient: vertical;
+/// 			display: -webkit-box;
+/// 			display: -moz-box;
+/// 		}
+/// 	}
+///
+/// 	.text-shorten-illogical {
+/// 		/* ? (sassify) 🟦 Сообщение для разработчика! */
+/// 		/* ? (sassify) Вы указали в качестве параметра миксина «text-shorten» значение «none». Миксин не сгенерировал никаких стилей, т.к. при значении «none» смысла использовать миксин нет. */
+/// 	}
+/// @param {string | number} $line-clamp [config.$dvalues--text-shorten] - количество строк текста
+@mixin text-shorten($line-clamp: config.$dvalues--text-shorten) {
+
+	// Если в параметр `$line-clamp` передано значение `null`,
+	// то отобразим сообщение о том, что это нелогично:
+	@if $line-clamp == none {
+		@include illogical-usage-message(config.$string--debug__text-shorten-none)
+	}
+
+	// Но если в миксин передано число (`Number`),
+	// то генерируем нужные стили:
+	@else if is-number($line-clamp)== true {
+
+		white-space  : nowrap;
+		text-overflow: ellipsis;
+		overflow     : hidden;
+
+		@supports (-webkit-line-clamp: $line-clamp) {
+
+			overflow          : hidden;
+			text-overflow     : ellipsis;
+			white-space       : initial;
+
+			-webkit-line-clamp: $line-clamp;
+			-webkit-box-orient: vertical;
+
+			@include prefixer(
+				display,
+				box,
+				webkit moz,
+				false,
+				true
+			);
+
+		}
+
+	}
+
+	// Если ни одно условие не выполнено и в параметр `$line-clamp`
+	// передано несовместимое значение, то отобразим сообщение
+	// об этом:
+	@else {
+		@include invalid-value-message(
+			'text-shorten',
+			$line-clamp,
+			'Number'
+		);
+	}
+
+}

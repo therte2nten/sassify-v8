@@ -32,3 +32,10 @@ $string--emoji__success: '🟩' !default;
 /// @access public
 /// @type string
 $string--emoji__debug: '⬜' !default;
+
+/// @name string--debug__text-shorten-empty
+/// @group Configs
+/// @since 7.0.0
+/// @access public
+/// @type string
+$string--debug__text-shorten-none: 'Вы указали в качестве параметра миксина «text-shorten» значение «none». Миксин не сгенерировал никаких стилей, т.к. при значении «none» смысла использовать миксин нет.' !default;

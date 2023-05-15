@@ -1,3 +1,10 @@
+/// @name vvalues--line-clamp
+/// @group Configs
+/// @since 7.0.0
+/// @access public
+/// @type list
+$vvalues--line-clamp: none 'Number' inherit initial revert revert-layer unset !default;
+
 /// - `content-box` — основывается на стандартах CSS,
 /// при этом свойства `width` и `height` задают ширину и
 /// высоту содержимого и не включают в себя значения

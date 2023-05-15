@@ -1,0 +1,36 @@
+@use '../../config' as config;
+@use '../../core/utility/validator/is-list-contains' as *;
+@use '../invalid-value-message' as *;
+
+/// Миксин `illogical-usage-message` выводит в консоль сообщение о том,
+/// что миксин используется там, где он не нужен или как-то
+/// нелогично.
+///
+/// > Предназначено для `@mixin`!
+/// ---
+/// @name illogical-usage-message
+/// @group DevPack
+/// @since 7.0.0
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @link https://github.com/therteenten GitHub
+/// @param {string} $message - сообщение, которое нужно отобразить
+@mixin illogical-usage-message($message) {
+
+	// Шаблоны сообщений
+	$-message-header-template: '(sassify) #{config.$string--emoji__info} Сообщение для разработчика!';
+	$-message-template: '(sassify) #{$message}';
+
+	// Если указан режим `comment`
+	@if is-list-contains(config.$dvalues--illogical-usage-message_mode, 'comment') {
+		/* ? #{$-message-header-template} */
+		/* ? #{$-message-template} */
+	}
+
+	// Если указан режим `comment`
+	@if is-list-contains(config.$dvalues--illogical-usage-message_mode, 'console') {
+		@debug $-message-header-template;
+		@debug $-message-template;
+	}
+
+}
