@@ -1,5 +1,5 @@
 /// @name prefixes--all
-/// @group Configs
+/// @group Prefixes
 /// @since 7.0.0
 /// @access public
 /// @type list
@@ -9,7 +9,7 @@ $prefixes--all: webkit khtml moz ms o !default;
 /// - Safari до версии 5, Chrome до версии 10, Android до версии 4 поддерживают свойство `-webkit-box-sizing`
 /// ---
 /// @name prefixes--box-sizing
-/// @group Configs
+/// @group Prefixes
 /// @since 7.0.0
 /// @access public
 /// @type list
@@ -20,7 +20,7 @@ $prefixes--box-sizing: webkit moz !default;
 /// - Safari 6 поддерживает `-webkit-calc`
 /// ---
 /// @name prefixes--calc
-/// @group Configs
+/// @group Prefixes
 /// @since 7.0.0
 /// @access public
 /// @type list
@@ -30,7 +30,7 @@ $prefixes--calc: webkit moz !default;
 /// - Firefox до версии 4.0 поддерживает свойство `-moz-box-shadow`
 /// ---
 /// @name prefixes--box-shadow
-/// @group Configs
+/// @group Prefixes
 /// @since 7.0.0
 /// @access public
 /// @type list
@@ -40,7 +40,7 @@ $prefixes--box-shadow: webkit moz !default;
 /// - Firefox до версии 16 поддерживает свойство `-moz-transform-style`
 /// ---
 /// @name prefixes--transform-style
-/// @group Configs
+/// @group Prefixes
 /// @since 7.0.0
 /// @access public
 /// @type list
@@ -52,7 +52,7 @@ $prefixes--transform-style: webkit moz !default;
 /// > Firefox до версии 16 поддерживает свойство `-moz-transform-origin`
 /// ---
 /// @name prefixes--transform-origin
-/// @group Configs
+/// @group Prefixes
 /// @since 7.0.0
 /// @access public
 /// @type list
@@ -64,7 +64,7 @@ $prefixes--transform-origin: webkit moz ms o !default;
 /// - Firefox до версии 16 поддерживает свойство `-moz-transform`
 /// ---
 /// @name prefixes--transform
-/// @group Configs
+/// @group Prefixes
 /// @since 7.0.0
 /// @access public
 /// @type list
@@ -76,7 +76,7 @@ $prefixes--transform: webkit moz ms o !default;
 /// - Safari поддерживает значение `steps` только с версии 5.1
 /// ---
 /// @name prefixes--transition-timing-function
-/// @group Configs
+/// @group Prefixes
 /// @since 7.0.0
 /// @access public
 /// @type list
@@ -87,7 +87,7 @@ $prefixes--transition-timing-function: webkit moz o !default;
 /// - Firefox до версии 16 поддерживает свойство `-moz-transition-property`
 /// ---
 /// @name prefixes--transition-property
-/// @group Configs
+/// @group Prefixes
 /// @since 7.0.0
 /// @access public
 /// @type list
@@ -98,7 +98,7 @@ $prefixes--transition-property: webkit moz o !default;
 /// - Firefox до версии 16 поддерживает свойство `-moz-transition-duration`
 /// ---
 /// @name prefixes--transition-duration
-/// @group Configs
+/// @group Prefixes
 /// @since 7.0.0
 /// @access public
 /// @type list
@@ -109,7 +109,7 @@ $prefixes--transition-duration: webkit moz o !default;
 /// - Firefox до версии 16 поддерживает свойство `-moz-transition-delay`
 /// ---
 /// @name prefixes--transition-delay
-/// @group Configs
+/// @group Prefixes
 /// @since 7.0.0
 /// @access public
 /// @type list
@@ -120,7 +120,7 @@ $prefixes--transition-delay: webkit moz o !default;
 /// - Firefox до версии 16 поддерживает свойство `-moz-transition`
 /// ---
 /// @name prefixes--transition
-/// @group Configs
+/// @group Prefixes
 /// @since 7.0.0
 /// @access public
 /// @type list
@@ -131,7 +131,7 @@ $prefixes--transition: webkit moz o !default;
 /// - Чтобы свойство работало в браузере Firefox, на странице [`about:config`](about:config) параметр `layout.css.backdrop-filter.enabled` следует установить как `true`
 /// ---
 /// @name prefixes--backdrop-filter
-/// @group Configs
+/// @group Prefixes
 /// @since 7.0.0
 /// @access public
 /// @type list
@@ -141,7 +141,7 @@ $prefixes--backdrop-filter: webkit !default;
 /// - Firefox до версии 4.0 использует свойство `-moz-border-radius`
 /// ---
 /// @name prefixes--border-radius
-/// @group Configs
+/// @group Prefixes
 /// @since 7.0.0
 /// @access public
 /// @type list
@@ -151,7 +151,7 @@ $prefixes--border-radius: webkit moz !default;
 /// - Internet Explorer до версии 9.0 для изменения прозрачности использует фильтры, для этого браузера следует записать `filter: alpha(opacity=50)`, где параметр `opacity` может принимать значение от 0 до 100.
 /// ---
 /// @name prefixes--opacity
-/// @group Configs
+/// @group Prefixes
 /// @since 7.0.0
 /// @access public
 /// @type list
@@ -161,7 +161,7 @@ $prefixes--opacity: moz !default;
 /// - Firefox до версии 16 поддерживает `@-moz-keyframes`
 /// ---
 /// @name prefixes--keyframes
-/// @group Configs
+/// @group Prefixes
 /// @since 7.0.0
 /// @access public
 /// @type list
@@ -170,7 +170,7 @@ $prefixes--keyframes: webkit moz ms o !default;
 /// - Браузер Safari поддерживает значение `-webkit-sticky`
 /// ---
 /// @name prefixes--position-sticky
-/// @group Configs
+/// @group Prefixes
 /// @since 7.0.0
 /// @access public
 /// @type list
@@ -181,7 +181,7 @@ $prefixes--position-sticky: webkit !default;
 /// - Firefox поддерживает свойство `-moz-user-select`
 /// ---
 /// @name prefixes--user-select
-/// @group Configs
+/// @group Prefixes
 /// @since 7.0.0
 /// @access public
 /// @type list
@@ -191,7 +191,7 @@ $prefixes--user-select: webkit moz ms !default;
 /// - Firefox до версии 53 поддерживает свойство `-moz-tab-size`
 /// ---
 /// @name prefixes--tab-size
-/// @group Configs
+/// @group Prefixes
 /// @since 7.0.0
 /// @access public
 /// @type list

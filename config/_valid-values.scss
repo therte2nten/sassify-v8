@@ -1,5 +1,5 @@
 /// @name vvalues--line-clamp
-/// @group Configs
+/// @group Valid Values
 /// @since 7.0.0
 /// @access public
 /// @type list
@@ -14,7 +14,7 @@ $vvalues--line-clamp: none 'Number' inherit initial revert revert-layer unset !d
 /// в себя значения `padding` и `border`, но не `margin`.
 /// ---
 /// @name vvalues--box-sizing
-/// @group Configs
+/// @group Valid Values
 /// @since 7.0.0
 /// @access public
 /// @type list
@@ -26,7 +26,7 @@ $vvalues--box-sizing: border-box content-box inherit initial revert revert-layer
 /// - `custom` — выбран режим принудительных цветов. Например, режим высокой контрастности Windows
 /// ---
 /// @name vvalues--media-prefers-contrast
-/// @group Configs
+/// @group Valid Values
 /// @since 7.0.0
 /// @access public
 /// @type list
@@ -39,7 +39,7 @@ $vvalues--media-prefers-contrast: no-preference more less custom !default;
 /// Дочерние элементы будут отображаться в 3D-пространстве.
 /// ---
 /// @name vvalues--transform-style
-/// @group Configs
+/// @group Valid Values
 /// @since 7.0.0
 /// @access public
 /// @type list
@@ -84,7 +84,7 @@ $vvalues--transform-style: preserve-3d flat inherit initial unset !default;
 /// Задаёт функцию движения в виде [кривой Безье](http://ru.wikipedia.org/wiki/%D0%9A%D1%80%D0%B8%D0%B2%D0%B0%D1%8F_%D0%91%D0%B5%D0%B7%D1%8C%D0%B5).
 /// ---
 /// @name vvalues--transition-timing-function
-/// @group Configs
+/// @group Valid Values
 /// @since 7.0.0
 /// @access public
 /// @link https://webref.ru/css/transition-timing-function WebReference
@@ -92,35 +92,35 @@ $vvalues--transform-style: preserve-3d flat inherit initial unset !default;
 $vvalues--transition-timing-function: ease ease-in ease-out ease-in-out linear step-start step-end "steps()" "cubic-bezier()" "Multiple timing functions (~ ease, cubic-bezier(0.1, 0.7, 1, 0.1))" inherit initial revert revert-layer unset !default;
 
 /// @name vvalues--transition-duration
-/// @group Configs
+/// @group Valid Values
 /// @since 7.0.0
 /// @access public
 /// @type list
 $vvalues--transition-duration: "Time (1s, 5ms, .2ms)" inherit initial revert revert-layer unset !default;
 
 /// @name vvalues--transition-delay
-/// @group Configs
+/// @group Valid Values
 /// @since 7.0.0
 /// @access public
 /// @type list
 $vvalues--transition-delay: "Time (1s, 5ms, .2ms)" inherit initial unset !default;
 
 /// @name vvalues--border-radius
-/// @group Configs
+/// @group Valid Values
 /// @since 7.0.0
 /// @access public
 /// @type list
 $vvalues--border-radius: "Number" "Length (px, rem, em, etc.)" "Percentage (0% - 100%)" inherit initial unset !default;
 
 /// @name vvalues--opacity
-/// @group Configs
+/// @group Valid Values
 /// @since 7.0.0
 /// @access public
 /// @type list
 $vvalues--opacity: "Number (0.0 - 1.0)" "Percentage (0% - 100%)" !default;
 
 /// @name vvalues--position-sticky__sides
-/// @group Configs
+/// @group Valid Values
 /// @since 7.0.0
 /// @access public
 /// @type list
@@ -176,21 +176,21 @@ $vvalues--position-sticky__sides: top right bottom left !default;
 /// любому «липкому» поведению (см. [Github issue on W3C CSSWG](https://github.com/w3c/csswg-drafts/issues/865)).
 /// ---
 /// @name vvalues--position
-/// @group Configs
+/// @group Valid Values
 /// @since 7.0.0
 /// @access public
 /// @type list
 $vvalues--position: static relative absolute fixed sticky inherit initial revert revert-layer unset !default;
 
 /// @name vvalues--tab-size
-/// @group Configs
+/// @group Valid Values
 /// @since 7.0.0
 /// @access public
 /// @type list
 $vvalues--tab-size: '<Number>' inherit initial revert revert-layer unset !default;
 
 /// @name vvalues--size
-/// @group Configs
+/// @group Valid Values
 /// @since 7.0.0
 /// @access public
 /// @type list
@@ -224,7 +224,7 @@ $vvalues--size: normal max min !default;
 /// будет содержаться внутри границ данного элемента.
 /// ---
 /// @name vvalues--user-select
-/// @group Configs
+/// @group Valid Values
 /// @since 7.0.0
 /// @access public
 /// @link https://developer.mozilla.org/ru/docs/Web/CSS/user-select user-select - CSS | MDN

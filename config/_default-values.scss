@@ -1,89 +1,89 @@
 /// @name dvalues--text-shorten
-/// @group Configs
+/// @group Default Values
 /// @since 7.0.0
 /// @access public
 /// @type list
 $dvalues--text-shorten: none !default;
 
 /// @name dvalues--illogical-usage-message_mode
-/// @group Configs
+/// @group Default Values
 /// @since 7.0.0
 /// @access public
 /// @type list
 $dvalues--illogical-usage-message_mode: 'console', 'comment' !default;
 
 /// @name dvalues--line-clamp
-/// @group Configs
+/// @group Default Values
 /// @since 7.0.0
 /// @access public
 /// @type string
 $dvalues--line-clamp: none !default;
 
 /// @name dvalues--box-sizing
-/// @group Configs
+/// @group Default Values
 /// @since 7.0.0
 /// @access public
 /// @type string
 $dvalues--box-sizing: content-box !default;
 
 /// @name dvalues--media-prefers-contrast
-/// @group Configs
+/// @group Default Values
 /// @since 7.0.0
 /// @access public
 /// @type string
 $dvalues--media-prefers-contrast: no-preference !default;
 
 /// @name dvalues--transform-style
-/// @group Configs
+/// @group Default Values
 /// @since 7.0.0
 /// @access public
 /// @type string
 $dvalues--transform-style: flat !default;
 
 /// @name dvalues--transform-origin_x
-/// @group Configs
+/// @group Default Values
 /// @since 7.0.0
 /// @access public
 /// @type number
 $dvalues--transform-origin_x: 50% !default;
 
 /// @name dvalues--transform-origin_y
-/// @group Configs
+/// @group Default Values
 /// @since 7.0.0
 /// @access public
 /// @type number
 $dvalues--transform-origin_y: 50% !default;
 
 /// @name dvalues--transform-origin_z
-/// @group Configs
+/// @group Default Values
 /// @since 7.0.0
 /// @access public
 /// @type number
 $dvalues--transform-origin_z: 0 !default;
 
 /// @name dvalues--transition-timing-function
-/// @group Configs
+/// @group Default Values
 /// @since 7.0.0
 /// @access public
 /// @type string
 $dvalues--transition-timing-function: ease !default;
 
 /// @name dvalues--transition-property
-/// @group Configs
+/// @group Default Values
 /// @since 7.0.0
 /// @access public
 /// @type string
 $dvalues--transition-property: all !default;
 
 /// @name dvalues--transition-duration
-/// @group Configs
+/// @group Default Values
 /// @since 7.0.0
 /// @access public
 /// @type number
 $dvalues--transition-duration: 0s !default;
 
 /// @name dvalues--transition-delay
-/// @group Configs
+/// @group Default Values
 /// @since 7.0.0
 /// @access public
 /// @type number
@@ -99,7 +99,7 @@ $dvalues--transition-delay: 0s !default;
 /// ---
 /// @ignore
 /// @name dvalues--transition
-/// @group Configs
+/// @group Default Values
 /// @since 7.0.0
 /// @access private
 /// @type list
@@ -109,7 +109,7 @@ $-dvalues--transition: all 0s ease 0s !default;
 /// поддержку CSS-свойства `opacity` для браузера Internet Explorer.
 /// ---
 /// @name dvalues--border-radius
-/// @group Configs
+/// @group Default Values
 /// @since 7.0.0
 /// @access public
 /// @type number
@@ -119,7 +119,7 @@ $dvalues--border-radius: 0 !default;
 /// поддержку CSS-свойства `opacity` для браузера Internet Explorer.
 /// ---
 /// @name dvalues--opacity__support-ie
-/// @group Configs
+/// @group Default Values
 /// @since 7.0.0
 /// @access public
 /// @type boolean
@@ -128,7 +128,7 @@ $dvalues--opacity__support-ie: false !default;
 /// Значение по умолчанию для CSS-свойства `position`
 /// ---
 /// @name dvalues--position
-/// @group Configs
+/// @group Default Values
 /// @since 7.0.0
 /// @access public
 /// @type string
@@ -137,7 +137,7 @@ $dvalues--position: static !default;
 /// Значение `$side` для миксина `position-sticky`
 /// ---
 /// @name dvalues--position-sticky__side
-/// @group Configs
+/// @group Default Values
 /// @since 7.0.0
 /// @access public
 /// @type string
@@ -146,7 +146,7 @@ $dvalues--position-sticky__side: top !default;
 /// Значение `$side-offset` для миксина `position-sticky`
 /// ---
 /// @name dvalues--position-sticky__side-offset
-/// @group Configs
+/// @group Default Values
 /// @since 7.0.0
 /// @access public
 /// @type number
@@ -155,7 +155,7 @@ $dvalues--position-sticky__side-offset: 0 !default;
 /// Значение по умолчанию для CSS-свойства `tab-size`
 /// ---
 /// @name dvalues--tab-size
-/// @group Configs
+/// @group Default Values
 /// @since 7.0.0
 /// @access public
 /// @type number
@@ -164,7 +164,7 @@ $dvalues--tab-size: 8 !default;
 /// Размер блока для миксина `visually-hidden`
 /// ---
 /// @name dvalues--visually-hidden__size
-/// @group Configs
+/// @group Default Values
 /// @since 7.0.0
 /// @access public
 /// @type number
@@ -173,7 +173,7 @@ $dvalues--visually-hidden__size: 1px !default;
 /// Режим работы миксина `size`
 /// ---
 /// @name dvalues--size__mode
-/// @group Configs
+/// @group Default Values
 /// @since 7.0.0
 /// @access public
 /// @type string
@@ -182,7 +182,7 @@ $dvalues--size__mode: normal !default;
 /// Добавлять префиксы не к CSS-свойству, а к его значению?
 /// ---
 /// @name dvalues--prefixer__prefix-value
-/// @group Configs
+/// @group Default Values
 /// @since 7.0.0
 /// @access public
 /// @type boolean
@@ -191,7 +191,7 @@ $dvalues--prefixer__prefix-value: false !default;
 /// Сохранять исходный вариант CSS-свойтсва без браузерного префикса?
 /// ---
 /// @name dvalues--prefixer__save-unprefixed-property
-/// @group Configs
+/// @group Default Values
 /// @since 7.0.0
 /// @access public
 /// @type boolean
@@ -200,7 +200,7 @@ $dvalues--prefixer__save-unprefixed-property: true !default;
 /// Значение CSS-свойства `user-select` по умолчанию
 /// ---
 /// @name dvalues--user-select
-/// @group Configs
+/// @group Default Values
 /// @since 7.0.0
 /// @access public
 /// @type string
@@ -209,7 +209,7 @@ $dvalues--user-select: auto !default;
 /// Префикс для атрибута
 /// ---
 /// @name dvalues--amcss__prefix
-/// @group Configs
+/// @group Default Values
 /// @since 7.0.0
 /// @access public
 /// @type string
@@ -219,7 +219,7 @@ $dvalues--amcss__prefix: 'am-' !default;
 /// `bem-modifier`.
 /// ---
 /// @name dvalues--bem
-/// @group Configs
+/// @group Default Values
 /// @since 7.0.0
 /// @access public
 /// @type map
@@ -231,7 +231,7 @@ $dvalues--bem: (
 ) !default;
 
 /// @name dvalues--url-encode__characters
-/// @group Configs
+/// @group Default Values
 /// @since 7.0.0
 /// @access public
 /// @type map
@@ -258,7 +258,7 @@ $dvalues--url-encode__characters: (
 ) !default;
 
 /// @name dvalues--set-initial
-/// @group Configs
+/// @group Default Values
 /// @since 7.0.0
 /// @access public
 /// @type map
