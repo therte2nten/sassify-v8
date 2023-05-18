@@ -1,3 +1,35 @@
+/// @name dvalues--brakepoints
+/// @group Default Values
+/// @since 7.0.0
+/// @access public
+/// @type map
+/// @prop {string} $dvalues--brakepoints.xs [(min-width: 0)]
+/// @prop {string} $dvalues--brakepoints.sm [(min-width: 576px)]
+/// @prop {string} $dvalues--brakepoints.md [(min-width: 768px)]
+/// @prop {string} $dvalues--brakepoints.lg [(min-width: 992px)]
+/// @prop {string} $dvalues--brakepoints.xl [(min-width: 1200px)]
+/// @prop {string} $dvalues--brakepoints.xxl [(min-width: 1400px)]
+/// @prop {string} $dvalues--brakepoints.max-xs [(max-width: 0)]
+/// @prop {string} $dvalues--brakepoints.max-sm [(max-width: 576px)]
+/// @prop {string} $dvalues--brakepoints.max-md [(max-width: 768px)]
+/// @prop {string} $dvalues--brakepoints.max-lg [(max-width: 992px)]
+/// @prop {string} $dvalues--brakepoints.max-xl [(max-width: 1200px)]
+/// @prop {string} $dvalues--brakepoints.max-xxl [(max-width: 1400px)]
+$dvalues--brakepoints: (
+	xs: '(min-width: 0)',
+	sm: '(min-width: 576px)',
+	md: '(min-width: 768px)',
+	lg: '(min-width: 992px)',
+	xl: '(min-width: 1200px)',
+	xxl: '(min-width: 1400px)',
+	max-xs: '(max-width: 0)',
+	max-sm: '(max-width: 576px)',
+	max-md: '(max-width: 768px)',
+	max-lg: '(max-width: 992px)',
+	max-xl: '(max-width: 1200px)',
+	max-xxl: '(max-width: 1400px)'
+) !default;
+
 /// @name dvalues--text-shorten
 /// @group Default Values
 /// @since 7.0.0
