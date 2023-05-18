@@ -1,0 +1,117 @@
+@use 'sass:map';
+@use '../../../config' as config;
+@use '../../utility/validator/is-map' as *;
+@use '../../../common/store/css-media_queries' as *;
+@use '../../../devpack/invalid-value-message' as *;
+
+/// Миксин `media` позволяет сгенерировать media-запрос
+/// с заранее подготовленными выражениями из списка,
+/// который выберет разработчик.
+/// ---
+/// @name media
+/// @group CSSex
+/// @since 7.0.0
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @link https://github.com/therteenten/sassify/blob/develop/core/cssex/media/_index.scss Исходный код миксина
+/// @example scss Пример использования в Sass (SCSS)
+/// 	.card {
+/// 		@include media(default, orientation-portrait) {
+/// 			width: 140px;
+/// 			/* ... */
+/// 		};
+/// 	}
+///
+/// 	$media--testmap: (
+/// 		h360px: '(height: 360px)',
+/// 		mh25rem: '(min-height: 25rem)',
+/// 		mh40rem: '(max-height: 40rem)'
+/// 	);
+///
+/// 	div {
+///
+/// 		@include media($media--testmap, h360px) {
+/// 			color: red;
+/// 			/* ... */
+/// 		};
+///
+/// 		@include media($media--testmap, mh25rem) {
+/// 			background-color: yellow;
+/// 			/* ... */
+/// 		};
+///
+/// 		@include media($media--testmap, mh40rem) {
+/// 			border: 2px solid blue;
+/// 			/* ... */
+/// 		};
+///
+/// 	}
+/// @example css Результат работы миксина в CSS
+/// 	@media (orientation: portrait) {
+/// 		.card {
+/// 			width: 140px;
+/// 			/* ... */
+/// 		}
+/// 	}
+///
+/// 	@media (height: 360px) {
+/// 		div {
+/// 			color: red;
+/// 			/* ... */
+/// 		}
+/// 	}
+/// 	@media (min-height: 25rem) {
+/// 		div {
+/// 			background-color: yellow;
+/// 			/* ... */
+/// 		}
+/// 	}
+/// 	@media (max-height: 40rem) {
+/// 		div {
+/// 			border: 2px solid blue;
+/// 			/* ... */
+/// 		}
+/// 	}
+/// @param {string} $queries-map ['default'] - карта, из которой будут браться значения
+/// @param {string} $query - имя media-запроса
+/// @content Стили селектора
+@mixin media($queries-map: 'default', $query) {
+
+	$-queries-map: '';
+
+	// Если в параметр `$queries-map` передано значение `default`,
+	// то будет использоваться карта `$store--css-media-queries`:
+	@if $queries-map == 'default' {
+		$-queries-map: $store--css-media-queries;
+	}
+
+	// ... а если что-то другое, то:
+	@else {
+		$-queries-map: $queries-map;
+	}
+
+	@if is-map($queries-map) == true or $queries-map == 'default' {
+
+		// Тут примерно также как и в миксине `brakepoint`:
+		@if map-has-key($-queries-map, $query) {
+
+			// Если всё верно, то генерируем media-выражение и передаем внутрь
+			// `@content`:
+			@media #{map-get($-queries-map, $query)} {
+				@content;
+			}
+
+		}
+
+		// Если передано неверное значение, то отображаем сообщение об этом:
+		@else {
+			@include invalid-value-message('media', $query, '#{map-keys($-queries-map)}')
+		}
+
+	}
+
+	@else {
+		@include invalid-value-message('media', '#{$queries-map} (type: #{type-of($queries-map)})' , 'map')
+	}
+
+}

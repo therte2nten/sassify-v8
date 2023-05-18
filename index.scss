@@ -18,6 +18,7 @@
 @forward 'core/cssex/brakepoint';
 @forward 'core/cssex/calc';
 @forward 'core/cssex/keyframes';
+@forward 'core/cssex/media';
 @forward 'core/cssex/media/prefers-contrast';
 @forward 'core/cssex/opacity';
 @forward 'core/cssex/position';
@@ -25,6 +26,7 @@
 @forward 'core/cssex/position/fixed';
 @forward 'core/cssex/position/relative';
 @forward 'core/cssex/position/sticky';
+@forward 'core/cssex/selection';
 @forward 'core/cssex/tab-size';
 @forward 'core/cssex/transform';
 @forward 'core/cssex/transform/origin';
@@ -36,7 +38,6 @@
 @forward 'core/cssex/transition/timing-function';
 @forward 'core/cssex/user-select';
 @forward 'core/cssex/visually-hidden';
-@forward 'core/cssex/selection';
 
 @forward 'core/csset/centering';
 @forward 'core/csset/size';

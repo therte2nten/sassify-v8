@@ -3,16 +3,106 @@
 /// @since 7.0.0
 /// @access public
 /// @type map
-/// @prop {string} $store--css-media-queries.pointer-coarse [(pointer:coarse)]
-/// @prop {string} $store--css-media-queries.pointer-fine [(pointer:fine)]
-/// @prop {string} $store--css-media-queries.hover [(hover)]
-/// @prop {string} $store--css-media-queries.hover-none [(hover:none)]
+/// @prop {string} $store--css-media-queries.any-hover [(any-hover: hover)]
+/// @prop {string} $store--css-media-queries.any-pointer-coarse [(any-pointer: coarse)]
+/// @prop {string} $store--css-media-queries.any-pointer-fine [(any-pointer: fine)]
+/// @prop {string} $store--css-media-queries.color-gamut-p3 [(color-gamut: p3)]
+/// @prop {string} $store--css-media-queries.color-gamut-rec2020 [(color-gamut: rec2020)]
+/// @prop {string} $store--css-media-queries.color-gamut-srgb [(color-gamut: srgb)]
+/// @prop {string} $store--css-media-queries.display-mode-browser [(all and (display-mode: browser)]
+/// @prop {string} $store--css-media-queries.display-mode-fs [(all and (display-mode: fullscreen)]
+/// @prop {string} $store--css-media-queries.display-mode-minui [(all and (display-mode: minimal-ui)]
+/// @prop {string} $store--css-media-queries.display-mode-sa [(all and (display-mode: standalone)]
+/// @prop {string} $store--css-media-queries.display-mode-wco [(all and (display-mode: window-controls-overlay)]
+/// @prop {string} $store--css-media-queries.dynamic-range-high [(dynamic-range: high)]
+/// @prop {string} $store--css-media-queries.dynamic-range-standard [(dynamic-range: standard)]
+/// @prop {string} $store--css-media-queries.forced-colors-active [(forced-colors: active)]
+/// @prop {string} $store--css-media-queries.forced-colors-none [(forced-colors: none)]
+/// @prop {string} $store--css-media-queries.hover-none [(hover: none)]
+/// @prop {string} $store--css-media-queries.hover [(hover: hover)]
+/// @prop {string} $store--css-media-queries.inverted-colors-inverted [(inverted-colors: inverted)]
+/// @prop {string} $store--css-media-queries.inverted-colors-none [(inverted-colors: none)]
+/// @prop {string} $store--css-media-queries.orientation-landscape [(orientation: landscape)]
+/// @prop {string} $store--css-media-queries.orientation-l [(orientation: landscape)]
+/// @prop {string} $store--css-media-queries.orientation-portrait [(orientation: portrait)]
+/// @prop {string} $store--css-media-queries.orientation-p [(orientation: portrait)]
+/// @prop {string} $store--css-media-queries.overflow-block-none [(overflow-block: none)]
+/// @prop {string} $store--css-media-queries.overflow-block-optional-paged [(overflow-block: optional-paged)]
+/// @prop {string} $store--css-media-queries.overflow-block-op [(overflow-block: optional-paged)]
 /// @prop {string} $store--css-media-queries.overflow-block-paged [(overflow-block: paged)]
+/// @prop {string} $store--css-media-queries.overflow-block-paged [(overflow-block: paged)]
+/// @prop {string} $store--css-media-queries.overflow-block-scroll [(overflow-block: scroll)]
+/// @prop {string} $store--css-media-queries.overflow-inline-none [(overflow-inline: none)]
+/// @prop {string} $store--css-media-queries.overflow-inline-scroll [(overflow-inline: scroll)]
+/// @prop {string} $store--css-media-queries.pointer-coarse [(pointer: coarse)]
+/// @prop {string} $store--css-media-queries.pointer-c [(pointer: coarse)]
+/// @prop {string} $store--css-media-queries.pointer-fine [(pointer: fine)]
+/// @prop {string} $store--css-media-queries.pointer-f [(pointer: fine)]
+/// @prop {string} $store--css-media-queries.prefers-color-scheme-d [(prefers-color-scheme: dark)]
+/// @prop {string} $store--css-media-queries.prefers-color-scheme-dark [(prefers-color-scheme: dark)]
+/// @prop {string} $store--css-media-queries.prefers-color-scheme-l [(prefers-color-scheme: light)]
+/// @prop {string} $store--css-media-queries.prefers-color-scheme-light [(prefers-color-scheme: light)]
+/// @prop {string} $store--css-media-queries.prefers-contrast-custom [(prefers-contrast: custom)]
+/// @prop {string} $store--css-media-queries.prefers-contrast-less [(prefers-contrast: less)]
+/// @prop {string} $store--css-media-queries.prefers-contrast-more [(prefers-contrast: more)]
+/// @prop {string} $store--css-media-queries.prefers-contrast-no-preference [(prefers-contrast: no-preference)]
+/// @prop {string} $store--css-media-queries.prefers-contrast-np [(prefers-contrast: no-preference)]
+/// @prop {string} $store--css-media-queries.scripting-enabled [(scripting: enabled)]
+/// @prop {string} $store--css-media-queries.scripting-initial-only [(scripting: initial-only)]
+/// @prop {string} $store--css-media-queries.scripting-io [(scripting: initial-only)]
+/// @prop {string} $store--css-media-queries.scripting-none [(scripting: none)]
+/// @prop {string} $store--css-media-queries.update-fast [(update: fast)]
+/// @prop {string} $store--css-media-queries.update-none [(update: none)]
+/// @prop {string} $store--css-media-queries.update-slow [(update: slow)]
 $store--css-media-queries: (
-	pointer-coarse: '(pointer:coarse)',
-	pointer-fine: '(pointer:fine)',
-	hover: '(hover)',
-	hover-none: '(hover:none)',
-	overflow-block-paged: '(overflow-block: paged)'
+	any-hover: '(any-hover: hover)',
+	any-pointer-coarse: '(any-pointer: coarse)',
+	any-pointer-fine: '(any-pointer: fine)',
+	color-gamut-p3:'(color-gamut: p3)',
+	color-gamut-rec2020:'(color-gamut: rec2020)',
+	color-gamut-srgb:'(color-gamut: srgb)',
+	display-mode-browser: 'all and (display-mode: browser)',
+	display-mode-fs: 'all and (display-mode: fullscreen)',
+	display-mode-minui: 'all and (display-mode: minimal-ui)',
+	display-mode-sa: 'all and (display-mode: standalone)',
+	display-mode-wco: 'all and (display-mode: window-controls-overlay)',
+	dynamic-range-high: '(dynamic-range: high)',
+	dynamic-range-standard: '(dynamic-range: standard)',
+	forced-colors-active: '(forced-colors: active)',
+	forced-colors-none: '(forced-colors: none)',
+	hover-none: '(hover: none)',
+	hover: '(hover: hover)',
+	inverted-colors-inverted: '(inverted-colors: inverted)',
+	inverted-colors-none: '(inverted-colors: none)',
+	orientation-l: '(orientation: landscape)',
+	orientation-landscape: '(orientation: landscape)',
+	orientation-p: '(orientation: portrait)',
+	orientation-portrait: '(orientation: portrait)',
+	overflow-block-none: '(overflow-block: none)',
+	overflow-block-op: '(overflow-block: optional-paged)',
+	overflow-block-optional-paged: '(overflow-block: optional-paged)',
+	overflow-block-paged: '(overflow-block: paged)',
+	overflow-block-scroll: '(overflow-block: scroll)',
+	overflow-inline-none: '(overflow-inline: none)',
+	overflow-inline-scroll: '(overflow-inline: scroll)',
+	pointer-c: '(pointer: coarse)',
+	pointer-coarse: '(pointer: coarse)',
+	pointer-f: '(pointer: fine)',
+	pointer-fine: '(pointer: fine)',
+	prefers-color-scheme-d: '(prefers-color-scheme: dark)',
+	prefers-color-scheme-dark: '(prefers-color-scheme: dark)',
+	prefers-color-scheme-l: '(prefers-color-scheme: light)',
+	prefers-color-scheme-light: '(prefers-color-scheme: light)',
+	prefers-contrast-custom: '(prefers-contrast: custom)',
+	prefers-contrast-less: '(prefers-contrast: less)',
+	prefers-contrast-more: '(prefers-contrast: more)',
+	prefers-contrast-no-preference: '(prefers-contrast: no-preference)',
+	prefers-contrast-np: '(prefers-contrast: no-preference)',
+	scripting-enabled: '(scripting: enabled)',
+	scripting-initial-only: '(scripting: initial-only)',
+	scripting-io: '(scripting: initial-only)',
+	scripting-none: '(scripting: none)',
+	update-fast: '(update: fast)',
+	update-none: '(update: none)',
+	update-slow: '(update: slow)'
 );
-
