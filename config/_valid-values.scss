@@ -1,3 +1,10 @@
+/// @name vvalues--centering
+/// @group Valid Values
+/// @since 7.0.0
+/// @access public
+/// @type list
+$vvalues--centering: 'horizontal' 'hr' 'vertical' 'vr' 'both' 'b' !default;
+
 /// @name vvalues--line-clamp
 /// @group Valid Values
 /// @since 7.0.0
