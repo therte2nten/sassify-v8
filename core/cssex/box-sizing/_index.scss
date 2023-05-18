@@ -34,7 +34,7 @@
 /// 		-moz-box-sizing: border-box;
 /// 		box-sizing: border-box;
 /// 	}
-/// @param {string} $
+/// @param {string} $box-sizing [config.$dvalues--box-sizing]
 @mixin box-sizing($box-sizing: config.$dvalues--box-sizing) {
 
 	// С помощью функции `is-list-contains` проверяем наличие
