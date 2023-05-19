@@ -20,7 +20,27 @@
 /// @author Haba Kudzaev (therteenten)
 /// @link https://github.com/therteenten/sassify/blob/develop/core/cssex/flex/_wrap.scss Исходный код миксина
 /// @example scss Пример использования в Sass (SCSS)
+/// 	.nowrap {
+/// 		display: flex;
+/// 		@include flex-wrap();
+/// 	}
+///
+/// 	.nowrap {
+/// 		display: flex;
+/// 		@include flex-wrap(wrap);
+/// 	}
 /// @example css Результат работы миксина в CSS
+/// 	.nowrap {
+/// 		display: flex;
+/// 		-webkit-flex-wrap: nowrap;
+/// 		flex-wrap: nowrap;
+/// 	}
+///
+/// 	.nowrap {
+/// 		display: flex;
+/// 		-webkit-flex-wrap: wrap;
+/// 		flex-wrap: wrap;
+/// 	}
 /// @param {string} $wrap [config.$dvalues--flex-wrap] - следует ли флексам располагаться в одну строку или можно занять несколько строк
 @mixin flex-wrap($wrap: config.$dvalues--flex-wrap) {
 
