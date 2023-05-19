@@ -12,13 +12,6 @@ $dvalues--flexbox: default !default;
 /// @type string
 $dvalues--flex-wrap: nowrap !default;
 
-/// @name dvalues--flex-wrap__support-ie
-/// @group Default Values
-/// @since 7.0.0
-/// @access public
-/// @type boolean
-$dvalues--flex-wrap__support-ie: false !default;
-
 /// @name dvalues--flex-shrink
 /// @group Default Values
 /// @since 7.0.0
@@ -202,16 +195,6 @@ $-dvalues--transition: all 0s ease 0s !default;
 /// @access public
 /// @type number
 $dvalues--border-radius: 0 !default;
-
-/// Значение по умолчанию для миксина `opacity`. Значение регулирует
-/// поддержку CSS-свойства `opacity` для браузера Internet Explorer.
-/// ---
-/// @name dvalues--opacity__support-ie
-/// @group Default Values
-/// @since 7.0.0
-/// @access public
-/// @type boolean
-$dvalues--opacity__support-ie: false !default;
 
 /// Значение по умолчанию для CSS-свойства `position`
 /// ---

@@ -30,10 +30,6 @@
 /// 	.class-3 {
 /// 		@include opacity(30%);
 /// 	}
-///
-/// 	.class-with-ie {
-/// 		@include opacity(.3, true);
-/// 	}
 /// @example css Результат работы миксина в CSS
 /// 	.class-1 {
 /// 		-moz-opacity: 1;
@@ -49,15 +45,8 @@
 /// 		-moz-opacity: 30%;
 /// 		opacity: 30%;
 /// 	}
-///
-/// 	.class-with-ie {
-/// 		-moz-opacity: 0.3;
-/// 		opacity: 0.3;
-/// 		filter: alpha(opacity=30);
-/// 	}
 /// @param {number} $alpha-value [1] - [число](https://developer.mozilla.org/ru/docs/Web/CSS/number) в пределах от 0.0 до 1.0, включительно, или [проценты](https://developer.mozilla.org/ru/docs/Web/CSS/percentage) в пределах от 0% до 100%, включительно, представляет непрозрачность канала (т.е. значение его альфа-канала). Любое значение вне интервала, хотя и является валидным, округляется до ближайшего предела в диапазоне.
-/// @param {boolean} $support-ie [config.$dvalues--opacity__support-ie] - нужно ли генерировать CSS-свойство `filter` со значением `alpha(opacity=*)`, чтобы добавить поддержку Internet Explorer?
-@mixin opacity($alpha-value: 1, $support-ie: config.$dvalues--opacity__support-ie) {
+@mixin opacity($alpha-value: 1) {
 
 	// С помощью функции `is-number` проверяем значение параметра
 	// `$alpha-value` на соответствие Sass-типу `Number`:
@@ -70,20 +59,6 @@
 			$alpha-value,
 			config.$prefixes--opacity
 		);
-
-		// Internet Explorer до версии 9.0 для изменения прозрачности
-		// использует фильтры, для этого браузера следует записать
-		// `filter: alpha(opacity=50)`, где параметр `opacity` может принимать
-		// значение от 0 до 100.
-		@if $support-ie == true {
-
-			// Вычисляем значение `opacity` для
-			// браузера Internet Explorer:
-			$-alpha-value-ie: $alpha-value * 100;
-
-			filter: alpha(opacity=$-alpha-value-ie);
-
-		}
 
 	}
 
