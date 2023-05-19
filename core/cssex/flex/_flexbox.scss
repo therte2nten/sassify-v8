@@ -27,7 +27,6 @@
 /// 		display: -moz-box;
 /// 		display: -webkit-flex;
 /// 		display: flex;
-/// 		display: -ms-flexbox;
 /// 	}
 ///
 /// 	.flexbox-inline {
@@ -35,7 +34,6 @@
 /// 		display: -moz-inline-box;
 /// 		display: -webkit-inline-flex;
 /// 		display: inline-flex;
-/// 		display: -ms-inline-flexbox;
 /// 	}
 /// @param {string} $type [config.$dvalues--flexbox] - выбор варианта flex-контейнера (обычный или инлайн)
 @mixin flexbox($type: config.$dvalues--flexbox) {
@@ -52,9 +50,6 @@
 			@include prefixer(display, box, webkit moz, false, true);
 			@include prefixer(display, flex, webkit, true, true);
 
-			// Для браузера IE 10:
-			display: -ms-flexbox;
-
 		}
 
 		// Если значение параметра `$type` равное `inline` или `i`,
@@ -64,9 +59,6 @@
 
 			@include prefixer(display, inline-box, webkit moz, false, true);
 			@include prefixer(display, inline-flex, webkit, true, true);
-
-			// Для браузера IE 10:
-			display: -ms-inline-flexbox;
 
 		}
 

@@ -21,14 +21,12 @@
 /// 	.unselect {
 /// 		-webkit-user-select: none;
 /// 		-moz-user-select: none;
-/// 		-ms-user-select: none;
 /// 		user-select: none;
 /// 	}
 ///
 /// 	.select-all {
 /// 		-webkit-user-select: all;
 /// 		-moz-user-select: all;
-/// 		-ms-user-select: all;
 /// 		user-select: all;
 /// 	}
 /// @param {string} $value [config.$dvalues--user-select] - значение CSS-свойства `user-select`

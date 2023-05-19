@@ -57,10 +57,6 @@
 			config.$prefixes--flex-wrap
 		);
 
-		// Отдельно добавляем префиксы для браузера IE:
-		@if $wrap == 'nowrap' { -ms-flex-wrap: none; }
-		@else { -ms-flex-wrap: $wrap; }
-
 	}
 
 	// Если условие выше не было соблюдено, то отображаем сообщение об этом:
