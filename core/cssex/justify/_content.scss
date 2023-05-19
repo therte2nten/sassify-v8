@@ -1,0 +1,59 @@
+@use '../../../config' as config;
+@use '../../prefixer' as *;
+@use '../../../devpack/invalid-value-message' as *;
+@use '../../utility/validator/is-list-contains' as *;
+
+/// > CSS свойство `justify-content` определяет, как браузер распределяет
+/// > пространство между и вокруг элементов контента вдоль главной оси flex
+/// > контейнера, или вдоль строчной оси grid контейнера.
+/// >
+/// > &mdash; [mdn web docs](https://developer.mozilla.org/ru/docs/Web/CSS/justify-content)
+///
+/// Миксин `justify-content` позволяет генерировать
+/// CSS-свойство `justify-content` со всеми нужными браузерными
+/// префиксами.
+/// ---
+/// @name justify-content
+/// @group CSSex
+/// @since 7.0.0
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @link https://github.com/therteenten/sassify/blob/develop/core/cssex/justify/_content.scss Исходный код миксина
+/// @example scss Пример использования в Sass (SCSS)
+/// 	div {
+/// 		@include justify-content(space-between);
+/// 	}
+/// @example css Результат работы миксина в CSS
+/// 	div {
+/// 		-webkit-justify-content: space-between;
+/// 		justify-content: space-between;
+/// 	}
+/// @param {string} $value [config.$dvalues--justify-content] - определяет,
+/// 	как браузер распределяет пространство вокруг флекс-элементов вдоль главной
+/// 	оси контейнера
+@mixin justify-content($value: config.$dvalues--justify-content) {
+
+	// С помощью функции `is-list-contains` проверяем наличие значения
+	// параметра `$value` в списке `config.$vvalues--justify-content`:
+	@if is-list-contains(config.$vvalues--justify-content, $value) {
+
+		// С помощью миксина `prefixer` добавляем CSS-свойтсву `justify-content`
+		// все необходимые браузерные префиксы:
+		@include prefixer(
+			justify-content,
+			$value,
+			config.$prefixes--justify-content
+		);
+
+	}
+
+	// Если условие выше не было соблюдено, то отображаем сообщение об этом:
+	@else {
+		@include invalid-value-message(
+			'justify-content',
+			$value,
+			config.$vvalues--justify-content
+		);
+	}
+
+}

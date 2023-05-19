@@ -5,6 +5,15 @@
 /// @type list
 $prefixes--all: webkit khtml moz ms o !default;
 
+/// - Safari до версии 9 поддерживает свойство `-webkit-justify-content`
+/// ---
+/// @name prefixes--justify-content
+/// @group Prefixes
+/// @since 7.0.0
+/// @access public
+/// @type string
+$prefixes--justify-content: webkit !default;
+
 /// - Safari до версии 9 поддерживает свойство `-webkit-align-self`
 /// ---
 /// @name prefixes--align-self
