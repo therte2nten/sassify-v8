@@ -1,3 +1,10 @@
+/// @name vvalues--flex-direction
+/// @group Valid Values
+/// @since 7.0.0
+/// @access public
+/// @type list
+$vvalues--flex-direction: row row-reverse column column-reverse inherit initial unset !default;
+
 /// @name vvalues--flex-basis
 /// @group Valid Values
 /// @since 7.0.0

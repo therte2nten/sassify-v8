@@ -5,6 +5,15 @@
 /// @type list
 $prefixes--all: webkit khtml moz ms o !default;
 
+/// - Safari до версии 9 поддерживает свойство `-webkit-flex-direction`
+/// ---
+/// @name prefixes--flex-direction
+/// @group Prefixes
+/// @since 7.0.0
+/// @access public
+/// @type string
+$prefixes--flex-direction: webkit !default;
+
 /// - Safari до версии 9 поддерживает свойство `-webkit-flex-basis`
 /// ---
 /// @name prefixes--flex-basis
