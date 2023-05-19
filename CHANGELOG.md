@@ -1,5 +1,4 @@
 ## v7.0.0
- в комментариях @SassDoc
 -  Добавил миксин `justify-content`
 -  Добавил миксин `align-self`
 -  Добавил миксин `align-items`
