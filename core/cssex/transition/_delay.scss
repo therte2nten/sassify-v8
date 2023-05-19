@@ -36,7 +36,8 @@
 /// 		-o-transition-delay: 0.5s;
 /// 		transition-delay: 0.5s;
 /// 	}
-/// @param {number | string} $delay [config.$dvalues--transition-delay] - время ожидания перед запуском эффекта перехода
+/// @param {number | string} $delay [config.$dvalues--transition-delay] - время
+/// 	ожидания перед запуском эффекта перехода
 @mixin transition-delay($delay: config.$dvalues--transition-delay) {
 
 	// С помощью функций `is-number` и `is-list-contains`

@@ -41,7 +41,8 @@
 /// 		-webkit-flex-wrap: wrap;
 /// 		flex-wrap: wrap;
 /// 	}
-/// @param {string} $wrap [config.$dvalues--flex-wrap] - следует ли флексам располагаться в одну строку или можно занять несколько строк
+/// @param {string} $wrap [config.$dvalues--flex-wrap] - следует ли флексам
+/// 	располагаться в одну строку или можно занять несколько строк
 @mixin flex-wrap($wrap: config.$dvalues--flex-wrap) {
 
 	// С помощью функции `is-list-contains` проверяем наличие значения

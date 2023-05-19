@@ -51,10 +51,14 @@
 /// 		top: 20px;
 /// 	}
 /// @param {string} $position [config.$dvalues--position] - тип позиционирования
-/// @param {string | number} $side-top [null] - конечное местоположение элемента относительно верхней стенки
-/// @param {string | number} $side-right [null] - конечное местоположение элемента относительно правой стенки
-/// @param {string | number} $side-bottom [null] - конечное местоположение элемента относительно низа
-/// @param {string | number} $side-left [null] - конечное местоположение элемента относительно левой стенки
+/// @param {string | number} $side-top [null] - конечное местоположение элемента
+/// 	относительно верхней стенки
+/// @param {string | number} $side-right [null] - конечное местоположение элемента
+/// 	относительно правой стенки
+/// @param {string | number} $side-bottom [null] - конечное местоположение элемента
+/// 	относительно низа
+/// @param {string | number} $side-left [null] - конечное местоположение элемента
+/// 	относительно левой стенки
 @mixin position(
 	$position: config.$dvalues--position,
 	$side-top: null,

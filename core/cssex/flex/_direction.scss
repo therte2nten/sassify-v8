@@ -36,7 +36,8 @@
 /// 		-webkit-flex-direction: row-reverse;
 /// 		flex-direction: row-reverse;
 /// 	}
-/// @param {string} $direction [config.$dvalues--flex-direction] - направление основных осей в контейнере
+/// @param {string} $direction [config.$dvalues--flex-direction] - направление
+/// 	основных осей в контейнере
 @mixin flex-direction($direction: config.$dvalues--flex-direction) {
 
 	// С помощью функции `is-list-contains` проверяем наличие значения

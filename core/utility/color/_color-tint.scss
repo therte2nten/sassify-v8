@@ -11,7 +11,8 @@
 /// 	@debug color-tint(#000, 15); //=> #262626
 /// @return {color} цвет, который получился после микса
 /// @param {color} $color - цвет, который необходимо замиксовать
-/// @param {number} $percentage - процент микса цвета `$color` (т.е. как много белого добавить в исходный цвет)
+/// @param {number} $percentage - процент микса цвета `$color` (т.е. как много
+/// 	белого добавить в исходный цвет)
 @function color-tint($color, $percentage) {
 	@return mix(
 		white,

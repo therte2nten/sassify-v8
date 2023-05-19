@@ -28,7 +28,8 @@
 /// 		-webkit-align-self: last baseline;
 /// 		align-self: last baseline;
 /// 	}
-/// @param {string} $value [config.$dvalues--align-self] - тип выравнивания флекс-элементов внутри контейнера в перпендикулярном направлении
+/// @param {string} $value [config.$dvalues--align-self] - тип выравнивания
+/// 	флекс-элементов внутри контейнера в перпендикулярном направлении
 @mixin align-self($value: config.$dvalues--align-self) {
 
 	// С помощью функции `is-list-contains` проверяем наличие значения

@@ -55,7 +55,8 @@
 /// 		height: 250px;
 /// 	}
 /// @param {number | string} $width - ширина
-/// @param {number | string} $height [$width] - высота (по умолчанию наследуется значение из `$width`)
+/// @param {number | string} $height [$width] - высота (по умолчанию наследуется
+/// 	значение из `$width`)
 /// @param {string} $mode [config.$dvalues--size__mode] - режим работы миксина
 @mixin size(
 	$width,

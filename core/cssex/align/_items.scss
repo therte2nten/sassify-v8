@@ -27,7 +27,8 @@
 /// 		-webkit-align-items: baseline;
 /// 		align-items: baseline;
 /// 	}
-/// @param {string} $value [config.$dvalues--align-items] - тип выравнивания флекс-элементов внутри контейнера в перпендикулярном направлении
+/// @param {string} $value [config.$dvalues--align-items] - тип выравнивания
+/// 	флекс-элементов внутри контейнера в перпендикулярном направлении
 @mixin align-items($value: config.$dvalues--align-items) {
 
 	// С помощью функции `is-list-contains` проверяем наличие значения

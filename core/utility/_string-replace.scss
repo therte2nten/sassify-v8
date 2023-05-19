@@ -15,7 +15,8 @@
 /// 	@debug string-replace('foo bar baz', 'bar', 'unicorn'); //=> foo unicorn baz
 /// @return {string} строка, которая получилась в итоге
 /// @param {string} $string - строка, в которой необходимо провести операцию замены
-/// @param {string} $replaceable - слово или часть слова в строке `$string`, которую необходимо заменить
+/// @param {string} $replaceable - слово или часть слова в строке `$string`,
+/// 	которую необходимо заменить
 /// @param {string} $replacement [''] - слово, которое заменит значение из `$replaceable`
 @function string-replace($string, $replaceable, $replacement: '') {
 

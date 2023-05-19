@@ -25,7 +25,8 @@
 /// 		width: 1px;
 /// 		height: 1px;
 /// 	}
-/// @param {number} $size [config.$dvalues--visually-hidden__size] - размер скрываемого блока
+/// @param {number} $size [config.$dvalues--visually-hidden__size] - размер
+/// 	скрываемого блока
 @mixin visually-hidden($size: config.$dvalues--visually-hidden__size) {
 
 	border: 0;

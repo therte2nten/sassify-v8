@@ -53,7 +53,8 @@
 /// 		}
 /// 	}
 /// @param {string} $keyframes-name - имя правила
-/// @param {boolean} $save-unprefixed-rule [true] - генерировать правило `@keyframes` без браузерного префикса?
+/// @param {boolean} $save-unprefixed-rule [true] - генерировать правило
+/// 	`@keyframes` без браузерного префикса?
 @mixin keyframes(
 	$keyframes-name,
 	$save-unprefixed-rule: true) {

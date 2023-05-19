@@ -57,7 +57,8 @@
 /// 		/* (sassify) 🟩 └─ unset */
 /// 		/* (sassify) 🟥 └⤬ column-reverse column-reverse */
 /// 	}
-/// @param {string} $flow [config.$dvalues--flex-flow] - сокращение для отдельных свойств `flex-direction` и `flex-wrap`
+/// @param {string} $flow [config.$dvalues--flex-flow] - сокращение для
+/// 	отдельных свойств `flex-direction` и `flex-wrap`
 @mixin flex-flow($flow: config.$dvalues--flex-flow) {
 
 	// С помощью функции `is-list-contains` проверяем наличие значения

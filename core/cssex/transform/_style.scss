@@ -43,7 +43,8 @@
 /// 		-moz-transform-style: preserve-3d;
 /// 		transform-style: preserve-3d;
 /// 	}
-/// @param {string} $style [config.$dvalues--transform-style] - определяет, как дочерние элементы будут отображаться в 3D-пространстве
+/// @param {string} $style [config.$dvalues--transform-style] - определяет,
+/// 	как дочерние элементы будут отображаться в 3D-пространстве
 @mixin transform-style($style: config.$dvalues--transform-style) {
 
 	// С помощью функций `is-string` и `is-list-contains`

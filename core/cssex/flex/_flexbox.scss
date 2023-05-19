@@ -35,7 +35,8 @@
 /// 		display: -webkit-inline-flex;
 /// 		display: inline-flex;
 /// 	}
-/// @param {string} $type [config.$dvalues--flexbox] - выбор варианта flex-контейнера (обычный или инлайн)
+/// @param {string} $type [config.$dvalues--flexbox] - выбор варианта
+/// 	flex-контейнера (обычный или инлайн)
 @mixin flexbox($type: config.$dvalues--flexbox) {
 
 	// С помощью функции `is-list-contains` проверяем наличие

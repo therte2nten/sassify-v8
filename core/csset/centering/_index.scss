@@ -53,7 +53,8 @@
 /// 		-o-transform: translate(-50%, -50%);
 /// 		transform: translate(-50%, -50%);
 /// 	}
-/// @param {string} $orientation - направление центрирования (`horizontal`, `vertical` или `both`)
+/// @param {string} $orientation - направление центрирования (`horizontal`,
+/// 	`vertical` или `both`)
 @mixin centering($orientation) {
 
 	// С помощью функции `is-list-contains` проверяем наличие значения

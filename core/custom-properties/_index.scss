@@ -79,8 +79,10 @@
 /// 		background-color: var(--background-color);
 /// 		color: var(--text-color);
 /// 	}
-/// @param {map} $map [()] - карта, чьи пары "ключ: значение" необходимо перевести в кастомные свойства CSS
-/// @param {boolean} $create-in-root [true] - нужно ли создавать блок с кастомными свойствами в `:root`?
+/// @param {map} $map [()] - карта, чьи пары "ключ: значение" необходимо перевести
+/// 	в кастомные свойства CSS
+/// @param {boolean} $create-in-root [true] - нужно ли создавать блок с кастомными
+/// 	свойствами в `:root`?
 @mixin custom-properties($map: (), $create-in-root: true) {
 
 	// Если значение параметра `$create-in-root` равняется

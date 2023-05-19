@@ -24,7 +24,8 @@
 /// 		animation: none 0s ease 0s 1 normal none running;
 /// 		outline: medium none invert;
 /// 	}
-/// @param {list} $properties - список CSS-свойств, чьи значения по умолчанию будут выставлены
+/// @param {list} $properties - список CSS-свойств, чьи значения по умолчанию
+/// 	будут выставлены
 @mixin set-initial($properties...) {
 
 	// С помощбю Sass-директивы `@each` проходимся

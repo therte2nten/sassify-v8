@@ -49,7 +49,10 @@
 /// 		-moz-border-radius: 0.8em;
 /// 		border-radius: 0.8em;
 /// 	}
-/// @param {number} $radius [config.$dvalues--border-radius] - [`<length>`](https://developer.mozilla.org/ru/docs/Web/CSS/length) или [`<percentage>`](https://developer.mozilla.org/ru/docs/Web/CSS/percentage) устанавливает радиус скругления для всех углов элемента. Может быть указано только одно значение (или одна пара).
+/// @param {number} $radius [config.$dvalues--border-radius] - [`<length>`](https://developer.mozilla.org/ru/docs/Web/CSS/length)
+/// 	или [`<percentage>`](https://developer.mozilla.org/ru/docs/Web/CSS/percentage)
+/// 	устанавливает радиус скругления для всех углов элемента. Может быть указано
+/// 	только одно значение (или одна пара).
 @mixin border-radius($radius: config.$dvalues--border-radius) {
 
 	// С помощью функции `is-number` проверяем значение параметра

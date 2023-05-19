@@ -30,9 +30,12 @@
 /// 	}
 /// @param {string} $property - CSS-свойство, которому необходимо добавить префиксы
 /// @param {number | string} $value - значение CSS-свойства
-/// @param {list} $prefixes [()] - список префиксов, которые будут добавлены к CSS-свойству (`$property`)
-/// @param {boolean} $save-unprefixed-property [config.$dvalues--prefixer__save-unprefixed-property] - сохранять исходный вариант CSS-свойтсва без браузерного префикса?
-/// @param {boolean} $prefix-value [config.$dvalues--prefixer__prefix-value] - добавлять префиксы не к CSS-свойству, а к его значению?
+/// @param {list} $prefixes [()] - список префиксов, которые будут добавлены к
+/// 	CSS-свойству (`$property`)
+/// @param {boolean} $save-unprefixed-property [config.$dvalues--prefixer__save-unprefixed-property] - сохранять
+/// 	исходный вариант CSS-свойтсва без браузерного префикса?
+/// @param {boolean} $prefix-value [config.$dvalues--prefixer__prefix-value] - добавлять
+/// 	префиксы не к CSS-свойству, а к его значению?
 @mixin prefixer(
 	$property,
 	$value,

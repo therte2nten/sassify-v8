@@ -36,7 +36,9 @@
 /// 		-o-transition-duration: 0.5s;
 /// 		transition-duration: 0.5s;
 /// 	}
-/// @param {number | string} $duration [config.$dvalues--transition-duration] - время в секундах или миллисекундах, сколько должна длиться анимация перехода до её завершения
+/// @param {number | string} $duration [config.$dvalues--transition-duration] - время
+/// 	в секундах или миллисекундах, сколько должна длиться анимация перехода до её
+/// 	завершения
 @mixin transition-duration($duration: config.$dvalues--transition-duration) {
 
 	// С помощью функций `is-number` и `is-list-contains`
