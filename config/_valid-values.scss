@@ -1,3 +1,10 @@
+/// @name vvalues--align-items
+/// @group Valid Values
+/// @since 7.0.0
+/// @access public
+/// @type list
+$vvalues--align-items: flex-start flex-end center baseline stretch inherit initial unset!default;
+
 /// #### `start`
 /// Элементы расположены вплотную друг к другу, прижавшись к началу контейнера
 /// выравнивания по поперечной оси.
