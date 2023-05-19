@@ -12,6 +12,13 @@ $dvalues--flexbox: default !default;
 /// @type string
 $dvalues--flex-wrap: nowrap !default;
 
+/// @name dvalues--flex-wrap__support-ie
+/// @group Default Values
+/// @since 7.0.0
+/// @access public
+/// @type boolean
+$dvalues--flex-wrap__support-ie: false !default;
+
 /// @name dvalues--flex-shrink
 /// @group Default Values
 /// @since 7.0.0

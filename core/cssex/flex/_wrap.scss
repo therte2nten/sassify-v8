@@ -42,7 +42,8 @@
 /// 		flex-wrap: wrap;
 /// 	}
 /// @param {string} $wrap [config.$dvalues--flex-wrap] - следует ли флексам располагаться в одну строку или можно занять несколько строк
-@mixin flex-wrap($wrap: config.$dvalues--flex-wrap) {
+/// @param {boolean} $support-ie [config.$dvalues--flex-wrap__support-ie] - нужно ли добавить поддержку браузера IE?
+@mixin flex-wrap($wrap: config.$dvalues--flex-wrap, $support-ie: config.$dvalues--flex-wrap__support-ie) {
 
 	// С помощью функции `is-list-contains` проверяем наличие значения
 	// параметра `$wrap` в списке `config.$vvalues--flex-wrap`:
@@ -55,6 +56,10 @@
 			$wrap,
 			config.$prefixes--flex-wrap
 		);
+
+		// Отдельно добавляем префиксы для браузера IE:
+		@if $wrap == 'nowrap' { -ms-flex-wrap: none; }
+		@else { -ms-flex-wrap: $wrap; }
 
 	}
 
