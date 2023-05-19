@@ -1,3 +1,10 @@
+/// @name vvalues--flex-flow
+/// @group Valid Values
+/// @since 7.0.0
+/// @access public
+/// @type list
+$vvalues--flex-flow: 'row' 'row-reverse' 'column' 'column-reverse' 'nowrap' 'wrap' 'wrap-reverse' 'row nowrap' 'column wrap' 'column-reverse wrap-reverse' inherit initial unset !default;
+
 /// @name vvalues--flex-direction
 /// @group Valid Values
 /// @since 7.0.0

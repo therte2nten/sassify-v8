@@ -36,7 +36,7 @@
 /// 		-webkit-flex-direction: row-reverse;
 /// 		flex-direction: row-reverse;
 /// 	}
-/// @param {string} $direction [config.$dvalues--flex-direction] - размер элемента в px, mm, pt или в процентах вдоль главной оси (отрицательное значение недопустимо)
+/// @param {string} $direction [config.$dvalues--flex-direction] - направление основных осей в контейнере
 @mixin flex-direction($direction: config.$dvalues--flex-direction) {
 
 	// С помощью функции `is-list-contains` проверяем наличие значения

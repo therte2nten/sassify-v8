@@ -1,0 +1,86 @@
+@use '../../../config' as config;
+@use '../../prefixer' as *;
+@use '../../../devpack/invalid-value-message' as *;
+@use '../../utility/validator/is-list-contains' as *;
+
+/// > CSS-свойство, которое является сокращением для отдельных свойств
+/// > `flex-direction` и `flex-wrap`.
+/// >
+/// > &mdash; [mdn web docs](https://developer.mozilla.org/ru/docs/Web/CSS/flex-flow)
+///
+/// Миксин `flex-flow` позволяет генерировать
+/// CSS-функцию `flex-flow` со всеми нужными браузерными
+/// префиксами.
+///
+/// > Обратите внимание на то, что миксин принимает в качестве параметра строку
+/// > в ковычках (' или ").
+/// ---
+/// @name flex-flow
+/// @group CSSex
+/// @since 7.0.0
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @link https://github.com/therteenten/sassify/blob/develop/core/cssex/flex/_flow.scss Исходный код миксина
+/// @example scss Пример использования в Sass (SCSS)
+/// 	/* Верно */
+/// 	div {
+/// 		@include flex-flow('column-reverse wrap-reverse');
+/// 	}
+///
+/// 	/* Неверно */
+/// 	div {
+/// 		@include flex-flow('column-reverse column-reverse');
+/// 	}
+/// @example css Результат работы миксина в CSS
+/// 	/* Верно */
+/// 	div {
+/// 		-webkit-flex-flow: column-reverse wrap-reverse;
+/// 		flex-flow: column-reverse wrap-reverse;
+/// 	}
+///
+/// 	/* Неверно */
+/// 	div {
+/// 		/* (sassify) 🟧 Миксин «flex-flow» не может принимать значение «column-reverse column-reverse»! */
+/// 		/* (sassify) 🟦 ┌ Допустимые значения для «flex-flow»: */
+/// 		/* (sassify) 🟩 └─ row */
+/// 		/* (sassify) 🟩 └─ row-reverse */
+/// 		/* (sassify) 🟩 └─ column */
+/// 		/* (sassify) 🟩 └─ column-reverse */
+/// 		/* (sassify) 🟩 └─ nowrap */
+/// 		/* (sassify) 🟩 └─ wrap */
+/// 		/* (sassify) 🟩 └─ wrap-reverse */
+/// 		/* (sassify) 🟩 └─ row nowrap */
+/// 		/* (sassify) 🟩 └─ column wrap */
+/// 		/* (sassify) 🟩 └─ column-reverse wrap-reverse */
+/// 		/* (sassify) 🟩 └─ inherit */
+/// 		/* (sassify) 🟩 └─ initial */
+/// 		/* (sassify) 🟩 └─ unset */
+/// 		/* (sassify) 🟥 └⤬ column-reverse column-reverse */
+/// 	}
+/// @param {string} $flow [config.$dvalues--flex-flow] - сокращение для отдельных свойств `flex-direction` и `flex-wrap`
+@mixin flex-flow($flow: config.$dvalues--flex-flow) {
+
+	// С помощью функции `is-list-contains` проверяем наличие значения
+	// параметра `$flow` в списке `config.$vvalues--flex-flow`:
+	@if is-list-contains(config.$vvalues--flex-flow, $flow) {
+
+		// С помощью миксина `prefixer` добавляем CSS-свойтсву `flex-flow`
+		// все необходимые браузерные префиксы:
+		@include prefixer(
+			flex-flow,
+			$flow,
+			config.$prefixes--flex-flow
+		);
+
+	}
+
+	// Если условие выше не было соблюдено, то отображаем сообщение об этом:
+	@else {
+		@include invalid-value-message(
+			'flex-flow',
+			$flow,
+			config.$vvalues--flex-flow
+		);
+	}
+
+}
