@@ -1,4 +1,4 @@
-## v7.0.0
+## v8.0.0
 -  Добавил миксин `justify-content`
 -  Добавил миксин `align-self`
 -  Добавил миксин `align-items`
