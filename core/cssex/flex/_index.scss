@@ -27,7 +27,7 @@
 /// 		-webkit-flex: 1 1 0%;
 /// 		flex: 1 1 0%;
 /// 	}
-/// @param {string} $props... - значения `flex-grow`, `flex-shrink` и `flex-basis`
+/// @param {string | number} $props... - значения `flex-grow`, `flex-shrink` и `flex-basis`
 @mixin flex($props...) {
 
 	// С помощью миксина `prefixer` добавляем необходимые браузерные

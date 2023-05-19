@@ -38,7 +38,7 @@
 /// 		-webkit-flex-grow: 0.3;
 /// 		flex-grow: 0.3;
 /// 	}
-/// @param {string} $grow [config.$dvalues--flex-grow] - определяет, сколько пространства
+/// @param {number} $grow [config.$dvalues--flex-grow] - определяет, сколько пространства
 /// 	может занимать флекс внутри контейнера (принимаются целые (1, 2, 3,…) или дробные
 /// 	числа (например: 0.6), а отрицательные значения игнорируются)
 @mixin flex-grow($grow: config.$dvalues--flex-grow) {
