@@ -1,6 +1,6 @@
 /// @name prefixes--all
 /// @group Prefixes
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type list
 $prefixes--all: webkit khtml moz ms o !default;
@@ -9,7 +9,7 @@ $prefixes--all: webkit khtml moz ms o !default;
 /// ---
 /// @name prefixes--justify-content
 /// @group Prefixes
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type string
 $prefixes--justify-content: webkit !default;
@@ -18,7 +18,7 @@ $prefixes--justify-content: webkit !default;
 /// ---
 /// @name prefixes--align-self
 /// @group Prefixes
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type string
 $prefixes--align-self: webkit !default;
@@ -27,7 +27,7 @@ $prefixes--align-self: webkit !default;
 /// ---
 /// @name prefixes--align-items
 /// @group Prefixes
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type string
 $prefixes--align-items: webkit !default;
@@ -36,7 +36,7 @@ $prefixes--align-items: webkit !default;
 /// ---
 /// @name prefixes--align-content
 /// @group Prefixes
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type string
 $prefixes--align-content: webkit !default;
@@ -45,7 +45,7 @@ $prefixes--align-content: webkit !default;
 /// ---
 /// @name prefixes--flex-wrap
 /// @group Prefixes
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type string
 $prefixes--flex-wrap: webkit !default;
@@ -54,7 +54,7 @@ $prefixes--flex-wrap: webkit !default;
 /// ---
 /// @name prefixes--flex-shrink
 /// @group Prefixes
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type string
 $prefixes--flex-shrink: webkit !default;
@@ -63,7 +63,7 @@ $prefixes--flex-shrink: webkit !default;
 /// ---
 /// @name prefixes--flex-grow
 /// @group Prefixes
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type string
 $prefixes--flex-grow: webkit !default;
@@ -72,7 +72,7 @@ $prefixes--flex-grow: webkit !default;
 /// ---
 /// @name prefixes--flex-flow
 /// @group Prefixes
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type string
 $prefixes--flex-flow: webkit !default;
@@ -81,7 +81,7 @@ $prefixes--flex-flow: webkit !default;
 /// ---
 /// @name prefixes--flex-direction
 /// @group Prefixes
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type string
 $prefixes--flex-direction: webkit !default;
@@ -90,7 +90,7 @@ $prefixes--flex-direction: webkit !default;
 /// ---
 /// @name prefixes--flex-basis
 /// @group Prefixes
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type string
 $prefixes--flex-basis: webkit !default;
@@ -99,7 +99,7 @@ $prefixes--flex-basis: webkit !default;
 /// ---
 /// @name prefixes--flex
 /// @group Prefixes
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type string
 $prefixes--flex: webkit !default;
@@ -109,7 +109,7 @@ $prefixes--flex: webkit !default;
 /// ---
 /// @name prefixes--box-sizing
 /// @group Prefixes
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type list
 $prefixes--box-sizing: webkit moz !default;
@@ -120,7 +120,7 @@ $prefixes--box-sizing: webkit moz !default;
 /// ---
 /// @name prefixes--calc
 /// @group Prefixes
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type list
 $prefixes--calc: webkit moz !default;
@@ -130,7 +130,7 @@ $prefixes--calc: webkit moz !default;
 /// ---
 /// @name prefixes--box-shadow
 /// @group Prefixes
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type list
 $prefixes--box-shadow: webkit moz !default;
@@ -140,7 +140,7 @@ $prefixes--box-shadow: webkit moz !default;
 /// ---
 /// @name prefixes--transform-style
 /// @group Prefixes
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type list
 $prefixes--transform-style: webkit moz !default;
@@ -151,7 +151,7 @@ $prefixes--transform-style: webkit moz !default;
 /// ---
 /// @name prefixes--transform-origin
 /// @group Prefixes
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type list
 $prefixes--transform-origin: webkit moz o !default;
@@ -162,7 +162,7 @@ $prefixes--transform-origin: webkit moz o !default;
 /// ---
 /// @name prefixes--transform
 /// @group Prefixes
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type list
 $prefixes--transform: webkit moz o !default;
@@ -174,7 +174,7 @@ $prefixes--transform: webkit moz o !default;
 /// ---
 /// @name prefixes--transition-timing-function
 /// @group Prefixes
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type list
 $prefixes--transition-timing-function: webkit moz o !default;
@@ -185,7 +185,7 @@ $prefixes--transition-timing-function: webkit moz o !default;
 /// ---
 /// @name prefixes--transition-property
 /// @group Prefixes
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type list
 $prefixes--transition-property: webkit moz o !default;
@@ -196,7 +196,7 @@ $prefixes--transition-property: webkit moz o !default;
 /// ---
 /// @name prefixes--transition-duration
 /// @group Prefixes
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type list
 $prefixes--transition-duration: webkit moz o !default;
@@ -207,7 +207,7 @@ $prefixes--transition-duration: webkit moz o !default;
 /// ---
 /// @name prefixes--transition-delay
 /// @group Prefixes
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type list
 $prefixes--transition-delay: webkit moz o !default;
@@ -218,7 +218,7 @@ $prefixes--transition-delay: webkit moz o !default;
 /// ---
 /// @name prefixes--transition
 /// @group Prefixes
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type list
 $prefixes--transition: webkit moz o !default;
@@ -229,7 +229,7 @@ $prefixes--transition: webkit moz o !default;
 /// ---
 /// @name prefixes--backdrop-filter
 /// @group Prefixes
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type list
 $prefixes--backdrop-filter: webkit !default;
@@ -239,7 +239,7 @@ $prefixes--backdrop-filter: webkit !default;
 /// ---
 /// @name prefixes--border-radius
 /// @group Prefixes
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type list
 $prefixes--border-radius: webkit moz !default;
@@ -249,7 +249,7 @@ $prefixes--border-radius: webkit moz !default;
 /// ---
 /// @name prefixes--opacity
 /// @group Prefixes
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type list
 $prefixes--opacity: moz !default;
@@ -259,7 +259,7 @@ $prefixes--opacity: moz !default;
 /// ---
 /// @name prefixes--keyframes
 /// @group Prefixes
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type list
 $prefixes--keyframes: webkit moz o !default;
@@ -268,7 +268,7 @@ $prefixes--keyframes: webkit moz o !default;
 /// ---
 /// @name prefixes--position-sticky
 /// @group Prefixes
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type list
 $prefixes--position-sticky: webkit !default;
@@ -278,7 +278,7 @@ $prefixes--position-sticky: webkit !default;
 /// ---
 /// @name prefixes--user-select
 /// @group Prefixes
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type list
 $prefixes--user-select: webkit moz !default;
@@ -288,7 +288,7 @@ $prefixes--user-select: webkit moz !default;
 /// ---
 /// @name prefixes--tab-size
 /// @group Prefixes
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type list
 $prefixes--tab-size: moz o !default;

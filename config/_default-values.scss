@@ -1,83 +1,83 @@
 /// @name dvalues--justify-content
 /// @group Default Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type string
 $dvalues--justify-content: flex-start !default;
 
 /// @name dvalues--align-items
 /// @group Default Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type string
 $dvalues--align-items: auto !default;
 
 /// @name dvalues--align-items
 /// @group Default Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type string
 $dvalues--align-items: stretch !default;
 
 /// @name dvalues--align-content
 /// @group Default Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type string
 $dvalues--align-content: stretch !default;
 
 /// @name dvalues--flexbox
 /// @group Default Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type string
 $dvalues--flexbox: default !default;
 
 /// @name dvalues--flex-wrap
 /// @group Default Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type string
 $dvalues--flex-wrap: nowrap !default;
 
 /// @name dvalues--flex-shrink
 /// @group Default Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type number
 $dvalues--flex-shrink: 1 !default;
 
 /// @name dvalues--flex-grow
 /// @group Default Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type number
 $dvalues--flex-grow: 0 !default;
 
 /// @name dvalues--flex-flow
 /// @group Default Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type string
 $dvalues--flex-flow: (row nowrap) !default;
 
 /// @name dvalues--flex-direction
 /// @group Default Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type string
 $dvalues--flex-direction: row !default;
 
 /// @name dvalues--flex-basis
 /// @group Default Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type string
 $dvalues--flex-basis: auto !default;
 
 /// @name dvalues--brakepoints
 /// @group Default Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type map
 /// @prop {string} $dvalues--brakepoints.xs [(min-width: 0)]
@@ -109,91 +109,91 @@ $dvalues--brakepoints: (
 
 /// @name dvalues--text-shorten
 /// @group Default Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type string
 $dvalues--text-shorten: none !default;
 
 /// @name dvalues--illogical-usage-message_mode
 /// @group Default Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type list
 $dvalues--illogical-usage-message_mode: 'console', 'comment' !default;
 
 /// @name dvalues--line-clamp
 /// @group Default Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type string
 $dvalues--line-clamp: none !default;
 
 /// @name dvalues--box-sizing
 /// @group Default Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type string
 $dvalues--box-sizing: content-box !default;
 
 /// @name dvalues--media-prefers-contrast
 /// @group Default Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type string
 $dvalues--media-prefers-contrast: no-preference !default;
 
 /// @name dvalues--transform-style
 /// @group Default Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type string
 $dvalues--transform-style: flat !default;
 
 /// @name dvalues--transform-origin_x
 /// @group Default Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type number
 $dvalues--transform-origin_x: 50% !default;
 
 /// @name dvalues--transform-origin_y
 /// @group Default Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type number
 $dvalues--transform-origin_y: 50% !default;
 
 /// @name dvalues--transform-origin_z
 /// @group Default Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type number
 $dvalues--transform-origin_z: 0 !default;
 
 /// @name dvalues--transition-timing-function
 /// @group Default Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type string
 $dvalues--transition-timing-function: ease !default;
 
 /// @name dvalues--transition-property
 /// @group Default Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type string
 $dvalues--transition-property: all !default;
 
 /// @name dvalues--transition-duration
 /// @group Default Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type number
 $dvalues--transition-duration: 0s !default;
 
 /// @name dvalues--transition-delay
 /// @group Default Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type number
 $dvalues--transition-delay: 0s !default;
@@ -209,7 +209,7 @@ $dvalues--transition-delay: 0s !default;
 /// @ignore
 /// @name dvalues--transition
 /// @group Default Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access private
 /// @type list
 $-dvalues--transition: all 0s ease 0s !default;
@@ -219,7 +219,7 @@ $-dvalues--transition: all 0s ease 0s !default;
 /// ---
 /// @name dvalues--border-radius
 /// @group Default Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type number
 $dvalues--border-radius: 0 !default;
@@ -228,7 +228,7 @@ $dvalues--border-radius: 0 !default;
 /// ---
 /// @name dvalues--position
 /// @group Default Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type string
 $dvalues--position: static !default;
@@ -237,7 +237,7 @@ $dvalues--position: static !default;
 /// ---
 /// @name dvalues--position-sticky__side
 /// @group Default Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type string
 $dvalues--position-sticky__side: top !default;
@@ -246,7 +246,7 @@ $dvalues--position-sticky__side: top !default;
 /// ---
 /// @name dvalues--position-sticky__side-offset
 /// @group Default Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type number
 $dvalues--position-sticky__side-offset: 0 !default;
@@ -255,7 +255,7 @@ $dvalues--position-sticky__side-offset: 0 !default;
 /// ---
 /// @name dvalues--tab-size
 /// @group Default Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type number
 $dvalues--tab-size: 8 !default;
@@ -264,7 +264,7 @@ $dvalues--tab-size: 8 !default;
 /// ---
 /// @name dvalues--visually-hidden__size
 /// @group Default Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type number
 $dvalues--visually-hidden__size: 1px !default;
@@ -273,7 +273,7 @@ $dvalues--visually-hidden__size: 1px !default;
 /// ---
 /// @name dvalues--size__mode
 /// @group Default Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type string
 $dvalues--size__mode: normal !default;
@@ -282,7 +282,7 @@ $dvalues--size__mode: normal !default;
 /// ---
 /// @name dvalues--prefixer__prefix-value
 /// @group Default Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type boolean
 $dvalues--prefixer__prefix-value: false !default;
@@ -291,7 +291,7 @@ $dvalues--prefixer__prefix-value: false !default;
 /// ---
 /// @name dvalues--prefixer__save-unprefixed-property
 /// @group Default Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type boolean
 $dvalues--prefixer__save-unprefixed-property: true !default;
@@ -300,7 +300,7 @@ $dvalues--prefixer__save-unprefixed-property: true !default;
 /// ---
 /// @name dvalues--user-select
 /// @group Default Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type string
 $dvalues--user-select: auto !default;
@@ -309,7 +309,7 @@ $dvalues--user-select: auto !default;
 /// ---
 /// @name dvalues--amcss__prefix
 /// @group Default Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type string
 $dvalues--amcss__prefix: 'am-' !default;
@@ -319,7 +319,7 @@ $dvalues--amcss__prefix: 'am-' !default;
 /// ---
 /// @name dvalues--bem
 /// @group Default Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type map
 /// @prop {string} $dvalues--bem.element  ['__'] - разделитель для элемента
@@ -331,7 +331,7 @@ $dvalues--bem: (
 
 /// @name dvalues--url-encode__characters
 /// @group Default Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type map
 $dvalues--url-encode__characters: (
@@ -358,7 +358,7 @@ $dvalues--url-encode__characters: (
 
 /// @name dvalues--set-initial
 /// @group Default Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type map
 /// @prop {string} $dvalues--set-initial.align-content ['normal']

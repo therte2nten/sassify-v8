@@ -1,20 +1,20 @@
 /// @name vvalues--justify-content
 /// @group Valid Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type list
 $vvalues--justify-content: center start end flex-start flex-end left right baseline (first baseline) (last baseline) space-between space-around space-evenly stretch (safe center) (unsafe center) inherit initial unset !default;
 
 /// @name vvalues--align-self
 /// @group Valid Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type list
 $vvalues--align-self: auto normal center start end self-start self-end flex-start flex-end baseline (first baseline) (last baseline) stretch (safe center) (unsafe center) inherit initial unset !default;
 
 /// @name vvalues--align-items
 /// @group Valid Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type list
 $vvalues--align-items: flex-start flex-end center baseline stretch inherit initial unset !default;
@@ -95,56 +95,56 @@ $vvalues--align-items: flex-start flex-end center baseline stretch inherit initi
 /// ---
 /// @name vvalues--align-content
 /// @group Valid Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type list
 $vvalues--align-content: center start end flex-start flex-end normal baseline (first baseline) (last baseline) space-between space-around space-evenly stretch (safe center) (unsafe center) inherit initial unset !default;
 
 /// @name vvalues--flexbox
 /// @group Valid Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type list
 $vvalues--flexbox: default inline i !default;
 
 /// @name vvalues--flex-wrap
 /// @group Valid Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type list
 $vvalues--flex-wrap: nowrap wrap wrap-reverse inherit initial unset !default;
 
 /// @name vvalues--flex-flow
 /// @group Valid Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type list
 $vvalues--flex-flow: (row) (row-reverse) (column) (column-reverse) (nowrap) (wrap) (wrap-reverse) (row nowrap) (column wrap) (column-reverse wrap-reverse) inherit initial unset !default;
 
 /// @name vvalues--flex-direction
 /// @group Valid Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type list
 $vvalues--flex-direction: row row-reverse column column-reverse inherit initial unset !default;
 
 /// @name vvalues--flex-basis
 /// @group Valid Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type list
 $vvalues--flex-basis: auto 'Lenght (10em, 3px, etc.)' fill max-content min-content fit-content content inherit initial unset !default;
 
 /// @name vvalues--centering
 /// @group Valid Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type list
 $vvalues--centering: 'horizontal' 'hr' 'vertical' 'vr' 'both' 'b' !default;
 
 /// @name vvalues--line-clamp
 /// @group Valid Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type list
 $vvalues--line-clamp: none 'Number' inherit initial revert revert-layer unset !default;
@@ -159,7 +159,7 @@ $vvalues--line-clamp: none 'Number' inherit initial revert revert-layer unset !d
 /// ---
 /// @name vvalues--box-sizing
 /// @group Valid Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type list
 $vvalues--box-sizing: border-box content-box inherit initial revert revert-layer unset !default;
@@ -171,7 +171,7 @@ $vvalues--box-sizing: border-box content-box inherit initial revert revert-layer
 /// ---
 /// @name vvalues--media-prefers-contrast
 /// @group Valid Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type list
 $vvalues--media-prefers-contrast: no-preference more less custom !default;
@@ -184,7 +184,7 @@ $vvalues--media-prefers-contrast: no-preference more less custom !default;
 /// ---
 /// @name vvalues--transform-style
 /// @group Valid Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type list
 $vvalues--transform-style: preserve-3d flat inherit initial unset !default;
@@ -229,7 +229,7 @@ $vvalues--transform-style: preserve-3d flat inherit initial unset !default;
 /// ---
 /// @name vvalues--transition-timing-function
 /// @group Valid Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @link https://webref.ru/css/transition-timing-function WebReference
 /// @type list
@@ -237,35 +237,35 @@ $vvalues--transition-timing-function: ease ease-in ease-out ease-in-out linear s
 
 /// @name vvalues--transition-duration
 /// @group Valid Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type list
 $vvalues--transition-duration: "Time (1s, 5ms, .2ms)" inherit initial revert revert-layer unset !default;
 
 /// @name vvalues--transition-delay
 /// @group Valid Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type list
 $vvalues--transition-delay: "Time (1s, 5ms, .2ms)" inherit initial unset !default;
 
 /// @name vvalues--border-radius
 /// @group Valid Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type list
 $vvalues--border-radius: "Number" "Length (px, rem, em, etc.)" "Percentage (0% - 100%)" inherit initial unset !default;
 
 /// @name vvalues--opacity
 /// @group Valid Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type list
 $vvalues--opacity: "Number (0.0 - 1.0)" "Percentage (0% - 100%)" !default;
 
 /// @name vvalues--position-sticky__sides
 /// @group Valid Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type list
 $vvalues--position-sticky__sides: top right bottom left !default;
@@ -321,21 +321,21 @@ $vvalues--position-sticky__sides: top right bottom left !default;
 /// ---
 /// @name vvalues--position
 /// @group Valid Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type list
 $vvalues--position: static relative absolute fixed sticky inherit initial revert revert-layer unset !default;
 
 /// @name vvalues--tab-size
 /// @group Valid Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type list
 $vvalues--tab-size: '<Number>' inherit initial revert revert-layer unset !default;
 
 /// @name vvalues--size
 /// @group Valid Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type list
 $vvalues--size: normal max min !default;
@@ -369,7 +369,7 @@ $vvalues--size: normal max min !default;
 /// ---
 /// @name vvalues--user-select
 /// @group Valid Values
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @link https://developer.mozilla.org/ru/docs/Web/CSS/user-select user-select - CSS | MDN
 /// @type list

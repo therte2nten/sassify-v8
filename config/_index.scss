@@ -13,14 +13,14 @@
 /// ---
 /// @name setting--strict-mode
 /// @group Configs
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @type boolean
 $setting--strict-mode: true !default;
 
 /// @name setting--strip-unit__use-sassmath
 /// @group Configs
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @deprecated Использование `/` для деления вне `calc()` устарело и будет удалено в DartSass 2.0.0.
 /// @link https://sass-lang.com/d/slash-div Breaking Change: Slash as Division
@@ -34,7 +34,7 @@ $setting--strip-unit__use-sassmath: true !default;
 /// ---
 /// @name setting--follow-prefers-reduced-motion
 /// @group Configs
-/// @since 7.0.0
+/// @since 8.0.0
 /// @access public
 /// @link https://doka.guide/a11y/prefers-reduced-motion/ Как сделать анимацию на сайте доступной.
 /// @type boolean
