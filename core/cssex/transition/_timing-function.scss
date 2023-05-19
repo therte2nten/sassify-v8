@@ -1,0 +1,236 @@
+@use '../../../config' as config;
+@use '../../../devpack/invalid-value-message' as *;
+@use '../../utility/validator/is-list-contains' as *;
+@use '../../utility/validator/is-string-start-with' as *;
+@use '../../prefixer' as *;
+
+/// > Устанавливает, насколько быстро должно изменяться
+/// > значение стилевого свойство для которого применяется
+/// > эффект перехода.
+/// >
+/// > `transition-timing-function` представляет собой
+/// > математическую функцию, показывающую, как быстро по
+/// > времени меняется указанное через `transition-property`
+/// > значение свойства. Начальная точка имеет координаты
+/// > `0.0`, `0.0`, конечная — `1.0`, `1.0`, при этом функция по оси
+/// > ординат может превышать эти значения в большую или
+/// > меньшую сторону (рис. 1).
+/// >
+/// > ![рис. 1](https://webref.ru/assets/images/css/css_timing-function-1.png)
+/// >
+/// > &mdash; [WebReference](https://webref.ru/css/transition-timing-function)
+///
+/// Миксин `transition-timing-function` позволяет сгенерировать CSS-свойство
+/// `transition-timing-function` со всеми необходимыми браузерными префиксами.
+/// ---
+/// @name transition-timing-function
+/// @group CSSex
+/// @since 7.0.0
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @link https://github.com/therteenten/sassify/blob/develop/core/cssex/transition-timing-function/_index.scss Исходный код миксина
+/// @example scss Пример использования в Sass (SCSS)
+/// 	.ease {
+/// 		@include transition-timing-function(ease);
+/// 	}
+/// 	.easein {
+/// 		@include transition-timing-function(ease-in);
+/// 	}
+/// 	.easeout {
+/// 		@include transition-timing-function(ease-out);
+/// 	}
+/// 	.easeinout {
+/// 		@include transition-timing-function(ease-in-out);
+/// 	}
+/// 	.linear {
+/// 		@include transition-timing-function(linear);
+/// 	}
+/// 	.cb {
+/// 		@include transition-timing-function(cubic-bezier(0.2, -2, 0.8, 2));
+/// 	}
+///
+/// 	.jump-start {
+/// 		@include transition-timing-function(steps(5, jump-start));
+/// 	}
+/// 	.jump-end {
+/// 		@include transition-timing-function(steps(5, jump-end));
+/// 	}
+/// 	.jump-none {
+/// 		@include transition-timing-function(steps(5, jump-none));
+/// 	}
+/// 	.jump-both {
+/// 		@include transition-timing-function(steps(5, jump-both));
+/// 	}
+/// 	.step-start {
+/// 		@include transition-timing-function(step-start);
+/// 	}
+/// 	.step-end {
+/// 		@include transition-timing-function(step-end);
+/// 	}
+///
+/// 	.multiply {
+/// 		@include transition-timing-function((ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1)), true);
+/// 	}
+///
+/// 	.multiply-2 {
+/// 		$timing-function: (ease-in, cubic-bezier(0.1, 0.7, 1, 0.1));
+///
+/// 		@include transition-timing-function($timing-function, true);
+/// 	}
+/// @example css Результат работы миксина в CSS
+/// 	.ease {
+/// 		-webkit-transition-timing-function: ease;
+/// 		-moz-transition-timing-function: ease;
+/// 		-o-transition-timing-function: ease;
+/// 		transition-timing-function: ease;
+/// 	}
+///
+/// 	.easein {
+/// 		-webkit-transition-timing-function: ease-in;
+/// 		-moz-transition-timing-function: ease-in;
+/// 		-o-transition-timing-function: ease-in;
+/// 		transition-timing-function: ease-in;
+/// 	}
+///
+/// 	.easeout {
+/// 		-webkit-transition-timing-function: ease-out;
+/// 		-moz-transition-timing-function: ease-out;
+/// 		-o-transition-timing-function: ease-out;
+/// 		transition-timing-function: ease-out;
+/// 	}
+///
+/// 	.easeinout {
+/// 		-webkit-transition-timing-function: ease-in-out;
+/// 		-moz-transition-timing-function: ease-in-out;
+/// 		-o-transition-timing-function: ease-in-out;
+/// 		transition-timing-function: ease-in-out;
+/// 	}
+///
+/// 	.linear {
+/// 		-webkit-transition-timing-function: linear;
+/// 		-moz-transition-timing-function: linear;
+/// 		-o-transition-timing-function: linear;
+/// 		transition-timing-function: linear;
+/// 	}
+///
+/// 	.cb {
+/// 		-webkit-transition-timing-function: cubic-bezier(0.2, -2, 0.8, 2);
+/// 		-moz-transition-timing-function: cubic-bezier(0.2, -2, 0.8, 2);
+/// 		-o-transition-timing-function: cubic-bezier(0.2, -2, 0.8, 2);
+/// 		transition-timing-function: cubic-bezier(0.2, -2, 0.8, 2);
+/// 	}
+///
+/// 	.jump-start {
+/// 		-webkit-transition-timing-function: steps(5, jump-start);
+/// 		-moz-transition-timing-function: steps(5, jump-start);
+/// 		-o-transition-timing-function: steps(5, jump-start);
+/// 		transition-timing-function: steps(5, jump-start);
+/// 	}
+///
+/// 	.jump-end {
+/// 		-webkit-transition-timing-function: steps(5, jump-end);
+/// 		-moz-transition-timing-function: steps(5, jump-end);
+/// 		-o-transition-timing-function: steps(5, jump-end);
+/// 		transition-timing-function: steps(5, jump-end);
+/// 	}
+///
+/// 	.jump-none {
+/// 		-webkit-transition-timing-function: steps(5, jump-none);
+/// 		-moz-transition-timing-function: steps(5, jump-none);
+/// 		-o-transition-timing-function: steps(5, jump-none);
+/// 		transition-timing-function: steps(5, jump-none);
+/// 	}
+///
+/// 	.jump-both {
+/// 		-webkit-transition-timing-function: steps(5, jump-both);
+/// 		-moz-transition-timing-function: steps(5, jump-both);
+/// 		-o-transition-timing-function: steps(5, jump-both);
+/// 		transition-timing-function: steps(5, jump-both);
+/// 	}
+///
+/// 	.step-start {
+/// 		-webkit-transition-timing-function: step-start;
+/// 		-moz-transition-timing-function: step-start;
+/// 		-o-transition-timing-function: step-start;
+/// 		transition-timing-function: step-start;
+/// 	}
+///
+/// 	.step-end {
+/// 		-webkit-transition-timing-function: step-end;
+/// 		-moz-transition-timing-function: step-end;
+/// 		-o-transition-timing-function: step-end;
+/// 		transition-timing-function: step-end;
+/// 	}
+///
+/// 	.multiply {
+/// 		-webkit-transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1);
+/// 		-moz-transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1);
+/// 		-o-transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1);
+/// 		transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1);
+/// 	}
+///
+/// 	.multiply-2 {
+/// 		-webkit-transition-timing-function: ease-in, cubic-bezier(0.1, 0.7, 1, 0.1);
+/// 		-moz-transition-timing-function: ease-in, cubic-bezier(0.1, 0.7, 1, 0.1);
+/// 		-o-transition-timing-function: ease-in, cubic-bezier(0.1, 0.7, 1, 0.1);
+/// 		transition-timing-function: ease-in, cubic-bezier(0.1, 0.7, 1, 0.1);
+/// 	}
+/// @param {string} $function [config.$dvalues--transition-timing-function] - математическая
+/// 	функция, показывающая, как быстро по времени меняется указанное через
+/// 	`transition-property` значение свойства
+/// @param {boolean} $is-multiple-timing-functions [false] - используется ли "пакет"
+/// 	значений (напр.: `(ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1)`)?
+@mixin transition-timing-function($function: config.$dvalues--transition-timing-function, $is-multiple-timing-functions: false) {
+
+	// Для начала проведем проверку значения параметра
+	// `$function`:
+	// 1) Если строка начинается с `cubic-bezier`
+	// 2) Если строка начина с `steps`
+	// 3) Если параметр `$is-multiple-timing-functions` равен `true`
+	@if is-string-start-with($function, 'cubic-bezier')
+	 or is-string-start-with($function, 'steps')
+	 or $is-multiple-timing-functions == true {
+
+		// Если хоть одно условие верно, то с помощью
+		// миксина `prefixer` добавляем CSS-свойству
+		// `transition-timing-function` все необходимые
+		// браузерные префиксы:
+		@include prefixer(
+			'transition-timing-function',
+			$function,
+			config.$prefixes--transition-timing-function
+		);
+
+	}
+
+	// Если все пред. условия не верны, то если значение
+	// параметра `$function` равно хоть одному элементу
+	// из списка `config.$vvalues--transition-timing-function`,
+	// то...
+	@else if is-list-contains(
+		config.$vvalues--transition-timing-function,
+		$function) {
+
+		// ... с помощью миксина `prefixer` добавляем
+		// все необходимые браузерные префиксы:
+		@include prefixer(
+			'transition-timing-function',
+			$function,
+			config.$prefixes--transition-timing-function
+		);
+
+	}
+
+	// А вот если вообще ничего не сложилось, то выводим
+	// сообщение об этом:
+	@else {
+
+		@include invalid-value-message(
+			'transition-timing-function',
+			$function,
+			config.$vvalues--transition-timing-function
+		);
+
+	}
+
+}

@@ -1,0 +1,22 @@
+/// Функция `color-tint` миксует необходимый цвет с белым
+/// и выдаёт "осветлённый" цвет.
+/// ---
+/// @name color-tint
+/// @group Core
+/// @since 7.0.0
+/// @access public
+/// @author Kitty Giraudel
+/// @link https://github.com/KittyGiraudel GitHub
+/// @example scss Пример использования в Sass (SCSS)
+/// 	@debug color-tint(#000, 15); //=> #262626
+/// @return {color} цвет, который получился после микса
+/// @param {color} $color - цвет, который необходимо замиксовать
+/// @param {number} $percentage - процент микса цвета `$color` (т.е. как много
+/// 	белого добавить в исходный цвет)
+@function color-tint($color, $percentage) {
+	@return mix(
+		white,
+		$color,
+		$percentage
+	);
+}

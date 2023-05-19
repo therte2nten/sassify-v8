@@ -1,0 +1,67 @@
+@use './index' as *;
+@use '../../../common/store/css-shadows' as *;
+@use '../../utility/map/map-deep-get' as *;
+@use '../../utility/validator/is-number' as *;
+
+/// Миксин `box-shadow-store` позволяет сгенерировать готовый
+/// шаблон с тенью из большого списка `$store--css-shadows`, используя
+/// миксин `box-shadow`.
+/// ---
+/// @name box-shadow-store
+/// @group CSSex
+/// @since 7.0.0
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @link https://github.com/therteenten/sassify/blob/develop/core/cssex/box-shadow/_store.scss Исходный код миксина
+/// @example scss Пример использования в Sass (SCSS)
+/// 	.shadow-3 {
+/// 		@include box-shadow-store(3);
+/// 	}
+///
+/// 	.shadow-78 {
+/// 		@include box-shadow-store(78);
+/// 	}
+///
+/// 	.shadow-35 {
+/// 		@include box-shadow-store(35);
+/// 	}
+/// @example css Результат работы миксина в CSS
+/// 	.shadow-3 {
+/// 		-webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+/// 		-moz-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+/// 		box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+/// 	}
+///
+/// 	.shadow-78 {
+/// 		-webkit-box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+/// 		-moz-box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+/// 		box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+/// 	}
+///
+/// 	.shadow-35 {
+/// 		-webkit-box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+/// 		-moz-box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+/// 		box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+/// 	}
+/// @param {number} $shadow-number - номер элемента из карты `$store--css-shadows`
+@mixin box-shadow-store($shadow-number) {
+
+	// С помощью функции `is-number` проверяем значение
+	// параметра `$shadow-number` на соответствие Sass-типу
+	// `Number`:
+	@if is-number($shadow-number) == true {
+
+		// Если `$shadow-number` == `Number`,
+		// то с помощью миксина `box-shadow` и функции
+		// `map-deep-get` генерируем CSS-свойство `box-shadow`
+		// со значением из карты `$store--css-shadows`:
+		@include box-shadow(
+			map-deep-get(
+				$store--css-shadows,
+				$shadow-number
+			)
+		);
+
+	}
+
+}

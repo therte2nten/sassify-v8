@@ -1,0 +1,35 @@
+@use '../../config' as config;
+@use './string-replace' as *;
+
+/// Функция `url-encode` заменяет символы URL на
+/// безопасные в CSS (чтобы не было проблем со вставкой
+/// ссылки, например, в `content`).
+/// ---
+/// @name url-encode
+/// @group Core
+/// @since 7.0.0
+/// @access public
+/// @author Sindre Sorhus
+/// @link https://github.com/sindresorhus GitHub
+/// @example scss Пример использования в Sass (SCSS)
+/// 	@debug url-encode('https://google.com'); //=> https%3A%2F%2Fgoogle.com
+/// 	@debug url-encode('mailto:therteenten@inbox.ru'); //=> mailto%3Atherteenten%40inbox.ru
+/// 	@debug url-encode('https://github.com/therteenten/sassify'); //=> https%3A%2F%2Fgithub.com%2Ftherteenten%2Fsassify
+/// 	@debug url-encode('https://github.com/sindresorhus'); //=> https%3A%2F%2Fgithub.com%2Fsindresorhus
+/// @return {string} строка, в которой все символы заменены
+/// @param {string} $url - ссылка, символы в которой надо заменить
+@function url-encode($url) {
+
+	$-string: $url;
+
+	@each $-replaceable, $-replacement in config.$dvalues--url-encode__characters {
+		$-string: string-replace(
+			$-string,
+			$-replaceable,
+			$-replacement
+		);
+	}
+
+	@return $-string;
+
+}

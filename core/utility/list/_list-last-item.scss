@@ -1,0 +1,36 @@
+@use '../../../devpack/invalid-value-message' as *;
+@use '../validator/is-list' as *;
+
+/// Функция `list-last-item` выдает последний элемент в списке.
+/// ---
+/// @name list-last-item
+/// @group Core
+/// @since 7.0.0
+/// @access public
+/// @author Sindre Sorhus
+/// @link https://github.com/sindresorhus GitHub
+/// @example scss Пример использования в Sass (SCSS)
+/// 	@debug list-last-item((1, 2, 3)); //=> 3
+/// 	@debug list-last-item((3, 2, 1)); //=> 1
+/// 	@debug list-last-item((red, blue, green)); //=> green
+/// @return {*} элемент, который находится в конце списка
+/// @param {list} $list - список, из которого необходимо получить последний элемент
+@function list-last-item($list) {
+
+	// Проверка на соответствие типу `List`:
+	@if is-list($list) == true {
+
+		// Возращаем результативное значение:
+		@return nth($list, -1);
+
+	}
+
+	// Если значение `$list` не соответствует типу `List`:
+	@else {
+
+		// Выводим сообщение о несоответствии типа:
+		@return invalid-value-message('list-last-item', $list, 'List');
+
+	}
+
+}

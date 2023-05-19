@@ -1,0 +1,91 @@
+@use '../../config' as config;
+
+/// Миксин `invalid-value-message` выводит в консоль сообщение о том,
+/// что миксину переданы неверные параметры.
+///
+/// > Предназначена для `@mixin`!
+/// ---
+/// @name invalid-value-message
+/// @group DevPack
+/// @since 7.0.0
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @link https://github.com/therteenten GitHub
+/// @param {string} $mixin-name - миксин, от имени которого консоль "говорит"
+/// @param {string} $invalid-param - неверный параметр
+/// @param {list} $valid-params - список допустимых параметров
+@mixin invalid-value-message($mixin-name, $invalid-param, $valid-params) {
+
+	$-message: '';
+
+	// Шаблон сообщения:
+	$-message-template: 'Миксин «#{$mixin-name}» не может принимать значение «#{$invalid-param}»!';
+
+	// Шаблон части сообщения с допустимыми
+	// значениями (для Strict Mode):
+	$-message-valid-params: 'Допустимые значения миксина: #{$valid-params}';
+
+	// Шаблон части сообщения с допустимыми
+	// значениями:
+	$-message-valid-params--list: '(sassify) #{config.$string--emoji__info} ┌ Допустимые значения для «#{$mixin-name}»:';
+
+	// Если "жесткий режим" включен, то...
+	@if config.$setting--strict-mode == true {
+
+		// ... конфигурируем текст сообщения об
+		// ошибке для "жесткого режима":
+		$-message: '#{config.$string--emoji__error} #{$-message-template} #{$-message-valid-params}';
+
+		// С помощью директивы `@error` выводим
+		// сообщение об ошибке:
+		@error $-message;
+
+	}
+
+	// Если "жесткий режим" отключен, то...
+	@else {
+
+		// ... конфигурируем текст сообщения об ошибке:
+		$-message: '(sassify) #{config.$string--emoji__warning} #{$-message-template}';
+
+		// С помощью директивы `@warn` выводим сообщение
+		// об ошибке:
+		@warn $-message;
+
+		// Выводим то же сообщение с помощью директивы
+		// `@debug` ниже:
+		@debug $-message;
+
+		// Выводим с помощью директивы `@debug` сообщение
+		// о возможных вариантах верных параметров:
+		@debug $-message-valid-params--list;
+
+		// Добавляем комментарии в CSS-файл
+		// для дубляжа консольного вывода прямо в файл:
+		/* #{$-message} */
+		/* #{$-message-valid-params--list} */
+
+		// Циклом `each` проходимся по списку допустимых
+		// вариантов верных параметров для миксина:
+		@each $i in $valid-params {
+
+			// С помощью директивы `@debug` выводим в консоль
+			// список допустимых параметров для миксина:
+			@debug '(sassify) #{config.$string--emoji__success} └─ #{$i}';
+
+			// Дублируем этот список в CSS-файл с помощью комментариев:
+			/* (sassify) #{config.$string--emoji__success} └─ #{$i} */
+
+		}
+
+		// В конце выводим для примера неверный параметр,
+		// который был передан миксину:
+		@debug '(sassify) #{config.$string--emoji__error} └⤬ #{$invalid-param}';
+
+		// Дублируем вывод неверного параметра прямо в CSS-файл
+		// с помощью комментария:
+		/* (sassify) #{config.$string--emoji__error} └⤬ #{$invalid-param} */
+
+	}
+
+}

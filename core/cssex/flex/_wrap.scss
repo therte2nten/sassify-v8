@@ -1,0 +1,71 @@
+@use '../../../config' as config;
+@use '../../prefixer' as *;
+@use '../../../devpack/invalid-value-message' as *;
+@use '../../utility/validator/is-list-contains' as *;
+
+/// > Свойство CSS flex-wrap задаёт правила вывода flex-элементов — в одну строку
+/// > или в несколько, с переносом блоков. Если перенос разрешён, то возможно задать
+/// > направление, в котором выводятся блоки.
+/// >
+/// > &mdash; [mdn web docs](https://developer.mozilla.org/ru/docs/Web/CSS/flex-wrap)
+///
+/// Миксин `flex-wrap` позволяет генерировать
+/// CSS-свойство `flex-wrap` со всеми нужными браузерными
+/// префиксами.
+/// ---
+/// @name flex-wrap
+/// @group CSSex
+/// @since 7.0.0
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @link https://github.com/therteenten/sassify/blob/develop/core/cssex/flex/_wrap.scss Исходный код миксина
+/// @example scss Пример использования в Sass (SCSS)
+/// 	.nowrap {
+/// 		display: flex;
+/// 		@include flex-wrap();
+/// 	}
+///
+/// 	.nowrap {
+/// 		display: flex;
+/// 		@include flex-wrap(wrap);
+/// 	}
+/// @example css Результат работы миксина в CSS
+/// 	.nowrap {
+/// 		display: flex;
+/// 		-webkit-flex-wrap: nowrap;
+/// 		flex-wrap: nowrap;
+/// 	}
+///
+/// 	.nowrap {
+/// 		display: flex;
+/// 		-webkit-flex-wrap: wrap;
+/// 		flex-wrap: wrap;
+/// 	}
+/// @param {string} $wrap [config.$dvalues--flex-wrap] - следует ли флексам
+/// 	располагаться в одну строку или можно занять несколько строк
+@mixin flex-wrap($wrap: config.$dvalues--flex-wrap) {
+
+	// С помощью функции `is-list-contains` проверяем наличие значения
+	// параметра `$wrap` в списке `config.$vvalues--flex-wrap`:
+	@if is-list-contains(config.$vvalues--flex-wrap, $wrap) {
+
+		// С помощью миксина `prefixer` добавляем CSS-свойтсву `flex-wrap`
+		// все необходимые браузерные префиксы:
+		@include prefixer(
+			flex-wrap,
+			$wrap,
+			config.$prefixes--flex-wrap
+		);
+
+	}
+
+	// Если условие выше не было соблюдено, то отображаем сообщение об этом:
+	@else {
+		@include invalid-value-message(
+			'flex-wrap',
+			$wrap,
+			config.$vvalues--flex-wrap
+		);
+	}
+
+}

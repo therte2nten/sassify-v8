@@ -1,0 +1,41 @@
+@forward 'valid-values';
+@forward 'default-values';
+@forward 'prefixes';
+@forward 'strings';
+
+/// Переменная `$setting--strict-mode` регулирует поведение
+/// вывода ошибок миксинов и функций в консоль.
+///
+/// - `$setting--strict-mode: true`: включает жесткий режим, при
+/// котором ошибки будут выводиться с помощью директивы `@error`.
+/// - `$setting--strict-mode: false`: отключает жесткий режим, а
+/// ошибки будут выводиться в консоль с помощью директивы `@warn`.
+/// ---
+/// @name setting--strict-mode
+/// @group Configs
+/// @since 7.0.0
+/// @access public
+/// @type boolean
+$setting--strict-mode: true !default;
+
+/// @name setting--strip-unit__use-sassmath
+/// @group Configs
+/// @since 7.0.0
+/// @access public
+/// @deprecated Использование `/` для деления вне `calc()` устарело и будет удалено в DartSass 2.0.0.
+/// @link https://sass-lang.com/d/slash-div Breaking Change: Slash as Division
+/// @type boolean
+$setting--strip-unit__use-sassmath: true !default;
+
+/// Данный параметр сообщает всем остальным миксинам
+/// и функциям в Sassify, которые как-то связаны с
+/// анимацией и переходами о том, что нужно следовать
+/// предпочтениям пользователя или нет.
+/// ---
+/// @name setting--follow-prefers-reduced-motion
+/// @group Configs
+/// @since 7.0.0
+/// @access public
+/// @link https://doka.guide/a11y/prefers-reduced-motion/ Как сделать анимацию на сайте доступной.
+/// @type boolean
+$setting--follow-prefers-reduced-motion: true !default;

@@ -1,0 +1,26 @@
+/// Миксин `bem-block` создает блок по "БЭМу".
+/// ---
+/// @name bem-block
+/// @group Core
+/// @since 7.0.0
+/// @access public
+/// @author Marcmintel
+/// @link https://medium.com/@marcmintel Medium
+/// @example scss Пример использования в Sass (SCSS)
+/// 	@include bem-block(button) {
+/// 		background-color: #4CAF50;
+/// 		border: none;
+/// 		/* ... */
+/// 	}
+/// @example css Результат в CSS
+/// 	.button {
+/// 		background-color: #4CAF50;
+/// 		border: none;
+/// 		/* ... */
+/// 	}
+/// @param {string} $block - название селектора блока
+@mixin bem-block($block) {
+	.#{$block} {
+		@content;
+	}
+}

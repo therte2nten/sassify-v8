@@ -1,0 +1,49 @@
+@use '../../config' as config;
+
+/// Функция `invalid-value-message` выводит в консоль сообщение о том,
+/// что функции переданы неверные параметры.
+///
+/// > Предназначена для `@function`!
+/// ---
+/// @name invalid-value-message
+/// @group DevPack
+/// @since 7.0.0
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @link https://github.com/therteenten GitHub
+/// @return {string} сообщение об ошибке
+/// @param {string} $function-name - функция, от имени которой консоль "говорит"
+/// @param {string} $invalid-param - неверный параметр
+@function invalid-value-message($function-name, $invalid-param, $error-explanation: false) {
+
+	$-message: '';
+
+	// Шаблон сообщения об ошибке:
+	$-message-template: 'Функция «#{$function-name}» не может принимать значение «#{$invalid-param}»';
+
+	// Если в функцию передан параметр `$error-explanation`,
+	// то в конце сообщения об ошибке добавляем пояснение:
+	@if $error-explanation != false {
+		$-message: '#{$-message-template} т.к. значение «#{$invalid-param}» не является «#{$error-explanation}»!';
+	} @else {
+		$-message: '#{$-message-template}!';
+	}
+
+	@if config.$setting--strict-mode == true {
+
+		// Если включен "жесткий режим", то выводим сообщение
+		// в консоль с помощью директивы `@error`:
+		@error '#{config.$string--emoji__error} #{$-message}';
+
+	} @else {
+
+		// Если "жесткий режим" выключен, то отображаем
+		// сообщение об ошибке через директиву `@warn`:
+		@warn '#{config.$string--emoji__warning} #{$-message}';
+
+		// Возвращаем пустую строку:
+		@return null;
+
+	}
+
+}

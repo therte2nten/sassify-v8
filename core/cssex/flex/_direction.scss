@@ -1,0 +1,90 @@
+@use '../../../config' as config;
+@use '../../prefixer' as *;
+@use '../../../devpack/invalid-value-message' as *;
+@use '../../utility/validator/is-list-contains' as *;
+@use '../../utility/validator/is-number' as *;
+
+/// > CSS-свойство, указывающее на то, как flex-элементы располагаются во
+/// > flex-контейнере по главной оси и направлению (`normal` или `reversed`).
+/// >
+/// > > Обратите внимание, что значения row и `row-reverse` зависят от направления
+/// > > flex-контейнера. Если его атрибут `dir` равен `ltr`, row представляет собой
+/// > > горизонтальную ось, ориентированную слева направо, а `row-reverse` — справа налево;
+/// > > если атрибут `dir` равен `rtl`, row представляет собой горизонтальную ось,
+/// > > ориентированную справа налево, а `row-reverse` — слева направо.
+/// >
+/// > &mdash; [mdn web docs](https://developer.mozilla.org/ru/docs/Web/CSS/flex-direction)
+///
+/// Миксин `flex-direction` позволяет генерировать
+/// CSS-свойство `flex-direction` со всеми нужными браузерными
+/// префиксами.
+/// ---
+/// @name flex-direction
+/// @group CSSex
+/// @since 7.0.0
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @link https://github.com/therteenten/sassify/blob/develop/core/cssex/flex/_direction.scss Исходный код миксина
+/// @example scss Пример использования в Sass (SCSS)
+/// 	div {
+/// 		display: flex;
+/// 		@include flex-direction(row-reverse);
+/// 	}
+/// @example css Результат работы миксина в CSS
+/// 	div {
+/// 		display: flex;
+/// 		-webkit-flex-direction: row-reverse;
+/// 		flex-direction: row-reverse;
+/// 	}
+/// @param {string} $direction [config.$dvalues--flex-direction] - направление
+/// 	основных осей в контейнере
+@mixin flex-direction($direction: config.$dvalues--flex-direction) {
+
+	// С помощью функции `is-list-contains` проверяем наличие значения
+	// параметра `$direction` в списке `config.$vvalues--flex-direction`:
+	@if is-list-contains(config.$vvalues--flex-direction, $direction) {
+
+		// С помощью миксина `prefixer` добавляем CSS-свойтсву `flex-direction`
+		// все необходимые браузерные префиксы:
+		@include prefixer(
+			flex-direction,
+			$direction,
+			config.$prefixes--flex-direction
+		);
+
+		// Если значение параметра `$direction` равно `row-reverse`
+		@if $direction == row-reverse {
+			@include prefixer(box-orient, horizontal, webkit moz, false);
+			@include prefixer(box-direction, reverse, webkit moz, false);
+		}
+
+		// Если значение параметра `$direction` равно `column`
+		@else if $direction == column {
+			@include prefixer(box-orient, vertical, webkit moz, false);
+			@include prefixer(box-direction, normal, webkit moz, false);
+		}
+
+		// Если значение параметра `$direction` равно `column-reverse`
+		@else if $direction == column-reverse {
+			@include prefixer(box-orient, vertical, webkit moz, false);
+			@include prefixer(box-direction, reverse, webkit moz, false);
+		}
+
+		// Во всех остальных случаях:
+		@else {
+			@include prefixer(box-orient, horizontal, webkit moz, false);
+			@include prefixer(box-direction, normal, webkit moz, false);
+		}
+
+	}
+
+	// Если условие выше не было соблюдено, то отображаем сообщение об этом:
+	@else {
+		@include invalid-value-message(
+			'flex-direction',
+			$direction,
+			config.$vvalues--flex-direction
+		);
+	}
+
+}

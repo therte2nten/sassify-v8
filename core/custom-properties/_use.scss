@@ -1,0 +1,55 @@
+/// Миксин `custom-properties-use` просто и удобно использовать
+/// кастомные свойства CSS, не используя конструкцию `var(--property)`.
+/// ---
+/// @name custom-properties-use
+/// @group Core
+/// @since 7.0.0
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @link https://github.com/therteenten/sassify/blob/develop/core/mixin/size/_index.scss Исходный код миксина
+/// @example scss Пример использования в Sass (SCSS)
+/// 	$theme: (
+/// 		color-background: #e1e1e1,
+/// 		text-color: #212121,
+/// 		text-color-h2: #454545,
+/// 		text-size-h2: 1.1rem
+/// 	);
+///
+/// 	@include custom-properties($theme);
+///
+/// 	body, html {
+/// 		@include custom-properties-use((
+/// 			background-color: color-background,
+/// 			color: text-color
+/// 		))
+/// 	}
+///
+/// 	h2 {
+/// 		@include custom-properties-use((
+/// 			color: text-color-h2,
+/// 			font-size: text-size-h2
+/// 		))
+/// 	}
+/// @example css Результат работы миксина в CSS
+/// 	:root {
+/// 		--color-background: #e1e1e1;
+/// 		--text-color: #212121;
+/// 		--text-color-h2: #454545;
+/// 		--text-size-h2: 1.1rem;
+/// 	}
+///
+/// 	body, html {
+/// 		background-color: var(--color-background);
+/// 		color: var(--text-color);
+/// 	}
+///
+/// 	h2 {
+/// 		color: var(--text-color-h2);
+/// 		font-size: var(--text-size-h2);
+/// 	}
+/// @param {map} $custom-properties [()] - список кастомных свойств CSS со свойствами
+@mixin custom-properties-use($custom-properties: ()) {
+	@each $-custom-property, $-value in $custom-properties {
+		#{$-custom-property}: var(--#{$-value});
+	}
+}

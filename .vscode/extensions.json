@@ -1,6 +1,7 @@
 {
 	"recommendations": [
 		"syler.sass-indented",
-		"EditorConfig.EditorConfig"
+		"editorconfig.editorconfig",
+		"fooxly.workspace"
 	]
 }

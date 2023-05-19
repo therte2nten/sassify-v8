@@ -1,0 +1,64 @@
+@use '../config' as config;
+
+/// Миксин `check` выводит некоторую информацию о Sassify.
+/// Полезно для проверки установки пакета Sassify в проект.
+/// ---
+/// @name check
+/// @group Commons
+/// @since 7.0.0
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @link https://github.com/therteenten/sassify GitHub
+/// @example scss Пример использования в Sass (SCSS)
+/// 	@include check();
+/// @example css Результат в CSS
+/// 	@charset "UTF-8";
+/// 	/* (sassify) 🟩 The check was successful! */
+/// 	/* (sassify) ⬜ Package Name: @therteenten/sassify */
+/// 	/* (sassify) ⬜ Description:  Большой набор миксинов и функций на языке CSS-препроцессора Sass */
+/// 	/* (sassify) ⬜ Author:       Haba Kudzaev <therteenten@inbox.ru> */
+/// 	/* (sassify) ⬜ License:      MIT */
+/// 	/* (sassify) ⬜ npm:          https://www.npmjs.com/package/@therteenten/sassify */
+/// 	/* (sassify) ⬜ Source Code:  https://github.com/therteenten/sassify */
+/// @example
+/// 	[2023-05-02 07:21] Compiled test.scss to test.css.
+/// 	Debug: (sassify) 🟩 The check was successful!
+/// 	Debug: (sassify) ⬜ Package Name: @therteenten/sassify
+/// 	Debug: (sassify) ⬜ Description:  Большой набор миксинов и функций на языке CSS-препроцессора Sass
+/// 	Debug: (sassify) ⬜ Author:       Haba Kudzaev <therteenten@inbox.ru>
+/// 	Debug: (sassify) ⬜ License:      MIT
+/// 	Debug: (sassify) ⬜ npm:          https://www.npmjs.com/package/@therteenten/sassify
+/// 	Debug: (sassify) ⬜ Source Code:  https://github.com/therteenten/sassify
+/// @param {boolean} $generate-css-comments [true] - генерировать аналогичный лог в формате CSS-комментария?
+@mixin check($generate-css-comments: true) {
+
+	$-package: (
+		"Package Name": '@therteenten/sassify',
+		"Description": ' Большой набор миксинов и функций на языке CSS-препроцессора Sass',
+		"Author": '      Haba Kudzaev <therteenten@inbox.ru>',
+		"License": '     MIT',
+		"npm": '         https://www.npmjs.com/package/@therteenten/sassify',
+		"Source Code": ' https://github.com/therteenten/sassify'
+	);
+
+	$-message-check-success: '(sassify) #{config.$string--emoji__success} The check was successful!';
+
+	@debug $-message-check-success;
+
+	@if $generate-css-comments == true {
+		/* #{$-message-check-success} */
+	}
+
+	@each $-title, $-description in $-package {
+
+		$-message: '(sassify) #{config.$string--emoji__debug} #{$-title}: #{$-description}';
+
+		@debug $-message;
+
+		@if $generate-css-comments == true {
+			/* #{$-message} */
+		}
+
+	}
+
+}

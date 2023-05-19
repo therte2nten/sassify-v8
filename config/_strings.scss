@@ -1,0 +1,41 @@
+/// @name string--emoji__error
+/// @group Strings
+/// @since 7.0.0
+/// @access public
+/// @type string
+$string--emoji__error: '🟥' !default;
+
+/// @name string--emoji__warning
+/// @group Strings
+/// @since 7.0.0
+/// @access public
+/// @type string
+$string--emoji__warning: '🟧' !default;
+
+/// @name string--emoji__info
+/// @group Strings
+/// @since 7.0.0
+/// @access public
+/// @type string
+$string--emoji__info: '🟦' !default;
+
+/// @name string--emoji__success
+/// @group Strings
+/// @since 7.0.0
+/// @access public
+/// @type string
+$string--emoji__success: '🟩' !default;
+
+/// @name string--emoji__debug
+/// @group Strings
+/// @since 7.0.0
+/// @access public
+/// @type string
+$string--emoji__debug: '⬜' !default;
+
+/// @name string--debug__text-shorten-empty
+/// @group Strings
+/// @since 7.0.0
+/// @access public
+/// @type string
+$string--debug__text-shorten-none: 'Вы указали в качестве параметра миксина «text-shorten» значение «none». Миксин не сгенерировал никаких стилей, т.к. при значении «none» смысла использовать миксин нет.' !default;

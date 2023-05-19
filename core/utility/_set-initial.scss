@@ -1,0 +1,28 @@
+@use '../../config' as config;
+
+/// Функция `set-initial` устанавливает дефолтное
+/// значение CSS-свойства.
+/// ---
+/// @name set-initial
+/// @group Core
+/// @since 7.0.0
+/// @access public
+/// @author takamoso
+/// @link https://github.com/takamoso GitHub
+/// @example scss Пример использования в Sass (SCSS)
+/// 	@debug set-initial(clip); //=> auto
+/// 	@debug set-initial(border-radius); //=> 0
+/// 	@debug set-initial(animation); //=> none 0s ease 0s 1 normal none running
+/// 	@debug set-initial(unknown); //=> Error: 🟥 Свойство «unknown» отсутствует в карте `$dvalues--set-initial`!
+/// @return {*} дефолтное значение того или иного CSS-свойства
+/// @param {string} $property - CSS-свойство, дефолтное значение которого нужно получить
+@function set-initial($property) {
+	@if map-has-key(config.$dvalues--set-initial, $property) {
+		@return map-get(
+			config.$dvalues--set-initial,
+			$property
+		);
+	} @else {
+		@error #{config.$string--emoji__error}  + ' Свойство «#{$property}» отсутствует в карте `$dvalues--set-initial`!';
+	}
+}

@@ -1,0 +1,57 @@
+@use '../../../config' as config;
+@use '../../prefixer' as *;
+@use '../../../devpack/invalid-value-message' as *;
+@use '../../utility/validator/is-list-contains' as *;
+
+/// > CSS-свойство `align-items` выравнивает flex-элементы текущей flex-линии таким
+/// > же образом, как и `justify-content`, но в перпендикулярном направлении.
+/// >
+/// > &mdash; [mdn web docs](https://developer.mozilla.org/ru/docs/Web/CSS/align-items)
+///
+/// Миксин `align-items` позволяет генерировать
+/// CSS-свойство `align-items` со всеми нужными браузерными
+/// префиксами.
+/// ---
+/// @name align-items
+/// @group CSSex
+/// @since 7.0.0
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @link https://github.com/therteenten/sassify/blob/develop/core/cssex/align/_items.scss Исходный код миксина
+/// @example scss Пример использования в Sass (SCSS)
+/// 	div {
+/// 		@include align-items(baseline);
+/// 	}
+/// @example css Результат работы миксина в CSS
+/// 	div {
+/// 		-webkit-align-items: baseline;
+/// 		align-items: baseline;
+/// 	}
+/// @param {string} $value [config.$dvalues--align-items] - тип выравнивания
+/// 	флекс-элементов внутри контейнера в перпендикулярном направлении
+@mixin align-items($value: config.$dvalues--align-items) {
+
+	// С помощью функции `is-list-contains` проверяем наличие значения
+	// параметра `$value` в списке `config.$vvalues--align-items`:
+	@if is-list-contains(config.$vvalues--align-items, $value) {
+
+		// С помощью миксина `prefixer` добавляем CSS-свойтсву `align-items`
+		// все необходимые браузерные префиксы:
+		@include prefixer(
+			align-items,
+			$value,
+			config.$prefixes--align-items
+		);
+
+	}
+
+	// Если условие выше не было соблюдено, то отображаем сообщение об этом:
+	@else {
+		@include invalid-value-message(
+			'align-items',
+			$value,
+			config.$vvalues--align-items
+		);
+	}
+
+}

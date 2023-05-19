@@ -1,0 +1,93 @@
+@use '../../../config' as config;
+@use '../../../devpack/invalid-value-message' as *;
+@use '../../utility/validator/is-list-contains' as *;
+@use '../../prefixer' as *;
+@use './index' as *;
+
+/// Миксин `position-sticky` позволяет указать тип позиционирования `sticky`
+/// одной строкой.
+///
+/// Элемент позиционируется в соответствии с нормальным потоком документа, а затем
+/// смещается относительно его ближайшего прокручивающего предка и [содержащего блока](https://developer.mozilla.org/ru/docs/Web/CSS/Containing_block)
+/// (ближайший родительский уровень блока), включая элементы, связанные с таблицей,
+/// на основе значений `top`, `right`, `bottom`, и `left`. Смещение не влияет на положение любых других
+/// элементов.Это значение всегда создаёт новый [контекст наложения](https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context).
+/// Обратите внимание, что липкий элемент «прилипает» к его ближайшему предшественнику, имеющему
+/// «механизм прокрутки» (созданный при `overflow` равном `hidden`, `scroll`, `auto` или `overlay`), даже
+/// если тот не является ближайшим фактически прокручивающим предком. Это эффективно препятствует
+/// любому «липкому» поведению (см. [Github issue on W3C CSSWG](https://github.com/w3c/csswg-drafts/issues/865)).
+/// ---
+/// @name position-sticky
+/// @group CSSex
+/// @since 7.0.0
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @link https://github.com/therteenten/sassify/blob/develop/core/cssex/position/_sticky.scss Исходный код миксина
+/// @example scss Пример использования в Sass (SCSS)
+/// 	.block-sticky {
+/// 		@include position-sticky();
+/// 	}
+///
+/// 	.block-sticky-top20 {
+/// 		@include position-sticky(top, 20px);
+/// 	}
+///
+/// 	.block-sticky-left5 {
+/// 		@include position-sticky(left, 5px);
+/// 	}
+/// @example css Результат работы миксина в CSS
+/// 	.block-sticky {
+/// 		position: -webkit-sticky;
+/// 		position: sticky;
+/// 		top: 0;
+/// 	}
+///
+/// 	.block-sticky-top20 {
+/// 		position: -webkit-sticky;
+/// 		position: sticky;
+/// 		top: 20px;
+/// 	}
+///
+/// 	.block-sticky-left5 {
+/// 		position: -webkit-sticky;
+/// 		position: sticky;
+/// 		left: 5px;
+/// 	}
+/// @param {string} $side [config.$dvalues--position-sticky__side] - сторона "прилипания"
+/// @param {string | number} $side-offset [config.$dvalues--position-sticky__side-offset] - отступ
+/// 	от стороны "прилипания"
+@mixin position-sticky(
+	$side: config.$dvalues--position-sticky__side,
+	$side-offset: config.$dvalues--position-sticky__side-offset) {
+
+	// С помощью миксина `prefixer` добавляем значению `sticky`
+	// CSS-свойтсва `position: sticky` необходимые браузерные префиксы:
+	@include prefixer(
+		position,
+		sticky,
+		config.$prefixes--position-sticky,
+		true,
+		true
+	);
+
+	// С помощью функции `is-list-contains` проверяем наличие
+	// значения параметра `$side` в списке `config.$vvalues--position-sticky__sides`:
+	@if is-list-contains(config.$vvalues--position-sticky__sides, $side) {
+
+		// Если в `$side` есть значение из `config.$vvalues--position-sticky__sides`,
+		// то генерируем стили:
+		#{$side}: $side-offset;
+
+	}
+
+	// Если в списке `config.$vvalues--position-sticky__sides` нет значения `$side`
+	// то отображаем сообщение об этом:
+	@else {
+		@include invalid-value-message(
+			'position-sticky',
+			$side,
+			config.$vvalues--position-sticky__sides
+		);
+	}
+
+}

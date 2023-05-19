@@ -1,0 +1,49 @@
+@use '../../../config' as config;
+@use '../../../devpack/invalid-value-message' as *;
+@use '../../prefixer' as *;
+
+/// > &mdash; [CSS](https://developer.mozilla.org/ru/docs/Web/CSS) свойство `backdrop-filter`
+/// > позволяет вам использовать визуальные эффекты - такие
+/// > как размытие или смещение цвета фона - за элементом.
+/// > Так как это применяется ко всему за элементом, чтобы
+/// > увидеть эффект, вы должны сделать элемент или его фон
+/// > по крайней мере частично прозрачными.
+/// >
+/// > &mdash; [mdn web docs](https://developer.mozilla.org/ru/docs/Web/CSS/backdrop-filter)
+///
+/// Миксин `backdrop-filter` позволяет сгенерировать CSS-свойство
+/// `backdrop-filter` со всеми необходимыми юраузерными префиксами.
+/// ---
+/// @name backdrop-filter
+/// @group CSSex
+/// @since 7.0.0
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @link https://github.com/therteenten/sassify/blob/develop/core/cssex/backdrop-filter/_index.scss Исходный код миксина
+/// @example scss Пример использования в Sass (SCSS)
+/// 	.class {
+/// 		@include backdrop-filter(blur(10px));
+/// 	}
+/// @example css Результат работы миксина в CSS
+/// 	.class {
+/// 		-webkit-backdrop-filter: blur(10px);
+/// 		backdrop-filter: blur(10px);
+/// 	}
+/// @param {list} $filter-function-list - список фильтров
+@mixin backdrop-filter($filter-function-list...) {
+
+	// Проверяем поддержку CSS-свойства `backdrop-filter`
+	// браузером:
+	@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+
+		// С помощью миксина `prefixer` генерируем
+		// браузерные префиксы:
+		@include prefixer(
+			backdrop-filter,
+			$filter-function-list,
+			config.$prefixes--backdrop-filter
+		);
+
+	}
+
+}

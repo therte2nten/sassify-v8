@@ -1,0 +1,61 @@
+@use '../../../config' as config;
+@use '../../prefixer' as *;
+@use '../../../devpack/invalid-value-message' as *;
+@use '../../utility/validator/is-list-contains' as *;
+
+/// > Свойство CSS `align-content` устанавливает распределение пространства между и
+/// > вокруг элементами контента вдоль поперечной оси `flexbox` контейнера или вдоль
+/// > блочной оси `grid` контейнера.
+/// >
+/// > &mdash; [mdn web docs](https://developer.mozilla.org/ru/docs/Web/CSS/align-content)
+///
+/// Миксин `align-content` позволяет генерировать
+/// CSS-свойство `align-content` со всеми нужными браузерными
+/// префиксами.
+///
+/// > Обратите внимание на то, что миксин принимает в качестве параметра строку
+/// > в скобках как на примере.
+/// ---
+/// @name align-content
+/// @group CSSex
+/// @since 7.0.0
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @link https://github.com/therteenten/sassify/blob/develop/core/cssex/align/_content.scss Исходный код миксина
+/// @example scss Пример использования в Sass (SCSS)
+/// 	div {
+/// 		@include align-content(first baseline);
+/// 	}
+/// @example css Результат работы миксина в CSS
+/// 	div {
+/// 		-webkit-align-content: first baseline;
+/// 		align-content: first baseline;
+/// 	}
+/// @param {string} $value [config.$dvalues--align-content] - тип выравнивания
+/// 	строк внутри флекс-контейнера по поперечной оси при наличии свободного пространства
+@mixin align-content($value: config.$dvalues--align-content) {
+
+	// С помощью функции `is-list-contains` проверяем наличие значения
+	// параметра `$value` в списке `config.$vvalues--align-content`:
+	@if is-list-contains(config.$vvalues--align-content, $value) {
+
+		// С помощью миксина `prefixer` добавляем CSS-свойтсву `align-content`
+		// все необходимые браузерные префиксы:
+		@include prefixer(
+			align-content,
+			$value,
+			config.$prefixes--align-content
+		);
+
+	}
+
+	// Если условие выше не было соблюдено, то отображаем сообщение об этом:
+	@else {
+		@include invalid-value-message(
+			'align-content',
+			$value,
+			config.$vvalues--align-content
+		);
+	}
+
+}

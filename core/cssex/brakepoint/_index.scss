@@ -1,0 +1,63 @@
+@use 'sass:map';
+@use '../../../config' as config;
+@use '../../../devpack/invalid-value-message' as *;
+
+/// Миксин `brakepoint` позволяет сгенерировать media-запрос
+/// с заранее подготовленными брейкпоинтами.
+/// ---
+/// @name brakepoint
+/// @group CSSex
+/// @since 7.0.0
+/// @access public
+/// @author Kitty Giraudel
+/// @link https://github.com/KittyGiraudel GitHub автора миксина
+/// @link https://github.com/therteenten/sassify/blob/develop/core/cssex/brakepoint/_index.scss Исходный код миксина
+/// @example scss Пример использования в Sass (SCSS)
+/// 	.button {
+/// 		@include brakepoint(md) {
+/// 			width: 120px;
+/// 			// ...
+/// 		};
+///
+/// 		@include brakepoint(lg) {
+/// 			width: 240px;
+/// 			// ...
+/// 		}
+/// 	}
+/// @example css Результат работы миксина в CSS
+/// 	@media (min-width: 768px) {
+/// 		.button {
+/// 			width: 120px;
+///  			/* ... */
+/// 		}
+/// 	}
+/// 	@media (min-width: 992px) {
+/// 		.button {
+/// 			width: 240px;
+/// 			/* ... */
+/// 		}
+/// 	}
+/// @param {string} $brakepoint-name - название брейкпоинта из списка `$dvalues--brakepoints`
+/// @content Стили селектора
+@mixin brakepoint($brakepoint-name) {
+
+	// С помощью встроенной Sass-функции проверяем наличие значение
+	// параметра `$brakepoint-name` в списке `config.$dvalues--brakepoints`:
+	@if map-has-key(
+		config.$dvalues--brakepoints,
+		$brakepoint-name) {
+
+		// Если всё верно, то генерируем media-выражение и передаем внутрь
+		// `@content`:
+		@media #{map-get(config.$dvalues--brakepoints, $brakepoint-name)} {
+			@content;
+		}
+
+	}
+
+	// Если передано неверное значение, то отображаем сообщение об этом:
+	@else {
+		@include invalid-value-message('brakepoint', $brakepoint-name, '#{map-keys(config.$dvalues--brakepoints)}')
+	}
+
+}

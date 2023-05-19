@@ -1,0 +1,36 @@
+/// Функция `is-string` проверяет соответствие значения
+/// типу `String` и возвращает `true` или `false`.
+///
+/// Функция является по сути обёрткой над `type-of`.
+/// ---
+/// @name is-string
+/// @group Core
+/// @since 7.0.0
+/// @access public
+/// @author takamoso
+/// @link https://github.com/takamoso GitHub
+/// @example scss Пример использования в Sass (SCSS)
+/// 	$boolean: true;
+/// 	$number: 1310;
+/// 	$string: "Sassify";
+/// 	$list: 1 2 3 4 5;
+/// 	$map: (
+/// 		one: 1,
+/// 		two: 2,
+/// 		three: 3
+/// 	);
+/// 	$null: null;
+/// 	$color: #fff;
+///
+/// 	@debug is-string($boolean); //=> false
+/// 	@debug is-string($number); //=> false
+/// 	@debug is-string($string); //=> true
+/// 	@debug is-string($list); //=> false
+/// 	@debug is-string($map); //=> false
+/// 	@debug is-string($null); //=> false
+/// 	@debug is-string($color); //=> false
+/// @return {boolean} является ли переданное значение строкой?
+/// @param {*} $value - значение, которое необходимо проверить на соответствие типу `String`
+@function is-string($value) {
+	@return type-of($value) == string;
+}

@@ -1,0 +1,70 @@
+@use '../../../config' as config;
+@use '../../../devpack/invalid-value-message' as *;
+@use '../../prefixer' as *;
+@use '../../utility/validator/is-number' as *;
+@use '../../utility/validator/is-list-contains' as *;
+
+/// > Свойство `transition-duration` задаёт время в секундах
+/// > или миллисекундах, сколько должна длиться анимация
+/// > перехода до её завершения. По умолчанию значение равно
+/// > `0s`, это означает, что никакой анимации нет, переход
+/// > происходит мгновенно.
+/// >
+/// > Можно указать несколько значений, перечисляя их через
+/// > запятую. Каждое значение применяется к свойствам,
+/// > заданным через `transition-property`.
+/// >
+/// > &mdash; [WebReference](https://webref.ru/css/transition-duration)
+///
+/// Миксин `transition-duration` позволяет сгенерировать CSS-свойство
+/// `transition-duration` со всеми необходимыми браузерными префиксами.
+/// ---
+/// @name transition-duration
+/// @group CSSex
+/// @since 7.0.0
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @link https://github.com/therteenten/sassify/blob/develop/core/cssex/transition-duration/_index.scss Исходный код миксина
+/// @example scss Пример использования в Sass (SCSS)
+/// 	.selector {
+/// 		@include transition-duration(.5s);
+/// 	}
+/// @example css Результат работы миксина в CSS
+/// 	.selector {
+/// 		-webkit-transition-duration: 0.5s;
+/// 		-moz-transition-duration: 0.5s;
+/// 		-o-transition-duration: 0.5s;
+/// 		transition-duration: 0.5s;
+/// 	}
+/// @param {number | string} $duration [config.$dvalues--transition-duration] - время
+/// 	в секундах или миллисекундах, сколько должна длиться анимация перехода до её
+/// 	завершения
+@mixin transition-duration($duration: config.$dvalues--transition-duration) {
+
+	// С помощью функций `is-number` и `is-list-contains`
+	// проводим проверку:
+	// 1) является ли `$duration` числом?
+	// 2) если не числом, то хоть допустимым вариантом из списка?
+	@if is-number($duration) == true or is-list-contains(config.$vvalues--transition-duration, $duration) == true {
+
+		// Если проверки прошли успешно, то с помощью
+		// миксина `prefixer` добавляем необходимые браузерные
+		// префиксы CSS-свойству `transition-duration`:
+		@include prefixer(
+			transition-duration,
+			$duration,
+			config.$prefixes--transition-duration
+		);
+
+	}
+
+	// Если проверка не прошла, то сообщаем об этом:
+	@else {
+		@include invalid-value-message(
+			'transition-duration',
+			$duration,
+			config.$vvalues--transition-duration
+		);
+	}
+
+}

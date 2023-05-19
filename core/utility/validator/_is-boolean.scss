@@ -1,0 +1,73 @@
+/// Функция `is-boolean` проверяет соответствие значения
+/// типу `Boolean` и возвращает `true` или `false`.
+///
+/// Функция является по сути обёрткой над `type-of`.
+/// ---
+/// @name is-boolean
+/// @group Core
+/// @since 7.0.0
+/// @access public
+/// @author takamoso
+/// @link https://github.com/takamoso GitHub
+/// @example scss Пример использования в Sass (SCSS)
+///   $boolean: true;
+///   $number: 1310;
+///   $string: "Sassify";
+///   $list: 1 2 3 4 5;
+///   $map: (
+///     one: 1,
+///     two: 2,
+///     three: 3
+///   );
+///   $null: null;
+///   $color: #fff;
+///
+///   @debug is-boolean($boolean); //=> true
+///   @debug is-boolean($number); //=> false
+///   @debug is-boolean($string); //=> false
+///   @debug is-boolean($list); //=> false
+///   @debug is-boolean($map); //=> false
+///   @debug is-boolean($null); //=> false
+///   @debug is-boolean($color); //=> false
+/// @return {boolean} является ли переданное значение булевым?
+/// @param {*} $value - значение, которое необходимо проверить на соответствие типу `Boolean`
+@function is-boolean($value) {
+	@return type-of($value) == bool;
+}
+
+/// Функция `is-bool` является алиасом функции
+/// `is-boolean`. Просто сокращённая форма записи.
+/// ---
+/// @name is-bool
+/// @alias is-boolean
+/// @group Core
+/// @since 7.0.0
+/// @access public
+/// @author takamoso
+/// @link https://github.com/takamoso GitHub
+/// @example scss Пример использования в Sass (SCSS)
+/// 	$boolean: true;
+/// 	$number: 1310;
+/// 	$string: "Sassify";
+/// 	$list: 1 2 3 4 5;
+/// 	$map: (
+/// 		one: 1,
+/// 		two: 2,
+/// 		three: 3
+/// 	);
+/// 	$null: null;
+/// 	$color: #fff;
+///
+/// 	@debug is-bool($boolean); //=> true
+/// 	@debug is-bool($number); //=> false
+/// 	@debug is-bool($string); //=> false
+/// 	@debug is-bool($list); //=> false
+/// 	@debug is-bool($map); //=> false
+/// 	@debug is-bool($null); //=> false
+/// 	@debug is-bool($color); //=> false
+/// @return {boolean} является ли переданное значение булевым?
+/// @param {string | boolean} $value - значение, которое необходимо проверить
+/// 	на соответствие типу `Boolean`
+@function is-bool($value) {
+	@return type-of($value) == bool;
+}

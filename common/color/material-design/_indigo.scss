@@ -1,0 +1,37 @@
+/// @name color--md-indigo
+/// @group ColorPalette
+/// @since 7.0.0
+/// @access public
+/// @author Google
+/// @link https://material.io/design/color/the-color-system.html Material Design
+/// @type map
+/// @prop {color} $color--md-indigo.50 [#e8eaf6]
+/// @prop {color} $color--md-indigo.100 [#c5cae9]
+/// @prop {color} $color--md-indigo.200 [#9fa8da]
+/// @prop {color} $color--md-indigo.300 [#7986cb]
+/// @prop {color} $color--md-indigo.400 [#5c6bc0]
+/// @prop {color} $color--md-indigo.500 [#3f51b5]
+/// @prop {color} $color--md-indigo.600 [#3949ab]
+/// @prop {color} $color--md-indigo.700 [#303f9f]
+/// @prop {color} $color--md-indigo.800 [#283593]
+/// @prop {color} $color--md-indigo.900 [#1a237e]
+/// @prop {color} $color--md-indigo.A100 [#8c9eff]
+/// @prop {color} $color--md-indigo.A200 [#536dfe]
+/// @prop {color} $color--md-indigo.A400 [#3d5afe]
+/// @prop {color} $color--md-indigo.A700 [#304ffe]
+$color--md-indigo: (
+	50: #e8eaf6,
+	100: #c5cae9,
+	200: #9fa8da,
+	300: #7986cb,
+	400: #5c6bc0,
+	500: #3f51b5,
+	600: #3949ab,
+	700: #303f9f,
+	800: #283593,
+	900: #1a237e,
+	A100: #8c9eff,
+	A200: #536dfe,
+	A400: #3d5afe,
+	A700: #304ffe
+);

@@ -1,0 +1,37 @@
+/// @name color--md-red
+/// @group ColorPalette
+/// @since 7.0.0
+/// @access public
+/// @author Google
+/// @link https://material.io/design/color/the-color-system.html Material Design
+/// @type map
+/// @prop {color} $color--md-red.50 [#ffebee]
+/// @prop {color} $color--md-red.100 [#ffcdd2]
+/// @prop {color} $color--md-red.200 [#ef9a9a]
+/// @prop {color} $color--md-red.300 [#e57373]
+/// @prop {color} $color--md-red.400 [#ef5350]
+/// @prop {color} $color--md-red.500 [#f44336]
+/// @prop {color} $color--md-red.600 [#e53935]
+/// @prop {color} $color--md-red.700 [#d32f2f]
+/// @prop {color} $color--md-red.800 [#c62828]
+/// @prop {color} $color--md-red.900 [#b71c1c]
+/// @prop {color} $color--md-red.A100 [#ff8a80]
+/// @prop {color} $color--md-red.A200 [#ff5252]
+/// @prop {color} $color--md-red.A400 [#ff1744]
+/// @prop {color} $color--md-red.A700 [#d50000]
+$color--md-red: (
+	50: #ffebee,
+	100: #ffcdd2,
+	200: #ef9a9a,
+	300: #e57373,
+	400: #ef5350,
+	500: #f44336,
+	600: #e53935,
+	700: #d32f2f,
+	800: #c62828,
+	900: #b71c1c,
+	A100: #ff8a80,
+	A200: #ff5252,
+	A400: #ff1744,
+	A700: #d50000
+);

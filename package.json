@@ -1,24 +1,34 @@
 {
-  "name": "@therteenten/sassify",
-  "version": "23.0.0",
-  "description": "Большой набор миксинов и функций на языке CSS-препроцессора Sass",
-  "main": "index.scss",
-  "scripts": {
-    "test": "sass --watch test.scss:test.css"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/therteenten/sassify.git"
-  },
-  "keywords": [
-    "sass",
-    "scss",
-    "sassify"
-  ],
-  "author": "Haba Kudzaev <therteenten@inbox.ru>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/therteenten/sassify/issues"
-  },
-  "homepage": "https://github.com/therteenten/sassify#readme"
+	"name": "@therteenten/sassify",
+	"version": "7.0.0",
+	"description": "Большой набор миксинов и функций на языке CSS-препроцессора Sass",
+	"main": "index.scss",
+	"scripts": {
+		"test": "sass --watch test.scss:test.css",
+		"sassdoc": "npx sassdoc . -d docs/",
+		"npm:publish": "npm publish --access public",
+		"npm:version-major": "npm version major -m \"Обновил версию пакета до %s\"",
+		"npm:version-minor": "npm version minor -m \"Обновил версию пакета до %s\"",
+		"npm:version-patch": "npm version patch -m \"Обновил версию пакета до %s\"",
+		"git:log-last-tag": "git log --oneline --decorate --pretty=format:'-  %s' | tee CHANGELOG.log"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/therteenten/sassify.git"
+	},
+	"keywords": [
+		"sass",
+		"scss",
+		"sassify"
+	],
+	"author": "Haba Kudzaev <therteenten@inbox.ru>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/therteenten/sassify/issues"
+	},
+	"homepage": "https://github.com/therteenten/sassify#readme",
+	"devDependencies": {
+		"sass": "^1.62.1",
+		"sassdoc": "^2.7.4"
+	}
 }

@@ -1,0 +1,63 @@
+@use '../../../config' as config;
+@use '../../prefixer' as *;
+@use '../../../devpack/invalid-value-message' as *;
+@use '../../utility/validator/is-number' as *;
+
+/// > Свойство CSS, которое определяет фактор сжатия flex-элемента.
+/// > Flex-элементы будут заполнять контейнер в зависимости от значения `flex-shrink`,
+/// > когда стандартная ширина flex-элементов шире, чем flex-контейнер.
+/// >
+/// > flex-shrink используется вместе со свойствами flex `flex-grow` и `flex-basis`.
+/// > Обычно определяется с помощью сокращения flex.
+/// >
+/// > &mdash; [mdn web docs](https://developer.mozilla.org/ru/docs/Web/CSS/flex-shrink)
+///
+/// Миксин `flex-shrink` позволяет генерировать
+/// CSS-свойство `flex-shrink` со всеми нужными браузерными
+/// префиксами.
+/// ---
+/// @name flex-shrink
+/// @group CSSex
+/// @since 7.0.0
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @link https://github.com/therteenten/sassify/blob/develop/core/cssex/flex/_shrink.scss Исходный код миксина
+/// @example scss Пример использования в Sass (SCSS)
+/// 	div {
+/// 		@include flex-shrink(3);
+/// 	}
+/// @example css Результат работы миксина в CSS
+/// 	div {
+/// 		-webkit-flex-shrink: 3;
+/// 		flex-shrink: 3;
+/// 	}
+/// @param {number} $shrink [config.$dvalues--flex-shrink] - коэффициент сжатия флексов в
+/// 	контейнере и задаёт, насколько элемент будет уменьшаться по отношению к другим
+/// 	флексам, чтобы разместить все элементы в одну строку (принимаются целые (1, 2, 3,…)
+/// 	или дробные числа (например: 0.6), а отрицательные значения игнорируются)
+@mixin flex-shrink($shrink: config.$dvalues--flex-shrink) {
+
+	// С помощью функции `is-number` проверяем значение
+	// параметра `$shrink` на соответствие типу `Number`:
+	@if is-number($shrink) {
+
+		// С помощью миксина `prefixer` добавляем CSS-свойтсву `flex-shrink`
+		// все необходимые браузерные префиксы:
+		@include prefixer(
+			flex-shrink,
+			$shrink,
+			config.$prefixes--flex-shrink
+		);
+
+	}
+
+	// Если условие выше не было соблюдено, то отображаем сообщение об этом:
+	@else {
+		@include invalid-value-message(
+			'flex-shrink',
+			$shrink,
+			'Number (1, 2, 0.7, etc.)'
+		);
+	}
+
+}

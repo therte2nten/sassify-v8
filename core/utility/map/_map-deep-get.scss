@@ -1,0 +1,46 @@
+@use 'sass:map';
+
+/// Функция `map-deep-get` получает какое-либо значение
+/// из указанной карты (`Map`).
+/// ---
+/// @name map-deep-get
+/// @group Core
+/// @since 7.0.0
+/// @access public
+/// @author Kitty Giraudel
+/// @link https://github.com/KittyGiraudel GitHub
+/// @example scss Пример использования в Sass (SCSS)
+/// 	$breakpoints: (
+/// 		xs: (min-width: 0),
+/// 		sm: (min-width: 576px),
+/// 		md: (min-width: 768px),
+/// 		lg: (min-width: 992px),
+/// 		xl: (min-width: 1200px),
+/// 		xxl: (min-width: 1400px)
+/// 	) !default;
+///
+/// 	@debug map-deep-get($breakpoints, xxl); //=> (min-width: 1400px)
+/// @return {map} карта со значениями
+/// @param {map} $map - карта (`Map`), значения которой нужно получить
+/// @param {string} $keys... - ключи, которые надо получить
+@function map-deep-get($map, $keys...) {
+
+	$-key: null;
+
+	// Прохожу циклом по карте и забираю значение:
+	@each $key in $keys {
+		$map: map-get($map, $key);
+		$-key: $key;
+	}
+
+	// Показываю предепреждение в консоль, если
+	// ключ `$-key` равен `null`:
+	@if type-of($map) == "null" {
+		@warn "#{config.$string--emoji__warning} Не удалось найти ключ «#{$-key}». Будет возвращено значение «null»!";
+	}
+
+	// Возвращаю значение из карты:
+	@return $map;
+
+
+}

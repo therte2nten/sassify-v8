@@ -1,0 +1,53 @@
+/// > > Так как спецификация этой технологии ещё не
+/// > > стабилизировалась, смотрите [таблицу совместимости](https://developer.mozilla.org/ru/docs/Web/CSS/::selection#browser_compatibility)
+/// > > по поводу использования в различных браузерах.
+/// > > Также заметьте, что синтаксис и поведение
+/// > > экспериментальной технологии может измениться в
+/// > > будущих версиях браузеров, вслед за изменениями
+/// > > спецификации.
+/// >
+/// > Псевдоэлемент `::selection` позволяет применить
+/// > стили к части документа, который был выделен
+/// > пользователем (например, с помощью мыши).
+/// >
+/// > &mdash; [mdn web docs](https://developer.mozilla.org/ru/docs/Web/CSS/::selection)
+///
+/// > Псевдоэлемент `::selection` применяет стиль к
+/// > выделенному пользователем тексту. В правилах стилей
+/// > допускается использовать следующие свойства: `color`,
+/// > `background`, `background-color`, `cursor`, `outline` и
+/// > `text-shadow`.
+/// >
+/// > &mdash; [WebReference](https://webref.ru/css/selection)
+///
+/// Миксин `selection` позволяет сгенерировать стили в
+/// псевдоклассе `::selection` с необходимыми браузерными
+/// префиксами.
+/// ---
+/// @name selection
+/// @group CSSex
+/// @since 7.0.0
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @link https://github.com/therteenten/sassify/blob/develop/core/cssex/selection/_index.scss Исходный код миксина
+/// @example scss Пример использования в Sass (SCSS)
+/// 	.block {
+/// 		@include selection {
+/// 			color: red;
+/// 			background-color: #ffd3d3;
+/// 		};
+/// 	}
+/// @example css Результат работы миксина в CSS
+/// 	.block::-moz-selection {
+/// 		color: red;
+/// 		background-color: #ffd3d3;
+/// 	}
+/// 	.block::selection {
+/// 		color: red;
+/// 		background-color: #ffd3d3;
+/// 	}
+/// @content CSS-свойства, которые будут стилизовать выделяемый текст
+@mixin selection() {
+	&::-moz-selection { @content; }
+	&::selection { @content; }
+}

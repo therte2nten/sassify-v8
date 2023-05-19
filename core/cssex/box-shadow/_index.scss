@@ -1,0 +1,43 @@
+@use '../../../config' as config;
+@use '../../prefixer' as *;
+
+/// > CSS-свойство `box-shadow` добавляет тень к элементу.
+/// > Через запятую можно задать несколько теней. Тень
+/// > описывается смещениями по оси X и Y относительно
+/// > элемента, радиусом размытия и распространения, а
+/// > также цветом.
+/// >
+/// > &mdash; [mdn web docs](https://developer.mozilla.org/ru/docs/Web/CSS/box-shadow)
+///
+/// Миксин `box-shadow` позволяет сгенерировать CSS-свойство
+/// `box-shadow` со всеми необходимыми юраузерными префиксами.
+/// ---
+/// @name box-shadow
+/// @group CSSex
+/// @since 7.0.0
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @link https://github.com/therteenten/sassify/blob/develop/core/cssex/box-shadow/_index.scss Исходный код миксина
+/// @example scss Пример использования в Sass (SCSS)
+/// 	.selector {
+/// 		@include box-shadow(12px 12px 2px 1px rgba(0, 0, 255, .2))
+/// 	}
+/// @example css Результат работы миксина в CSS
+/// 	.selector {
+/// 		-webkit-box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
+/// 		-moz-box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
+/// 		box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
+/// 	}
+/// @param {list} $shadow-params - значение CSS-свойства `box-shadow`
+@mixin box-shadow($shadow-params...) {
+
+	// С помощью миксина `prefixer` добавляем
+	// CSS-свойству `box-shadow` браузерные
+	// префиксы:
+	@include prefixer(
+		box-shadow,
+		$shadow-params,
+		config.$prefixes--box-shadow
+	);
+
+}

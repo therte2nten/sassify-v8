@@ -1,0 +1,294 @@
+/// @name prefixes--all
+/// @group Prefixes
+/// @since 7.0.0
+/// @access public
+/// @type list
+$prefixes--all: webkit khtml moz ms o !default;
+
+/// - Safari до версии 9 поддерживает свойство `-webkit-justify-content`
+/// ---
+/// @name prefixes--justify-content
+/// @group Prefixes
+/// @since 7.0.0
+/// @access public
+/// @type string
+$prefixes--justify-content: webkit !default;
+
+/// - Safari до версии 9 поддерживает свойство `-webkit-align-self`
+/// ---
+/// @name prefixes--align-self
+/// @group Prefixes
+/// @since 7.0.0
+/// @access public
+/// @type string
+$prefixes--align-self: webkit !default;
+
+/// - Safari до версии 9 поддерживает свойство `-webkit-align-items`
+/// ---
+/// @name prefixes--align-items
+/// @group Prefixes
+/// @since 7.0.0
+/// @access public
+/// @type string
+$prefixes--align-items: webkit !default;
+
+/// - Safari до версии 9 поддерживает свойство `-webkit-align-content`
+/// ---
+/// @name prefixes--align-content
+/// @group Prefixes
+/// @since 7.0.0
+/// @access public
+/// @type string
+$prefixes--align-content: webkit !default;
+
+/// - Safari до версии 9 поддерживает свойство `-webkit-flex-wrap`
+/// ---
+/// @name prefixes--flex-wrap
+/// @group Prefixes
+/// @since 7.0.0
+/// @access public
+/// @type string
+$prefixes--flex-wrap: webkit !default;
+
+/// - Safari до версии 9 поддерживает свойство `-webkit-flex-shrink`
+/// ---
+/// @name prefixes--flex-shrink
+/// @group Prefixes
+/// @since 7.0.0
+/// @access public
+/// @type string
+$prefixes--flex-shrink: webkit !default;
+
+/// - Safari до версии 9 поддерживает свойство `-webkit-flex-grow`
+/// ---
+/// @name prefixes--flex-grow
+/// @group Prefixes
+/// @since 7.0.0
+/// @access public
+/// @type string
+$prefixes--flex-grow: webkit !default;
+
+/// - Safari до версии 9 поддерживает свойство `-webkit-flex-flow`
+/// ---
+/// @name prefixes--flex-flow
+/// @group Prefixes
+/// @since 7.0.0
+/// @access public
+/// @type string
+$prefixes--flex-flow: webkit !default;
+
+/// - Safari до версии 9 поддерживает свойство `-webkit-flex-direction`
+/// ---
+/// @name prefixes--flex-direction
+/// @group Prefixes
+/// @since 7.0.0
+/// @access public
+/// @type string
+$prefixes--flex-direction: webkit !default;
+
+/// - Safari до версии 9 поддерживает свойство `-webkit-flex-basis`
+/// ---
+/// @name prefixes--flex-basis
+/// @group Prefixes
+/// @since 7.0.0
+/// @access public
+/// @type string
+$prefixes--flex-basis: webkit !default;
+
+/// - Safari до версии 9 поддерживает свойство `-webkit-flex`
+/// ---
+/// @name prefixes--flex
+/// @group Prefixes
+/// @since 7.0.0
+/// @access public
+/// @type string
+$prefixes--flex: webkit !default;
+
+/// - Firefox до версии 29 поддерживает свойство `-moz-box-sizing`
+/// - Safari до версии 5, Chrome до версии 10, Android до версии 4 поддерживают свойство `-webkit-box-sizing`
+/// ---
+/// @name prefixes--box-sizing
+/// @group Prefixes
+/// @since 7.0.0
+/// @access public
+/// @type list
+$prefixes--box-sizing: webkit moz !default;
+
+/// - Firefox до версии 16 поддерживает `-moz-calc`
+/// - Chrome до версии 26 поддерживает `-webkit-calc`
+/// - Safari 6 поддерживает `-webkit-calc`
+/// ---
+/// @name prefixes--calc
+/// @group Prefixes
+/// @since 7.0.0
+/// @access public
+/// @type list
+$prefixes--calc: webkit moz !default;
+
+/// - Safari до версии 5.1, Chrome до версии 10.0, Android до версии 4.0 поддерживают свойство `-webkit-box-shadow`
+/// - Firefox до версии 4.0 поддерживает свойство `-moz-box-shadow`
+/// ---
+/// @name prefixes--box-shadow
+/// @group Prefixes
+/// @since 7.0.0
+/// @access public
+/// @type list
+$prefixes--box-shadow: webkit moz !default;
+
+/// - Chrome до версии 36, Safari до версии 9, Opera до версии 23, Android поддерживают свойство `-webkit-transform-style`
+/// - Firefox до версии 16 поддерживает свойство `-moz-transform-style`
+/// ---
+/// @name prefixes--transform-style
+/// @group Prefixes
+/// @since 7.0.0
+/// @access public
+/// @type list
+$prefixes--transform-style: webkit moz !default;
+
+/// > Chrome до версии 36, Safari до версии 9, Opera до версии 23 и Android поддерживают свойство `-webkit-transform-origin`
+/// > Opera до версии 12.1 и с версии 15 до 23 поддерживает свойство `-o-transform-origin`
+/// > Firefox до версии 16 поддерживает свойство `-moz-transform-origin`
+/// ---
+/// @name prefixes--transform-origin
+/// @group Prefixes
+/// @since 7.0.0
+/// @access public
+/// @type list
+$prefixes--transform-origin: webkit moz o !default;
+
+/// - Chrome до версии 36, Safari до версии 9, Opera до версии 23 и Android поддерживают свойство `-webkit-transform`
+/// - Opera до версии 12.1 и с версии 15 до 23 поддерживает свойство `-o-transform`
+/// - Firefox до версии 16 поддерживает свойство `-moz-transform`
+/// ---
+/// @name prefixes--transform
+/// @group Prefixes
+/// @since 7.0.0
+/// @access public
+/// @type list
+$prefixes--transform: webkit moz o !default;
+
+/// - Chrome до версии 26, Safari до версии 6.1 и Android до версии 4.4 поддерживают свойство `-webkit-transition-timing-function`
+/// - Opera до версии 12.10 поддерживает свойство `-o-transition-timing-function`
+/// - Firefox до версии 16 поддерживает свойство` -moz-transition-timing-function`
+/// - Safari поддерживает значение `steps` только с версии 5.1
+/// ---
+/// @name prefixes--transition-timing-function
+/// @group Prefixes
+/// @since 7.0.0
+/// @access public
+/// @type list
+$prefixes--transition-timing-function: webkit moz o !default;
+
+/// - Chrome до версии 26.0, Safari до версии 6.1 и Android до версии 4.4 поддерживают свойство `-webkit-transition-property`
+/// - Opera до версии 12.10 поддерживает свойство `-o-transition-property`
+/// - Firefox до версии 16 поддерживает свойство `-moz-transition-property`
+/// ---
+/// @name prefixes--transition-property
+/// @group Prefixes
+/// @since 7.0.0
+/// @access public
+/// @type list
+$prefixes--transition-property: webkit moz o !default;
+
+/// - Chrome до версии 26.0, Safari до версии 6.1 и Android до версии 4.4 поддерживают свойство `-webkit-transition-duration`
+/// - Opera до версии 12.10 поддерживает свойство `-o-transition-duration`
+/// - Firefox до версии 16 поддерживает свойство `-moz-transition-duration`
+/// ---
+/// @name prefixes--transition-duration
+/// @group Prefixes
+/// @since 7.0.0
+/// @access public
+/// @type list
+$prefixes--transition-duration: webkit moz o !default;
+
+/// - Chrome до версии 26.0, Safari до версии 6.1 и Android до версии 4.4 поддерживают свойство `-webkit-transition-delay`
+/// - Opera до версии 12.10 поддерживает свойство `-o-transition-delay`
+/// - Firefox до версии 16 поддерживает свойство `-moz-transition-delay`
+/// ---
+/// @name prefixes--transition-delay
+/// @group Prefixes
+/// @since 7.0.0
+/// @access public
+/// @type list
+$prefixes--transition-delay: webkit moz o !default;
+
+/// - Chrome до версии 26, Safari до версии 6.1 и Android до версии 4.4 поддерживают свойство `-webkit-transition`
+/// - Opera до версии 12.10 поддерживает свойство `-o-transition`
+/// - Firefox до версии 16 поддерживает свойство `-moz-transition`
+/// ---
+/// @name prefixes--transition
+/// @group Prefixes
+/// @since 7.0.0
+/// @access public
+/// @type list
+$prefixes--transition: webkit moz o !default;
+
+/// - Браузеры Edge и Safari поддерживают свойство `-webkit-backdrop-filter`
+/// - Чтобы свойство работало в браузере Opera, на странице [`opera:flags`](opera:flags) раздел **Experimental Web Platform features** следует установить в **Enabled**.
+/// - Чтобы свойство работало в браузере Firefox, на странице [`about:config`](about:config) параметр `layout.css.backdrop-filter.enabled` следует установить как `true`
+/// ---
+/// @name prefixes--backdrop-filter
+/// @group Prefixes
+/// @since 7.0.0
+/// @access public
+/// @type list
+$prefixes--backdrop-filter: webkit !default;
+
+/// - Chrome до версии 4.0, Safari до версии 5.0 и Android до версии 2.1 используют свойство `-webkit-border-radius`
+/// - Firefox до версии 4.0 использует свойство `-moz-border-radius`
+/// ---
+/// @name prefixes--border-radius
+/// @group Prefixes
+/// @since 7.0.0
+/// @access public
+/// @type list
+$prefixes--border-radius: webkit moz !default;
+
+/// - Firefox до версии 3.5 поддерживает свойство `-moz-opacity`
+/// - Internet Explorer до версии 9.0 для изменения прозрачности использует фильтры, для этого браузера следует записать `filter: alpha(opacity=50)`, где параметр `opacity` может принимать значение от 0 до 100.
+/// ---
+/// @name prefixes--opacity
+/// @group Prefixes
+/// @since 7.0.0
+/// @access public
+/// @type list
+$prefixes--opacity: moz !default;
+
+/// - Chrome до версии 43, Opera до версии 30, Safari до версии 9 и Android поддерживают `@-webkit-keyframes`
+/// - Firefox до версии 16 поддерживает `@-moz-keyframes`
+/// ---
+/// @name prefixes--keyframes
+/// @group Prefixes
+/// @since 7.0.0
+/// @access public
+/// @type list
+$prefixes--keyframes: webkit moz o !default;
+
+/// - Браузер Safari поддерживает значение `-webkit-sticky`
+/// ---
+/// @name prefixes--position-sticky
+/// @group Prefixes
+/// @since 7.0.0
+/// @access public
+/// @type list
+$prefixes--position-sticky: webkit !default;
+
+/// - Chrome до версии 54, Opera до версии 41, Safari и Android поддерживают свойство `-webkit-user-select`
+/// - Firefox поддерживает свойство `-moz-user-select`
+/// ---
+/// @name prefixes--user-select
+/// @group Prefixes
+/// @since 7.0.0
+/// @access public
+/// @type list
+$prefixes--user-select: webkit moz !default;
+
+/// - Opera до версии 15 поддерживает свойство `-o-tab-size`
+/// - Firefox до версии 53 поддерживает свойство `-moz-tab-size`
+/// ---
+/// @name prefixes--tab-size
+/// @group Prefixes
+/// @since 7.0.0
+/// @access public
+/// @type list
+$prefixes--tab-size: moz o !default;

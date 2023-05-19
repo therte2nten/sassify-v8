@@ -1,0 +1,38 @@
+@use '../../../config' as config;
+@use '../../prefixer' as *;
+
+/// > Сокращённое свойство, которое позволяет указать параметры элемента,
+/// > чтобы он эффективно заполнял доступное пространство. Элементы могут быть
+/// > растянуты пропорционально с учётом заданного соотношения или сжаты,
+/// > чтобы целиком вместить все элементы без переносов в одну строку.
+/// >
+/// > &mdash; [WebReference](https://webref.ru/css/flex)
+///
+/// Миксин `flex` позволяет генерировать
+/// CSS-свойство `flex` со всеми нужными браузерными
+/// префиксами.
+/// ---
+/// @name flex
+/// @group CSSex
+/// @since 7.0.0
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @link https://github.com/therteenten/sassify/blob/develop/core/cssex/flex/_index.scss Исходный код миксина
+/// @example scss Пример использования в Sass (SCSS)
+/// 	div {
+/// 		@include flex(1 1 0%);
+/// 	}
+/// @example css Результат работы миксина в CSS
+/// 	div {
+/// 		-webkit-flex: 1 1 0%;
+/// 		flex: 1 1 0%;
+/// 	}
+/// @param {string | number} $props... - значения `flex-grow`,
+/// 	`flex-shrink` и `flex-basis`
+@mixin flex($props...) {
+
+	// С помощью миксина `prefixer` добавляем необходимые браузерные
+	// префиксы для CSS-свойства `flex`:
+	@include prefixer(flex, $props, config.$prefixes--flex);
+
+}

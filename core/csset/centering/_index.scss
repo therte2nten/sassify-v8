@@ -1,0 +1,101 @@
+@use '../../../config' as config;
+@use '../../cssex/transform' as *;
+@use '../../cssex/position' as *;
+@use '../../utility/validator/is-list-contains' as *;
+@use '../../../devpack/invalid-value-message' as *;
+
+/// Миксин `centering` позволяет указать CSS-стили для выравнивания
+/// контента блока вертикально или горизонтально.
+/// ---
+/// @name centering
+/// @group CSSet
+/// @since 7.0.0
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @link https://github.com/therteenten/sassify/blob/develop/core/csset/centering/_index.scss Исходный код миксина
+/// @example scss Пример использования в Sass (SCSS)
+/// 	.centering__vertical {
+/// 		@include centering(vertical);
+/// 	}
+///
+/// 	.centering__horizontal {
+/// 		@include centering(hr);
+/// 	}
+///
+/// 	.centering__both {
+/// 		@include centering(both);
+/// 	}
+/// @example css Результат работы миксина в CSS
+/// 	.centering__vertical {
+/// 		position: absolute;
+/// 		top: 50%;
+/// 		-webkit-transform: translateY(-50%);
+/// 		-moz-transform: translateY(-50%);
+/// 		-o-transform: translateY(-50%);
+/// 		transform: translateY(-50%);
+/// 	}
+///
+/// 	.centering__horizontal {
+/// 		position: absolute;
+/// 		left: 50%;
+/// 		-webkit-transform: translateX(-50%);
+/// 		-moz-transform: translateX(-50%);
+/// 		-o-transform: translateX(-50%);
+/// 		transform: translateX(-50%);
+/// 	}
+///
+/// 	.centering__both {
+/// 		position: absolute;
+/// 		top: 50%;
+/// 		left: 50%;
+/// 		-webkit-transform: translate(-50%, -50%);
+/// 		-moz-transform: translate(-50%, -50%);
+/// 		-o-transform: translate(-50%, -50%);
+/// 		transform: translate(-50%, -50%);
+/// 	}
+/// @param {string} $orientation - направление центрирования (`horizontal`,
+/// 	`vertical` или `both`)
+@mixin centering($orientation) {
+
+	// С помощью функции `is-list-contains` проверяем наличие значения
+	// параметра `$orientation` в списке `config.$vvalues--centering`:
+	@if is-list-contains(config.$vvalues--centering, $orientation) {
+
+		// Если в параметр `$orientation` передано значение `hr`
+		// или `horizontal`, то:
+		@if $orientation == 'hr'
+		 or $orientation == 'horizontal' {
+			@include position(absolute, null, null, null, 50%);
+			@include transform(translateX(-50%));
+		}
+
+		// Иначе если в параметр `$orientation` передано значение `vr`
+		// или `vertical`, то:
+		@else if $orientation == 'vr'
+					or $orientation == 'vertical' {
+			@include position(absolute, 50%);
+			@include transform(translateY(-50%));
+		}
+
+		// Иначе если в параметр `$orientation` передано значение `b`
+		// или `both`, то:
+		@else if $orientation == 'b'
+					or $orientation == 'both' {
+			@include position(absolute, 50%, null, null, 50%);
+			@include transform(translate(-50%, -50%));
+		}
+
+	}
+
+	// Если начения параметра `$orientation` в списке `config.$vvalues--centering`
+	// нет, то отображаем сообщение об этом:
+	@else {
+		@include invalid-value-message(
+			'centering',
+			$orientation,
+			config.$vvalues--centering
+		);
+	}
+
+}
+

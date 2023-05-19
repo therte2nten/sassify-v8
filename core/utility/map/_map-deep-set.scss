@@ -1,0 +1,87 @@
+@use 'sass:map';
+@use '../../../config' as config;
+
+/// Функция `map-deep-set` устанавливает какое-либо значение
+/// в указанную карту (`Map`).
+/// ---
+/// @name map-deep-set
+/// @group Core
+/// @since 7.0.0
+/// @access public
+/// @author Kitty Giraudel
+/// @link https://github.com/KittyGiraudel GitHub
+/// @example scss Пример использования в Sass (SCSS)
+/// 	$grid-default-config: (
+/// 		columns: 12,
+/// 		gutter: 10px,
+/// 		min-width: 240px,
+/// 		max-width: 1330px,
+/// 		layouts: (
+/// 			S:  370px,  // ≥20px columns
+/// 			M:  610px,  // ≥40px columns
+/// 			L:  850px,  // ≥60px columns
+/// 			XL: 1090px  // ≥80px columns
+/// 		),
+/// 		fluid: true,
+/// 		debug: false,
+/// 		fixed-layout: M,
+/// 		enhanced-experience: true
+/// 	);
+///
+/// 	@debug map-deep-set($grid-default-config, "layouts" "M", 650px); //=> Debug: (columns: 12, gutter: 10px, min-width: 240px, max-width: 1330px, layouts: (S: 370px, M: 650px, L: 850px, XL: 1090px), fluid: true, debug: false, fixed-layout: M, enhanced-experience: true)
+/// 	@debug map-deep-set($grid-default-config, "mobile-first", true); //=> Debug: (columns: 12, gutter: 10px, min-width: 240px, max-width: 1330px, layouts: (S: 370px, M: 610px, L: 850px, XL: 1090px), fluid: true, debug: false, fixed-layout: M, enhanced-experience: true, "mobile-first": true)
+/// @return {map} карта с установленными значениями
+/// @param {map} $map - карта (`Map`), в которую нужно добавить значения
+/// @param {string} $keys - ключ значения
+/// @param {*} $value - значение
+@function map-deep-set($map, $keys, $value) {
+
+	$-maps: ($map,);
+	$-result: null;
+
+	// Если введёный ключ уже является картой,
+	// то оповещаю разработчика о том, что она будет
+	// переопределена:
+	@if type-of(nth($keys, -1)) == "map" {
+		@warn "#{config.$string--emoji__warning} Последний указанный вами ключ — это карта. Он будет переопределен с помощью `#{$value}`.";
+	}
+
+	// Если `$keys` - это один ключ, то
+	// просто объединяю и возвращаю его:
+	@if length($keys) == 1 {
+		@return map-merge($map, ($keys: $value));
+	}
+
+	// Прохожу циклом `@for` от первого до предпоследнего ключа
+	// из `$keys`.
+	// Сохраните связанную карту с этим ключом в списке `$-maps`
+	@for $i from 1 through length($keys) - 1 {
+
+		$-current-key: nth($keys, $i);
+		$-current-map: nth($-maps, -1);
+		$-current-get: map-get($-current-map, $-current-key);
+
+		// Если ключ не существует, выдаю сообщение об ошибке:
+		@if $-current-get == null {
+			@error "#{config.$string--emoji__error} Ключ `#{$keys}` не существует на текущем уровне карты!";
+		}
+
+		$-maps: append($-maps, $-current-get);
+	}
+
+	// Цикл от последней карты к первой.
+	// Объединяем его с предыдущим:
+	@for $i from length($-maps) through 1 {
+
+		$-current-map: nth($-maps, $i);
+		$-current-key: nth($keys, $i);
+		$-current-val: if($i == length($-maps), $value, $-result);
+
+		$-result: map-merge($-current-map, ($-current-key: $-current-val));
+
+	}
+
+	// Возвращаю результат:
+	@return $-result;
+
+}

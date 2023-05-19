@@ -1,0 +1,74 @@
+@use '../../../config' as config;
+@use '../../prefixer' as *;
+
+/// > Свойство CSS `transition` - это сокращённое свойство
+/// > для `transition-property`, `transition-duration`,
+/// > `transition-timing-function`, и `transition-delay`.
+/// >
+/// > &mdash; [mdn web docs](https://developer.mozilla.org/ru/docs/Web/CSS/transition)
+///
+/// > Универсальное свойство, которое позволяет
+/// > одновременно задать значения `transition-property`,
+/// > `transition-duration`, `transition-timing-function` и
+/// > `transition-delay`. Устанавливает эффект перехода между
+/// > двумя состояниями элемента, они могут быть определены
+/// > с помощью псевдокласса `:hover` или `:active`, а также
+/// > динамически через JavaScript.
+/// >
+/// > &mdash; [WebReference](https://webref.ru/css/transition)
+///
+/// Миксин `transition` позволяет сгенерировать CSS-свойство
+/// `transition` со всеми необходимыми браузерными префиксами.
+/// ---
+/// @name transition
+/// @group CSSex
+/// @since 7.0.0
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @link https://github.com/therteenten/sassify/blob/develop/core/cssex/transition/_index.scss Исходный код миксина
+/// @example scss Пример использования в Sass (SCSS)
+/// 	.card {
+/// 		@include transition(top 1s ease-out 0.5s);
+/// 	}
+/// @example css Результат работы миксина в CSS
+/// 	.card {
+/// 		-webkit-transition: top 1s ease-out 0.5s;
+/// 		-moz-transition: top 1s ease-out 0.5s;
+/// 		-o-transition: top 1s ease-out 0.5s;
+/// 		transition: top 1s ease-out 0.5s;
+/// 	}
+/// 	@media screen and (prefers-reduced-motion: reduce) {
+/// 		.card {
+/// 			transition: none;
+/// 		}
+/// 	}
+/// @param {list} $params - список параметров для CSS-свойства `transition`
+@mixin transition($params...) {
+
+	// С помощью миксина `prefixer` добавляем все
+	// необходимые браузерные префиксы к CSS-свойству
+	// `transition`:
+	@include prefixer(
+		transition,
+		$params,
+		config.$prefixes--transition
+	);
+
+	@if config.$setting--follow-prefers-reduced-motion == true {
+
+		// > Одно из значений директивы @media для проверки
+		// > пользовательских настроек. Отслеживает, отключена ли
+		// > анимация в системе.
+		// >
+		// > > &mdash; [Doka](https://doka.guide/a11y/prefers-reduced-motion/)
+		@media screen and (prefers-reduced-motion: reduce) {
+
+			// Тут мы отключаем переходы для пользователей,
+			// у которых анимации отключены на уровне системы:
+			transition: none;
+
+		}
+
+	}
+
+}

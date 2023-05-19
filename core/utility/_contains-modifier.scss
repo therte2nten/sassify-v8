@@ -1,0 +1,23 @@
+@use './selector-to-string' as *;
+
+/// @ignore Данная функция используется только в миксинах `b`, `e` и `m`!
+/// @name contains-modifier
+/// @group Core
+/// @since 7.0.0
+/// @access private
+/// @author Marcmintel
+/// @link https://medium.com/@marcmintel Medium
+/// @return {boolean} `true` или `false`
+/// @param {*} $selector
+/// @param {*} $modifier
+@function contains-modifier($selector, $modifier) {
+
+	$selector: selector-to-string($selector);
+
+	@if str-index($selector, $modifier) {
+		@return true;
+	} @else {
+		@return false;
+	}
+
+}

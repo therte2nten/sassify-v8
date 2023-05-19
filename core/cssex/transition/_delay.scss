@@ -1,0 +1,69 @@
+@use '../../../config' as config;
+@use '../../../devpack/invalid-value-message' as *;
+@use '../../prefixer' as *;
+@use '../../utility/validator/is-number' as *;
+@use '../../utility/validator/is-list-contains' as *;
+
+/// > Свойство `transition-delay` устанавливает время
+/// > ожидания перед запуском эффекта перехода. Значение
+/// > `0s` запускает анимацию сразу же. Отрицательное значение
+/// > также включает анимацию без задержек, но может привести
+/// > к изменению вида начала анимации.
+/// >
+/// > Допустимо указывать несколько значений, перечисляя их
+/// > через запятую. Каждое значение будет применяться к
+/// > свойству, заданному в параметрах `transition-property`.
+/// >
+/// > &mdash; [WebReference](https://webref.ru/css/transition-delay)
+///
+/// Миксин `transition-delay` позволяет сгенерировать CSS-свойство
+/// `transition-delay` со всеми необходимыми браузерными префиксами.
+/// ---
+/// @name transition-delay
+/// @group CSSex
+/// @since 7.0.0
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @link https://github.com/therteenten/sassify/blob/develop/core/cssex/transition-delay/_index.scss Исходный код миксина
+/// @example scss Пример использования в Sass (SCSS)
+/// 	.card {
+/// 		@include transition-delay(.5s);
+/// 	}
+/// @example css Результат работы миксина в CSS
+/// 	.card {
+/// 		-webkit-transition-delay: 0.5s;
+/// 		-moz-transition-delay: 0.5s;
+/// 		-o-transition-delay: 0.5s;
+/// 		transition-delay: 0.5s;
+/// 	}
+/// @param {number | string} $delay [config.$dvalues--transition-delay] - время
+/// 	ожидания перед запуском эффекта перехода
+@mixin transition-delay($delay: config.$dvalues--transition-delay) {
+
+	// С помощью функций `is-number` и `is-list-contains`
+	// проводим проверку:
+	// 1) является ли `$delay` числом?
+	// 2) если не числом, то хоть допустимым вариантом из списка?
+	@if is-number($delay) == true or is-list-contains(config.$vvalues--transition-delay, $delay) == true {
+
+		// Если проверки прошли успешно, то с помощью
+		// миксина `prefixer` добавляем необходимые браузерные
+		// префиксы CSS-свойству `transition-delay`:
+		@include prefixer(
+			transition-delay,
+			$delay,
+			config.$prefixes--transition-delay
+		);
+
+	}
+
+	// Если проверка не прошла, то сообщаем об этом:
+	@else {
+		@include invalid-value-message(
+			'transition-delay',
+			$delay,
+			config.$vvalues--transition-delay
+		);
+	}
+
+}

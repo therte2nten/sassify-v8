@@ -1,0 +1,40 @@
+@use '../../config' as config;
+@use '../utility/set-initial' as *;
+
+/// Миксин `set-initial` позволяет устанавливать CSS-свойствам
+/// значения по умолчанию.
+/// ---
+/// @name set-initial
+/// @group Core
+/// @since 7.0.0
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @link https://github.com/therteenten/sassify/blob/develop/core/mixin/set-initial/_index.scss Исходный код миксина
+/// @example scss Пример использования в Sass (SCSS)
+/// 	.class {
+/// 		@include set-initial(
+/// 			text-align,
+/// 			animation,
+/// 			outline
+/// 		);
+/// 	}
+/// @example css Результат работы миксина в CSS
+/// 	.class {
+/// 		text-align: left;
+/// 		animation: none 0s ease 0s 1 normal none running;
+/// 		outline: medium none invert;
+/// 	}
+/// @param {list} $properties - список CSS-свойств, чьи значения по умолчанию
+/// 	будут выставлены
+@mixin set-initial($properties...) {
+
+	// С помощбю Sass-директивы `@each` проходимся
+	// по списку `$properties` и на каждой итерации с
+	// помощью функции `set-initial` устанавливаем
+	// CSS-свойствам из списка `$properties` значения
+	// по умолчанию.
+	@each $-property in $properties {
+		#{$-property}: set-initial($-property);
+	}
+
+}

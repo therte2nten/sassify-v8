@@ -1,0 +1,37 @@
+/// @name color--md-orange
+/// @group ColorPalette
+/// @since 7.0.0
+/// @access public
+/// @author Google
+/// @link https://material.io/design/color/the-color-system.html Material Design
+/// @type map
+/// @prop {color} $color--md-orange.50 [#fff3e0]
+/// @prop {color} $color--md-orange.100 [#ffe0b2]
+/// @prop {color} $color--md-orange.200 [#ffcc80]
+/// @prop {color} $color--md-orange.300 [#ffb74d]
+/// @prop {color} $color--md-orange.400 [#ffa726]
+/// @prop {color} $color--md-orange.500 [#ff9800]
+/// @prop {color} $color--md-orange.600 [#fb8c00]
+/// @prop {color} $color--md-orange.700 [#f57c00]
+/// @prop {color} $color--md-orange.800 [#ef6c00]
+/// @prop {color} $color--md-orange.900 [#e65100]
+/// @prop {color} $color--md-orange.A100 [#ffd180]
+/// @prop {color} $color--md-orange.A200 [#ffab40]
+/// @prop {color} $color--md-orange.A400 [#ff9100]
+/// @prop {color} $color--md-orange.A700 [#ff6d00]
+$color--md-orange: (
+	50: #fff3e0,
+	100: #ffe0b2,
+	200: #ffcc80,
+	300: #ffb74d,
+	400: #ffa726,
+	500: #ff9800,
+	600: #fb8c00,
+	700: #f57c00,
+	800: #ef6c00,
+	900: #e65100,
+	A100: #ffd180,
+	A200: #ffab40,
+	A400: #ff9100,
+	A700: #ff6d00
+);

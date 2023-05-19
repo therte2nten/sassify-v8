@@ -1,0 +1,73 @@
+@use '../../../config' as config;
+@use '../../../devpack/invalid-value-message' as *;
+@use '../../prefixer' as *;
+@use '../../utility/validator/is-list-contains' as *;
+
+/// Миксин `flexbox` позволяет генерировать
+/// CSS-свойство `display` со значением `flex` или `inline-flex`
+/// со всеми нужными браузерными префиксами.
+/// ---
+/// @name flexbox
+/// @group CSSex
+/// @since 7.0.0
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @link https://github.com/therteenten/sassify/blob/develop/core/cssex/flex/_flexbox.scss Исходный код миксина
+/// @example scss Пример использования в Sass (SCSS)
+/// 	.flexbox {
+/// 		@include flexbox();
+/// 	}
+///
+/// 	.flexbox-inline {
+/// 		@include flexbox(i);
+/// 	}
+/// @example css Результат работы миксина в CSS
+/// 	.flexbox {
+/// 		display: -webkit-box;
+/// 		display: -moz-box;
+/// 		display: -webkit-flex;
+/// 		display: flex;
+/// 	}
+///
+/// 	.flexbox-inline {
+/// 		display: -webkit-inline-box;
+/// 		display: -moz-inline-box;
+/// 		display: -webkit-inline-flex;
+/// 		display: inline-flex;
+/// 	}
+/// @param {string} $type [config.$dvalues--flexbox] - выбор варианта
+/// 	flex-контейнера (обычный или инлайн)
+@mixin flexbox($type: config.$dvalues--flexbox) {
+
+	// С помощью функции `is-list-contains` проверяем наличие
+	// значения параметра `$type` в списке `config.$vvalues--flexbox`:
+	@if is-list-contains(config.$vvalues--flexbox, $type) {
+
+		// Если значение параметра `$type` равное `default`,
+		// то генерируем свойство `display` со значением `flex`
+		// и добавляем браузерные префиксы с помощью миксина `prefixer`:
+		@if $type == 'default' {
+
+			@include prefixer(display, box, webkit moz, false, true);
+			@include prefixer(display, flex, webkit, true, true);
+
+		}
+
+		// Если значение параметра `$type` равное `inline` или `i`,
+		// то генерируем свойство `display` со значением `inline-flex`
+		// и добавляем браузерные префиксы с помощью миксина `prefixer`:
+		@else if $type == 'inline' or $type == 'i' {
+
+			@include prefixer(display, inline-box, webkit moz, false, true);
+			@include prefixer(display, inline-flex, webkit, true, true);
+
+		}
+
+	}
+
+	// Если условие выше не было соблюдено, то сообщаем об ошибке:
+	@else {
+		@include invalid-value-message('flexbox', $type, config.$vvalues--flexbox);
+	}
+
+}

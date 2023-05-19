@@ -1,0 +1,54 @@
+/// @name helper--input-type
+/// @group Store
+/// @since 7.0.0
+/// @access public
+/// @type map
+/// @prop {string} $store--input-type.button [type='button']
+/// @prop {string} $store--input-type.checkbox [type='checkbox']
+/// @prop {string} $store--input-type.color [type='color']
+/// @prop {string} $store--input-type.date [type='date']
+/// @prop {string} $store--input-type.datetime-local: [type='datetime-local']
+/// @prop {string} $store--input-type.email [type='email']
+/// @prop {string} $store--input-type.file [type='file']
+/// @prop {string} $store--input-type.hidden [type='hidden']
+/// @prop {string} $store--input-type.image [type='image']
+/// @prop {string} $store--input-type.month [type='month']
+/// @prop {string} $store--input-type.number [type='number']
+/// @prop {string} $store--input-type.password [type='password']
+/// @prop {string} $store--input-type.radio [type='radio']
+/// @prop {string} $store--input-type.range [type='range']
+/// @prop {string} $store--input-type.reset [type='reset']
+/// @prop {string} $store--input-type.search [type='search']
+/// @prop {string} $store--input-type.submit [type='submit']
+/// @prop {string} $store--input-type.tel [type='tel']
+/// @prop {string} $store--input-type.text [type='text']
+/// @prop {string} $store--input-type.time [type='time']
+/// @prop {string} $store--input-type.url [type='url']
+/// @prop {string} $store--input-type.week [type='week']
+$store--input-type: (
+	button: "[type='button']",
+	checkbox: "[type='checkbox']",
+	color: "[type='color']",
+	date: "[type='date']",
+	datetime-local: "[type='datetime-local']",
+	email: "[type='email']",
+	file: "[type='file']",
+	hidden: "[type='hidden']",
+	image: "[type='image']",
+	month: "[type='month']",
+	number: "[type='number']",
+	password: "[type='password']",
+	radio: "[type='radio']",
+	range: "[type='range']",
+	reset: "[type='reset']",
+	search: "[type='search']",
+	submit: "[type='submit']",
+	tel: "[type='tel']",
+	text: "[type='text']",
+	time: "[type='time']",
+	url: "[type='url']",
+	week: "[type='week']"
+);
+
+
+

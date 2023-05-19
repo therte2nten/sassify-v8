@@ -1,0 +1,53 @@
+@use '../../../config' as config;
+@use '../../prefixer' as *;
+@use '../../../devpack/invalid-value-message' as *;
+@use '../../utility/validator/is-list-contains' as *;
+@use '../../utility/validator/is-number' as *;
+
+/// > CSS-свойство `flex-basis` задаёт базовый размер флекс элемента по
+/// > основной оси. Это свойство определяет размер контент-бокса, если не
+/// > задано иначе через `box-sizing`.
+/// >
+/// > &mdash; [mdn web docs](https://developer.mozilla.org/ru/docs/Web/CSS/flex-basis)
+///
+/// Миксин `flex-basis` позволяет генерировать
+/// CSS-свойство `flex-basis` со всеми нужными браузерными
+/// префиксами.
+/// ---
+/// @name flex-basis
+/// @group CSSex
+/// @since 7.0.0
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @link https://github.com/therteenten/sassify/blob/develop/core/cssex/flex/_basis.scss Исходный код миксина
+/// @example scss Пример использования в Sass (SCSS)
+/// 	div {
+/// 		@include flex-basis(100%);
+/// 	}
+/// @example css Результат работы миксина в CSS
+/// 	div {
+/// 		-webkit-flex-basis: 100%;
+/// 		flex-basis: 100%;
+/// 	}
+/// @param {string | number} $size [config.$dvalues--flex-basis] - размер элемента
+/// 	в px, mm, pt или в процентах вдоль главной оси (отрицательное значение недопустимо)
+@mixin flex-basis($size: config.$dvalues--flex-basis) {
+
+	// С помощью функции `is-list-contains` проверяем наличие значения
+	// параметра `$size` в списке `config.$vvalues--flex-basis`,
+	// или проверяем значение параметра `$size` на соответствие
+	// Sass-типу `Number`:
+	@if is-list-contains(config.$vvalues--flex-basis, $size) or is-number($size) {
+
+		// С помощью миксина `prefixer` добавляем CSS-свойтсву `flex-basis`
+		// все необходимые браузерные префиксы:
+		@include prefixer(flex-basis, $size, config.$prefixes--flex-basis);
+
+	}
+
+	// если условие выше не было соблюдено, то отображаем сообщение об этом:
+	@else {
+		@include invalid-value-message('flex-basis', $size, config.$vvalues--flex-basis);
+	}
+
+}

@@ -1,0 +1,71 @@
+/// @name color--macos
+/// @group ColorPalette
+/// @since 7.0.0
+/// @access public
+/// @author Apple Inc.
+/// @link https://developer.apple.com/design/human-interface-guidelines/foundations/color/ Human Interface Guidelines
+/// @type map
+/// @prop {color} $color--macos.red [#ff0000]
+/// @prop {color} $color--macos.orange [#ff9500]
+/// @prop {color} $color--macos.yellow [#ffd900]
+/// @prop {color} $color--macos.green [#00e34f]
+/// @prop {color} $color--macos.mint [#00d0c2]
+/// @prop {color} $color--macos.teal [#36adc6]
+/// @prop {color} $color--macos.cyan [#2bb8f2]
+/// @prop {color} $color--macos.blue [#353eff]
+/// @prop {color} $color--macos.indigo [#6f00d6]
+/// @prop {color} $color--macos.purple [#c800dc]
+/// @prop {color} $color--macos.pink [#ff0040]
+/// @prop {color} $color--macos.brown [#a6875c]
+/// @prop {color} $color--macos.gray [#8f8d93]
+$color--macos: (
+	red: #ff0000,
+	orange: #ff9500,
+	yellow: #ffd900,
+	green: #00e34f,
+	mint: #00d0c2,
+	teal: #36adc6,
+	cyan: #2bb8f2,
+	blue: #353eff,
+	indigo: #6f00d6,
+	purple: #c800dc,
+	pink: #ff0040,
+	brown: #a6875c,
+	gray: #8f8d93
+);
+
+/// @name color--macos-dark
+/// @group ColorPalette
+/// @since 7.0.0
+/// @access public
+/// @author Apple Inc.
+/// @link https://developer.apple.com/design/human-interface-guidelines/foundations/color/ Human Interface Guidelines
+/// @type map
+/// @prop {color} $color--macos-dark.red [#ff000f]
+/// @prop {color} $color--macos-dark.orange [#ffa200]
+/// @prop {color} $color--macos-dark.yellow [#ffe400]
+/// @prop {color} $color--macos-dark.green [#00ee58]
+/// @prop {color} $color--macos-dark.mint [#04dbd2]
+/// @prop {color} $color--macos-dark.teal [#46c4de]
+/// @prop {color} $color--macos-dark.cyan [#28c4f7]
+/// @prop {color} $color--macos-dark.blue [#2e57ff]
+/// @prop {color} $color--macos-dark.indigo [#7700e6]
+/// @prop {color} $color--macos-dark.purple [#da00f0]
+/// @prop {color} $color--macos-dark.pink [#ff004e]
+/// @prop {color} $color--macos-dark.brown [#b09166]
+/// @prop {color} $color--macos-dark.gray [#99979d]
+$color--macos-dark: (
+	red: #ff000f,
+	orange: #ffa200,
+	yellow: #ffe400,
+	green: #00ee58,
+	mint: #04dbd2,
+	teal: #46c4de,
+	cyan: #28c4f7,
+	blue: #2e57ff,
+	indigo: #7700e6,
+	purple: #da00f0,
+	pink: #ff004e,
+	brown: #b09166,
+	gray: #99979d
+);

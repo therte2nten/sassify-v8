@@ -1,0 +1,34 @@
+/// Функция `is-number` проверяет значение на соответствие
+/// типу `Integer` и возращает `true` или `false`.
+/// ---
+/// @name is-number
+/// @group Core
+/// @since 7.0.0
+/// @access public
+/// @author Zsolt Pentz
+/// @link https://github.com/pentzzsolt GitHub
+/// @example scss Пример использования в Sass (SCSS)
+/// 	$boolean: true;
+/// 	$number: 1310;
+/// 	$string: "Sassify";
+/// 	$list: 1 2 3 4 5;
+/// 	$map: (
+/// 		one: 1,
+/// 		two: 2,
+/// 		three: 3
+/// 	);
+/// 	$null: null;
+/// 	$color: #fff;
+///
+/// 	@debug is-number($boolean); //=> false
+/// 	@debug is-number($number); //=> true
+/// 	@debug is-number($string); //=> false
+/// 	@debug is-number($list); //=> false
+/// 	@debug is-number($map); //=> false
+/// 	@debug is-number($null); //=> false
+/// 	@debug is-number($color); //=> false
+/// @return {boolean} является ли переданное значение числом?
+/// @param {*} $value - значение, которое необходимо проверить на соответствие типу `Number`
+@function is-number($value) {
+	@return type-of($value) == number;
+}

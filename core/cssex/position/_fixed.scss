@@ -1,0 +1,51 @@
+@use './index' as *;
+
+/// Миксин `position-fixed` позволяет указать тип позиционирования `fixed`
+/// одной строкой.
+///
+/// Элемент выбивается из обычного потока документа, и для элемента в макете страницы
+/// не создаётся пространство. Он позиционируется относительно исходного [содержащего блока](https://developer.mozilla.org/ru/docs/Web/CSS/Containing_block),
+/// установленного [`viewport`](https://developer.mozilla.org/ru/docs/Glossary/Viewport), за
+/// исключением случаев, когда один из его предков имеет свойство `transform`, `perspective`,
+/// или `filter`, установленное на что-то иное, кроме none (см. [CSS Transforms Spec](https://www.w3.org/TR/css-transforms-1/#propdef-transform)), и
+/// в этом случае этот предок ведёт себя как содержащий блок. (Обратите внимание,
+/// что существуют несогласованности браузера с `perspective` и `filter`, способствующими
+/// содержанию формирования блоков.) Его конечная позиция определяется значениями `top`,
+/// `right`, `bottom` и `left`. Это значение всегда создаёт новый [контекст наложения](https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context).
+/// В печатных документах элемент помещается в одно и то же положение на каждой странице.
+/// ---
+/// @name position-fixed
+/// @group CSSex
+/// @since 7.0.0
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @link https://github.com/therteenten/sassify/blob/develop/core/cssex/position/_fixed.scss Исходный код миксина
+/// @example scss Пример использования в Sass (SCSS)
+/// 	.block-position-fixed {
+/// 		@include position-fixed(15px, 15px);
+/// 	}
+/// @example css Результат работы миксина в CSS
+/// 	.block-position-fixed {
+/// 		position: fixed;
+/// 		top: 15px;
+/// 		right: 15px;
+/// 	}
+/// @param {string | number} $side-top [null]
+/// @param {string | number} $side-right [null]
+/// @param {string | number} $side-bottom [null]
+/// @param {string | number} $side-left [null]
+@mixin position-fixed(
+	$side-top: null,
+	$side-right: null,
+	$side-bottom: null,
+	$side-left: null) {
+
+	@include position(
+		fixed,
+		$side-top,
+		$side-right,
+		$side-bottom,
+		$side-left
+	);
+
+}

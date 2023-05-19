@@ -1,0 +1,49 @@
+@use '../../../config' as config;
+@use '../../../devpack/invalid-value-message' as *;
+@use '../../utility/validator/is-list-contains' as *;
+
+/// > Одно из значений директивы @media для проверки
+/// > пользовательских настроек. Отслеживает выбор
+/// > настроек контрастности в системе.
+/// >
+/// > &mdash; [Дока](https://doka.guide/a11y/prefers-contrast/)
+/// ---
+/// @name media-prefers-contrast
+/// @group CSSex
+/// @since 7.0.0
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @link https://github.com/therteenten/sassify/blob/develop/core/cssex/media/_prefers-contrast.scss Исходный код миксина
+/// @example scss Пример использования в Sass (SCSS)
+/// 	@include media-prefers-contrast(more) {
+/// 		.image {
+/// 			border: 3px solid black;
+/// 		}
+/// 	}
+/// @example css Результат работы миксина в CSS
+/// 	@media (prefers-contrast: more) {
+/// 		.image {
+/// 			border: 3px solid black;
+/// 		}
+/// 	}
+/// @param {string} $type [config.$dvalues--media-prefers-contrast] - настройка контрастности
+@mixin media-prefers-contrast($type: config.$dvalues--media-prefers-contrast) {
+
+	// С помощью функции `is-list-contains` проверяем
+	// наличие `$type` в списке `config.$vvalues--media-prefers-contrast`:
+	@if is-list-contains(config.$vvalues--media-prefers-contrast, $type) {
+		@media (prefers-contrast: $type) {
+			@content;
+		}
+	}
+
+	// Если условие сверху неверно, то
+	// выводим сообщение об этом:
+	@else {
+		@include invalid-value-message(
+			'media-prefers-contrast',
+			$type,
+			config.$vvalues--media-prefers-contrast
+		);
+	}
+}

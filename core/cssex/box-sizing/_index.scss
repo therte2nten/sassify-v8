@@ -1,0 +1,60 @@
+@use '../../../config' as config;
+@use '../../prefixer' as *;
+@use '../../utility/validator/is-list-contains' as *;
+@use '../../../devpack/invalid-value-message' as *;
+
+/// > Применяется для изменения алгоритма расчёта ширины
+/// > и высоты элемента.
+/// >
+/// > Согласно спецификации CSS ширина блока складывается
+/// > из ширины содержимого (`width`), значений `margin`,
+/// > `padding` и `border`. Аналогично обстоит и с высотой
+/// > блока. Свойство `box-sizing` позволяет изменить этот
+/// > алгоритм, чтобы свойства `width` и `height` задавали
+/// > размеры не содержимого, а размеры блока.
+/// >
+/// > &mdash; [WebReference](https://webref.ru/css/value/box-sizing)
+///
+/// Миксин `box-sizing` позволяет сгенерировать CSS-свойство
+/// `box-sizing` со всеми необходимыми браузерными префиксами.
+/// ---
+/// @name box-sizing
+/// @group CSSex
+/// @since 7.0.0
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @link https://github.com/therteenten/sassify/blob/develop/core/cssex/box-sizing/_index.scss Исходный код миксина
+/// @example scss Пример использования в Sass (SCSS)
+/// 	.selector {
+/// 		@include box-sizing(border-box);
+/// 	}
+/// @example css Результат работы миксина в CSS
+/// 	.selector {
+/// 		-webkit-box-sizing: border-box;
+/// 		-moz-box-sizing: border-box;
+/// 		box-sizing: border-box;
+/// 	}
+/// @param {string} $box-sizing [config.$dvalues--box-sizing]
+@mixin box-sizing($box-sizing: config.$dvalues--box-sizing) {
+
+	// С помощью функции `is-list-contains` проверяем наличие
+	// значения параметра `$box-sizing` в списке `config.$vvalues--box-sizing`:
+	@if is-list-contains(config.$vvalues--box-sizing, $box-sizing) {
+
+		// С помощью миксина `prefixer` добавляем все
+		// необходимые браузерные префиксы:
+		@include prefixer(
+			box-sizing,
+			$box-sizing,
+			config.$prefixes--box-sizing
+		);
+
+	}
+
+	// Если нет совпадений в списке `config.$vvalues--box-sizing`,
+	// то отображаем сообщение об этом:
+	@else {
+		@include invalid-value-message('box-sizing', $box-sizing, config.$vvalues--box-sizing);
+	}
+
+}

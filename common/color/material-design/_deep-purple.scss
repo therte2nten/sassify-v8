@@ -1,0 +1,37 @@
+/// @name color--md-deep-purple
+/// @group ColorPalette
+/// @since 7.0.0
+/// @access public
+/// @author Google
+/// @link https://material.io/design/color/the-color-system.html Material Design
+/// @type map
+/// @prop {color} $color--md-deep-purple.50 [#ede7f6]
+/// @prop {color} $color--md-deep-purple.100 [#d1c4e9]
+/// @prop {color} $color--md-deep-purple.200 [#b39ddb]
+/// @prop {color} $color--md-deep-purple.300 [#9575cd]
+/// @prop {color} $color--md-deep-purple.400 [#7e57c2]
+/// @prop {color} $color--md-deep-purple.500 [#673ab7]
+/// @prop {color} $color--md-deep-purple.600 [#5e35b1]
+/// @prop {color} $color--md-deep-purple.700 [#512da8]
+/// @prop {color} $color--md-deep-purple.800 [#4527a0]
+/// @prop {color} $color--md-deep-purple.900 [#311b92]
+/// @prop {color} $color--md-deep-purple.A100 [#b388ff]
+/// @prop {color} $color--md-deep-purple.A200 [#7c4dff]
+/// @prop {color} $color--md-deep-purple.A400 [#651fff]
+/// @prop {color} $color--md-deep-purple.A700 [#6200ea]
+$color--md-deep-purple: (
+	50: #ede7f6,
+	100: #d1c4e9,
+	200: #b39ddb,
+	300: #9575cd,
+	400: #7e57c2,
+	500: #673ab7,
+	600: #5e35b1,
+	700: #512da8,
+	800: #4527a0,
+	900: #311b92,
+	A100: #b388ff,
+	A200: #7c4dff,
+	A400: #651fff,
+	A700: #6200ea
+);
