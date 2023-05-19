@@ -13,7 +13,7 @@
 /// префиксами.
 ///
 /// > Обратите внимание на то, что миксин принимает в качестве параметра строку
-/// > в ковычках (' или ").
+/// > в скобках как на примере.
 /// ---
 /// @name flex-flow
 /// @group CSSex
@@ -24,12 +24,12 @@
 /// @example scss Пример использования в Sass (SCSS)
 /// 	/* Верно */
 /// 	div {
-/// 		@include flex-flow('column-reverse wrap-reverse');
+/// 		@include flex-flow((column-reverse wrap-reverse));
 /// 	}
 ///
 /// 	/* Неверно */
 /// 	div {
-/// 		@include flex-flow('column-reverse column-reverse');
+/// 		@include flex-flow((column-reverse column-reverse));
 /// 	}
 /// @example css Результат работы миксина в CSS
 /// 	/* Верно */
