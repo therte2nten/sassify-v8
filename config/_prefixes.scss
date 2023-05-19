@@ -5,6 +5,15 @@
 /// @type list
 $prefixes--all: webkit khtml moz ms o !default;
 
+/// - Safari до версии 9 поддерживает свойство `-webkit-align-self`
+/// ---
+/// @name prefixes--align-self
+/// @group Prefixes
+/// @since 7.0.0
+/// @access public
+/// @type string
+$prefixes--align-self: webkit !default;
+
 /// - Safari до версии 9 поддерживает свойство `-webkit-align-items`
 /// ---
 /// @name prefixes--align-items

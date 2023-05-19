@@ -1,0 +1,52 @@
+@use '../../../config' as config;
+@use '../../prefixer' as *;
+@use '../../../devpack/invalid-value-message' as *;
+@use '../../utility/validator/is-list-contains' as *;
+
+/// > Свойство CSS `align-self` выравнивает flex-элементы по текущей flex-линии,
+/// переопределяя значение свойства `align-items`. Если у какого-либо flex-элемента
+/// `margin` в поперечной оси выставлен в auto, то `align-self` игнорируется.
+/// >
+/// > &mdash; [mdn web docs](https://developer.mozilla.org/ru/docs/Web/CSS/align-self)
+///
+/// Миксин `align-self` позволяет генерировать
+/// CSS-свойство `align-self` со всеми нужными браузерными
+/// префиксами.
+/// ---
+/// @name align-self
+/// @group CSSex
+/// @since 7.0.0
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @link https://github.com/therteenten/sassify/blob/develop/core/cssex/align/_self.scss Исходный код миксина
+/// @example scss Пример использования в Sass (SCSS)
+
+/// @example css Результат работы миксина в CSS
+
+/// @param {string} $value [config.$dvalues--align-self] - тип выравнивания флекс-элементов внутри контейнера в перпендикулярном направлении
+@mixin align-self($value: config.$dvalues--align-self) {
+
+	// С помощью функции `is-list-contains` проверяем наличие значения
+	// параметра `$value` в списке `config.$vvalues--align-self`:
+	@if is-list-contains(config.$vvalues--align-self, $value) {
+
+		// С помощью миксина `prefixer` добавляем CSS-свойтсву `align-self`
+		// все необходимые браузерные префиксы:
+		@include prefixer(
+			align-self,
+			$value,
+			config.$prefixes--align-self
+		);
+
+	}
+
+	// Если условие выше не было соблюдено, то отображаем сообщение об этом:
+	@else {
+		@include invalid-value-message(
+			'align-self',
+			$value,
+			config.$vvalues--align-self
+		);
+	}
+
+}

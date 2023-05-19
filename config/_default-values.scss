@@ -3,6 +3,13 @@
 /// @since 7.0.0
 /// @access public
 /// @type string
+$dvalues--align-items: auto !default;
+
+/// @name dvalues--align-items
+/// @group Default Values
+/// @since 7.0.0
+/// @access public
+/// @type string
 $dvalues--align-items: stretch !default;
 
 /// @name dvalues--align-content
