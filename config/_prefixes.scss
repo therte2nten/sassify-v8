@@ -5,6 +5,15 @@
 /// @type list
 $prefixes--all: webkit khtml moz ms o !default;
 
+/// - Safari до версии 9 поддерживает свойство `-webkit-flex-wrap`
+/// ---
+/// @name prefixes--flex-wrap
+/// @group Prefixes
+/// @since 7.0.0
+/// @access public
+/// @type string
+$prefixes--flex-wrap: webkit !default;
+
 /// - Safari до версии 9 поддерживает свойство `-webkit-flex-shrink`
 /// ---
 /// @name prefixes--flex-shrink
