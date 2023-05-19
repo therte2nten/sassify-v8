@@ -21,7 +21,14 @@
 /// @author Haba Kudzaev (therteenten)
 /// @link https://github.com/therteenten/sassify/blob/develop/core/cssex/flex/_basis.scss Исходный код миксина
 /// @example scss Пример использования в Sass (SCSS)
+/// 	div {
+/// 		@include flex-basis(100%);
+/// 	}
 /// @example css Результат работы миксина в CSS
+/// 	div {
+/// 		-webkit-flex-basis: 100%;
+/// 		flex-basis: 100%;
+/// 	}
 /// @param {string | number} $size [config.$dvalues--flex-basis] - размер элемента в px, mm, pt или в процентах вдоль главной оси (отрицательное значение недопустимо)
 @mixin flex-basis($size: config.$dvalues--flex-basis) {
 
