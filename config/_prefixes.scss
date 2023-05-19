@@ -5,13 +5,22 @@
 /// @type list
 $prefixes--all: webkit khtml moz ms o !default;
 
+/// - Safari до версии 9 поддерживает свойство `-webkit-flex-basis`
+/// ---
+/// @name prefixes--flex-basis
+/// @group Prefixes
+/// @since 7.0.0
+/// @access public
+/// @type string
+$prefixes--flex-basis: webkit !default;
+
 /// - Safari до версии 9 поддерживает свойство `-webkit-flex`
 /// ---
 /// @name prefixes--flex
 /// @group Prefixes
 /// @since 7.0.0
 /// @access public
-/// @type list
+/// @type string
 $prefixes--flex: webkit !default;
 
 /// - Firefox до версии 29 поддерживает свойство `-moz-box-sizing`

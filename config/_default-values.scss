@@ -1,3 +1,10 @@
+/// @name dvalues--flex-basis
+/// @group Default Values
+/// @since 7.0.0
+/// @access public
+/// @type string
+$dvalues--flex-basis: auto !default;
+
 /// @name dvalues--brakepoints
 /// @group Default Values
 /// @since 7.0.0
@@ -34,7 +41,7 @@ $dvalues--brakepoints: (
 /// @group Default Values
 /// @since 7.0.0
 /// @access public
-/// @type list
+/// @type string
 $dvalues--text-shorten: none !default;
 
 /// @name dvalues--illogical-usage-message_mode

@@ -1,3 +1,10 @@
+/// @name vvalues--flex-basis
+/// @group Valid Values
+/// @since 7.0.0
+/// @access public
+/// @type list
+$vvalues--flex-basis: auto 'Lenght (10em, 3px, etc.)' fill max-content min-content fit-content content inherit initial unset !default;
+
 /// @name vvalues--centering
 /// @group Valid Values
 /// @since 7.0.0
