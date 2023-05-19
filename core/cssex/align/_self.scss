@@ -20,9 +20,14 @@
 /// @author Haba Kudzaev (therteenten)
 /// @link https://github.com/therteenten/sassify/blob/develop/core/cssex/align/_self.scss Исходный код миксина
 /// @example scss Пример использования в Sass (SCSS)
-
+/// 	div {
+/// 		@include align-self(last baseline);
+/// 	}
 /// @example css Результат работы миксина в CSS
-
+/// 	div {
+/// 		-webkit-align-self: last baseline;
+/// 		align-self: last baseline;
+/// 	}
 /// @param {string} $value [config.$dvalues--align-self] - тип выравнивания флекс-элементов внутри контейнера в перпендикулярном направлении
 @mixin align-self($value: config.$dvalues--align-self) {
 
