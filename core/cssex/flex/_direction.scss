@@ -51,6 +51,30 @@
 			config.$prefixes--flex-direction
 		);
 
+		// Если значение параметра `$direction` равно `row-reverse`
+		@if $direction == row-reverse {
+			@include prefixer(box-orient, horizontal, webkit moz, false);
+			@include prefixer(box-direction, reverse, webkit moz, false);
+		}
+
+		// Если значение параметра `$direction` равно `column`
+		@else if $direction == column {
+			@include prefixer(box-orient, vertical, webkit moz, false);
+			@include prefixer(box-direction, normal, webkit moz, false);
+		}
+
+		// Если значение параметра `$direction` равно `column-reverse`
+		@else if $direction == column-reverse {
+			@include prefixer(box-orient, vertical, webkit moz, false);
+			@include prefixer(box-direction, reverse, webkit moz, false);
+		}
+
+		// Во всех остальных случаях:
+		@else {
+			@include prefixer(box-orient, horizontal, webkit moz, false);
+			@include prefixer(box-direction, normal, webkit moz, false);
+		}
+
 	}
 
 	// Если условие выше не было соблюдено, то отображаем сообщение об этом:
