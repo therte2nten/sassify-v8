@@ -1,0 +1,69 @@
+@use '../../../config' as config;
+@use '../../prefixer' as *;
+@use '../../../devpack/invalid-value-message' as *;
+@use '../../utility/validator/is-number' as *;
+
+/// > CSS-свойство `flex-grow` определяет как много свободного пространства во
+/// > flex-контейнере должно быть назначено текущему элементу
+/// > (flex grow factor — «коэффициент увеличения flex»). Свободное пространство — разница
+/// > между размером flex-контейнера и размером всех его flex-элементов вместе. Если все
+/// > sibling-элементы (sibling items — элементы одного уровня вложенности, состоящие по
+/// > отношению друг к другу в родственной связи как брат или сестра), имеют одинаковый
+/// > коэффициент `flex-grow`, то все они получат одинаковую долю свободного пространства,
+/// > в противном случае оно распределяется в соответствии с соотношением, определённым
+/// > различными коэффициентами `flex-grow`.
+/// >
+/// > На практике `flex-grow` используется вместе с другими flex-свойствами
+/// > `flex-shrink` и `flex-basis`, и обычно определяется с помощью сокращения (shorthand)
+/// > `flex`, чтобы убедиться, что все значения заданы.
+/// >
+/// > &mdash; [mdn web docs](https://developer.mozilla.org/ru/docs/Web/CSS/flex-grow)
+///
+/// Миксин `flex-grow` позволяет генерировать
+/// CSS-функцию `flex-grow` со всеми нужными браузерными
+/// префиксами.
+/// ---
+/// @name flex-grow
+/// @group CSSex
+/// @since 7.0.0
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @link https://github.com/therteenten/sassify/blob/develop/core/cssex/flex/_grow.scss Исходный код миксина
+/// @example scss Пример использования в Sass (SCSS)
+/// 	div {
+/// 		@include flex-grow(0.3);
+/// 	}
+/// @example css Результат работы миксина в CSS
+/// 	div {
+/// 		-webkit-flex-grow: 0.3;
+/// 		flex-grow: 0.3;
+/// 	}
+/// @param {string} $grow [config.$dvalues--flex-grow] - определяет, сколько пространства
+/// 	может занимать флекс внутри контейнера (принимаются целые (1, 2, 3,…) или дробные
+/// 	числа (например: 0.6), а отрицательные значения игнорируются)
+@mixin flex-grow($grow: config.$dvalues--flex-grow) {
+
+	// С помощью функции `is-number` проверяем значение
+	// параметра `$grow` на соответствие типу `Number`:
+	@if is-number($grow) {
+
+		// С помощью миксина `prefixer` добавляем CSS-свойтсву `flex-grow`
+		// все необходимые браузерные префиксы:
+		@include prefixer(
+			flex-grow,
+			$grow,
+			config.$prefixes--flex-grow
+		);
+
+	}
+
+	// Если условие выше не было соблюдено, то отображаем сообщение об этом:
+	@else {
+		@include invalid-value-message(
+			'flex-grow',
+			$grow,
+			'Number (1, 2, 0.7, etc.)'
+		);
+	}
+
+}

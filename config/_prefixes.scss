@@ -5,6 +5,15 @@
 /// @type list
 $prefixes--all: webkit khtml moz ms o !default;
 
+/// - Safari до версии 9 поддерживает свойство `-webkit-flex-grow`
+/// ---
+/// @name prefixes--flex-grow
+/// @group Prefixes
+/// @since 7.0.0
+/// @access public
+/// @type string
+$prefixes--flex-grow: webkit !default;
+
 /// - Safari до версии 9 поддерживает свойство `-webkit-flex-flow`
 /// ---
 /// @name prefixes--flex-flow
