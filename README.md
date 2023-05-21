@@ -10,8 +10,6 @@
 ![Кол-во открытых ишью](https://img.shields.io/github/issues-raw/therteenten/sassify)
 ![Кол-во открытых PR](https://img.shields.io/github/issues-pr-raw/therteenten/sassify)
 ![Лицензия](https://img.shields.io/github/license/therteenten/sassify)
-![Версия пакета Sassify](https://img.shields.io/github/package-json/v/therteenten/sassify)
-![Версия пакета Sassify в ветке develop](https://img.shields.io/github/package-json/v/therteenten/sassify/develop)
 ![Версия зависимости `sass`](https://img.shields.io/github/package-json/dependency-version/therteenten/sassify/dev/sass/develop?color=%23d94390)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/therteenten/sassify)
 ![GitHub contributors](https://img.shields.io/github/contributors/therteenten/sassify)
