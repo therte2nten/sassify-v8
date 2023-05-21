@@ -33,12 +33,12 @@
 @mixin check($generate-css-comments: true) {
 
 	$-package: (
-		"Package Name": '@therteenten/sassify',
-		"Description": ' Большой набор миксинов и функций на языке CSS-препроцессора Sass',
-		"Author": '      Haba Kudzaev <therteenten@inbox.ru>',
-		"License": '     MIT',
-		"npm": '         https://www.npmjs.com/package/@therteenten/sassify',
-		"Source Code": ' https://github.com/therteenten/sassify'
+		'Package Name': '@therteenten/sassify',
+		'Description': ' Большой набор миксинов и функций на языке CSS-препроцессора Sass',
+		'Author': '      Haba Kudzaev <therteenten@inbox.ru>',
+		'License': '     MIT',
+		'npm': '         https://www.npmjs.com/package/@therteenten/sassify',
+		'Source Code': ' https://github.com/therteenten/sassify'
 	);
 
 	$-message-check-success: '(sassify) #{config.$string--emoji__success} The check was successful!';

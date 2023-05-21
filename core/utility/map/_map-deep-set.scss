@@ -28,8 +28,8 @@
 /// 		enhanced-experience: true
 /// 	);
 ///
-/// 	@debug map-deep-set($grid-default-config, "layouts" "M", 650px); //=> Debug: (columns: 12, gutter: 10px, min-width: 240px, max-width: 1330px, layouts: (S: 370px, M: 650px, L: 850px, XL: 1090px), fluid: true, debug: false, fixed-layout: M, enhanced-experience: true)
-/// 	@debug map-deep-set($grid-default-config, "mobile-first", true); //=> Debug: (columns: 12, gutter: 10px, min-width: 240px, max-width: 1330px, layouts: (S: 370px, M: 610px, L: 850px, XL: 1090px), fluid: true, debug: false, fixed-layout: M, enhanced-experience: true, "mobile-first": true)
+/// 	@debug map-deep-set($grid-default-config, 'layouts' 'M', 650px); //=> Debug: (columns: 12, gutter: 10px, min-width: 240px, max-width: 1330px, layouts: (S: 370px, M: 650px, L: 850px, XL: 1090px), fluid: true, debug: false, fixed-layout: M, enhanced-experience: true)
+/// 	@debug map-deep-set($grid-default-config, 'mobile-first', true); //=> Debug: (columns: 12, gutter: 10px, min-width: 240px, max-width: 1330px, layouts: (S: 370px, M: 610px, L: 850px, XL: 1090px), fluid: true, debug: false, fixed-layout: M, enhanced-experience: true, 'mobile-first': true)
 /// @return {map} карта с установленными значениями
 /// @param {map} $map - карта (`Map`), в которую нужно добавить значения
 /// @param {string} $keys - ключ значения
@@ -42,8 +42,8 @@
 	// Если введёный ключ уже является картой,
 	// то оповещаю разработчика о том, что она будет
 	// переопределена:
-	@if type-of(nth($keys, -1)) == "map" {
-		@warn "#{config.$string--emoji__warning} Последний указанный вами ключ — это карта. Он будет переопределен с помощью `#{$value}`.";
+	@if type-of(nth($keys, -1)) == 'map' {
+		@warn '#{config.$string--emoji__warning} Последний указанный вами ключ — это карта. Он будет переопределен с помощью `#{$value}`.';
 	}
 
 	// Если `$keys` - это один ключ, то
@@ -63,7 +63,7 @@
 
 		// Если ключ не существует, выдаю сообщение об ошибке:
 		@if $-current-get == null {
-			@error "#{config.$string--emoji__error} Ключ `#{$keys}` не существует на текущем уровне карты!";
+			@error '#{config.$string--emoji__error} Ключ `#{$keys}` не существует на текущем уровне карты!';
 		}
 
 		$-maps: append($-maps, $-current-get);
