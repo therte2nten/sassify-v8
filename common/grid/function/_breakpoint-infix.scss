@@ -1,0 +1,15 @@
+@use 'breakpoint-min' as *;
+
+/// @name breakpoint-infix
+/// @group Grid
+/// @since 8.1.0
+/// @access private
+/// @author Haba Kudzaev (therteenten)
+/// @author The Bootstrap Authors
+/// @link https://github.com/therteenten/sassify/blob/develop/common/grid/_index.scss Исходный код миксина
+/// @link https://github.com/twbs/bootstrap Bootstrap GitHub
+/// @param {string} $name
+/// @param {map} $breakpoints [$dvalues--grid-breakpoints]
+@function breakpoint-infix($name, $breakpoints: $dvalues--grid-breakpoints) {
+	@return if(breakpoint-min($name, $breakpoints) == null, "", "-#{$name}");
+}
