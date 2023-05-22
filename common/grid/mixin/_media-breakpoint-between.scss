@@ -1,0 +1,33 @@
+@use 'media-breakpoint-up' as *;
+@use 'media-breakpoint-down' as *;
+@use '../function/breakpoint-min' as *;
+@use '../function/breakpoint-max' as *;
+
+/// @name media-breakpoint-between
+/// @group Grid
+/// @since 8.1.0
+/// @access private
+/// @author Haba Kudzaev (therteenten)
+/// @author The Bootstrap Authors
+/// @link https://github.com/therteenten/sassify/blob/develop/common/grid/_index.scss Исходный код миксина
+/// @link https://github.com/twbs/bootstrap Bootstrap GitHub
+@mixin media-breakpoint-between($lower, $upper, $breakpoints: $dvalues--grid-breakpoints) {
+
+	$-min: breakpoint-min($lower, $breakpoints);
+	$-max: breakpoint-max($upper, $breakpoints);
+
+	@if $-min != null and $-max != null {
+		@media (min-width: $-min) and (max-width: $-max) {
+			@content;
+		}
+	} @else if $-max == null {
+		@include media-breakpoint-up($lower, $breakpoints) {
+			@content;
+		}
+	} @else if $-min == null {
+		@include media-breakpoint-down($upper, $breakpoints) {
+			@content;
+		}
+	}
+
+}

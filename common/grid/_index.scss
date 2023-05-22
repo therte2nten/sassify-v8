@@ -1,0 +1,126 @@
+@charset "UTF-8";
+
+@use '../../config' as config;
+@use '../../core/cssex/box-sizing' as *;
+@use '../../core/utility/map/map-deep-get' as *;
+
+@use 'mixin/make-container' as *;
+@use 'mixin/make-container-max-widths' as *;
+@use 'mixin/make-row' as *;
+@use 'mixin/make-grid-columns' as *;
+
+@use 'function/assert-ascending' as *;
+@use 'function/assert-starts-at-zero' as *;
+
+/// Миксин `grid-init` позволяет сгенерировать сетку Bootstrap Grid,
+/// написанную на Sass. По умолчанию используется 12-ти колононая
+/// система.
+/// ---
+/// @name grid-init
+/// @group Grid
+/// @since 8.1.0
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @author The Bootstrap Authors
+/// @link https://github.com/twbs/bootstrap Bootstrap GitHub
+/// @link https://github.com/therteenten/sassify/blob/develop/common/grid/_index.scss Исходный код миксина
+/// @example scss Пример использования в Sass (SCSS)
+/// 	@include grid-init();
+/// @example css Результат работы миксина в CSS
+/// 	/* ... очень много CSS-кода */
+/// @param {boolean} $write-copyright [true] - параметр отвечает за
+/// 	генерацию CSS-комментария с копирайтом проекта Bootstrap.
+@mixin grid-init($write-copyright: true) {
+
+	// Генерация CSS-комментария с копирайтом проекта
+	// Bootstrap:
+	@if $write-copyright == true {
+		/*!
+		 * Bootstrap Grid v3.3.6 (https://getbootstrap.com/)
+		 * Copyright 2011-2023 The Bootstrap Authors
+		 * Copyright 2023 Haba Kudzaev (therteenten)
+		 * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+		 */
+	}
+
+	// Минимальный ресет:
+	@include -minimal-reset();
+
+	// Генерация классов `.container`
+	.#{map-deep-get(config.$dvalues--grid-class-naming, 'container')} {
+		@include make-container();
+		@include make-container-max-widths();
+	}
+
+	// Генерация классов `.container-fluid`
+	.#{map-deep-get(config.$dvalues--grid-class-naming, 'container-fluid')} {
+		@include make-container();
+	}
+
+	// Генерация классов `.row`
+	.#{map-deep-get(config.$dvalues--grid-class-naming, 'row')} {
+		@include make-row();
+	}
+
+	@include -create-no-gutters();
+
+	@include make-grid-columns();
+	@include assert-starts-at-zero(config.$dvalues--grid-breakpoints, "$dvalues--grid-breakpoints");
+	@include assert-ascending(config.$dvalues--grid-breakpoints, "$dvalues--grid-breakpoints");
+	@include assert-ascending(config.$dvalues--grid-container-max-widths, "$dvalues--grid-container-max-widths");
+
+}
+
+/// Миксин генерирует ну очень простой ресет.
+/// ---
+/// @name -minimal-reset
+/// @group Grid
+/// @since 8.1.0
+/// @access private
+/// @author Haba Kudzaev (therteenten)
+/// @author The Bootstrap Authors
+/// @link https://github.com/therteenten/sassify/blob/develop/common/grid/_index.scss Исходный код миксина
+/// @link https://github.com/twbs/bootstrap Bootstrap GitHub
+@mixin -minimal-reset() {
+	@if config.$dvalues--grid-minimal-reset == true {
+		*,
+		*::before,
+		*::after {
+			padding: 0;
+			margin: 0;
+			@include box-sizing(border-box);
+		}
+	}
+}
+
+
+/// Микисн `-create-no-gutters` генерирует CSS-классы
+/// `no-gutters`.
+/// ---
+/// @name -create-no-gutters
+/// @group Grid
+/// @since 8.1.0
+/// @access private
+/// @author Haba Kudzaev (therteenten)
+/// @author The Bootstrap Authors
+/// @link https://github.com/therteenten/sassify/blob/develop/common/grid/_index.scss Исходный код миксина
+/// @link https://github.com/twbs/bootstrap Bootstrap GitHub
+@mixin -create-no-gutters() {
+
+	@if config.$dvalues--grid-create-class__no-gutters == true {
+
+		.no-gutters {
+			margin-right: 0;
+			margin-left: 0;
+
+			> .#{map-deep-get(config.$dvalues--grid-class-naming, 'col')},
+			> [class*="#{map-deep-get(config.$dvalues--grid-class-naming, 'col')}-"] {
+				padding-right: 0;
+				padding-left: 0;
+			}
+
+		}
+
+	}
+
+}
