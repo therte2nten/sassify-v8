@@ -233,35 +233,35 @@ $vvalues--transform-style: preserve-3d flat inherit initial unset !default;
 /// @access public
 /// @link https://webref.ru/css/transition-timing-function WebReference
 /// @type list
-$vvalues--transition-timing-function: ease ease-in ease-out ease-in-out linear step-start step-end "steps()" "cubic-bezier()" "Multiple timing functions (~ ease, cubic-bezier(0.1, 0.7, 1, 0.1))" inherit initial revert revert-layer unset !default;
+$vvalues--transition-timing-function: ease ease-in ease-out ease-in-out linear step-start step-end 'steps()' 'cubic-bezier()' 'Multiple timing functions (~ ease, cubic-bezier(0.1, 0.7, 1, 0.1))' inherit initial revert revert-layer unset !default;
 
 /// @name vvalues--transition-duration
 /// @group Valid Values
 /// @since 8.0.0
 /// @access public
 /// @type list
-$vvalues--transition-duration: "Time (1s, 5ms, .2ms)" inherit initial revert revert-layer unset !default;
+$vvalues--transition-duration: 'Time (1s, 5ms, .2ms)' inherit initial revert revert-layer unset !default;
 
 /// @name vvalues--transition-delay
 /// @group Valid Values
 /// @since 8.0.0
 /// @access public
 /// @type list
-$vvalues--transition-delay: "Time (1s, 5ms, .2ms)" inherit initial unset !default;
+$vvalues--transition-delay: 'Time (1s, 5ms, .2ms)' inherit initial unset !default;
 
 /// @name vvalues--border-radius
 /// @group Valid Values
 /// @since 8.0.0
 /// @access public
 /// @type list
-$vvalues--border-radius: "Number" "Length (px, rem, em, etc.)" "Percentage (0% - 100%)" inherit initial unset !default;
+$vvalues--border-radius: 'Number' 'Length (px, rem, em, etc.)' 'Percentage (0% - 100%)' inherit initial unset !default;
 
 /// @name vvalues--opacity
 /// @group Valid Values
 /// @since 8.0.0
 /// @access public
 /// @type list
-$vvalues--opacity: "Number (0.0 - 1.0)" "Percentage (0% - 100%)" !default;
+$vvalues--opacity: 'Number (0.0 - 1.0)' 'Percentage (0% - 100%)' !default;
 
 /// @name vvalues--position-sticky__sides
 /// @group Valid Values

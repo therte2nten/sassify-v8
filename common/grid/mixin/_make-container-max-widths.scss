@@ -1,0 +1,29 @@
+@use '../../../config' as config;
+@use '../mixin/media-breakpoint-up' as *;
+
+/// For each breakpoint, define the maximum width of
+/// the container in a media query
+/// ---
+/// @name make-container-max-widths
+/// @group Grid
+/// @since 8.1.0
+/// @access private
+/// @author Haba Kudzaev (therteenten)
+/// @author The Bootstrap Authors
+/// @link https://github.com/therteenten/sassify/blob/develop/common/grid/_index.scss Исходный код миксина
+/// @link https://github.com/twbs/bootstrap Bootstrap GitHub
+/// @param {number} $max-widths [$dvalues--grid-container-max-widths]
+/// @param {number} $breakpoints [$dvalues--grid-breakpoints]
+@mixin make-container-max-widths(
+	$max-widths: config.$dvalues--grid-container-max-widths,
+	$breakpoints: config.$dvalues--grid-breakpoints) {
+
+	@each $-breakpoint, $-container-max-width in $max-widths {
+
+		@include media-breakpoint-up($-breakpoint, $breakpoints) {
+			max-width: $-container-max-width;
+		}
+
+	}
+
+}

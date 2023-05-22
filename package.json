@@ -1,10 +1,10 @@
 {
 	"name": "@therteenten/sassify",
-	"version": "8.0.0",
+	"version": "8.1.0",
 	"description": "Большой набор миксинов и функций на языке CSS-препроцессора Sass",
 	"main": "index.scss",
 	"scripts": {
-		"test": "sass --watch test.scss:test.css",
+		"test": "sass --watch tests/index.scss:tests/dist/stylesheets/index.test.css",
 		"sassdoc": "npx sassdoc . -d docs/",
 		"npm:publish": "npm publish --access public",
 		"npm:version-major": "npm version major -m \"Обновил версию пакета до %s\"",

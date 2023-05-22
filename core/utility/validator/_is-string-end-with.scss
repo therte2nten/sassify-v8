@@ -12,13 +12,13 @@
 /// @author Sindre Sorhus
 /// @link https://github.com/sindresorhus GitHub
 /// @example scss Пример использования в Sass (SCSS)
-/// 	$string: "Lorem ipsum";
-/// 	$substring: "Lorem";
+/// 	$string: 'Lorem ipsum';
+/// 	$substring: 'Lorem';
 ///
-/// 	@debug is-string-end-with("foo bar", "foo"); //=> Debug: false
-/// 	@debug is-string-end-with("foo bar", "bar"); //=> Debug: true
+/// 	@debug is-string-end-with('foo bar', 'foo'); //=> Debug: false
+/// 	@debug is-string-end-with('foo bar', 'bar'); //=> Debug: true
 /// 	@debug is-string-end-with($string, $substring); //=> Debug: false
-/// 	@debug is-string-end-with(1310, 1); //=> Error: "🟥 Значение `$string: 1310` не соответствует типу `String`!"
+/// 	@debug is-string-end-with(1310, 1); //=> Error: '🟥 Значение `$string: 1310` не соответствует типу `String`!'
 /// @return {boolean} `true`, если строка `$string` кончается с `$substring`
 /// @param {string} $string - строка, в которой будет производиться проверка
 /// @param {string} $substring - часть строки, с которой должна заканчиваться строка `$string`
