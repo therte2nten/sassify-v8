@@ -38,7 +38,7 @@ $dvalues--grid-v3-class-naming: (
 	'auto': 'auto'
 ) !default;
 
-/// @name dvalues--grid-breakpoints
+/// @name dvalues--grid-v3-breakpoints
 /// @group default-values
 /// @since 8.1.0
 /// @access public
@@ -58,7 +58,7 @@ $dvalues--grid-v3-breakpoints: (
 	xxl: 1400px
 ) !default;
 
-/// @name dvalues--grid-container-max-widths
+/// @name dvalues--grid-v3-container-max-widths
 /// @group default-values
 /// @since 8.1.0
 /// @access public
@@ -76,14 +76,14 @@ $dvalues--grid-v3-container-max-widths: (
 	xxl: 1320px
 ) !default;
 
-/// @name dvalues--grid-columns
+/// @name dvalues--grid-v3-columns
 /// @group default-values
 /// @since 8.1.0
 /// @access public
 /// @type number
 $dvalues--grid-v3-columns: 12 !default;
 
-/// @name dvalues--grid-gutter-width
+/// @name dvalues--grid-v3-gutter-width
 /// @group default-values
 /// @since 8.1.0
 /// @access public
