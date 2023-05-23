@@ -1,4 +1,7 @@
 @use 'sass:map';
+@use '../validator/is-map' as *;
+@use '../../../config' as config;
+@use '../../../devpack/invalid-value-message' as *;
 
 /// Функция `map-deep-get` получает какое-либо значение
 /// из указанной карты (`Map`).
@@ -27,16 +30,28 @@
 
 	$-key: null;
 
-	// Прохожу циклом по карте и забираю значение:
-	@each $key in $keys {
-		$map: map-get($map, $key);
-		$-key: $key;
+	@if is-map($map) {
+		// Прохожу циклом по карте и забираю значение:
+		@each $key in $keys {
+			$map: map-get($map, $key);
+			$-key: $key;
+		}
+	} @else {
+		@return invalid-value-message('map-deep-get', $map, 'Map');
 	}
 
 	// Показываю предепреждение в консоль, если
 	// ключ `$-key` равен `null`:
 	@if type-of($map) == 'null' {
-		@warn '#{config.$string--emoji__warning} Не удалось найти ключ «#{$-key}». Будет возвращено значение «null»!';
+
+		$-error-message: 'Не удалось найти ключ «#{$-key}». Будет возвращено значение «null»!';
+
+		@if config.$setting--strict-mode == true {
+			@error '#{config.$string--emoji__error} #{$-error-message}';
+		} @else {
+			@warn '#{config.$string--emoji__warning} #{$-error-message}';
+		}
+
 	}
 
 	// Возвращаю значение из карты:
