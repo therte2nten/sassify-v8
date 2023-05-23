@@ -1,0 +1,124 @@
+@use '../../../config' as config;
+@use '../../../devpack/invalid-value-message' as *;
+@use '../map/map-deep-get' as *;
+@use '../validator/is-list-contains' as *;
+
+@use '../../../common/color/apple-hig/ios' as *;
+@use '../../../common/color/apple-hig/macos' as *;
+@use '../../../common/color/apple-hig/watchos' as *;
+@use '../../../common/color/material-design/amber' as *;
+@use '../../../common/color/material-design/blue' as *;
+@use '../../../common/color/material-design/blue-grey' as *;
+@use '../../../common/color/material-design/brown' as *;
+@use '../../../common/color/material-design/cyan' as *;
+@use '../../../common/color/material-design/deep-orange' as *;
+@use '../../../common/color/material-design/deep-purple' as *;
+@use '../../../common/color/material-design/green' as *;
+@use '../../../common/color/material-design/grey' as *;
+@use '../../../common/color/material-design/indigo' as *;
+@use '../../../common/color/material-design/light-blue' as *;
+@use '../../../common/color/material-design/light-green' as *;
+@use '../../../common/color/material-design/lime' as *;
+@use '../../../common/color/material-design/orange' as *;
+@use '../../../common/color/material-design/pink' as *;
+@use '../../../common/color/material-design/purple' as *;
+@use '../../../common/color/material-design/red' as *;
+@use '../../../common/color/material-design/teal' as *;
+@use '../../../common/color/material-design/yellow' as *;
+@use '../../../common/color/microsoft-windows' as *;
+
+/// Функция `color-common` позволяет проще получать цвета
+/// из цветовых палитр из Common.
+///
+/// > Функция требует рефакторинга, но в будущем интерфейс
+/// > функции не будет изменён. Так что пользоваться можно.
+/// ---
+/// @name color-common
+/// @group Core
+/// @since 8.1.1
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @link https://github.com/therteenten/sassify/blob/develop/core/utility/color/_color-common.scss Исходный код миксина
+/// @example scss Пример использования в Sass (SCSS)
+/// 	@debug color-common(ios, red); //=> Debug: #ff0000
+/// 	@debug color-common(md-amber, 600); //=> Debug: #ffb300
+/// 	@debug color-common(ms, BlanchedAlmond); //=> Debug: #FFEBCD
+/// 	@debug color-common(macosd, blue); //=> Debug: #2e57ff
+/// @return {color} цвет из карты
+/// @param {map} $color-palette - название цветовой палитры
+/// @param {string} $color-name - название цвета в цветовой палитре
+@function color-common($color-palette, $color-name) {
+
+	// TODO: реализовать как-нибудь подход ниже
+	// $-color-palette: '$color--#{$color-palette}';
+
+	$-color-palette: '';
+
+	// С помощью функции `is-list-contains` проверяем наличие значения
+	// параметра `$color-palette` в списке `config.$vvalues--color-common`:
+	@if is-list-contains(config.$vvalues--color-common, $color-palette) {
+
+		// если значение содержится в списке, то присваиваем приватной
+		// переменной `$-color-palette` значение карты (`map`) с цветовой палитрой:
+		@if $color-palette == 'ios' {
+			$-color-palette: $color--ios;
+		} @else if $color-palette == 'ios-dark' or $color-palette == 'iosd' {
+			$-color-palette: $color--ios-dark;
+		} @else if $color-palette == 'macos' {
+			$-color-palette: $color--macos;
+		} @else if $color-palette == 'macos-dark' or $color-palette == 'macosd' {
+			$-color-palette: $color--macos-dark;
+		} @else if $color-palette == 'watchos' {
+			$-color-palette: $color--watchos;
+		} @else if $color-palette == 'windown' or $color-palette == 'ms' {
+			$-color-palette: $color--windows;
+		} @else if $color-palette == 'md-amber' {
+			$-color-palette: $color--md-amber;
+		} @else if $color-palette == 'md-blue-grey' {
+			$-color-palette: $color--md-blue-grey;
+		} @else if $color-palette == 'md-blue' {
+			$-color-palette: $color--md-blue;
+		} @else if $color-palette == 'md-brown' {
+			$-color-palette: $color--md-brown;
+		} @else if $color-palette == 'md-cyan' {
+			$-color-palette: $color--md-cyan;
+		} @else if $color-palette == 'md-deep-orange' {
+			$-color-palette: $color--md-deep-orange;
+		} @else if $color-palette == 'md-deep-purple' {
+			$-color-palette: $color--md-deep-purple;
+		} @else if $color-palette == 'md-green' {
+			$-color-palette: $color--md-green;
+		} @else if $color-palette == 'md-grey' {
+			$-color-palette: $color--md-grey;
+		} @else if $color-palette == 'md-indigo' {
+			$-color-palette: $color--md-indigo;
+		} @else if $color-palette == 'md-light-blue' {
+			$-color-palette: $color--md-light-blue;
+		} @else if $color-palette == 'md-light-green' {
+			$-color-palette: $color--md-light-green;
+		} @else if $color-palette == 'md-lime' {
+			$-color-palette: $color--md-lime;
+		} @else if $color-palette == 'md-orange' {
+			$-color-palette: $color--md-orange;
+		} @else if $color-palette == 'md-pink' {
+			$-color-palette: $color--md-pink;
+		} @else if $color-palette == 'md-purple' {
+			$-color-palette: $color--md-purple;
+		} @else if $color-palette == 'md-red' {
+			$-color-palette: $color--md-red;
+		} @else if $color-palette == 'md-yellow' {
+			$-color-palette: $color--md-yellow;
+		} @else if $color-palette == 'md-teal' {
+			$-color-palette: $color--md-teal;
+		}
+	}
+
+	// Если совпадений не найдено, то отображаем сообщений об этом:
+	@else {
+		@return invalid-value-message('color-common', $color-palette, 'Common Color Palette');
+	}
+
+	// Возвращаем цвет из палитры:
+	@return map-deep-get($-color-palette, $color-name);
+
+}
