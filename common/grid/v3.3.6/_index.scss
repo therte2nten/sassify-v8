@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
-@use '../../config' as config;
-@use '../../core/cssex/box-sizing' as *;
-@use '../../core/utility/map/map-deep-get' as *;
+@use '../../../config' as config;
+@use '../../../core/cssex/box-sizing' as *;
+@use '../../../core/utility/map/map-deep-get' as *;
 
 @use 'mixin/make-container' as *;
 @use 'mixin/make-container-max-widths' as *;
@@ -12,25 +12,25 @@
 @use 'function/assert-ascending' as *;
 @use 'function/assert-starts-at-zero' as *;
 
-/// Миксин `grid-init` позволяет сгенерировать сетку Bootstrap Grid,
+/// Миксин `make-grid-v3` позволяет сгенерировать сетку Bootstrap Grid,
 /// написанную на Sass. По умолчанию используется 12-ти колононая
 /// система.
 /// ---
-/// @name grid-init
+/// @name make-grid-v3
 /// @group Grid
 /// @since 8.1.0
 /// @access public
 /// @author Haba Kudzaev (therteenten)
 /// @author The Bootstrap Authors
 /// @link https://github.com/twbs/bootstrap Bootstrap GitHub
-/// @link https://github.com/therteenten/sassify/blob/develop/common/grid/_index.scss Исходный код миксина
+/// @link https://github.com/therteenten/sassify/blob/develop/common/grid/v3.3.6/_index.scss Исходный код миксина
 /// @example scss Пример использования в Sass (SCSS)
 /// 	@include grid-init();
 /// @example css Результат работы миксина в CSS
 /// 	/* ... очень много CSS-кода */
 /// @param {boolean} $write-copyright [true] - параметр отвечает за
 /// 	генерацию CSS-комментария с копирайтом проекта Bootstrap.
-@mixin grid-init($write-copyright: true) {
+@mixin make-grid-v3($write-copyright: true) {
 
 	// Генерация CSS-комментария с копирайтом проекта
 	// Bootstrap:
@@ -79,7 +79,7 @@
 /// @access private
 /// @author Haba Kudzaev (therteenten)
 /// @author The Bootstrap Authors
-/// @link https://github.com/therteenten/sassify/blob/develop/common/grid/_index.scss Исходный код миксина
+/// @link https://github.com/therteenten/sassify/blob/develop/common/grid/v3.3.6/_index.scss Исходный код миксина
 /// @link https://github.com/twbs/bootstrap Bootstrap GitHub
 @mixin -minimal-reset() {
 	@if config.$dvalues--grid-minimal-reset == true {
@@ -103,7 +103,7 @@
 /// @access private
 /// @author Haba Kudzaev (therteenten)
 /// @author The Bootstrap Authors
-/// @link https://github.com/therteenten/sassify/blob/develop/common/grid/_index.scss Исходный код миксина
+/// @link https://github.com/therteenten/sassify/blob/develop/common/grid/v3.3.6/_index.scss Исходный код миксина
 /// @link https://github.com/twbs/bootstrap Bootstrap GitHub
 @mixin -create-no-gutters() {
 
@@ -122,5 +122,30 @@
 		}
 
 	}
+
+}
+
+/// Микисн `grid-init` является фолбеком для миксина `make-grid-v3`.
+/// ---
+/// @deprecated Миксин будет удален примерно через пару мажорных версий. Используйте `make-grid-v3`!
+/// @name grid-init
+/// @group Grid
+/// @since 8.1.1
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @link https://github.com/therteenten/sassify/blob/develop/common/grid/v3.3.6/_index.scss Исходный код миксина
+/// @param {boolean} $write-copyright [true] - параметр отвечает за
+/// 	генерацию CSS-комментария с копирайтом проекта Bootstrap.
+@mixin grid-init($write-copyright: true) {
+
+	$-deprecated-message-title: 'Миксин `grid-init` является устаревшим.';
+	$-deprecated-message: 'Необходимо переименовать в местах использования `grid-init` на `make-grid-v3`.';
+
+	/*! DEPRECATED: #{$-deprecated-message-title}
+	 *  #{$-deprecated-message} */
+
+	@warn '#{$-deprecated-message-title} #{$-deprecated-message}';
+
+	@include make-grid-v3($write-copyright);
 
 }

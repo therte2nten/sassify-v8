@@ -1,4 +1,4 @@
-@use '../../../config' as config;
+@use '../../../../config' as config;
 @use '../mixin/media-breakpoint-up' as *;
 
 /// For each breakpoint, define the maximum width of
@@ -10,7 +10,7 @@
 /// @access private
 /// @author Haba Kudzaev (therteenten)
 /// @author The Bootstrap Authors
-/// @link https://github.com/therteenten/sassify/blob/develop/common/grid/_index.scss Исходный код миксина
+/// @link https://github.com/therteenten/sassify/blob/develop/common/grid/v3.3.6/_index.scss Исходный код миксина
 /// @link https://github.com/twbs/bootstrap Bootstrap GitHub
 /// @param {number} $max-widths [$dvalues--grid-container-max-widths]
 /// @param {number} $breakpoints [$dvalues--grid-breakpoints]

@@ -1,4 +1,4 @@
-@use '../../../config' as config;
+@use '../../../../config' as config;
 @use '../function/breakpoint-min' as *;
 
 /// @name media-breakpoint-up
@@ -7,7 +7,7 @@
 /// @access private
 /// @author Haba Kudzaev (therteenten)
 /// @author The Bootstrap Authors
-/// @link https://github.com/therteenten/sassify/blob/develop/common/grid/_index.scss Исходный код миксина
+/// @link https://github.com/therteenten/sassify/blob/develop/common/grid/v3.3.6/_index.scss Исходный код миксина
 /// @link https://github.com/twbs/bootstrap Bootstrap GitHub
 @mixin media-breakpoint-up($name, $breakpoints: config.$dvalues--grid-breakpoints) {
 

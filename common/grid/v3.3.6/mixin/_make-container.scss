@@ -1,5 +1,5 @@
 @use "sass:math";
-@use '../../../config' as config;
+@use '../../../../config' as config;
 
 /// @name make-container
 /// @group Grid
@@ -7,7 +7,7 @@
 /// @access private
 /// @author Haba Kudzaev (therteenten)
 /// @author The Bootstrap Authors
-/// @link https://github.com/therteenten/sassify/blob/develop/common/grid/_index.scss Исходный код миксина
+/// @link https://github.com/therteenten/sassify/blob/develop/common/grid/v3.3.6/_index.scss Исходный код миксина
 /// @link https://github.com/twbs/bootstrap Bootstrap GitHub
 /// @param {number} $gutter [config.$dvalues--grid-gutter-width]
 @mixin make-container($gutter: config.$dvalues--grid-gutter-width) {

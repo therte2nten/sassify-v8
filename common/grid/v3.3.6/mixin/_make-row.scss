@@ -1,7 +1,7 @@
 @use "sass:math";
-@use '../../../config' as *;
-@use '../../../core/cssex/flex/flexbox' as *;
-@use '../../../core/cssex/flex/wrap' as *;
+@use '../../../../config' as *;
+@use '../../../../core/cssex/flex/flexbox' as *;
+@use '../../../../core/cssex/flex/wrap' as *;
 
 /// @name make-row
 /// @group Grid
@@ -9,7 +9,7 @@
 /// @access private
 /// @author Haba Kudzaev (therteenten)
 /// @author The Bootstrap Authors
-/// @link https://github.com/therteenten/sassify/blob/develop/common/grid/_index.scss Исходный код миксина
+/// @link https://github.com/therteenten/sassify/blob/develop/common/grid/v3.3.6/_index.scss Исходный код миксина
 /// @link https://github.com/twbs/bootstrap Bootstrap GitHub
 /// @param {number} $gutter [$dvalues--grid-gutter-width]
 @mixin make-row($gutter: $dvalues--grid-gutter-width) {

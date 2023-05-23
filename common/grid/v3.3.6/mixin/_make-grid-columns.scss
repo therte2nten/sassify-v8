@@ -1,8 +1,8 @@
 @use "sass:math";
 @use "sass:map";
 
-@use '../../../config' as config;
-@use '../../../core/utility/map/map-deep-get' as *;
+@use '../../../../config' as config;
+@use '../../../../core/utility/map/map-deep-get' as *;
 @use '../mixin/make-col-offset' as *;
 @use '../mixin/make-col' as *;
 @use '../mixin/media-breakpoint-up' as *;
@@ -14,7 +14,7 @@
 /// @access private
 /// @author Haba Kudzaev (therteenten)
 /// @author The Bootstrap Authors
-/// @link https://github.com/therteenten/sassify/blob/develop/common/grid/_index.scss Исходный код миксина
+/// @link https://github.com/therteenten/sassify/blob/develop/common/grid/v3.3.6/_index.scss Исходный код миксина
 /// @link https://github.com/twbs/bootstrap Bootstrap GitHub
 /// @param {number} $columns [config.$dvalues--grid-columns]
 /// @param {number} $gutter [config.$dvalues--grid-gutter-width]
