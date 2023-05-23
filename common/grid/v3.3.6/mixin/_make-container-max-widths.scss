@@ -5,18 +5,18 @@
 /// the container in a media query
 /// ---
 /// @name make-container-max-widths
-/// @group Grid
+/// @group grid-v3
 /// @since 8.1.0
 /// @access private
 /// @author Haba Kudzaev (therteenten)
 /// @author The Bootstrap Authors
 /// @link https://github.com/therteenten/sassify/blob/develop/common/grid/v3.3.6/_index.scss Исходный код миксина
 /// @link https://github.com/twbs/bootstrap Bootstrap GitHub
-/// @param {number} $max-widths [$dvalues--grid-container-max-widths]
-/// @param {number} $breakpoints [$dvalues--grid-breakpoints]
+/// @param {number} $max-widths [$dvalues--grid-v3-container-max-widths]
+/// @param {number} $breakpoints [$dvalues--grid-v3-breakpoints]
 @mixin make-container-max-widths(
-	$max-widths: config.$dvalues--grid-container-max-widths,
-	$breakpoints: config.$dvalues--grid-breakpoints) {
+	$max-widths: config.$dvalues--grid-v3-container-max-widths,
+	$breakpoints: config.$dvalues--grid-v3-breakpoints) {
 
 	@each $-breakpoint, $-container-max-width in $max-widths {
 

@@ -1,7 +1,7 @@
 @use 'sass:map';
 
 /// @name breakpoint-next
-/// @group Grid
+/// @group grid-v3
 /// @since 8.1.0
 /// @access private
 /// @author Haba Kudzaev (therteenten)
@@ -9,11 +9,11 @@
 /// @link https://github.com/therteenten/sassify/blob/develop/common/grid/v3.3.6/_index.scss Исходный код миксина
 /// @link https://github.com/twbs/bootstrap Bootstrap GitHub
 /// @param {string} $name
-/// @param {map} $breakpoints [$dvalues--grid-breakpoints]
+/// @param {map} $breakpoints [$dvalues--grid-v3-breakpoints]
 /// @param {map} $$breakpoint-names [map-keys($breakpoints)]
 @function breakpoint-next(
 	$name,
-	$breakpoints: $dvalues--grid-breakpoints,
+	$breakpoints: $dvalues--grid-v3-breakpoints,
 	$breakpoint-names: map-keys($breakpoints)) {
 
 	$-n: index($breakpoint-names, $name);

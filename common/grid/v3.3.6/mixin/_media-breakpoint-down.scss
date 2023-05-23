@@ -1,14 +1,14 @@
 @use '../function/breakpoint-max' as *;
 
 /// @name media-breakpoint-down
-/// @group Grid
+/// @group grid-v3
 /// @since 8.1.0
 /// @access private
 /// @author Haba Kudzaev (therteenten)
 /// @author The Bootstrap Authors
 /// @link https://github.com/therteenten/sassify/blob/develop/common/grid/v3.3.6/_index.scss Исходный код миксина
 /// @link https://github.com/twbs/bootstrap Bootstrap GitHub
-@mixin media-breakpoint-down($name, $breakpoints: $dvalues--grid-breakpoints) {
+@mixin media-breakpoint-down($name, $breakpoints: $dvalues--grid-v3-breakpoints) {
 
 	$-max: breakpoint-max($name, $breakpoints);
 

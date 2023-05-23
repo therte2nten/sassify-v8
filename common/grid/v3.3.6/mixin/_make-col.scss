@@ -1,7 +1,7 @@
 @use "sass:math";
 
 /// @name make-col
-/// @group Grid
+/// @group grid-v3
 /// @since 8.1.0
 /// @access private
 /// @author Haba Kudzaev (therteenten)
@@ -9,10 +9,10 @@
 /// @link https://github.com/therteenten/sassify/blob/develop/common/grid/v3.3.6/_index.scss Исходный код миксина
 /// @link https://github.com/twbs/bootstrap Bootstrap GitHub
 /// @param {number} $size
-/// @param {number} $columns [$dvalues--grid-columns]
+/// @param {number} $columns [$dvalues--grid-v3-columns]
 @mixin make-col(
 	$size,
-	$columns: $dvalues--grid-columns) {
+	$columns: $dvalues--grid-v3-columns) {
 
 	flex: 0 0 percentage(math.div($size, $columns));
 

@@ -1,5 +1,5 @@
 /// @name assert-starts-at-zero
-/// @group Grid
+/// @group grid-v3
 /// @since 8.1.0
 /// @access private
 /// @author Haba Kudzaev (therteenten)
@@ -7,8 +7,8 @@
 /// @link https://github.com/therteenten/sassify/blob/develop/common/grid/v3.3.6/_index.scss Исходный код миксина
 /// @link https://github.com/twbs/bootstrap Bootstrap GitHub
 /// @param {map} $map
-/// @param {string} $map-name ["$dvalues--grid-breakpoints"]
-@mixin assert-starts-at-zero($map, $map-name: "$dvalues--grid-breakpoints") {
+/// @param {string} $map-name ["$dvalues--grid-v3-breakpoints"]
+@mixin assert-starts-at-zero($map, $map-name: "$dvalues--grid-v3-breakpoints") {
 
 	$-values: map-values($map);
 	$-first-value: nth($-values, 1);

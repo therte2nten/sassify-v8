@@ -12,14 +12,14 @@
 /// ошибки будут выводиться в консоль с помощью директивы `@warn`.
 /// ---
 /// @name setting--strict-mode
-/// @group Configs
+/// @group settings
 /// @since 8.0.0
 /// @access public
 /// @type boolean
 $setting--strict-mode: true !default;
 
 /// @name setting--strip-unit__use-sassmath
-/// @group Configs
+/// @group settings
 /// @since 8.0.0
 /// @access public
 /// @deprecated Использование `/` для деления вне `calc()` устарело и будет удалено в DartSass 2.0.0.
@@ -33,7 +33,7 @@ $setting--strip-unit__use-sassmath: true !default;
 /// предпочтениям пользователя или нет.
 /// ---
 /// @name setting--follow-prefers-reduced-motion
-/// @group Configs
+/// @group settings
 /// @since 8.0.0
 /// @access public
 /// @link https://doka.guide/a11y/prefers-reduced-motion/ Как сделать анимацию на сайте доступной.

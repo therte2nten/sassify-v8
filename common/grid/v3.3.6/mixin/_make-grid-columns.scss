@@ -9,20 +9,20 @@
 @use '../function/breakpoint-infix' as *;
 
 /// @name make-grid-columns
-/// @group Grid
+/// @group grid-v3
 /// @since 8.1.0
 /// @access private
 /// @author Haba Kudzaev (therteenten)
 /// @author The Bootstrap Authors
 /// @link https://github.com/therteenten/sassify/blob/develop/common/grid/v3.3.6/_index.scss Исходный код миксина
 /// @link https://github.com/twbs/bootstrap Bootstrap GitHub
-/// @param {number} $columns [config.$dvalues--grid-columns]
-/// @param {number} $gutter [config.$dvalues--grid-gutter-width]
-/// @param {number} $breakpoints [config.$dvalues--grid-breakpoints]
+/// @param {number} $columns [config.$dvalues--grid-v3-columns]
+/// @param {number} $gutter [config.$dvalues--grid-v3-gutter-width]
+/// @param {number} $breakpoints [config.$dvalues--grid-v3-breakpoints]
 @mixin make-grid-columns(
-	$columns: config.$dvalues--grid-columns,
-	$gutter: config.$dvalues--grid-gutter-width,
-	$breakpoints: config.$dvalues--grid-breakpoints) {
+	$columns: config.$dvalues--grid-v3-columns,
+	$gutter: config.$dvalues--grid-v3-gutter-width,
+	$breakpoints: config.$dvalues--grid-v3-breakpoints) {
 
 	// Common properties for all breakpoints
 	%grid-column {
@@ -38,49 +38,49 @@
 
 		// Allow columns to stretch full width below their breakpoints
 		@for $-i from 1 through $columns {
-			.#{map-deep-get(config.$dvalues--grid-class-naming, 'col')}#{$-infix}-#{$-i} {
+			.#{map-deep-get(config.$dvalues--grid-v3-class-naming, 'col')}#{$-infix}-#{$-i} {
 				@extend %grid-column;
 			}
 		}
 
-		.#{map-deep-get(config.$dvalues--grid-class-naming, 'col')}#{$-infix},
-		.#{map-deep-get(config.$dvalues--grid-class-naming, 'col')}#{$-infix}-#{map-deep-get(config.$dvalues--grid-class-naming, 'auto')} {
+		.#{map-deep-get(config.$dvalues--grid-v3-class-naming, 'col')}#{$-infix},
+		.#{map-deep-get(config.$dvalues--grid-v3-class-naming, 'col')}#{$-infix}-#{map-deep-get(config.$dvalues--grid-v3-class-naming, 'auto')} {
 			@extend %grid-column;
 		}
 
 		@include media-breakpoint-up($breakpoint, $breakpoints) {
 
-			// Provide basic `.#{map-deep-get(config.$dvalues--grid-class-naming, 'col')}-{bp}` classes for equal-width flexbox columns
-			.#{map-deep-get(config.$dvalues--grid-class-naming, 'col')}#{$-infix} {
+			// Provide basic `.#{map-deep-get(config.$dvalues--grid-v3-class-naming, 'col')}-{bp}` classes for equal-width flexbox columns
+			.#{map-deep-get(config.$dvalues--grid-v3-class-naming, 'col')}#{$-infix} {
 				flex-basis: 0;
 				flex-grow: 1;
 				max-width: 100%;
 			}
 
-			.#{map-deep-get(config.$dvalues--grid-class-naming, 'col')}#{$-infix}-auto {
+			.#{map-deep-get(config.$dvalues--grid-v3-class-naming, 'col')}#{$-infix}-auto {
 				flex: 0 0 auto;
 				width: auto;
 				max-width: 100%; // Reset earlier grid tiers
 			}
 
 			@for $-i from 1 through $columns {
-				.#{map-deep-get(config.$dvalues--grid-class-naming, 'col')}#{$-infix}-#{$-i} {
+				.#{map-deep-get(config.$dvalues--grid-v3-class-naming, 'col')}#{$-infix}-#{$-i} {
 					@include make-col($-i, $columns);
 				}
 			}
 
-			.#{map-deep-get(config.$dvalues--grid-class-naming, 'order')}#{$-infix}-#{map-deep-get(config.$dvalues--grid-class-naming, 'first')} { order: -1; }
+			.#{map-deep-get(config.$dvalues--grid-v3-class-naming, 'order')}#{$-infix}-#{map-deep-get(config.$dvalues--grid-v3-class-naming, 'first')} { order: -1; }
 
-			.#{map-deep-get(config.$dvalues--grid-class-naming, 'order')}#{$-infix}-#{map-deep-get(config.$dvalues--grid-class-naming, 'last')} { order: $columns + 1; }
+			.#{map-deep-get(config.$dvalues--grid-v3-class-naming, 'order')}#{$-infix}-#{map-deep-get(config.$dvalues--grid-v3-class-naming, 'last')} { order: $columns + 1; }
 
 			@for $-i from 0 through $columns {
-				.#{map-deep-get(config.$dvalues--grid-class-naming, 'order')}#{$-infix}-#{$-i} { order: $-i; }
+				.#{map-deep-get(config.$dvalues--grid-v3-class-naming, 'order')}#{$-infix}-#{$-i} { order: $-i; }
 			}
 
 			// `$columns - 1` because offsetting by the width of an entire row isn't possible
 			@for $-i from 0 through ($columns - 1) {
-				@if not ($-infix == "" and $-i == 0) { // Avoid emitting useless .#{map-deep-get(config.$dvalues--grid-class-naming, 'offset')}-0
-					.#{map-deep-get(config.$dvalues--grid-class-naming, 'offset')}#{$-infix}-#{$-i} {
+				@if not ($-infix == "" and $-i == 0) { // Avoid emitting useless .#{map-deep-get(config.$dvalues--grid-v3-class-naming, 'offset')}-0
+					.#{map-deep-get(config.$dvalues--grid-v3-class-naming, 'offset')}#{$-infix}-#{$-i} {
 						@include make-col-offset($-i, $columns);
 					}
 				}

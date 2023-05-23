@@ -17,7 +17,7 @@
 /// система.
 /// ---
 /// @name make-grid-v3
-/// @group Grid
+/// @group grid-v3
 /// @since 8.1.0
 /// @access public
 /// @author Haba Kudzaev (therteenten)
@@ -47,34 +47,34 @@
 	@include -minimal-reset();
 
 	// Генерация классов `.container`
-	.#{map-deep-get(config.$dvalues--grid-class-naming, 'container')} {
+	.#{map-deep-get(config.$dvalues--grid-v3-class-naming, 'container')} {
 		@include make-container();
 		@include make-container-max-widths();
 	}
 
 	// Генерация классов `.container-fluid`
-	.#{map-deep-get(config.$dvalues--grid-class-naming, 'container-fluid')} {
+	.#{map-deep-get(config.$dvalues--grid-v3-class-naming, 'container-fluid')} {
 		@include make-container();
 	}
 
 	// Генерация классов `.row`
-	.#{map-deep-get(config.$dvalues--grid-class-naming, 'row')} {
+	.#{map-deep-get(config.$dvalues--grid-v3-class-naming, 'row')} {
 		@include make-row();
 	}
 
 	@include -create-no-gutters();
 
 	@include make-grid-columns();
-	@include assert-starts-at-zero(config.$dvalues--grid-breakpoints, "$dvalues--grid-breakpoints");
-	@include assert-ascending(config.$dvalues--grid-breakpoints, "$dvalues--grid-breakpoints");
-	@include assert-ascending(config.$dvalues--grid-container-max-widths, "$dvalues--grid-container-max-widths");
+	@include assert-starts-at-zero(config.$dvalues--grid-v3-breakpoints, "$dvalues--grid-v3-breakpoints");
+	@include assert-ascending(config.$dvalues--grid-v3-breakpoints, "$dvalues--grid-v3-breakpoints");
+	@include assert-ascending(config.$dvalues--grid-v3-container-max-widths, "$dvalues--grid-v3-container-max-widths");
 
 }
 
 /// Миксин генерирует ну очень простой ресет.
 /// ---
 /// @name -minimal-reset
-/// @group Grid
+/// @group grid-v3
 /// @since 8.1.0
 /// @access private
 /// @author Haba Kudzaev (therteenten)
@@ -82,7 +82,7 @@
 /// @link https://github.com/therteenten/sassify/blob/develop/common/grid/v3.3.6/_index.scss Исходный код миксина
 /// @link https://github.com/twbs/bootstrap Bootstrap GitHub
 @mixin -minimal-reset() {
-	@if config.$dvalues--grid-minimal-reset == true {
+	@if config.$dvalues--grid-v3-minimal-reset == true {
 		*,
 		*::before,
 		*::after {
@@ -98,7 +98,7 @@
 /// `no-gutters`.
 /// ---
 /// @name -create-no-gutters
-/// @group Grid
+/// @group grid-v3
 /// @since 8.1.0
 /// @access private
 /// @author Haba Kudzaev (therteenten)
@@ -107,14 +107,14 @@
 /// @link https://github.com/twbs/bootstrap Bootstrap GitHub
 @mixin -create-no-gutters() {
 
-	@if config.$dvalues--grid-create-class__no-gutters == true {
+	@if config.$dvalues--grid-v3-create-class__no-gutters == true {
 
 		.no-gutters {
 			margin-right: 0;
 			margin-left: 0;
 
-			> .#{map-deep-get(config.$dvalues--grid-class-naming, 'col')},
-			> [class*="#{map-deep-get(config.$dvalues--grid-class-naming, 'col')}-"] {
+			> .#{map-deep-get(config.$dvalues--grid-v3-class-naming, 'col')},
+			> [class*="#{map-deep-get(config.$dvalues--grid-v3-class-naming, 'col')}-"] {
 				padding-right: 0;
 				padding-left: 0;
 			}
@@ -129,7 +129,7 @@
 /// ---
 /// @deprecated Миксин будет удален примерно через пару мажорных версий. Используйте `make-grid-v3`!
 /// @name grid-init
-/// @group Grid
+/// @group grid-v3
 /// @since 8.1.1
 /// @access public
 /// @author Haba Kudzaev (therteenten)
