@@ -1,9 +1,0 @@
-@use '../index.scss' as sassify with (
-	$dvalues--grid-minimal-reset: true
-);
-
-.test-flexbox {
-	@include sassify.flexbox();
-}
-
-@include sassify.grid-init();

@@ -4,7 +4,7 @@
 	"description": "Большой набор миксинов и функций на языке CSS-препроцессора Sass",
 	"main": "index.scss",
 	"scripts": {
-		"test": "sass --watch tests/index.scss:tests/dist/stylesheets/index.test.css",
+		"test": "sass --watch _test.scss:test.css",
 		"sassdoc": "npx sassdoc . -d docs/",
 		"npm:publish": "npm publish --access public",
 		"npm:version-major": "npm version major -m \"Обновил версию пакета до %s\"",

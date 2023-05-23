@@ -1,0 +1,7 @@
+@use 'index.scss' as * with (
+	$setting--strict-mode: false
+);
+
+.text-error {
+	color: color-common(md-red, z500);
+}
