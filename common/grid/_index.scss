@@ -1,0 +1,160 @@
+@use '../../config' as config;
+@use '../../core/cssex/box-sizing' as *;
+@use '../../core/utility/map/map-deep-get' as *;
+
+@use 'core/make-container' as *;
+@use 'core/make-row' as *;
+@use 'core/make-grid-columns' as *;
+@use 'core/media-breakpoint-up' as *;
+@use 'core/utility/breakpoint-infix' as *;
+
+/// Миксин генерирует 12-ти колоночную (без настроек) сетку
+/// Bootstrap Grid из версии 4.6.2.
+/// ---
+/// @name make-grid
+/// @group grid
+/// @since 8.1.1
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @link https://github.com/therteenten/sassify/blob/main/common/grid/_index.scss Исходный код миксина
+/// @example scss Пример использования в Sass (SCSS)
+/// 	// grid.scss
+/// 	@include make-grid();
+/// @example css Результат в CSS
+/// 	// Очень много CSS-кода (кода сетки)
+/// @param {boolean} $write-copyright [true] - параметр регулирует
+/// 	генерацию CSS-комментария с текстом копирайта проекта Bootstrap
+@mixin make-grid($write-copyright: true) {
+
+	@if $write-copyright == true {
+		/*!
+		 * Bootstrap Grid v4.6.2 (https://getbootstrap.com/)
+		 * Copyright 2011-2022 The Bootstrap Authors
+		 * Copyright 2011-2022 Twitter, Inc.
+		 * Copyright 2023 Haba Kudzaev (therteenten)
+		 * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+		 */
+	}
+
+	@include -gen-minimal-reset();
+	@include -gen-container();
+	@include -gen-row();
+
+	@include make-grid-columns();
+
+}
+
+/// @name -gen-row
+/// @group grid
+/// @since 8.1.1
+/// @access private
+/// @author Haba Kudzaev (therteenten)
+/// @link https://github.com/therteenten/sassify/blob/main/common/grid/_index.scss Исходный код миксина
+@mixin -gen-row() {
+
+	.#{map-deep-get(config.$dvalues--grid-class-names, row)} {
+    @include make-row();
+  }
+
+  // Удалите отрицательное поле из `.row` по умолчанию, затем
+	// горизонтальное заполнение из всех непосредственных дочерних
+	// столбцов (чтобы предотвратить наследование безудержного стиля).
+  .#{map-deep-get(config.$dvalues--grid-class-names, no-gutters)} {
+    margin-right: 0;
+    margin-left: 0;
+
+    > .#{map-deep-get(config.$dvalues--grid-class-names, col)},
+    > [class*=".#{map-deep-get(config.$dvalues--grid-class-names, col)}-"] {
+      padding-right: 0;
+      padding-left: 0;
+    }
+
+  }
+
+}
+
+/// @name -gen-container
+/// @group grid
+/// @since 8.1.1
+/// @access private
+/// @author Haba Kudzaev (therteenten)
+/// @link https://github.com/therteenten/sassify/blob/main/common/grid/_index.scss Исходный код миксина
+@mixin -gen-container() {
+
+	// Класс одиночного контейнера с максимальной
+	// шириной точки останова
+	.#{map-deep-get(config.$dvalues--grid-class-names, container)},
+	// контейнер шириной 100% во всех точках останова
+	.#{map-deep-get(config.$dvalues--grid-class-names, container-fluid)} {
+		@include make-container();
+	}
+
+	// Адаптивные контейнеры шириной 100% до
+	// достижения точки останова
+	@each $-breakpoint, $-container-max-width in config.$dvalues--grid-container-max-widths {
+
+		.#{map-deep-get(config.$dvalues--grid-class-names, container)}-#{$-breakpoint} {
+			@extend .#{map-deep-get(config.$dvalues--grid-class-names, container-fluid)};
+		}
+
+		@include media-breakpoint-up($-breakpoint, config.$dvalues--grid-breakpoints) {
+
+			%responsive-container-#{$-breakpoint} {
+				max-width: $-container-max-width;
+			}
+
+			// Расширять каждую точку останова, которая
+			// меньше или равна текущей точке останова:
+			$-extend-breakpoint: true;
+
+			@each $-name, $-width in config.$dvalues--grid-breakpoints {
+
+				@if ($-extend-breakpoint) {
+
+					.#{map-deep-get(config.$dvalues--grid-class-names, container)}#{breakpoint-infix($-name, config.$dvalues--grid-breakpoints)} {
+						@extend %responsive-container-#{$-breakpoint};
+					}
+
+					// Как только текущая точка останова будет
+					// достигнута, прекратите расширение:
+					@if ($-breakpoint == $-name) {
+						$-extend-breakpoint: false;
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+/// Миксин `-gen-minimal-reset` генерирует минимальный ресет для
+/// сетки.
+/// ---
+/// @name -gen-minimal-reset
+/// @group grid
+/// @since 8.1.1
+/// @access private
+/// @author Haba Kudzaev (therteenten)
+/// @link https://github.com/therteenten/sassify/blob/main/common/grid/_index.scss Исходный код миксина
+@mixin -gen-minimal-reset() {
+
+	@if config.$dvalues--grid-generate-minimal-reset == true {
+
+		html {
+			-ms-overflow-style: scrollbar;
+			@include box-sizing(border-box);
+		}
+
+		*,
+		*::before,
+		*::after {
+			@include box-sizing(inherit);
+		}
+
+	}
+
+}

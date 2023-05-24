@@ -1,0 +1,27 @@
+@use 'sass:math';
+@use 'sass:map';
+
+@use '../../../../config' as config;
+
+/// @name breakpoint-next
+/// @group grid
+/// @since 8.1.1
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @author The Bootstrap Authors
+/// @link https://github.com/therteenten/sassify/blob/main/common/grid Sassify Grid GitHub
+/// @link https://github.com/twbs/bootstrap Bootstrap GitHub
+@function breakpoint-next(
+	$name, $breakpoints:
+	config.$dvalues--grid-breakpoints,
+	$breakpoint-names: map-keys($breakpoints)) {
+
+  $-n: index($breakpoint-names, $name);
+
+  @return if(
+		$-n != null and $-n < length($breakpoint-names),
+		nth($breakpoint-names, $-n + 1),
+		null
+	);
+
+}

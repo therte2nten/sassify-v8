@@ -84,12 +84,10 @@
 @forward 'core/utility/validator/is-time';
 
 @forward 'common/check';
+@forward 'common/grid';
 @forward 'common/store/css-media_queries';
 @forward 'common/store/css-shadows';
 @forward 'common/store/css-types';
-
-@forward 'common/grid/v3.3.6';
-@forward 'common/grid/v4.6.2';
 
 @forward 'common/color/apple-hig/ios';
 @forward 'common/color/apple-hig/macos';

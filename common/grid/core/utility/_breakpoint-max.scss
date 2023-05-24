@@ -1,0 +1,24 @@
+@use '../../../../config' as config;
+@use 'breakpoint-min' as *;
+
+/// @name breakpoint-max
+/// @group grid
+/// @since 8.1.1
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @author The Bootstrap Authors
+/// @link https://github.com/therteenten/sassify/blob/main/common/grid Sassify Grid GitHub
+/// @link https://github.com/twbs/bootstrap Bootstrap GitHub
+@function breakpoint-max(
+	$name,
+	$breakpoints: config.$dvalues--grid-breakpoints) {
+
+  $-next: breakpoint-next($name, $breakpoints);
+
+  @return if(
+		$-next,
+		breakpoint-min($-next, $breakpoints) - .02,
+		null
+	);
+
+}

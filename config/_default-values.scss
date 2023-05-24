@@ -1,4 +1,88 @@
+/// @name dvalues--grid-class-names
+/// @group default-values
+/// @since 8.1.1
+/// @access public
+/// @type map
+/// @prop {string} $dvalues--grid-class-names.container ['container']
+/// @prop {string} $dvalues--grid-class-names.container-fluid ['container-fluid']
+/// @prop {string} $dvalues--grid-class-names.row ['row']
+/// @prop {string} $dvalues--grid-class-names.no-gutters ['no-gutters']
+/// @prop {string} $dvalues--grid-class-names.col ['col']
+/// @prop {string} $dvalues--grid-class-names.cols ['cols']
+/// @prop {string} $dvalues--grid-class-names.order ['order']
+/// @prop {string} $dvalues--grid-class-names.offset ['offset']
+$dvalues--grid-class-names: (
+	container: 'container',
+	container-fluid: 'container-fluid',
+	row: 'row',
+	no-gutters: 'no-gutters',
+	col: 'col',
+	cols: 'cols',
+	order: 'order',
+	offset: 'offset'
+) !default;
 
+/// @name dvalues--grid-generate-minimal-reset
+/// @group default-values
+/// @since 8.1.1
+/// @access public
+/// @type boolean
+$dvalues--grid-generate-minimal-reset: false !default;
+
+/// @name dvalues--grid-columns
+/// @group default-values
+/// @since 8.1.1
+/// @access public
+/// @type number
+$dvalues--grid-columns: 12 !default;
+
+/// @name dvalues--grid-gutter-width
+/// @group default-values
+/// @since 8.1.1
+/// @access public
+/// @type number
+$dvalues--grid-gutter-width: 30px !default;
+
+/// @name dvalues--grid-row-columns
+/// @group default-values
+/// @since 8.1.1
+/// @access public
+/// @type number
+$dvalues--grid-row-columns: 6 !default;
+
+/// @name dvalues--grid-container-max-widths
+/// @group default-values
+/// @since 8.1.1
+/// @access public
+/// @type map
+/// @prop {string} $dvalues--grid-container-max-widths.sm [540px]
+/// @prop {string} $dvalues--grid-container-max-widths.md [720px]
+/// @prop {string} $dvalues--grid-container-max-widths.lg [960px]
+/// @prop {string} $dvalues--grid-container-max-widths.xl [1140px]
+$dvalues--grid-container-max-widths: (
+	sm: 540px,
+	md: 720px,
+	lg: 960px,
+	xl: 1140px
+) !default;
+
+/// @name dvalues--grid-breakpoints
+/// @group default-values
+/// @since 8.1.1
+/// @access public
+/// @type map
+/// @prop {string} $dvalues--grid-breakpoints.xs [0]
+/// @prop {string} $dvalues--grid-breakpoints.sm [576px]
+/// @prop {string} $dvalues--grid-breakpoints.md [768px]
+/// @prop {string} $dvalues--grid-breakpoints.lg [992px]
+/// @prop {string} $dvalues--grid-breakpoints.xl [1200px]
+$dvalues--grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px
+) !default;
 
 /// @name dvalues--justify-content
 /// @group default-values

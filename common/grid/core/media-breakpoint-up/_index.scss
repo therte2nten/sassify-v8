@@ -1,0 +1,34 @@
+@use '../../../../config' as config;
+@use '../utility/breakpoint-min' as *;
+
+/// Носитель с шириной, по крайней мере, минимальной
+/// точки останова. Нет запроса на наименьшую точку останова.
+///
+/// Заставляет `@content` применяться к заданной точке
+/// останова и шире.
+/// ---
+/// @name media-breakpoint-up
+/// @group grid
+/// @since 8.1.1
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @author The Bootstrap Authors
+/// @link https://github.com/therteenten/sassify/blob/main/common/grid Sassify Grid GitHub
+/// @link https://github.com/twbs/bootstrap Bootstrap GitHub
+@mixin media-breakpoint-up(
+	$name,
+	$breakpoints: config.$dvalues--grid-breakpoints) {
+
+  $-min: breakpoint-min($name, $breakpoints);
+
+  @if $-min {
+    @media (min-width: $-min) {
+      @content;
+    }
+  }
+
+	@else {
+    @content;
+  }
+
+}
