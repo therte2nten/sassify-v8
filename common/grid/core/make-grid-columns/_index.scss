@@ -1,0 +1,125 @@
+@use 'sass:math';
+@use 'sass:map';
+
+@use '../media-breakpoint-up' as *;
+@use '../row-cols' as *;
+@use '../make-col' as *;
+@use '../make-col/auto' as *;
+@use '../make-col/offset' as *;
+@use '../utility/breakpoint-infix' as *;
+
+@use '../../../../core/cssex/flex/basis' as *;
+@use '../../../../core/cssex/flex/grow' as *;
+@use '../../../../core/utility/map/map-deep-get' as *;
+@use '../../../../config' as config;
+
+/// @name make-grid-columns
+/// @group grid
+/// @since 8.1.1
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @author The Bootstrap Authors
+/// @link https://github.com/therteenten/sassify/blob/main/common/grid Sassify Grid GitHub
+/// @link https://github.com/twbs/bootstrap Bootstrap GitHub
+/// @param {number} $columns [config.$dvalues--grid-columns]
+/// @param {number} $gutter [$gutter]
+/// @param {map} $breakpoints [config.$dvalues--grid-breakpoints]
+@mixin make-grid-columns(
+	$columns: config.$dvalues--grid-columns,
+	$gutter: config.$dvalues--grid-gutter-width,
+	$breakpoints: config.$dvalues--grid-breakpoints) {
+
+	// Общие свойства для всех точек останова
+	%grid-column {
+		position: relative;
+		width: 100%;
+		padding-right: $gutter * .5;
+		padding-left: $gutter * .5;
+	}
+
+	@each $-breakpoint in map-keys($breakpoints) {
+
+		$-infix: breakpoint-infix($-breakpoint, $breakpoints);
+
+		@if $columns > 0 {
+
+			// Разрешить столбцам растягиваться на всю ширину ниже
+			// их точек останова
+			@for $-i from 1 through $columns {
+
+				.#{map-deep-get(config.$dvalues--grid-class-names, col)}#{$-infix}-#{$-i} {
+					@extend %grid-column;
+				}
+
+			}
+
+		}
+
+		.#{map-deep-get(config.$dvalues--grid-class-names, col)}#{$-infix},
+		.#{map-deep-get(config.$dvalues--grid-class-names, col)}#{$-infix}-auto {
+			@extend %grid-column;
+		}
+
+		@include media-breakpoint-up($-breakpoint, $breakpoints) {
+
+			// Предоставьте базовые классы `.col-{bp}` для столбцов
+			// flexbox одинаковой ширины
+			.#{map-deep-get(config.$dvalues--grid-class-names, col)}#{$-infix} {
+
+				max-width: 100%;
+
+				@include flex-basis(0);
+				@include flex-grow(1);
+
+			}
+
+			@if config.$dvalues--grid-row-columns > 0 {
+				@for $-i from 1 through config.$dvalues--grid-row-columns {
+					.#{map-deep-get(config.$dvalues--grid-class-names, row)}-#{map-deep-get(config.$dvalues--grid-class-names, cols)}#{$-infix}-#{$-i} {
+						@include row-cols($-i);
+					}
+				}
+			}
+
+			.#{map-deep-get(config.$dvalues--grid-class-names, col)}#{$-infix}-auto {
+				@include make-col-auto();
+			}
+
+			@if $columns > 0 {
+				@for $-i from 1 through $columns {
+					.#{map-deep-get(config.$dvalues--grid-class-names, col)}#{$-infix}-#{$-i} {
+						@include make-col($-i, $columns);
+					}
+				}
+			}
+
+			.#{map-deep-get(config.$dvalues--grid-class-names, order)}#{$-infix}-first { order: -1; }
+
+			.#{map-deep-get(config.$dvalues--grid-class-names, order)}#{$-infix}-last { order: $columns + 1; }
+
+			@for $-i from 0 through $columns {
+				.#{map-deep-get(config.$dvalues--grid-class-names, order)}#{$-infix}-#{$-i} { order: $-i; }
+			}
+
+			@if $columns > 0 {
+
+				// `$columns - 1`, потому что смещение по ширине всей строки невозможно
+				@for $-i from 0 through ($columns - 1) {
+
+					@if not ($-infix == "" and $-i == 0) { // Избегайте бесполезного излучения .offset-0
+
+						.#{map-deep-get(config.$dvalues--grid-class-names, offset)}#{$-infix}-#{$-i} {
+							@include make-col-offset($-i, $columns);
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+}

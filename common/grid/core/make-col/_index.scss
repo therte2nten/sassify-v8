@@ -1,0 +1,26 @@
+@use 'sass:math';
+@use '../../../../config' as config;
+@use '../../../../core/cssex/flex' as *;
+@use '../utility/divide' as *;
+
+/// @name make-col
+/// @group grid
+/// @since 8.1.1
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @author The Bootstrap Authors
+/// @link https://github.com/therteenten/sassify/blob/main/common/grid Sassify Grid GitHub
+/// @link https://github.com/twbs/bootstrap Bootstrap GitHub
+/// @param {number} $size
+/// @param {number} $columns [config.$dvalues--grid-columns]
+@mixin make-col($size, $columns: config.$dvalues--grid-columns) {
+
+	// Добавьте `max-width`, чтобы гарантировать, что содержимое
+	// внутри каждого столбца не будет превышать ширину столбца.
+	// Применяется к IE10+ и Firefox. Chrome и Safari, по-видимому,
+	// этого не требуют.
+  max-width: percentage(divide($size, $columns));
+
+	@include flex(0 0 percentage(divide($size, $columns)));
+
+}

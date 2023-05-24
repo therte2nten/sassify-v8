@@ -34,11 +34,11 @@
 /// > функции не будет изменён. Так что пользоваться можно.
 /// ---
 /// @name color-common
-/// @group Core
+/// @group core
 /// @since 8.1.1
 /// @access public
 /// @author Haba Kudzaev (therteenten)
-/// @link https://github.com/therteenten/sassify/blob/develop/core/utility/color/_color-common.scss Исходный код миксина
+/// @link https://github.com/therteenten/sassify/blob/main/core/utility/color/_color-common.scss Исходный код миксина
 /// @example scss Пример использования в Sass (SCSS)
 /// 	@debug color-common(ios, red); //=> Debug: #ff0000
 /// 	@debug color-common(md-amber, 600); //=> Debug: #ffb300

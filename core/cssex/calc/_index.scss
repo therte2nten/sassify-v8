@@ -17,7 +17,7 @@
 /// префиксами.
 /// ---
 /// @name calc
-/// @group CSSex
+/// @group core-cssex
 /// @since 8.0.0
 /// @access public
 /// @author Roman Matusevich
@@ -25,7 +25,7 @@
 /// @link https://github.com/drublic/Sass-Mixins/blob/master/mixins.scss Исходный код
 /// @link http://caniuse.com/calc Can i use
 /// @link http://www.w3.org/TR/css3-values/#calc Спецификация `calc()` W3
-/// @link https://github.com/therteenten/sassify/blob/develop/core/cssex/calc/_index.scss Исходный код миксина
+/// @link https://github.com/therteenten/sassify/blob/main/core/cssex/calc/_index.scss Исходный код миксина
 /// @example scss Пример использования в Sass (SCSS)
 /// 	.selector {
 /// 		@include calc(width, '600px - 2em');

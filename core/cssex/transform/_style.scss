@@ -28,11 +28,11 @@
 /// `transform-style` со всеми необходимыми браузерными префиксами.
 /// ---
 /// @name transform-style
-/// @group CSSex
+/// @group core-cssex
 /// @since 8.0.0
 /// @access public
 /// @author Haba Kudzaev (therteenten)
-/// @link https://github.com/therteenten/sassify/blob/develop/core/cssex/transform-style/_index.scss Исходный код миксина
+/// @link https://github.com/therteenten/sassify/blob/main/core/cssex/transform-style/_index.scss Исходный код миксина
 /// @example scss Пример использования в Sass (SCSS)
 /// 	.selector {
 /// 		@include transform-style(preserve-3d)

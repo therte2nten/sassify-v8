@@ -1,0 +1,29 @@
+@use '../../../../config' as config;
+@use '../media-breakpoint-up' as *;
+
+/// Для каждой точки останова определите максимальную ширину
+/// контейнера в медиа-запросе
+/// ---
+/// @name make-container-max-widths
+/// @group grid
+/// @since 8.1.1
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @author The Bootstrap Authors
+/// @link https://github.com/therteenten/sassify/blob/main/common/grid Sassify Grid GitHub
+/// @link https://github.com/twbs/bootstrap Bootstrap GitHub
+/// @param {map} $max-widths [config.$dvalues--grid-container-max-widths]
+/// @param {map} $breakpoints [config.$dvalues--grid-breakpoints]
+@mixin make-container-max-widths(
+	$max-widths: config.$dvalues--grid-container-max-widths,
+	$breakpoints: config.$dvalues--grid-breakpoints) {
+
+	@each $-breakpoint, $-container-max-width in $max-widths {
+
+    @include media-breakpoint-up($-breakpoint, $breakpoints) {
+      max-width: $-container-max-width;
+    }
+
+  }
+
+}

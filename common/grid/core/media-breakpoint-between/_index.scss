@@ -1,0 +1,47 @@
+@use '../../../../config' as config;
+
+@use '../media-breakpoint-up' as *;
+@use '../media-breakpoint-down' as *;
+@use '../utility/breakpoint-min' as *;
+@use '../utility/breakpoint-max' as *;
+
+/// Носитель, который охватывает несколько точек останова
+/// по ширине.
+/// Заставляет `@content` применяться между минимальной
+/// и максимальной точками останова.
+/// ---
+/// @name media-breakpoint-between
+/// @group grid
+/// @since 8.1.1
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @author The Bootstrap Authors
+/// @link https://github.com/therteenten/sassify/blob/main/common/grid Sassify Grid GitHub
+/// @link https://github.com/twbs/bootstrap Bootstrap GitHub
+@mixin media-breakpoint-between(
+	$lower,
+	$upper,
+	$breakpoints: config.$dvalues--grid-breakpoints) {
+
+  $-min: breakpoint-min($lower, $breakpoints);
+  $-max: breakpoint-max($upper, $breakpoints);
+
+  @if $-min != null and $-max != null {
+    @media (min-width: $-min) and (max-width: $-max) {
+      @content;
+    }
+  }
+
+	@else if $-max == null {
+    @include media-breakpoint-up($lower, $breakpoints) {
+      @content;
+    }
+  }
+
+	@else if $-min == null {
+    @include media-breakpoint-down($upper, $breakpoints) {
+      @content;
+    }
+  }
+
+}

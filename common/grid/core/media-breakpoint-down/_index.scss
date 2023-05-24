@@ -1,0 +1,34 @@
+@use '../../../../config' as config;
+@use '../utility/breakpoint-max' as *;
+
+/// Носитель не более максимальной ширины точки останова.
+/// Нет запроса на самую большую точку останова.
+///
+/// Делает `@content` применимым к заданной точке останова и
+/// более узким.
+/// ---
+/// @name media-breakpoint-down
+/// @group grid
+/// @since 8.1.1
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @author The Bootstrap Authors
+/// @link https://github.com/therteenten/sassify/blob/main/common/grid Sassify Grid GitHub
+/// @link https://github.com/twbs/bootstrap Bootstrap GitHub
+@mixin media-breakpoint-down(
+	$name,
+	$breakpoints: config.$dvalues--grid-breakpoints) {
+
+  $-max: breakpoint-max($name, $breakpoints);
+
+  @if $-max {
+    @media (max-width: $-max) {
+      @content;
+    }
+  }
+
+	@else {
+    @content;
+  }
+
+}

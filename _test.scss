@@ -1,5 +1,32 @@
 @use 'index.scss' as * with (
-	$setting--strict-mode: false
+	$setting--strict-mode: false,
+	$dvalues--grid-class-names: (
+		container: 'container',
+		container-fluid: 'container-fluid',
+		row: 'row',
+		no-gutters: 'no-gutters',
+		col: 'col',
+		cols: 'cols',
+		order: 'order',
+		offset: 'offset'
+	),
+	$dvalues--grid-generate-minimal-reset: false,
+	$dvalues--grid-columns: 12,
+	$dvalues--grid-gutter-width: 30px,
+	$dvalues--grid-row-columns: 6,
+	$dvalues--grid-container-max-widths: (
+		sm: 540px,
+		md: 720px,
+		lg: 960px,
+		xl: 1140px
+	),
+	$dvalues--grid-breakpoints: (
+		xs: 0,
+		sm: 576px,
+		md: 768px,
+		lg: 992px,
+		xl: 1200px
+	)
 );
 
-
+@include make-grid();
