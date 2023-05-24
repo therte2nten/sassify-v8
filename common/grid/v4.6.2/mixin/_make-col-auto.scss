@@ -1,5 +1,0 @@
-@mixin make-col-auto() {
-  flex: 0 0 auto;
-  width: auto;
-  max-width: 100%; // Reset earlier grid tiers
-}
