@@ -16,9 +16,9 @@
 	config.$dvalues--grid-breakpoints,
 	$breakpoint-names: map-keys($breakpoints)) {
 
-  $-n: index($breakpoint-names, $name);
+	$-n: index($breakpoint-names, $name);
 
-  @return if(
+	@return if(
 		$-n != null and $-n < length($breakpoint-names),
 		nth($breakpoint-names, $-n + 1),
 		null

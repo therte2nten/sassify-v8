@@ -53,23 +53,23 @@
 @mixin -gen-row() {
 
 	.#{map-deep-get(config.$dvalues--grid-class-names, row)} {
-    @include make-row();
-  }
+		@include make-row();
+	}
 
-  // Удалите отрицательное поле из `.row` по умолчанию, затем
+	// Удалите отрицательное поле из `.row` по умолчанию, затем
 	// горизонтальное заполнение из всех непосредственных дочерних
 	// столбцов (чтобы предотвратить наследование безудержного стиля).
-  .#{map-deep-get(config.$dvalues--grid-class-names, no-gutters)} {
-    margin-right: 0;
-    margin-left: 0;
+	.#{map-deep-get(config.$dvalues--grid-class-names, no-gutters)} {
+		margin-right: 0;
+		margin-left: 0;
 
-    > .#{map-deep-get(config.$dvalues--grid-class-names, col)},
-    > [class*=".#{map-deep-get(config.$dvalues--grid-class-names, col)}-"] {
-      padding-right: 0;
-      padding-left: 0;
-    }
+		> .#{map-deep-get(config.$dvalues--grid-class-names, col)},
+		> [class*=".#{map-deep-get(config.$dvalues--grid-class-names, col)}-"] {
+			padding-right: 0;
+			padding-left: 0;
+		}
 
-  }
+	}
 
 }
 

@@ -19,7 +19,7 @@
 	// внутри каждого столбца не будет превышать ширину столбца.
 	// Применяется к IE10+ и Firefox. Chrome и Safari, по-видимому,
 	// этого не требуют.
-  max-width: percentage(divide($size, $columns));
+	max-width: percentage(divide($size, $columns));
 
 	@include flex(0 0 percentage(divide($size, $columns)));
 

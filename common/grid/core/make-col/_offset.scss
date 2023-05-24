@@ -14,8 +14,8 @@
 /// @param {number} $colums [config.$dvalues--grid-columns]
 @mixin make-col-offset($size, $columns: config.$dvalues--grid-columns) {
 
-  $-num: divide($size, $columns);
+	$-num: divide($size, $columns);
 
-  margin-left: if($-num == 0, 0, percentage($-num));
+	margin-left: if($-num == 0, 0, percentage($-num));
 
 }

@@ -408,8 +408,8 @@ $dvalues--amcss__prefix: 'am-' !default;
 /// @since 8.0.0
 /// @access public
 /// @type map
-/// @prop {string} $dvalues--bem.element  ['__'] - разделитель для элемента
-/// @prop {string} $dvalues--bem.modifier  ['--'] - разделитель для модификатора
+/// @prop {string} $dvalues--bem.element ['__'] - разделитель для элемента
+/// @prop {string} $dvalues--bem.modifier ['--'] - разделитель для модификатора
 $dvalues--bem: (
 	element: '__',
 	modifier: '--'

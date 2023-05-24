@@ -14,8 +14,8 @@
 /// @param {number} $gutter [config.$dvalues--grid-gutter-width]
 @mixin make-row($gutter: config.$dvalues--grid-gutter-width) {
 
-  margin-right: -$gutter * .5;
-  margin-left: -$gutter * .5;
+	margin-right: -$gutter * .5;
+	margin-left: -$gutter * .5;
 
 	@include flexbox();
 	@include flex-wrap(wrap);

@@ -64,15 +64,15 @@
 	// то генерируем нужные стили:
 	@else if is-number($line-clamp)== true {
 
-		white-space  : nowrap;
+		white-space: nowrap;
 		text-overflow: ellipsis;
-		overflow     : hidden;
+		overflow: hidden;
 
 		@supports (-webkit-line-clamp: $line-clamp) {
 
-			overflow          : hidden;
-			text-overflow     : ellipsis;
-			white-space       : initial;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: initial;
 
 			-webkit-line-clamp: $line-clamp;
 			-webkit-box-orient: vertical;

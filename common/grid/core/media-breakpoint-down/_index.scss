@@ -19,16 +19,16 @@
 	$name,
 	$breakpoints: config.$dvalues--grid-breakpoints) {
 
-  $-max: breakpoint-max($name, $breakpoints);
+	$-max: breakpoint-max($name, $breakpoints);
 
-  @if $-max {
-    @media (max-width: $-max) {
-      @content;
-    }
-  }
+	@if $-max {
+		@media (max-width: $-max) {
+			@content;
+		}
+	}
 
 	@else {
-    @content;
-  }
+		@content;
+	}
 
 }

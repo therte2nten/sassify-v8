@@ -10,8 +10,8 @@
 /// @link https://github.com/twbs/bootstrap Bootstrap GitHub
 @mixin make-col-auto() {
 
-  width: auto;
-  max-width: 100%; // Сброс предыдущих уровней сетки
+	width: auto;
+	max-width: 100%; // Сброс предыдущих уровней сетки
 
 	@include flex(0 0 auto);
 

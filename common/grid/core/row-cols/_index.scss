@@ -19,10 +19,10 @@
 /// @link https://github.com/twbs/bootstrap Bootstrap GitHub
 @mixin row-cols($count) {
 
-  > * {
-    max-width: divide(100%, $count);
+	> * {
+		max-width: divide(100%, $count);
 
 		@include flex(0 0 divide(100%, $count));
-  }
+	}
 
 }

@@ -13,9 +13,9 @@
 	$name,
 	$breakpoints: config.$dvalues--grid-breakpoints) {
 
-  $-next: breakpoint-next($name, $breakpoints);
+	$-next: breakpoint-next($name, $breakpoints);
 
-  @return if(
+	@return if(
 		$-next,
 		breakpoint-min($-next, $breakpoints) - .02,
 		null

@@ -11,9 +11,9 @@
 /// @link https://github.com/twbs/bootstrap Bootstrap GitHub
 /// @param {number} $gutter [config.$dvalues--grid-gutter-width]
 @mixin make-container($gutter: config.$dvalues--grid-gutter-width) {
-  width: 100%;
-  padding-right: $gutter * .5;
-  padding-left: $gutter * .5;
-  margin-right: auto;
-  margin-left: auto;
+	width: 100%;
+	padding-right: $gutter * .5;
+	padding-left: $gutter * .5;
+	margin-right: auto;
+	margin-left: auto;
 }

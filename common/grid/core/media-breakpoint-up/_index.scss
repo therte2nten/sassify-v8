@@ -19,16 +19,16 @@
 	$name,
 	$breakpoints: config.$dvalues--grid-breakpoints) {
 
-  $-min: breakpoint-min($name, $breakpoints);
+	$-min: breakpoint-min($name, $breakpoints);
 
-  @if $-min {
-    @media (min-width: $-min) {
-      @content;
-    }
-  }
+	@if $-min {
+		@media (min-width: $-min) {
+			@content;
+		}
+	}
 
 	@else {
-    @content;
-  }
+		@content;
+	}
 
 }

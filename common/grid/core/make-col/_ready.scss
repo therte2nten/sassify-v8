@@ -12,15 +12,15 @@
 /// @param {number} $gutter [config.$dvalues--grid-gutter-width]
 @mixin make-col-ready($gutter: config.$dvalues--grid-gutter-width) {
 
-  position: relative;
+	position: relative;
 
-  // Чтобы столбцы не становились слишком узкими на меньших
+	// Чтобы столбцы не становились слишком узкими на меньших
 	// уровнях сетки, всегда устанавливайте значение `width: 100%;`.
 	// Это работает, потому что позже мы используем значения `flex`,
 	// чтобы переопределить эту начальную ширину.
-  width: 100%;
+	width: 100%;
 
-  padding-right: $gutter * .5;
-  padding-left: $gutter * .5;
+	padding-right: $gutter * .5;
+	padding-left: $gutter * .5;
 
 }
