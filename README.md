@@ -30,7 +30,6 @@ npm install @therteenten/sassify --save-dev
 > pnpm install @therteenten/sassify -D
 > ```
 
-
 - [Начало работы](https://github.com/therteenten/sassify/blob/main/.docs/getting-started.md)
 - [Документация проекта](https://therteenten.github.io/sassify)
 - [Тех. задание проекта](https://github.com/therteenten/sassify/blob/main/.docs/technical-specification.md)
@@ -39,6 +38,25 @@ npm install @therteenten/sassify --save-dev
 - [Список изменений](https://github.com/therteenten/sassify/blob/main/CHANGELOG.md)
 - [Участие в разработке проекта](https://github.com/therteenten/sassify/blob/main/CONTRIBUTING.md)
 
+## Нашли проблему? Есть предложение?
+Есть ошибка или запрос функции? Пожалуйста, сначала прочитайте [руководство по Issues](https://github.com/therteenten/sassify/blob/main/CONTRIBUTING.md#%D0%BF%D1%80%D0%BE%D0%B1%D0%BB%D0%B5%D0%BC%D1%8B-%D0%B8-%D1%8F%D1%80%D0%BB%D1%8B%D0%BA%D0%B8) и найдите существующие и закрытые проблемы. Если ваша проблема или идея еще не рассмотрены, пожалуйста, откройте [новый вопрос](https://github.com/therteenten/sassify/issues/new/choose).
+
+## Сообщество
+У проекта Sassify нет какого-либо сервера в Discord и нет своего канала или чата в Telegram или где-либо еще.
+
+Все основные новости по проекту публикуются в личном Telegram-канале автора проекта - [@therte2nten](https://t.me/therte2nten) (там же есть и чат).
+
+## Версии
+Для обеспечения прозрачности цикла выпуска и стремления поддерживать обратную совместимость Sassify поддерживается в соответствии с рекомендациями [Semantic Versioning](https://semver.org/). Иногда я ошибаюсь, но я придерживаюсь этих правил, когда это возможно.
+
+## Благодарности
+Несмотря на то, что я умудрился как-то гармонично (надеюсь) уложить все эти функции и миксины в один котел, я не могу не выразить огромную благодарность след. персонажам:
+- [Kitty Giraudel](https://github.com/KittyGiraudel) - за большое количество кода и статей по Sass,
+- [takamoso](https://github.com/takamoso) - за полезный код,
+- [Sindre Sorhus](https://github.com/sindresorhus) - за полезный код,
+- разработчикам [Bootstrap](https://github.com/twbs/bootstrap) - за шаблон для этого README,
+- разработчикам CSS-препроцессора [Sass](https://sass-lang.com/) - за непосредственно Sass,
+- всем тем у кого я учился (хоть я и не помню ваши имена).
 
 ## Лицензия
 Проект распространяется по свободной лицензии MIT, однако в проекте используются труды иных людей, чьё авторство я также обозначил в местах, где используется их код.
