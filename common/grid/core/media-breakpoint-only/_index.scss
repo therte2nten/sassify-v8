@@ -1,0 +1,50 @@
+@use '../../../../config' as config;
+
+@use '../media-breakpoint-up' as *;
+@use '../media-breakpoint-down' as *;
+@use '../utility/breakpoint-min' as *;
+@use '../utility/breakpoint-max' as *;
+
+/// Носитель между минимальной и максимальной шириной
+/// точек останова.
+///
+/// Нет минимума для наименьшей точки останова и нет
+/// максимума для самой большой.
+///
+/// Делает `@content` применимым только к данной точке
+/// останова, а не к видовым экранам более широкими или узкими.
+/// ---
+/// @name media-breakpoint-only
+/// @group grid
+/// @since 8.1.1
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @author The Bootstrap Authors
+/// @link https://github.com/therteenten/sassify/blob/main/common/grid Sassify Grid GitHub
+/// @link https://github.com/twbs/bootstrap Bootstrap GitHub
+@mixin media-breakpoint-only(
+	$name,
+	$breakpoints: config.$dvalues--grid-breakpoints) {
+
+	$-min: breakpoint-min($name, $breakpoints);
+	$-max: breakpoint-max($name, $breakpoints);
+
+	@if $-min != null and $-max != null {
+		@media (min-width: $-min) and (max-width: $-max) {
+			@content;
+		}
+	}
+
+	@else if $-max == null {
+		@include media-breakpoint-up($name, $breakpoints) {
+			@content;
+		}
+	}
+
+	@else if $-min == null {
+		@include media-breakpoint-down($name, $breakpoints) {
+			@content;
+		}
+	}
+
+}

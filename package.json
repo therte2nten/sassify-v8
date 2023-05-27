@@ -1,6 +1,6 @@
 {
 	"name": "@therteenten/sassify",
-	"version": "8.1.0",
+	"version": "8.1.1",
 	"description": "Большой набор миксинов и функций на языке CSS-препроцессора Sass",
 	"main": "index.scss",
 	"scripts": {
@@ -10,7 +10,7 @@
 		"npm:version-major": "npm version major -m \"Обновил версию пакета до %s\"",
 		"npm:version-minor": "npm version minor -m \"Обновил версию пакета до %s\"",
 		"npm:version-patch": "npm version patch -m \"Обновил версию пакета до %s\"",
-		"git:log-last-tag": "git log --oneline --decorate --pretty=format:'-  %s' | tee CHANGELOG.log"
+		"git:log-last-tag": "git log --oneline --decorate --pretty=format:'- %s' | tee CHANGELOG.log"
 	},
 	"repository": {
 		"type": "git",

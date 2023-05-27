@@ -6,11 +6,11 @@
 /// `max-width`, `height`, `mix-height` и `max-height` одной строкой.
 /// ---
 /// @name size
-/// @group CSSet
+/// @group core-csset
 /// @since 8.0.0
 /// @access public
 /// @author Haba Kudzaev (therteenten)
-/// @link https://github.com/therteenten/sassify/blob/develop/core/csset/size/_index.scss Исходный код миксина
+/// @link https://github.com/therteenten/sassify/blob/main/core/csset/size/_index.scss Исходный код миксина
 /// @example scss Пример использования в Sass (SCSS)
 /// 	.block-1 {
 /// 		@include size(250px);

@@ -1,26 +1,26 @@
 /// @name vvalues--color-common
-/// @group Valid Values
-/// @since 8.0.0
+/// @group valid-values
+/// @since 8.1.1
 /// @access public
 /// @type list
 $vvalues--color-common: 'ios' 'ios-dark' 'iosd' 'macos' 'macos-dark' 'macosd' 'watchos' 'windown' 'ms' 'md-amber' 'md-blue-grey' 'md-blue' 'md-brown' 'md-cyan' 'md-deep-orange' 'md-deep-purple' 'md-green' 'md-grey' 'md-indigo' 'md-light-blue' 'md-light-green' 'md-lime' 'md-orange' 'md-pink' 'md-purple' 'md-red' 'md-yellow' 'md-teal';
 
 /// @name vvalues--justify-content
-/// @group Valid Values
+/// @group valid-values
 /// @since 8.0.0
 /// @access public
 /// @type list
 $vvalues--justify-content: center start end flex-start flex-end left right baseline (first baseline) (last baseline) space-between space-around space-evenly stretch (safe center) (unsafe center) inherit initial unset !default;
 
 /// @name vvalues--align-self
-/// @group Valid Values
+/// @group valid-values
 /// @since 8.0.0
 /// @access public
 /// @type list
 $vvalues--align-self: auto normal center start end self-start self-end flex-start flex-end baseline (first baseline) (last baseline) stretch (safe center) (unsafe center) inherit initial unset !default;
 
 /// @name vvalues--align-items
-/// @group Valid Values
+/// @group valid-values
 /// @since 8.0.0
 /// @access public
 /// @type list
@@ -101,56 +101,56 @@ $vvalues--align-items: flex-start flex-end center baseline stretch inherit initi
 /// учитывается.
 /// ---
 /// @name vvalues--align-content
-/// @group Valid Values
+/// @group valid-values
 /// @since 8.0.0
 /// @access public
 /// @type list
 $vvalues--align-content: center start end flex-start flex-end normal baseline (first baseline) (last baseline) space-between space-around space-evenly stretch (safe center) (unsafe center) inherit initial unset !default;
 
 /// @name vvalues--flexbox
-/// @group Valid Values
+/// @group valid-values
 /// @since 8.0.0
 /// @access public
 /// @type list
 $vvalues--flexbox: default inline i !default;
 
 /// @name vvalues--flex-wrap
-/// @group Valid Values
+/// @group valid-values
 /// @since 8.0.0
 /// @access public
 /// @type list
 $vvalues--flex-wrap: nowrap wrap wrap-reverse inherit initial unset !default;
 
 /// @name vvalues--flex-flow
-/// @group Valid Values
+/// @group valid-values
 /// @since 8.0.0
 /// @access public
 /// @type list
 $vvalues--flex-flow: (row) (row-reverse) (column) (column-reverse) (nowrap) (wrap) (wrap-reverse) (row nowrap) (column wrap) (column-reverse wrap-reverse) inherit initial unset !default;
 
 /// @name vvalues--flex-direction
-/// @group Valid Values
+/// @group valid-values
 /// @since 8.0.0
 /// @access public
 /// @type list
 $vvalues--flex-direction: row row-reverse column column-reverse inherit initial unset !default;
 
 /// @name vvalues--flex-basis
-/// @group Valid Values
+/// @group valid-values
 /// @since 8.0.0
 /// @access public
 /// @type list
 $vvalues--flex-basis: auto 'Lenght (10em, 3px, etc.)' fill max-content min-content fit-content content inherit initial unset !default;
 
 /// @name vvalues--centering
-/// @group Valid Values
+/// @group valid-values
 /// @since 8.0.0
 /// @access public
 /// @type list
 $vvalues--centering: 'horizontal' 'hr' 'vertical' 'vr' 'both' 'b' !default;
 
 /// @name vvalues--line-clamp
-/// @group Valid Values
+/// @group valid-values
 /// @since 8.0.0
 /// @access public
 /// @type list
@@ -165,7 +165,7 @@ $vvalues--line-clamp: none 'Number' inherit initial revert revert-layer unset !d
 /// в себя значения `padding` и `border`, но не `margin`.
 /// ---
 /// @name vvalues--box-sizing
-/// @group Valid Values
+/// @group valid-values
 /// @since 8.0.0
 /// @access public
 /// @type list
@@ -177,7 +177,7 @@ $vvalues--box-sizing: border-box content-box inherit initial revert revert-layer
 /// - `custom` — выбран режим принудительных цветов. Например, режим высокой контрастности Windows
 /// ---
 /// @name vvalues--media-prefers-contrast
-/// @group Valid Values
+/// @group valid-values
 /// @since 8.0.0
 /// @access public
 /// @type list
@@ -190,7 +190,7 @@ $vvalues--media-prefers-contrast: no-preference more less custom !default;
 /// Дочерние элементы будут отображаться в 3D-пространстве.
 /// ---
 /// @name vvalues--transform-style
-/// @group Valid Values
+/// @group valid-values
 /// @since 8.0.0
 /// @access public
 /// @type list
@@ -235,7 +235,7 @@ $vvalues--transform-style: preserve-3d flat inherit initial unset !default;
 /// Задаёт функцию движения в виде [кривой Безье](http://ru.wikipedia.org/wiki/%D0%9A%D1%80%D0%B8%D0%B2%D0%B0%D1%8F_%D0%91%D0%B5%D0%B7%D1%8C%D0%B5).
 /// ---
 /// @name vvalues--transition-timing-function
-/// @group Valid Values
+/// @group valid-values
 /// @since 8.0.0
 /// @access public
 /// @link https://webref.ru/css/transition-timing-function WebReference
@@ -243,35 +243,35 @@ $vvalues--transform-style: preserve-3d flat inherit initial unset !default;
 $vvalues--transition-timing-function: ease ease-in ease-out ease-in-out linear step-start step-end 'steps()' 'cubic-bezier()' 'Multiple timing functions (~ ease, cubic-bezier(0.1, 0.7, 1, 0.1))' inherit initial revert revert-layer unset !default;
 
 /// @name vvalues--transition-duration
-/// @group Valid Values
+/// @group valid-values
 /// @since 8.0.0
 /// @access public
 /// @type list
 $vvalues--transition-duration: 'Time (1s, 5ms, .2ms)' inherit initial revert revert-layer unset !default;
 
 /// @name vvalues--transition-delay
-/// @group Valid Values
+/// @group valid-values
 /// @since 8.0.0
 /// @access public
 /// @type list
 $vvalues--transition-delay: 'Time (1s, 5ms, .2ms)' inherit initial unset !default;
 
 /// @name vvalues--border-radius
-/// @group Valid Values
+/// @group valid-values
 /// @since 8.0.0
 /// @access public
 /// @type list
 $vvalues--border-radius: 'Number' 'Length (px, rem, em, etc.)' 'Percentage (0% - 100%)' inherit initial unset !default;
 
 /// @name vvalues--opacity
-/// @group Valid Values
+/// @group valid-values
 /// @since 8.0.0
 /// @access public
 /// @type list
 $vvalues--opacity: 'Number (0.0 - 1.0)' 'Percentage (0% - 100%)' !default;
 
 /// @name vvalues--position-sticky__sides
-/// @group Valid Values
+/// @group valid-values
 /// @since 8.0.0
 /// @access public
 /// @type list
@@ -327,21 +327,21 @@ $vvalues--position-sticky__sides: top right bottom left !default;
 /// любому «липкому» поведению (см. [Github issue on W3C CSSWG](https://github.com/w3c/csswg-drafts/issues/865)).
 /// ---
 /// @name vvalues--position
-/// @group Valid Values
+/// @group valid-values
 /// @since 8.0.0
 /// @access public
 /// @type list
 $vvalues--position: static relative absolute fixed sticky inherit initial revert revert-layer unset !default;
 
 /// @name vvalues--tab-size
-/// @group Valid Values
+/// @group valid-values
 /// @since 8.0.0
 /// @access public
 /// @type list
 $vvalues--tab-size: '<Number>' inherit initial revert revert-layer unset !default;
 
 /// @name vvalues--size
-/// @group Valid Values
+/// @group valid-values
 /// @since 8.0.0
 /// @access public
 /// @type list
@@ -375,7 +375,7 @@ $vvalues--size: normal max min !default;
 /// будет содержаться внутри границ данного элемента.
 /// ---
 /// @name vvalues--user-select
-/// @group Valid Values
+/// @group valid-values
 /// @since 8.0.0
 /// @access public
 /// @link https://developer.mozilla.org/ru/docs/Web/CSS/user-select user-select - CSS | MDN

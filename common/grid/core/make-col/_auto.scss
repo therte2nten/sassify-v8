@@ -1,0 +1,18 @@
+@use "../../../../core/cssex/flex" as *;
+
+/// @name make-col-auto
+/// @group grid
+/// @since 8.1.1
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @author The Bootstrap Authors
+/// @link https://github.com/therteenten/sassify/blob/main/common/grid Sassify Grid GitHub
+/// @link https://github.com/twbs/bootstrap Bootstrap GitHub
+@mixin make-col-auto() {
+
+	width: auto;
+	max-width: 100%; // Сброс предыдущих уровней сетки
+
+	@include flex(0 0 auto);
+
+}

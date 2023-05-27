@@ -15,11 +15,11 @@
 /// для ограничения блока текста заданным количеством строк.
 /// ---
 /// @name text-shorten
-/// @group CSSet
+/// @group core-csset
 /// @since 8.0.0
 /// @access public
 /// @author Haba Kudzaev (therteenten)
-/// @link https://github.com/therteenten/sassify/blob/develop/core/csset/text-shorten/_index.scss Исходный код миксина
+/// @link https://github.com/therteenten/sassify/blob/main/core/csset/text-shorten/_index.scss Исходный код миксина
 /// @example scss Пример использования в Sass (SCSS)
 /// 	.text-shorten {
 /// 		@include text-shorten(4);
@@ -64,15 +64,15 @@
 	// то генерируем нужные стили:
 	@else if is-number($line-clamp)== true {
 
-		white-space  : nowrap;
+		white-space: nowrap;
 		text-overflow: ellipsis;
-		overflow     : hidden;
+		overflow: hidden;
 
 		@supports (-webkit-line-clamp: $line-clamp) {
 
-			overflow          : hidden;
-			text-overflow     : ellipsis;
-			white-space       : initial;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: initial;
 
 			-webkit-line-clamp: $line-clamp;
 			-webkit-box-orient: vertical;

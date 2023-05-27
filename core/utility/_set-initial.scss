@@ -4,7 +4,7 @@
 /// значение CSS-свойства.
 /// ---
 /// @name set-initial
-/// @group Core
+/// @group core
 /// @since 8.0.0
 /// @access public
 /// @author takamoso
@@ -23,6 +23,6 @@
 			$property
 		);
 	} @else {
-		@error #{config.$string--emoji__error}  + ' Свойство «#{$property}» отсутствует в карте `$dvalues--set-initial`!';
+		@error #{config.$string--emoji__error} + ' Свойство «#{$property}» отсутствует в карте `$dvalues--set-initial`!';
 	}
 }

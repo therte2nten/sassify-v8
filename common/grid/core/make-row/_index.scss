@@ -1,0 +1,23 @@
+@use 'sass:math';
+@use '../../../../config' as config;
+@use '../../../../core/cssex/flex/flexbox' as *;
+@use '../../../../core/cssex/flex/wrap' as *;
+
+/// @name make-row
+/// @group grid
+/// @since 8.1.1
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @author The Bootstrap Authors
+/// @link https://github.com/therteenten/sassify/blob/main/common/grid Sassify Grid GitHub
+/// @link https://github.com/twbs/bootstrap Bootstrap GitHub
+/// @param {number} $gutter [config.$dvalues--grid-gutter-width]
+@mixin make-row($gutter: config.$dvalues--grid-gutter-width) {
+
+	margin-right: -$gutter * .5;
+	margin-left: -$gutter * .5;
+
+	@include flexbox();
+	@include flex-wrap(wrap);
+
+}

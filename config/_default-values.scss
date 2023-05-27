@@ -1,169 +1,168 @@
-/// @name dvalues--grid-create-class__no-gutters
-/// @group DefaultValues
-/// @since 8.1.0
-/// @access public
-/// @type boolean
-$dvalues--grid-create-class__no-gutters: true !default;
-
-/// @name dvalues--grid-minimal-reset
-/// @group DefaultValues
-/// @since 8.1.0
-/// @access public
-/// @type boolean
-$dvalues--grid-minimal-reset: false !default;
-
-/// @prop {string} $dvalues--grid-class-naming.container [container] - название класса `container`
-/// @prop {string} $dvalues--grid-class-naming.container-fluid [container-fluid] - название класса `container-fluid`
-/// @prop {string} $dvalues--grid-class-naming.row [row] - название класса `row`
-/// @prop {string} $dvalues--grid-class-naming.col [col] - название класса `col-*`
-/// @prop {string} $dvalues--grid-class-naming.order [order] - название класса `order-*`
-/// @prop {string} $dvalues--grid-class-naming.offset [offset] - название класса `offset-*`
-/// @prop {string} $dvalues--grid-class-naming.first [first]
-/// @prop {string} $dvalues--grid-class-naming.last [last]
-/// @prop {string} $dvalues--grid-class-naming.auto [auto]
-$dvalues--grid-class-naming: (
-	'container': 'container',
-	'container-fluid': 'container-fluid',
-	'row': 'row',
-	'col': 'col',
-	'order': 'order',
-	'offset': 'offset',
-	'first': 'first',
-	'last': 'last',
-	'auto': 'auto'
-) !default;
-
-/// @name dvalues--grid-breakpoints
-/// @group DefaultValues
-/// @since 8.1.0
+/// @name dvalues--grid-class-names
+/// @group default-values
+/// @since 8.1.1
 /// @access public
 /// @type map
-/// @prop {number} $dvalues--grid-breakpoints.xs [0]
-/// @prop {number} $dvalues--grid-breakpoints.sm [576px]
-/// @prop {number} $dvalues--grid-breakpoints.md [768px]
-/// @prop {number} $dvalues--grid-breakpoints.lg [992px]
-/// @prop {number} $dvalues--grid-breakpoints.xl [1200px]
-/// @prop {number} $dvalues--grid-breakpoints.xxl [1400px]
-$dvalues--grid-breakpoints: (
-	xs: 0,
-	sm: 576px,
-	md: 768px,
-	lg: 992px,
-	xl: 1200px,
-	xxl: 1400px
+/// @prop {string} $dvalues--grid-class-names.container ['container']
+/// @prop {string} $dvalues--grid-class-names.container-fluid ['container-fluid']
+/// @prop {string} $dvalues--grid-class-names.row ['row']
+/// @prop {string} $dvalues--grid-class-names.no-gutters ['no-gutters']
+/// @prop {string} $dvalues--grid-class-names.col ['col']
+/// @prop {string} $dvalues--grid-class-names.cols ['cols']
+/// @prop {string} $dvalues--grid-class-names.order ['order']
+/// @prop {string} $dvalues--grid-class-names.offset ['offset']
+$dvalues--grid-class-names: (
+	container: 'container',
+	container-fluid: 'container-fluid',
+	row: 'row',
+	no-gutters: 'no-gutters',
+	col: 'col',
+	cols: 'cols',
+	order: 'order',
+	offset: 'offset'
 ) !default;
 
-/// @name dvalues--grid-container-max-widths
-/// @group DefaultValues
-/// @since 8.1.0
+/// @name dvalues--grid-generate-minimal-reset
+/// @group default-values
+/// @since 8.1.1
 /// @access public
-/// @type map
-/// @prop {number} $dvalues--grid-container-max-widths.sm [540px]
-/// @prop {number} $dvalues--grid-container-max-widths.md [720px]
-/// @prop {number} $dvalues--grid-container-max-widths.lg [960px]
-/// @prop {number} $dvalues--grid-container-max-widths.xl [1140px]
-/// @prop {number} $dvalues--grid-container-max-widths.xxl [1320px]
-$dvalues--grid-container-max-widths: (
-	sm: 540px,
-	md: 720px,
-	lg: 960px,
-	xl: 1140px,
-	xxl: 1320px
-) !default;
+/// @type boolean
+$dvalues--grid-generate-minimal-reset: false !default;
 
 /// @name dvalues--grid-columns
-/// @group DefaultValues
-/// @since 8.1.0
+/// @group default-values
+/// @since 8.1.1
 /// @access public
 /// @type number
 $dvalues--grid-columns: 12 !default;
 
 /// @name dvalues--grid-gutter-width
-/// @group DefaultValues
-/// @since 8.1.0
+/// @group default-values
+/// @since 8.1.1
 /// @access public
 /// @type number
 $dvalues--grid-gutter-width: 30px !default;
 
+/// @name dvalues--grid-row-columns
+/// @group default-values
+/// @since 8.1.1
+/// @access public
+/// @type number
+$dvalues--grid-row-columns: 6 !default;
+
+/// @name dvalues--grid-container-max-widths
+/// @group default-values
+/// @since 8.1.1
+/// @access public
+/// @type map
+/// @prop {string} $dvalues--grid-container-max-widths.sm [540px]
+/// @prop {string} $dvalues--grid-container-max-widths.md [720px]
+/// @prop {string} $dvalues--grid-container-max-widths.lg [960px]
+/// @prop {string} $dvalues--grid-container-max-widths.xl [1140px]
+$dvalues--grid-container-max-widths: (
+	sm: 540px,
+	md: 720px,
+	lg: 960px,
+	xl: 1140px
+) !default;
+
+/// @name dvalues--grid-breakpoints
+/// @group default-values
+/// @since 8.1.1
+/// @access public
+/// @type map
+/// @prop {string} $dvalues--grid-breakpoints.xs [0]
+/// @prop {string} $dvalues--grid-breakpoints.sm [576px]
+/// @prop {string} $dvalues--grid-breakpoints.md [768px]
+/// @prop {string} $dvalues--grid-breakpoints.lg [992px]
+/// @prop {string} $dvalues--grid-breakpoints.xl [1200px]
+$dvalues--grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px
+) !default;
+
 /// @name dvalues--justify-content
-/// @group DefaultValues
+/// @group default-values
 /// @since 8.0.0
 /// @access public
 /// @type string
 $dvalues--justify-content: flex-start !default;
 
 /// @name dvalues--align-items
-/// @group DefaultValues
+/// @group default-values
 /// @since 8.0.0
 /// @access public
 /// @type string
 $dvalues--align-items: auto !default;
 
 /// @name dvalues--align-items
-/// @group DefaultValues
+/// @group default-values
 /// @since 8.0.0
 /// @access public
 /// @type string
 $dvalues--align-items: stretch !default;
 
 /// @name dvalues--align-content
-/// @group DefaultValues
+/// @group default-values
 /// @since 8.0.0
 /// @access public
 /// @type string
 $dvalues--align-content: stretch !default;
 
 /// @name dvalues--flexbox
-/// @group DefaultValues
+/// @group default-values
 /// @since 8.0.0
 /// @access public
 /// @type string
 $dvalues--flexbox: 'default' !default;
 
 /// @name dvalues--flex-wrap
-/// @group DefaultValues
+/// @group default-values
 /// @since 8.0.0
 /// @access public
 /// @type string
 $dvalues--flex-wrap: nowrap !default;
 
 /// @name dvalues--flex-shrink
-/// @group DefaultValues
+/// @group default-values
 /// @since 8.0.0
 /// @access public
 /// @type number
 $dvalues--flex-shrink: 1 !default;
 
 /// @name dvalues--flex-grow
-/// @group DefaultValues
+/// @group default-values
 /// @since 8.0.0
 /// @access public
 /// @type number
 $dvalues--flex-grow: 0 !default;
 
 /// @name dvalues--flex-flow
-/// @group DefaultValues
+/// @group default-values
 /// @since 8.0.0
 /// @access public
 /// @type string
 $dvalues--flex-flow: (row nowrap) !default;
 
 /// @name dvalues--flex-direction
-/// @group DefaultValues
+/// @group default-values
 /// @since 8.0.0
 /// @access public
 /// @type string
 $dvalues--flex-direction: row !default;
 
 /// @name dvalues--flex-basis
-/// @group DefaultValues
+/// @group default-values
 /// @since 8.0.0
 /// @access public
 /// @type string
 $dvalues--flex-basis: auto !default;
 
 /// @name dvalues--brakepoints
-/// @group DefaultValues
+/// @group default-values
 /// @since 8.0.0
 /// @access public
 /// @type map
@@ -195,91 +194,91 @@ $dvalues--brakepoints: (
 ) !default;
 
 /// @name dvalues--text-shorten
-/// @group DefaultValues
+/// @group default-values
 /// @since 8.0.0
 /// @access public
 /// @type string
 $dvalues--text-shorten: none !default;
 
 /// @name dvalues--illogical-usage-message_mode
-/// @group DefaultValues
+/// @group default-values
 /// @since 8.0.0
 /// @access public
 /// @type list
 $dvalues--illogical-usage-message_mode: 'console', 'comment' !default;
 
 /// @name dvalues--line-clamp
-/// @group DefaultValues
+/// @group default-values
 /// @since 8.0.0
 /// @access public
 /// @type string
 $dvalues--line-clamp: none !default;
 
 /// @name dvalues--box-sizing
-/// @group DefaultValues
+/// @group default-values
 /// @since 8.0.0
 /// @access public
 /// @type string
 $dvalues--box-sizing: content-box !default;
 
 /// @name dvalues--media-prefers-contrast
-/// @group DefaultValues
+/// @group default-values
 /// @since 8.0.0
 /// @access public
 /// @type string
 $dvalues--media-prefers-contrast: no-preference !default;
 
 /// @name dvalues--transform-style
-/// @group DefaultValues
+/// @group default-values
 /// @since 8.0.0
 /// @access public
 /// @type string
 $dvalues--transform-style: flat !default;
 
 /// @name dvalues--transform-origin_x
-/// @group DefaultValues
+/// @group default-values
 /// @since 8.0.0
 /// @access public
 /// @type number
 $dvalues--transform-origin_x: 50% !default;
 
 /// @name dvalues--transform-origin_y
-/// @group DefaultValues
+/// @group default-values
 /// @since 8.0.0
 /// @access public
 /// @type number
 $dvalues--transform-origin_y: 50% !default;
 
 /// @name dvalues--transform-origin_z
-/// @group DefaultValues
+/// @group default-values
 /// @since 8.0.0
 /// @access public
 /// @type number
 $dvalues--transform-origin_z: 0 !default;
 
 /// @name dvalues--transition-timing-function
-/// @group DefaultValues
+/// @group default-values
 /// @since 8.0.0
 /// @access public
 /// @type string
 $dvalues--transition-timing-function: ease !default;
 
 /// @name dvalues--transition-property
-/// @group DefaultValues
+/// @group default-values
 /// @since 8.0.0
 /// @access public
 /// @type string
 $dvalues--transition-property: all !default;
 
 /// @name dvalues--transition-duration
-/// @group DefaultValues
+/// @group default-values
 /// @since 8.0.0
 /// @access public
 /// @type number
 $dvalues--transition-duration: 0s !default;
 
 /// @name dvalues--transition-delay
-/// @group DefaultValues
+/// @group default-values
 /// @since 8.0.0
 /// @access public
 /// @type number
@@ -295,7 +294,7 @@ $dvalues--transition-delay: 0s !default;
 /// ---
 /// @ignore
 /// @name dvalues--transition
-/// @group DefaultValues
+/// @group default-values
 /// @since 8.0.0
 /// @access private
 /// @type list
@@ -305,7 +304,7 @@ $-dvalues--transition: all 0s ease 0s !default;
 /// поддержку CSS-свойства `opacity` для браузера Internet Explorer.
 /// ---
 /// @name dvalues--border-radius
-/// @group DefaultValues
+/// @group default-values
 /// @since 8.0.0
 /// @access public
 /// @type number
@@ -314,7 +313,7 @@ $dvalues--border-radius: 0 !default;
 /// Значение по умолчанию для CSS-свойства `position`
 /// ---
 /// @name dvalues--position
-/// @group DefaultValues
+/// @group default-values
 /// @since 8.0.0
 /// @access public
 /// @type string
@@ -323,7 +322,7 @@ $dvalues--position: static !default;
 /// Значение `$side` для миксина `position-sticky`
 /// ---
 /// @name dvalues--position-sticky__side
-/// @group DefaultValues
+/// @group default-values
 /// @since 8.0.0
 /// @access public
 /// @type string
@@ -332,7 +331,7 @@ $dvalues--position-sticky__side: top !default;
 /// Значение `$side-offset` для миксина `position-sticky`
 /// ---
 /// @name dvalues--position-sticky__side-offset
-/// @group DefaultValues
+/// @group default-values
 /// @since 8.0.0
 /// @access public
 /// @type number
@@ -341,7 +340,7 @@ $dvalues--position-sticky__side-offset: 0 !default;
 /// Значение по умолчанию для CSS-свойства `tab-size`
 /// ---
 /// @name dvalues--tab-size
-/// @group DefaultValues
+/// @group default-values
 /// @since 8.0.0
 /// @access public
 /// @type number
@@ -350,7 +349,7 @@ $dvalues--tab-size: 8 !default;
 /// Размер блока для миксина `visually-hidden`
 /// ---
 /// @name dvalues--visually-hidden__size
-/// @group DefaultValues
+/// @group default-values
 /// @since 8.0.0
 /// @access public
 /// @type number
@@ -359,7 +358,7 @@ $dvalues--visually-hidden__size: 1px !default;
 /// Режим работы миксина `size`
 /// ---
 /// @name dvalues--size__mode
-/// @group DefaultValues
+/// @group default-values
 /// @since 8.0.0
 /// @access public
 /// @type string
@@ -368,7 +367,7 @@ $dvalues--size__mode: normal !default;
 /// Добавлять префиксы не к CSS-свойству, а к его значению?
 /// ---
 /// @name dvalues--prefixer__prefix-value
-/// @group DefaultValues
+/// @group default-values
 /// @since 8.0.0
 /// @access public
 /// @type boolean
@@ -377,7 +376,7 @@ $dvalues--prefixer__prefix-value: false !default;
 /// Сохранять исходный вариант CSS-свойтсва без браузерного префикса?
 /// ---
 /// @name dvalues--prefixer__save-unprefixed-property
-/// @group DefaultValues
+/// @group default-values
 /// @since 8.0.0
 /// @access public
 /// @type boolean
@@ -386,7 +385,7 @@ $dvalues--prefixer__save-unprefixed-property: true !default;
 /// Значение CSS-свойства `user-select` по умолчанию
 /// ---
 /// @name dvalues--user-select
-/// @group DefaultValues
+/// @group default-values
 /// @since 8.0.0
 /// @access public
 /// @type string
@@ -395,7 +394,7 @@ $dvalues--user-select: auto !default;
 /// Префикс для атрибута
 /// ---
 /// @name dvalues--amcss__prefix
-/// @group DefaultValues
+/// @group default-values
 /// @since 8.0.0
 /// @access public
 /// @type string
@@ -405,19 +404,19 @@ $dvalues--amcss__prefix: 'am-' !default;
 /// `bem-modifier`.
 /// ---
 /// @name dvalues--bem
-/// @group DefaultValues
+/// @group default-values
 /// @since 8.0.0
 /// @access public
 /// @type map
-/// @prop {string} $dvalues--bem.element  ['__'] - разделитель для элемента
-/// @prop {string} $dvalues--bem.modifier  ['--'] - разделитель для модификатора
+/// @prop {string} $dvalues--bem.element ['__'] - разделитель для элемента
+/// @prop {string} $dvalues--bem.modifier ['--'] - разделитель для модификатора
 $dvalues--bem: (
 	element: '__',
 	modifier: '--'
 ) !default;
 
 /// @name dvalues--url-encode__characters
-/// @group DefaultValues
+/// @group default-values
 /// @since 8.0.0
 /// @access public
 /// @type map
@@ -444,7 +443,7 @@ $dvalues--url-encode__characters: (
 ) !default;
 
 /// @name dvalues--set-initial
-/// @group DefaultValues
+/// @group default-values
 /// @since 8.0.0
 /// @access public
 /// @type map

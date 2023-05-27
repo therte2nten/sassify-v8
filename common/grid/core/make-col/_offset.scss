@@ -1,0 +1,21 @@
+@use 'sass:math';
+@use '../../../../config' as config;
+@use '../utility/divide' as *;
+
+/// @name make-col-offset
+/// @group grid
+/// @since 8.1.1
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @author The Bootstrap Authors
+/// @link https://github.com/therteenten/sassify/blob/main/common/grid Sassify Grid GitHub
+/// @link https://github.com/twbs/bootstrap Bootstrap GitHub
+/// @param {number} $size
+/// @param {number} $colums [config.$dvalues--grid-columns]
+@mixin make-col-offset($size, $columns: config.$dvalues--grid-columns) {
+
+	$-num: divide($size, $columns);
+
+	margin-left: if($-num == 0, 0, percentage($-num));
+
+}

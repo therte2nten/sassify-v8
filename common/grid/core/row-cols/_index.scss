@@ -1,0 +1,28 @@
+@use 'sass:math';
+
+@use '../../../../config' as config;
+@use '../../../../core/cssex/flex' as *;
+@use '../utility/divide' as *;
+
+/// Укажите в родительском элементе (например, `.row`), чтобы
+/// принудительно поместить непосредственные дочерние элементы
+/// в N-количество столбцов. Поддерживает перенос на новые
+/// линии, но не создает сетку в стиле каменной кладки.
+/// ---
+/// @name row-cols
+/// @group grid
+/// @since 8.1.1
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @author The Bootstrap Authors
+/// @link https://github.com/therteenten/sassify/blob/main/common/grid Sassify Grid GitHub
+/// @link https://github.com/twbs/bootstrap Bootstrap GitHub
+@mixin row-cols($count) {
+
+	> * {
+		max-width: divide(100%, $count);
+
+		@include flex(0 0 divide(100%, $count));
+	}
+
+}

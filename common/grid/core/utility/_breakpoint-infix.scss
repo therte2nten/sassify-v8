@@ -1,0 +1,27 @@
+@use '../../../../config' as config;
+@use 'breakpoint-min' as *;
+
+/// Возвращает пустую строку, если наименьшая точка
+/// останова, в противном случае возвращает имя с тире впереди.
+///
+/// Полезно для создания адаптивных утилит.
+/// ---
+/// @name breakpoint-infix
+/// @group grid
+/// @since 8.1.1
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @author The Bootstrap Authors
+/// @link https://github.com/therteenten/sassify/blob/main/common/grid Sassify Grid GitHub
+/// @link https://github.com/twbs/bootstrap Bootstrap GitHub
+@function breakpoint-infix(
+	$name,
+	$breakpoints: config.$dvalues--grid-breakpoints) {
+
+	@return if(
+		breakpoint-min($name, $breakpoints) == null,
+		"",
+		"-#{$name}"
+	);
+
+}
