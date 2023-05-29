@@ -1,5 +1,4 @@
 @use '../../config' as config;
-@use '../../devpack/completed-log-in-css' as *;
 
 /// Миксин `prefixer` позволяет добавить CSS-свойству
 /// необходимые браузерные префиксы. Миксин также позволяет добавлять
@@ -54,7 +53,6 @@
 		// к его значению:
 		@if $prefix-value == true {
 			@each $prefix in config.$prefixes--all {
-				@include completed-log-in-css('prefixer', 'prefix for «#{$prefix}»');
 				#{$property}: -#{$prefix}-#{$value};
 			}
 		}
@@ -64,7 +62,6 @@
 		// к его значению:
 		@else {
 			@each $prefix in config.$prefixes--all {
-				@include completed-log-in-css('prefixer', 'prefix for «#{$prefix}»');
 				-#{$prefix}-#{$property}: #{$value};
 			}
 		}
@@ -81,7 +78,6 @@
 		// к его значению:
 		@if $prefix-value == true {
 			@each $prefix in $prefixes {
-				@include completed-log-in-css('prefixer', 'prefix for «#{$prefix}»');
 				#{$property}: -#{$prefix}-#{$value};
 			}
 		}
@@ -91,7 +87,6 @@
 		// к его значению:
 		@else {
 			@each $prefix in $prefixes {
-				@include completed-log-in-css('prefixer', 'prefix for «#{$prefix}»');
 				-#{$prefix}-#{$property}: #{$value};
 			}
 		}
@@ -101,7 +96,6 @@
 	// А также, если значение параметра `$save-unprefixed-property`
 	// равно `true`, то добавляем в конце CSS-свойство без префикса:
 	@if $save-unprefixed-property == true {
-		@include completed-log-in-css('prefixer', 'unprefixed value «#{$value}»');
 		#{$property}: #{$value};
 	}
 

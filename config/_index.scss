@@ -41,23 +41,6 @@ $setting--strip-unit__use-sassmath: true !default;
 /// @type boolean
 $setting--follow-prefers-reduced-motion: true !default;
 
-/// Данный параметр регулирует добавление в CSS-комментариев
-/// в конечный результат выполнения миксина, например, `prefixer`.
-/// ---
-/// @name setting--completed-log-in-css
-/// @group settings
-/// @since 8.1.2
-/// @access public
-/// @type boolean
-$setting--completed-log-in-css: true !default;
-
-/// @name setting--completed-log-in-css__show-message-in-console
-/// @group default-values
-/// @since 8.1.2
-/// @access public
-/// @type boolean
-$setting--completed-log-in-css__show-message-in-console: false !default;
-
 /// @name setting--grid-minimal-reset
 /// @group default-values
 /// @since 8.1.1

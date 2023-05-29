@@ -1,5 +1,4 @@
 @use '../../config' as config;
-@use '../../devpack/completed-log-in-css' as *;
 @use '../utility/map/map-deep-get' as *;
 
 /// Миксин `bem-modifier` создает модификатор по "БЭМу".
@@ -41,7 +40,6 @@
 /// @param {string} $modifier - название селектора модификатора
 @mixin bem-modifier($modifier) {
 	@at-root {
-		@include completed-log-in-css('bem-modifier', 'created modifier "#{&}#{ map-deep-get(config.$dvalues--bem, modifier) + $modifier }"');
 		#{&}#{ map-deep-get(config.$dvalues--bem, modifier) + $modifier } {
 			@content;
 		}

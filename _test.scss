@@ -33,5 +33,5 @@
 
 
 .test {
-	@include size(10px, 10px, m);
+	@include size(10px, 10px, min);
 }

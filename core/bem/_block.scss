@@ -1,5 +1,3 @@
-@use '../../devpack/completed-log-in-css' as *;
-
 /// Миксин `bem-block` создает блок по "БЭМу".
 /// ---
 /// @name bem-block
@@ -22,7 +20,6 @@
 /// 	}
 /// @param {string} $block - название селектора блока
 @mixin bem-block($block) {
-	@include completed-log-in-css('bem-block', 'created block ".#{$block}"');
 	.#{$block} {
 		@content;
 	}

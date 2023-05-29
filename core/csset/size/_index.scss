@@ -1,6 +1,5 @@
 @use '../../../config' as config;
 @use '../../../devpack/invalid-value-message' as *;
-@use '../../../devpack/completed-log-in-css' as *;
 @use '../../utility/validator/is-list-contains' as *;
 
 /// Миксин `size` позволяет указать CSS-свойства `width`, `min-width`,
@@ -73,8 +72,6 @@
 		// 	то не используем приставки `max` или `min`:
 		@if $mode == normal {
 
-			@include completed-log-in-css('size', 'width: "#{$width}", height: #{$height}, mode: "#{$mode}"');
-
 			width: $width;
 			height: $height;
 
@@ -83,8 +80,6 @@
 		//	2. Если значение `$mode` отличается от `normal`,
 		// 	то подставляем значение `$mode` как приставку:
 		@else {
-
-			@include completed-log-in-css('size', '#{$mode}-width: "#{$width}", #{$mode}-height: #{$height}, mode: "#{$mode}"');
 
 			#{$mode}-width: $width;
 			#{$mode}-height: $height;
