@@ -29,9 +29,4 @@
 	)
 );
 
-// @include make-grid();
-
-
-.test {
-	@include size(10px, 10px, min);
-}
+@include make-grid();
