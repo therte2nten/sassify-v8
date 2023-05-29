@@ -23,6 +23,6 @@
 			$property
 		);
 	} @else {
-		@error #{config.$string--emoji__error} + ' Свойство «#{$property}» отсутствует в карте `$dvalues--set-initial`!';
+		@error '#{config.$string--error__set-initial} «#{$property}»';
 	}
 }

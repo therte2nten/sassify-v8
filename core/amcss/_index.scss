@@ -1,4 +1,5 @@
 @use '../../config' as config;
+@use '../../devpack/completed-log-in-css' as *;
 
 /// Немного про AMCSS:
 /// Название подхода означает «Модули атрибутов для CSS» (Attribute Modules for CSS).
@@ -47,12 +48,14 @@
 	$prefix: config.$dvalues--amcss__prefix) {
 
 	@if $trait != null {
+		@include completed-log-in-css('amcss', 'created module "#{$module}" (module prefix "#{$prefix}") with trait "#{$trait}"');
 		[#{$prefix}#{$module}~="#{$trait}"]{
 			@content;
 		}
 	}
 
 	@else {
+		@include completed-log-in-css('amcss', 'created module "#{$module}" (module prefix "#{$prefix}")');
 		[#{$prefix}#{$module}]{
 			@content;
 		}

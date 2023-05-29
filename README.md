@@ -54,7 +54,7 @@ npm install @therteenten/sassify --save-dev
 - [Kitty Giraudel](https://github.com/KittyGiraudel) - за большое количество кода и статей по Sass,
 - [takamoso](https://github.com/takamoso) - за полезный код,
 - [Sindre Sorhus](https://github.com/sindresorhus) - за полезный код,
-- разработчикам [Bootstrap](https://github.com/twbs/bootstrap) - за шаблон для этого README,
+- разработчикам [Bootstrap](https://github.com/twbs/bootstrap) - за шаблон для этого README и сетку Bootstrap Grid,
 - разработчикам CSS-препроцессора [Sass](https://sass-lang.com/) - за непосредственно Sass,
 - всем тем у кого я учился (хоть я и не помню ваши имена).
 

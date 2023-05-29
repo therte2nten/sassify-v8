@@ -30,7 +30,7 @@
 	}
 
 	@if $divisor == 0 {
-		@error "Не удается разделить на 0";
+		@error config.$string--error__grid-divide;
 	}
 
 	$-remainder: $dividend;

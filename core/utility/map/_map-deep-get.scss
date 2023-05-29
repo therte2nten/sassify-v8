@@ -44,12 +44,12 @@
 	// ключ `$-key` равен `null`:
 	@if type-of($map) == 'null' {
 
-		$-error-message: 'Не удалось найти ключ «#{$-key}». Будет возвращено значение «null»!';
+		$-error-message: '#{config.$string--error__map-deep-get} «#{$-key}».';
 
 		@if config.$setting--strict-mode == true {
-			@error '#{config.$string--emoji__error} #{$-error-message}';
+			@error $-error-message;
 		} @else {
-			@warn '#{config.$string--emoji__warning} #{$-error-message}';
+			@warn $-error-message;
 		}
 
 	}

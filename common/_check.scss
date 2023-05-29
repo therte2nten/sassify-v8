@@ -41,7 +41,7 @@
 		'Source Code': ' https://github.com/therteenten/sassify'
 	);
 
-	$-message-check-success: '(sassify) #{config.$string--emoji__success} The check was successful!';
+	$-message-check-success: config.$string--message__check-success;
 
 	@debug $-message-check-success;
 

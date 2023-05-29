@@ -1,4 +1,5 @@
 @use '../../config' as config;
+@use '../../devpack/completed-log-in-css' as *;
 @use '../utility/contains-modifier' as *;
 @use '../utility/get-block' as *;
 @use '../utility/map/map-deep-get' as *;
@@ -41,19 +42,27 @@
 		$block: get-block($-selector, map-deep-get(config.$dvalues--bem, modifier));
 
 		@at-root {
+
+			@include completed-log-in-css('bem-element', 'created element "#{$block + map-deep-get(config.$dvalues--bem, element) + $element}"');
+
 			#{$-selector} {
 				#{$block + map-deep-get(config.$dvalues--bem, element) + $element} {
 					@content;
 				}
 			}
+
 		}
 
 	} @else {
 
 		@at-root {
+
+			@include completed-log-in-css('bem-element', 'created element "#{$-selector + map-deep-get(config.$dvalues--bem, element) + $element }"');
+
 			#{$-selector + map-deep-get(config.$dvalues--bem, element) + $element } {
 				@content;
 			}
+
 		}
 
 	}

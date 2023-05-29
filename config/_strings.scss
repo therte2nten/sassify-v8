@@ -38,4 +38,39 @@ $string--emoji__debug: '⬜' !default;
 /// @since 8.0.0
 /// @access public
 /// @type string
-$string--debug__text-shorten-none: 'Вы указали в качестве параметра миксина «text-shorten» значение «none». Миксин не сгенерировал никаких стилей, т.к. при значении «none» смысла использовать миксин нет.' !default;
+$string--debug__text-shorten-none: '(sassify) Вы указали в качестве параметра миксина «text-shorten» значение «none». Миксин не сгенерировал никаких стилей, т.к. при значении «none» смысла использовать миксин нет.' !default;
+
+/// @name string--message__check-success
+/// @group strings
+/// @since 8.1.2
+/// @access public
+/// @type string
+$string--message__check-success: '(sassify) #{$string--emoji__success} The check was successful!' !default;
+
+/// @name string--error__grid-divide
+/// @group strings
+/// @since 8.1.2
+/// @access public
+/// @type string
+$string--error__grid-divide: '(sassify) #{$string--emoji__error} Не удается разделить на 0' !default;
+
+/// @name string--error__set-initial
+/// @group strings
+/// @since 8.1.2
+/// @access public
+/// @type string
+$string--error__set-initial: '(sassify) #{$string--emoji__error} Свойство отсутствует в карте `$dvalues--set-initial`:' !default;
+
+/// @name string--error__is-list-contains
+/// @group strings
+/// @since 8.1.2
+/// @access public
+/// @type string
+$string--error__is-list-contains: '(sassify) #{$string--emoji__error} Выбранная переменная не является списком (List)!' !default;
+
+/// @name string--error__map-deep-get
+/// @group strings
+/// @since 8.1.2
+/// @access public
+/// @type string
+$string--error__map-deep-get: '(sassify) #{$string--emoji__error} Не удалось найти ключ. Будет возвращено значение «null»! Название ключа:' !default;

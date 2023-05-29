@@ -1,0 +1,38 @@
+@use '../../config' as config;
+
+/// Миксин `completed-log-in-css` добавляет в CSS комментарии
+/// с каким-то логом, которое должно быть после компиляции Sass
+/// в CSS.
+///
+/// > Предназначено для `@mixin`!
+/// ---
+/// @name completed-log-in-css
+/// @group completed-log-in-css
+/// @since 8.1.2
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @link https://github.com/therteenten GitHub
+/// @param {string} $mixin-name - название миксина, которое выполнило работу
+/// @param {string} $message - сообщение, которое нужно добавить в комментарий
+/// @param {boolean} $show-message-in-console [config.$dvalues--completed-log-in-css__show-message-in-console] - отображать лог выполнения в консоли?
+@mixin completed-log-in-css(
+	$mixin-name,
+	$message,
+	$show-message-in-console: config.$dvalues--completed-log-in-css__show-message-in-console) {
+
+	@if config.$setting--completed-log-in-css == true {
+
+		$-message-title: '(sassify) #{config.$string--emoji__success} #{$mixin-name}';
+		$-message: '(sassify) #{config.$string--emoji__debug} #{$message}';
+
+		@if $show-message-in-console == true {
+			@debug $-message-title;
+			@debug $-message;
+			@debug '---------------------------------------------------------------------';
+		}
+
+		/* #{$-message-title} */
+		/* #{$-message} */
+
+	}
+}
