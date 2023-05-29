@@ -1,5 +1,6 @@
 @forward 'valid-values';
 @forward 'default-values';
+@forward 'default-values_maps';
 @forward 'prefixes';
 @forward 'strings';
 
@@ -40,3 +41,34 @@ $setting--strip-unit__use-sassmath: true !default;
 /// @type boolean
 $setting--follow-prefers-reduced-motion: true !default;
 
+/// Данный параметр регулирует генерацию минимального ресета
+/// CSS для сетки Bootstrap.
+///
+/// Не используйте, ессли у Вас подключены стили типа Normalize.css.
+/// ---
+/// @name setting--grid-minimal-reset
+/// @group settings
+/// @since 8.1.1
+/// @access public
+/// @type boolean
+$setting--grid-minimal-reset: false !default;
+
+/// Данный параметр регулирует поведение миксина `prefixer`,
+/// а именно добавление префикса к значению, а не к CSS-свойству.
+/// ---
+/// @name setting--prefixer__prefix-value
+/// @group settings
+/// @since 8.0.0
+/// @access public
+/// @type boolean
+$setting--prefixer__prefix-value: false !default;
+
+/// Данный параметр регулирует поведение миксина `prefixer`,
+/// а именно сохранение CSS-свойства без браузерного префикса.
+/// ---
+/// @name setting--prefixer__save-unprefixed-property
+/// @group settings
+/// @since 8.0.0
+/// @access public
+/// @type boolean
+$setting--prefixer__save-unprefixed-property: true !default;

@@ -41,19 +41,23 @@
 		$block: get-block($-selector, map-deep-get(config.$dvalues--bem, modifier));
 
 		@at-root {
+
 			#{$-selector} {
 				#{$block + map-deep-get(config.$dvalues--bem, element) + $element} {
 					@content;
 				}
 			}
+
 		}
 
 	} @else {
 
 		@at-root {
+
 			#{$-selector + map-deep-get(config.$dvalues--bem, element) + $element } {
 				@content;
 			}
+
 		}
 
 	}

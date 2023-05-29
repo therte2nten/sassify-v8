@@ -71,13 +71,16 @@
 		// 	1. Если `$mode` содержит значение `normal`,
 		// 	то не используем приставки `max` или `min`:
 		@if $mode == normal {
+
 			width: $width;
 			height: $height;
+
 		}
 
 		//	2. Если значение `$mode` отличается от `normal`,
 		// 	то подставляем значение `$mode` как приставку:
 		@else {
+
 			#{$mode}-width: $width;
 			#{$mode}-height: $height;
 		}

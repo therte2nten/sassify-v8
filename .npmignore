@@ -2,11 +2,11 @@
 .vscode/
 docs/
 node_modules/
-.editorconfig
-.gitignore
+_test.scss
+.npmignore
 .npmrc
 CODE_OF_CONDUCT.md
 CODEOWNERS
 CONTRIBUTING.md
+package-lock.json
 *.css
-test.*
