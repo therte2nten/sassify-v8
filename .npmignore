@@ -5,6 +5,8 @@ node_modules/
 _test.scss
 .npmignore
 .npmrc
+.editorconfig
+.gitignore
 CODE_OF_CONDUCT.md
 CODEOWNERS
 CONTRIBUTING.md
