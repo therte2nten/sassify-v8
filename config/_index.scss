@@ -1,6 +1,6 @@
 @forward 'valid-values';
-@forward 'default-values';
-@forward 'default-values_maps';
+@forward 'settings';
+@forward 'settings_maps';
 @forward 'prefixes';
 @forward 'strings';
 
@@ -42,7 +42,7 @@ $setting--strip-unit__use-sassmath: true !default;
 $setting--follow-prefers-reduced-motion: true !default;
 
 /// @name setting--grid-minimal-reset
-/// @group default-values
+/// @group settings
 /// @since 8.1.1
 /// @access public
 /// @type boolean
@@ -51,7 +51,7 @@ $setting--grid-minimal-reset: false !default;
 /// Добавлять префиксы не к CSS-свойству, а к его значению?
 /// ---
 /// @name setting--prefixer__prefix-value
-/// @group default-values
+/// @group settings
 /// @since 8.0.0
 /// @access public
 /// @type boolean
@@ -60,7 +60,7 @@ $setting--prefixer__prefix-value: false !default;
 /// Сохранять исходный вариант CSS-свойтсва без браузерного префикса?
 /// ---
 /// @name setting--prefixer__save-unprefixed-property
-/// @group default-values
+/// @group settings
 /// @since 8.0.0
 /// @access public
 /// @type boolean
