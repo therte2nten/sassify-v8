@@ -128,7 +128,7 @@ git clone https://github.com/therteenten/sassify.git
 		order: 'order',
 		offset: 'offset'
 	),
-	$dvalues--grid-generate-minimal-reset: true
+	$setting--grid-minimal-reset: true
 );
 ```
 

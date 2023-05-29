@@ -142,7 +142,7 @@
 /// @link https://github.com/therteenten/sassify/blob/main/common/grid/_index.scss Исходный код миксина
 @mixin -gen-minimal-reset() {
 
-	@if config.$dvalues--grid-generate-minimal-reset == true {
+	@if config.$setting--grid-minimal-reset == true {
 
 		html {
 			-ms-overflow-style: scrollbar;

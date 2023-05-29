@@ -1,10 +1,3 @@
-/// @name dvalues--completed-log-in-css__show-message-in-console
-/// @group default-values
-/// @since 8.1.2
-/// @access public
-/// @type boolean
-$dvalues--completed-log-in-css__show-message-in-console: false !default;
-
 /// @name dvalues--grid-class-names
 /// @group default-values
 /// @since 8.1.1
@@ -28,13 +21,6 @@ $dvalues--grid-class-names: (
 	order: 'order',
 	offset: 'offset'
 ) !default;
-
-/// @name dvalues--grid-generate-minimal-reset
-/// @group default-values
-/// @since 8.1.1
-/// @access public
-/// @type boolean
-$dvalues--grid-generate-minimal-reset: false !default;
 
 /// @name dvalues--grid-columns
 /// @group default-values
@@ -370,24 +356,6 @@ $dvalues--visually-hidden__size: 1px !default;
 /// @access public
 /// @type string
 $dvalues--size__mode: normal !default;
-
-/// Добавлять префиксы не к CSS-свойству, а к его значению?
-/// ---
-/// @name dvalues--prefixer__prefix-value
-/// @group default-values
-/// @since 8.0.0
-/// @access public
-/// @type boolean
-$dvalues--prefixer__prefix-value: false !default;
-
-/// Сохранять исходный вариант CSS-свойтсва без браузерного префикса?
-/// ---
-/// @name dvalues--prefixer__save-unprefixed-property
-/// @group default-values
-/// @since 8.0.0
-/// @access public
-/// @type boolean
-$dvalues--prefixer__save-unprefixed-property: true !default;
 
 /// Значение CSS-свойства `user-select` по умолчанию
 /// ---

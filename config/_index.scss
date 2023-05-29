@@ -43,10 +43,41 @@ $setting--follow-prefers-reduced-motion: true !default;
 /// Данный параметр регулирует добавление в CSS-комментариев
 /// в конечный результат выполнения миксина, например, `prefixer`.
 /// ---
-/// @name completed-log-in-css
+/// @name setting--completed-log-in-css
 /// @group settings
 /// @since 8.1.2
 /// @access public
 /// @type boolean
 $setting--completed-log-in-css: true !default;
 
+/// @name setting--completed-log-in-css__show-message-in-console
+/// @group default-values
+/// @since 8.1.2
+/// @access public
+/// @type boolean
+$setting--completed-log-in-css__show-message-in-console: false !default;
+
+/// @name setting--grid-minimal-reset
+/// @group default-values
+/// @since 8.1.1
+/// @access public
+/// @type boolean
+$setting--grid-minimal-reset: false !default;
+
+/// Добавлять префиксы не к CSS-свойству, а к его значению?
+/// ---
+/// @name setting--prefixer__prefix-value
+/// @group default-values
+/// @since 8.0.0
+/// @access public
+/// @type boolean
+$setting--prefixer__prefix-value: false !default;
+
+/// Сохранять исходный вариант CSS-свойтсва без браузерного префикса?
+/// ---
+/// @name setting--prefixer__save-unprefixed-property
+/// @group default-values
+/// @since 8.0.0
+/// @access public
+/// @type boolean
+$setting--prefixer__save-unprefixed-property: true !default;
